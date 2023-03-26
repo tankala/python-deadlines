@@ -56,7 +56,7 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/js-year-calendar.min.css?t=1679842234"
+      href="/static/css/js-year-calendar.min.css?t=1679853772"
       media="screen,projection"
     />
 
@@ -68,13 +68,13 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/deadlines.css?t=1679842234"
+      href="/static/css/deadlines.css?t=1679853772"
       media="screen,projection"
     />
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/calendar.css?t=1679842234"
+      href="/static/css/calendar.css?t=1679853772"
       media="screen,projection"
     />
 
@@ -1347,6 +1347,38 @@
           subject: "PY",
           startDate: Date.parse("2023-05-10"),
           endDate: Date.parse("2023-05-12"),
+        });
+
+        // add deadlines in red
+        conf_list_all.push({
+          id: "geopython2023-deadline",
+          abbreviation: "geopython2023",
+          name: "GeoPython 2023 CfP",
+          color: "red",
+          location: "Basel, Switzerland",
+          date: "March 06 - 08, 2023",
+          subject: "PY",
+          startDate: Date.parse("2022-12-16 12:00:00"),
+          endDate: Date.parse("2022-12-16 12:00:00"),
+        });
+
+        // add Conferences in chosen color
+
+        var color = "black";
+        // use first sub to choose color
+
+        color = "#4B8BBE";
+
+        conf_list_all.push({
+          id: "geopython2023-conference",
+          abbreviation: "geopython2023",
+          name: "GeoPython 2023",
+          color: color,
+          location: "Basel, Switzerland",
+          date: "March 06 - 08, 2023",
+          subject: "PY",
+          startDate: Date.parse("2023-03-06"),
+          endDate: Date.parse("2023-03-08"),
         });
 
         // add deadlines in red

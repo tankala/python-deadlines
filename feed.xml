@@ -9,7 +9,7 @@
 		<title>Python Conference Deadlines</title>
 		<description>Countdowns to your favourite Python conferences with calls for participation and resources to submit awesome talks!</description>
 		<link>https://pythondeadlin.es/feed.xml</link>
-		<lastBuildDate>Sun, 26 Mar 2023 14:50:34 +0000</lastBuildDate>
+		<lastBuildDate>Sun, 26 Mar 2023 18:02:52 +0000</lastBuildDate>
 		
 		
 			<item>
@@ -244,22 +244,22 @@
 		
 		
 			<item>
-				<title>PyCon US 2023 Conference Deadline</title>
-				<description>Conference in Salt Lake City, Utah, USA on April 19 - 28, 2023. CfP: 2022-12-09 23:59:59 AoE.&lt;br /&gt;Find them here: @pycon </description>
-				<pubDate>Fri, 09 Dec 2022 23:59:59 +0000</pubDate>
-				<link>https://pythondeadlin.es/conference/pycon-us-2023</link>
-				<guid isPermaLink="false">pyconus23</guid>
+				<title>GeoPython 2023 Conference Deadline</title>
+				<description>Conference in Basel, Switzerland on March 06 - 08, 2023. CfP: 2022-12-16 12:00:00 AoE.&lt;br /&gt;Find them here: @GeoPythonConf </description>
+				<pubDate>Fri, 16 Dec 2022 12:00:00 +0000</pubDate>
+				<link>https://pythondeadlin.es/conference/geopython-2023</link>
+				<guid isPermaLink="false">geopython2023</guid>
 				<category>PY</category>
 			</item>
 		
 		
 		
 			<item>
-				<title>PyCascades 2023 Conference Deadline</title>
-				<description>Conference in Vancouver, Canada on March 18 - 19, 2023. CfP: 2022-11-16 23:59:59 AoE.&lt;br /&gt;Find them here: @pyCascades </description>
-				<pubDate>Wed, 16 Nov 2022 23:59:59 +0000</pubDate>
-				<link>https://pythondeadlin.es/conference/pycascades-2023</link>
-				<guid isPermaLink="false">pycascades23</guid>
+				<title>PyCon US 2023 Conference Deadline</title>
+				<description>Conference in Salt Lake City, Utah, USA on April 19 - 28, 2023. CfP: 2022-12-09 23:59:59 AoE.&lt;br /&gt;Find them here: @pycon </description>
+				<pubDate>Fri, 09 Dec 2022 23:59:59 +0000</pubDate>
+				<link>https://pythondeadlin.es/conference/pycon-us-2023</link>
+				<guid isPermaLink="false">pyconus23</guid>
 				<category>PY</category>
 			</item>
 		
