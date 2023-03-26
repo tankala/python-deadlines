@@ -142,19 +142,19 @@ def pretty_print(header, conf, tba=None, expired=None):
             print("\n")
 
 
-# def add_latlon(data):
-#     for i, q in tqdm(enumerate(data.copy()), total = len(data)):
-#         if ("location" in q) or ("place" not in q) or ("online" in q["place"].lower()):
-#             continue
-#         else:
-#             url = "https://nominatim.openstreetmap.org/search/" + urllib.parse.quote(q["place"]) + "?format=json"
-#             response = requests.get(url).json()
-#             if response:
-#                 data[i]["location"] = {}
-#                 data[i]["location"]["latitude"] = float(response[0]["lat"])
-#                 data[i]["location"]["longitude"] = float(response[0]["lon"])
-#                 time.sleep(2)
-#     return data
+def add_latlon(data):
+    for i, q in tqdm(enumerate(data.copy()), total = len(data)):
+        if ("location" in q) or ("place" not in q) or ("online" in q["place"].lower()):
+            continue
+        else:
+            url = "https://nominatim.openstreetmap.org/search/" + urllib.parse.quote(q["place"]) + "?format=json"
+            response = requests.get(url).json()
+            if response:
+                data[i]["location"] = {}
+                data[i]["location"]["latitude"] = float(response[0]["lat"])
+                data[i]["location"]["longitude"] = float(response[0]["lon"])
+                time.sleep(2)
+    return data
 
 
 # Sort:
@@ -172,6 +172,10 @@ def sort_data(base=""):
             for q in data:
                 print(q["cfp"], " - ", q["title"])
             print("\n\n")
+
+            # Geocode Data
+            print("Adding Lat Lon from Place")
+            data = add_latlon(data)
 
             # Split data by cfp
             print("Splitting conferences, tba, and archive")
@@ -199,6 +203,7 @@ def sort_data(base=""):
             data += expired
 
             data.sort(key=sort_by_cfp, reverse=True)
+            data = add_latlon(data)
 
             pretty_print("New archive:", data)
             with open(out_archive, "w") as outfile:
