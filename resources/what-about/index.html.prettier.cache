@@ -4,39 +4,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
-    <title>What is a Python conference CfP?</title>
+    <title>What should my Python conference talk be about?</title>
     <!-- Begin Jekyll SEO tag v2.8.0 -->
     <title>
-      What is a Python conference CfP? | Python Conference Deadlines
+      What should my Python conference talk be about? | Python Conference
+      Deadlines
     </title>
     <meta name="generator" content="Jekyll v3.9.3" />
-    <meta property="og:title" content="What is a Python conference CfP?" />
+    <meta
+      property="og:title"
+      content="What should my Python conference talk be about?"
+    />
     <meta name="author" content="Jesper Dramsch" />
     <meta property="og:locale" content="en_US" />
     <meta
       name="description"
-      content="A Call for Proposals (CfP) or Call for Participation is a common term used in academic, research, and professional communities to invite individuals or groups to submit proposals or abstracts for conferences, workshops, symposiums, and other events."
+      content="We often get a paradox conundrum when we finally decide to give a talk at a Python conference. We learned about so many exciting things. So much is interesting. But what should my Python talk be about?!"
     />
     <meta
       property="og:description"
-      content="A Call for Proposals (CfP) or Call for Participation is a common term used in academic, research, and professional communities to invite individuals or groups to submit proposals or abstracts for conferences, workshops, symposiums, and other events."
+      content="We often get a paradox conundrum when we finally decide to give a talk at a Python conference. We learned about so many exciting things. So much is interesting. But what should my Python talk be about?!"
     />
     <link
       rel="canonical"
-      href="https://pythondeadlin.es/resources/what-are-python-cfps/"
+      href="https://pythondeadlin.es/resources/what-about/"
     />
     <meta
       property="og:url"
-      content="https://pythondeadlin.es/resources/what-are-python-cfps/"
+      content="https://pythondeadlin.es/resources/what-about/"
     />
     <meta property="og:site_name" content="Python Conference Deadlines" />
     <meta property="og:type" content="article" />
     <meta
       property="article:published_time"
-      content="2023-03-05T00:00:00+00:00"
+      content="2023-03-09T00:00:00+00:00"
     />
     <meta name="twitter:card" content="summary" />
-    <meta property="twitter:title" content="What is a Python conference CfP?" />
+    <meta
+      property="twitter:title"
+      content="What should my Python conference talk be about?"
+    />
     <meta name="twitter:site" content="@jesperdramsch" />
     <meta name="twitter:creator" content="@Jesper Dramsch" />
     <script type="application/ld+json">
@@ -44,15 +51,15 @@
         "@context": "https://schema.org",
         "@type": "BlogPosting",
         "author": { "@type": "Person", "name": "Jesper Dramsch" },
-        "dateModified": "2023-03-05T00:00:00+00:00",
-        "datePublished": "2023-03-05T00:00:00+00:00",
-        "description": "A Call for Proposals (CfP) or Call for Participation is a common term used in academic, research, and professional communities to invite individuals or groups to submit proposals or abstracts for conferences, workshops, symposiums, and other events.",
-        "headline": "What is a Python conference CfP?",
+        "dateModified": "2023-03-09T00:00:00+00:00",
+        "datePublished": "2023-03-09T00:00:00+00:00",
+        "description": "We often get a paradox conundrum when we finally decide to give a talk at a Python conference. We learned about so many exciting things. So much is interesting. But what should my Python talk be about?!",
+        "headline": "What should my Python conference talk be about?",
         "mainEntityOfPage": {
           "@type": "WebPage",
-          "@id": "https://pythondeadlin.es/resources/what-are-python-cfps/"
+          "@id": "https://pythondeadlin.es/resources/what-about/"
         },
-        "url": "https://pythondeadlin.es/resources/what-are-python-cfps/"
+        "url": "https://pythondeadlin.es/resources/what-about/"
       }
     </script>
     <!-- End Jekyll SEO tag -->
@@ -67,7 +74,7 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/js-year-calendar.min.css?t=1680340208"
+      href="/static/css/js-year-calendar.min.css?t=1679854849"
       media="screen,projection"
     />
 
@@ -79,13 +86,13 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/deadlines.css?t=1680340208"
+      href="/static/css/deadlines.css?t=1679854849"
       media="screen,projection"
     />
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/calendar.css?t=1680340208"
+      href="/static/css/calendar.css?t=1679854849"
       media="screen,projection"
     />
 
@@ -240,6 +247,20 @@
             </li>
           </ul>
           <div class="twitter-github-icons">
+            <a
+              href="https://twitter.com/share"
+              class="twitter-share-button"
+              data-text="Countdowns to your favourite Python conferences with calls for participation and resources to submit awesome talks!"
+              data-show-count="false"
+              style="font-size: 13px"
+              >Tweet</a
+            >
+            <script
+              async
+              src="//platform.twitter.com/widgets.js"
+              charset="utf-8"
+            ></script>
+            &nbsp; &nbsp;
             <iframe
               src="https://ghbtns.com/github-btn.html?user=jesperdramsch&repo=python-deadlines&type=star&count=true"
               frameborder="0"
@@ -255,95 +276,64 @@
       <div class="page-header">
         <div class="row">
           <div class="col-12 col-sm-12">
-            <h1>What is a Python conference CfP?</h1>
+            <h1>What should my Python conference talk be about?</h1>
           </div>
         </div>
         <br />
         <div class="row">
           <div class="meta col-12">
-            Jesper Dramsch - <strong>Tags:</strong> CfP, Python, conference
+            Jesper Dramsch - <strong>Tags:</strong> Python, presentation
           </div>
         </div>
       </div>
       <div id="confs">
         <p>
-          A Call for Proposals (CfP) or Call for Participation is a common term
-          used in academic, research, and professional communities to invite
-          individuals or groups to submit proposals or abstracts for
-          conferences, workshops, symposiums, and other events.
+          We often get a paradox conundrum when we finally decide to give a talk
+          at a Python conference. We learned about so many exciting things. So
+          much is interesting. But what should my Python talk be about?!
         </p>
 
         <p>
-          Since the Python community is a bunch of lovely nerds, this same
-          terminology made it into the Python vernacular.
-        </p>
-
-        <h2 id="whats-a-cfp">What’s a CfP?</h2>
-        <p>
-          In simple terms, a CfP is an open invitation to experts, scholars,
-          researchers, and practitioners to present their ideas, research
-          findings, and case studies in a particular field or area of interest.
+          So, Congratulations on deciding to present on Python! You’re eager to
+          share your knowledge and experience with others. Let’s dive in!
         </p>
 
         <p>
-          A CfP is typically issued by event organizers, conference committees,
-          or academic institutions to solicit submissions from interested
-          individuals or groups.
-        </p>
-
-        <h2 id="what-are-cfps-for">What are CfPs for?</h2>
-        <p>
-          The purpose of a CfP is to encourage a broad range of participants to
-          engage with an event or a conference, ensuring a diversity of
-          perspectives and ideas.
+          First things first, think about your audience. Who do you want to
+          attend your talk? Are they beginners, intermediate or advanced Python
+          users? Do they have a specific interest or problem they want to solve
+          using Python? Understanding your audience’s expertise and interest
+          will help you decide on a topic that will appeal to them and keep them
+          engaged.
         </p>
 
         <p>
-          CfPs often outline the event’s theme, the topics of interest, and the
-          submission guidelines. They also specify the types of submissions that
-          are accepted, such as research papers, case studies, posters, or
-          workshops.
-        </p>
-
-        <h2 id="how-do-you-participate-in-a-cfp">
-          How do you participate in a CfP?
-        </h2>
-        <p>
-          The submission process for a CfP typically involves preparing a
-          proposal or abstract that includes a summary of the proposed topic,
-          the research methodology or approach, and the expected outcomes.
+          Next, consider the type of talk you want to give. Do you want to dive
+          deep into a complex topic or keep it simple with a hands-on tutorial?
+          Do you want to focus on Python’s mathematical capabilities or
+          practical applications? It’s crucial to pick a topic that aligns with
+          your expertise and passion and keeps your audience in mind.
         </p>
 
         <p>
-          Some academic CfPs may require a full paper submission, while others
-          may ask for a short abstract or a summary.
+          Once you’ve decided on your topic and type of talk, think about the
+          tone you want to set. Do you want to be light-hearted and funny or
+          more severe and cautionary? There’s no right or wrong answer here, but
+          ensure your tone is appropriate for your topic and audience.
         </p>
 
         <p>
-          Python CfPs rarely require the submission of full materials, as they
-          do not publish papers. However, it is vital to avoid the
-          <a href="/resources/common-pitfalls/">common pitfall</a> of promising
-          solely future work.
-        </p>
-
-        <h2 id="conclusion">Conclusion</h2>
-
-        <p>
-          In summary, a CfP invites experts, scholars, researchers, and
-          practitioners to submit proposals or abstracts for an event or
-          conference.
+          Remember, your talk aims to educate and inspire others about Python,
+          so make sure your takeaways are clear and valuable. What should your
+          audience learn or take away from your talk? How can they apply what
+          they’ve learned in their Python projects or careers?
         </p>
 
         <p>
-          It plays a vital role in facilitating the sharing of knowledge and
-          expertise, promoting discussions, and creating opportunities for
-          networking among professionals in a particular field.
-        </p>
-
-        <p>
-          If you are interested in attending or presenting at a conference or
-          event,
-          <a href="https://pythondeadlin.es">keep an eye out for CfPs</a>!
+          In summary, when deciding on the topic of your Python talk, consider
+          your audience, the type of talk, and the tone you want to set. Make
+          sure your takeaways are clear and valuable to your audience. And most
+          importantly, have fun and share your passion for Python with others!
         </p>
       </div>
       <footer>

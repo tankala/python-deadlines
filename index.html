@@ -63,7 +63,7 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/js-year-calendar.min.css?t=1679854849"
+      href="/static/css/js-year-calendar.min.css?t=1680340208"
       media="screen,projection"
     />
 
@@ -75,13 +75,13 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/deadlines.css?t=1679854849"
+      href="/static/css/deadlines.css?t=1680340208"
       media="screen,projection"
     />
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/calendar.css?t=1679854849"
+      href="/static/css/calendar.css?t=1680340208"
       media="screen,projection"
     />
 
@@ -236,20 +236,6 @@
             </li>
           </ul>
           <div class="twitter-github-icons">
-            <a
-              href="https://twitter.com/share"
-              class="twitter-share-button"
-              data-text="Countdowns to your favourite Python conferences with calls for participation and resources to submit awesome talks!"
-              data-show-count="false"
-              style="font-size: 13px"
-              >Tweet</a
-            >
-            <script
-              async
-              src="//platform.twitter.com/widgets.js"
-              charset="utf-8"
-            ></script>
-            &nbsp; &nbsp;
             <iframe
               src="https://ghbtns.com/github-btn.html?user=jesperdramsch&repo=python-deadlines&type=star&count=true"
               frameborder="0"
@@ -2788,29 +2774,9 @@
         </div>
         <div id="past_cfps">
           <h1 id="past-cfps-title">Past Calls for Participation</h1>
-          <div id="cfp-sort-order-checkbox">
-            <label for="cfp-sort-order"
-              ><input
-                type="checkbox"
-                id="cfp-sort-order"
-                name="cfp-sort-order"
-                checked
-              />Most recent first</label
-            >
-          </div>
         </div>
         <div id="past_confs">
           <h1 id="past-events-title">Past Events</h1>
-          <div id="conf-sort-order-checkbox">
-            <label for="conf-sort-order"
-              ><input
-                type="checkbox"
-                id="conf-sort-order"
-                name="conf-sort-order"
-                checked
-              />Most recent first</label
-            >
-          </div>
         </div>
         <div id="conf_archive">
           <h1 id="archive-link">Visit the <a href="/archive/">Archive</a></h1>
@@ -5128,22 +5094,6 @@
             return $(b).attr("cfpDiff") - $(a).attr("cfpDiff");
           })
           .appendTo($("#coming_confs"));
-
-        $("#cfp-sort-order-checkbox input").on("click", function () {
-          if ($("#cfp-sort-order-checkbox input").is(":checked")) {
-            $("#past_cpfs .ConfItem")
-              .sort(function (a, b) {
-                return $(a).attr("cfpDiff") - $(b).attr("cfpDiff");
-              })
-              .appendTo($("#past_cfps"));
-          } else {
-            $("#past_cpfs .ConfItem")
-              .sort(function (a, b) {
-                return $(b).attr("cfpDiff") - $(a).attr("cfpDiff");
-              })
-              .appendTo($("#past_cpfs"));
-          }
-        });
 
         $("#conf-sort-order-checkbox input").on("click", function () {
           if ($("#conf-sort-order-checkbox input").is(":checked")) {
