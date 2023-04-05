@@ -9,7 +9,7 @@
 		<title>Python Conference Deadlines</title>
 		<description>Countdowns to your favourite Python conferences with calls for participation and resources to submit awesome talks!</description>
 		<link>https://pythondeadlin.es/feed.xml</link>
-		<lastBuildDate>Sun, 02 Apr 2023 16:40:31 +0000</lastBuildDate>
+		<lastBuildDate>Wed, 05 Apr 2023 11:09:18 +0000</lastBuildDate>
 		
 		
 			<item>
@@ -189,45 +189,12 @@
 		
 		
 			<item>
-				<title>PyCon France 2023 Conference Deadline</title>
-				<description>Conference in Bordeaux, France on February 16 - 19, 2023. CfP: 2023-01-07 23:59:59 AoE.&lt;br /&gt;Find them here: @PyConFR </description>
-				<pubDate>Sat, 07 Jan 2023 23:59:59 +0000</pubDate>
-				<link>https://pythondeadlin.es/conference/pycon-france-2023/</link>
-				<guid isPermaLink="false">pyconFrance23</guid>
-				<category>PY</category>
-			</item>
-		
-		
-		
-			<item>
-				<title>PyCon Namibia 2023 Conference Deadline</title>
-				<description>Conference in Windhoek, Namibia on February 21 - 23, 2023. CfP: 2023-01-06 23:59:59 AoE.&lt;br /&gt;Find them here: @PyConNA </description>
-				<pubDate>Fri, 06 Jan 2023 23:59:59 +0000</pubDate>
-				<link>https://pythondeadlin.es/conference/pycon-namibia-2023/</link>
-				<guid isPermaLink="false">pyconnamibia23</guid>
-				<category>PY</category>
-			</item>
-		
-		
-		
-			<item>
 				<title>PyCon DE &amp; PyData Berlin 2023 Conference Deadline</title>
 				<description>Conference in Berlin, Germany on April 17 - 19, 2023. CfP: 2023-01-05 23:59:59 AoE.&lt;br /&gt;Find them here: @PyConDE </description>
 				<pubDate>Thu, 05 Jan 2023 23:59:59 +0000</pubDate>
 				<link>https://pythondeadlin.es/conference/pycon-de-pydata-berlin-2023/</link>
 				<guid isPermaLink="false">pyconde2023</guid>
 				<category>PY,PYDATA</category>
-			</item>
-		
-		
-		
-			<item>
-				<title>PyCon Philippines 2023 Conference Deadline</title>
-				<description>Conference in Manila, Philippines on February 25 - 26, 2022. CfP: 2022-12-23 23:59:00 AoE.&lt;br /&gt;Find them here: @PyConPH </description>
-				<pubDate>Fri, 23 Dec 2022 23:59:00 +0000</pubDate>
-				<link>https://pythondeadlin.es/conference/pycon-philippines-2023/</link>
-				<guid isPermaLink="false">pyconphilippines2023</guid>
-				<category>PY</category>
 			</item>
 		
 		
@@ -262,6 +229,30 @@
 				<guid isPermaLink="false">pyconus23</guid>
 				<category>PY</category>
 			</item>
+		
+		
+		
+			<item>
+				<title>PyCascades 2023 Conference Deadline</title>
+				<description>Conference in Vancouver, Canada on March 18 - 19, 2023. CfP: 2022-11-16 23:59:59 AoE.&lt;br /&gt;Find them here: @pyCascades </description>
+				<pubDate>Wed, 16 Nov 2022 23:59:59 +0000</pubDate>
+				<link>https://pythondeadlin.es/conference/pycascades-2023/</link>
+				<guid isPermaLink="false">pycascades23</guid>
+				<category>PY</category>
+			</item>
+		
+		
+		
+			<item>
+				<title>Python Web Conference 2023 Conference Deadline</title>
+				<description>Conference in Online on March 13 - 17, 2023. CfP: 2022-10-01 23:00:00 AoE.&lt;br /&gt;Find them here: @PythonWebConf </description>
+				<pubDate>Sat, 01 Oct 2022 23:00:00 +0000</pubDate>
+				<link>https://pythondeadlin.es/conference/python-web-conference-2023/</link>
+				<guid isPermaLink="false">pythonwebconference2023</guid>
+				<category>WEB</category>
+			</item>
+		
+		
 		
 		
 	</channel>
