@@ -56,7 +56,7 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/js-year-calendar.min.css?t=1681043103"
+      href="/static/css/js-year-calendar.min.css?t=1681743010"
       media="screen,projection"
     />
 
@@ -68,13 +68,13 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/deadlines.css?t=1681043103"
+      href="/static/css/deadlines.css?t=1681743010"
       media="screen,projection"
     />
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/calendar.css?t=1681043103"
+      href="/static/css/calendar.css?t=1681743010"
       media="screen,projection"
     />
 
@@ -664,6 +664,70 @@
 
         // add deadlines in red
         conf_list_all.push({
+          id: "pyconportugal2023-deadline",
+          abbreviation: "pyconportugal2023",
+          name: "PyCon Portugal 2023 CfP",
+          color: "red",
+          location: "Porto, Portugal",
+          date: "September 07 - 09, 2023",
+          subject: "PY",
+          startDate: Date.parse("2023-06-30 23:59:00"),
+          endDate: Date.parse("2023-06-30 23:59:00"),
+        });
+
+        // add Conferences in chosen color
+
+        var color = "black";
+        // use first sub to choose color
+
+        color = "#4B8BBE";
+
+        conf_list_all.push({
+          id: "pyconportugal2023-conference",
+          abbreviation: "pyconportugal2023",
+          name: "PyCon Portugal 2023",
+          color: color,
+          location: "Porto, Portugal",
+          date: "September 07 - 09, 2023",
+          subject: "PY",
+          startDate: Date.parse("2023-09-07"),
+          endDate: Date.parse("2023-09-09"),
+        });
+
+        // add deadlines in red
+        conf_list_all.push({
+          id: "pycones23-deadline",
+          abbreviation: "pycones23",
+          name: "PyConEs 2023 CfP",
+          color: "red",
+          location: "Tenerife, Spain",
+          date: "October 06 - 08, 2023",
+          subject: "PY",
+          startDate: Date.parse("2023-06-23 23:59:00"),
+          endDate: Date.parse("2023-06-23 23:59:00"),
+        });
+
+        // add Conferences in chosen color
+
+        var color = "black";
+        // use first sub to choose color
+
+        color = "#4B8BBE";
+
+        conf_list_all.push({
+          id: "pycones23-conference",
+          abbreviation: "pycones23",
+          name: "PyConEs 2023",
+          color: color,
+          location: "Tenerife, Spain",
+          date: "October 06 - 08, 2023",
+          subject: "PY",
+          startDate: Date.parse("2023-10-08"),
+          endDate: Date.parse("2023-10-08"),
+        });
+
+        // add deadlines in red
+        conf_list_all.push({
           id: "djangoCon2023-deadline",
           abbreviation: "djangoCon2023",
           name: "DjangoCon US 2023 CfP",
@@ -1240,38 +1304,6 @@
 
         // add deadlines in red
         conf_list_all.push({
-          id: "geopython2023-deadline",
-          abbreviation: "geopython2023",
-          name: "GeoPython 2023 CfP",
-          color: "red",
-          location: "Basel, Switzerland",
-          date: "March 06 - 08, 2023",
-          subject: "PY",
-          startDate: Date.parse("2022-12-16 12:00:00"),
-          endDate: Date.parse("2022-12-16 12:00:00"),
-        });
-
-        // add Conferences in chosen color
-
-        var color = "black";
-        // use first sub to choose color
-
-        color = "#4B8BBE";
-
-        conf_list_all.push({
-          id: "geopython2023-conference",
-          abbreviation: "geopython2023",
-          name: "GeoPython 2023",
-          color: color,
-          location: "Basel, Switzerland",
-          date: "March 06 - 08, 2023",
-          subject: "PY",
-          startDate: Date.parse("2023-03-06"),
-          endDate: Date.parse("2023-03-08"),
-        });
-
-        // add deadlines in red
-        conf_list_all.push({
           id: "pyconus23-deadline",
           abbreviation: "pyconus23",
           name: "PyCon US 2023 CfP",
@@ -1396,70 +1428,6 @@
           subject: "PYDATA",
           startDate: Date.parse("2023-11-14"),
           endDate: Date.parse("2023-11-14"),
-        });
-
-        // add deadlines in red
-        conf_list_all.push({
-          id: "pycones23-deadline",
-          abbreviation: "pycones23",
-          name: "PyConEs 2023 CfP",
-          color: "red",
-          location: "Tenerife, Spain",
-          date: "October 06 - 08, 2023",
-          subject: "PY",
-          startDate: Date.parse("TBA"),
-          endDate: Date.parse("TBA"),
-        });
-
-        // add Conferences in chosen color
-
-        var color = "black";
-        // use first sub to choose color
-
-        color = "#4B8BBE";
-
-        conf_list_all.push({
-          id: "pycones23-conference",
-          abbreviation: "pycones23",
-          name: "PyConEs 2023",
-          color: color,
-          location: "Tenerife, Spain",
-          date: "October 06 - 08, 2023",
-          subject: "PY",
-          startDate: Date.parse("2023-10-08"),
-          endDate: Date.parse("2023-10-08"),
-        });
-
-        // add deadlines in red
-        conf_list_all.push({
-          id: "pyconportugal2023-deadline",
-          abbreviation: "pyconportugal2023",
-          name: "PyCon Portugal 2023 CfP",
-          color: "red",
-          location: "Porto, Portugal",
-          date: "September 07 - 09, 2023",
-          subject: "PY",
-          startDate: Date.parse("TBA"),
-          endDate: Date.parse("TBA"),
-        });
-
-        // add Conferences in chosen color
-
-        var color = "black";
-        // use first sub to choose color
-
-        color = "#4B8BBE";
-
-        conf_list_all.push({
-          id: "pyconportugal2023-conference",
-          abbreviation: "pyconportugal2023",
-          name: "PyCon Portugal 2023",
-          color: color,
-          location: "Porto, Portugal",
-          date: "September 07 - 09, 2023",
-          subject: "PY",
-          startDate: Date.parse("2023-09-07"),
-          endDate: Date.parse("2023-09-09"),
         });
 
         // add deadlines in red

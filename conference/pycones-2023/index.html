@@ -69,7 +69,7 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/js-year-calendar.min.css?t=1681043103"
+      href="/static/css/js-year-calendar.min.css?t=1681743010"
       media="screen,projection"
     />
 
@@ -81,13 +81,13 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/deadlines.css?t=1681043103"
+      href="/static/css/deadlines.css?t=1681743010"
       media="screen,projection"
     />
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/calendar.css?t=1681043103"
+      href="/static/css/calendar.css?t=1681743010"
       media="screen,projection"
     />
 
@@ -480,6 +480,22 @@
 
           <div class="col-12">
             <img
+              src="/static/img/035-file-text.svg"
+              class="badge-link"
+              alt="Document Icon for CfP link"
+              width="16"
+              height="16"
+            />
+            <a
+              id="conf-cfplink"
+              target="_blank"
+              href="https://charlas.2023.es.pycon.org/pycones-2023/cfp"
+              >Call for Participation</a
+            >
+          </div>
+
+          <div class="col-12">
+            <img
               src="/static/img/407-twitter.svg"
               class="badge-link"
               alt="Twitter icon"
@@ -533,17 +549,17 @@
           </div>
         </div>
         <div id="conf-deadline-timer" class="row">
-          <div id="cfp-timer" class="col-12 conf-timer">TBA</div>
+          <div id="cfp-timer" class="col-12 conf-timer"></div>
         </div>
         <div class="row">
           <div
-            id="1594d374-cc61-42f5-88c0-19b4b4daedc1"
+            id="1821fbcf-c0a1-4a05-ab3f-e1500f9b592f"
             style="width: 100%; height: 400px"
             class="jekyll-map"
           ></div>
           <script type="text/javascript">
             jekyllMaps.register(
-              "1594d374-cc61-42f5-88c0-19b4b4daedc1",
+              "1821fbcf-c0a1-4a05-ab3f-e1500f9b592f",
               [
                 {
                   latitude: 28.2935785,
@@ -694,9 +710,48 @@
 
         // other
 
-        $("#cfp-timer").html("TBA");
-        $(".deadline-time").html("TBA");
-        $(".deadline-local-time").html("TBA");
+        // Use specified timezone for deadlines if available else use AoE timezone
+
+        var confDeadline = DateTime.fromSQL("2023-06-23 23:59:00", {
+          zone: "Europe/London",
+        });
+
+        // check if timezone is valid otherwise replace by system timezone
+        if (confDeadline.invalid) {
+          var confDeadline = DateTime.fromSQL("2023-06-23 23:59:00");
+          console.log("Invalid timezone. Using system timezone instead.");
+        }
+
+        // add calendar
+        var conferenceDeadlineCalendar = createCalendarFromObject({
+          id: "pycones23",
+          title: "PyConEs 2023 deadline",
+          date: confDeadline.toJSDate(),
+          duration: 60,
+        });
+        document
+          .querySelector("#conference-deadline")
+          .appendChild(conferenceDeadlineCalendar);
+
+        // render countdown timer
+        $("#cfp-timer").countdown(confDeadline.toJSDate(), function (event) {
+          $(this).html(event.strftime("%D days %Hh %Mm %Ss"));
+        });
+
+        // render deadline conference time
+
+        $(".deadline-time").html(
+          confDeadline
+            .setZone("Europe/London")
+            .toLocaleString(DateTime.DATETIME_HUGE_WITH_SECONDS)
+        );
+
+        // render deadline in local timezone
+        $(".deadline-local-time").html(
+          confDeadline
+            .setZone("system")
+            .toLocaleString(DateTime.DATETIME_HUGE_WITH_SECONDS)
+        );
       });
     </script>
     <script async defer>
