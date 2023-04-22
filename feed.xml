@@ -9,7 +9,7 @@
 		<title>Python Conference Deadlines</title>
 		<description>Countdowns to your favourite Python conferences with calls for participation and resources to submit awesome talks!</description>
 		<link>https://pythondeadlin.es/feed.xml</link>
-		<lastBuildDate>Mon, 17 Apr 2023 14:50:10 +0000</lastBuildDate>
+		<lastBuildDate>Sat, 22 Apr 2023 13:27:52 +0000</lastBuildDate>
 		
 		
 			<item>
@@ -95,6 +95,17 @@
 				<pubDate>Fri, 31 Mar 2023 23:59:59 +0000</pubDate>
 				<link>https://pythondeadlin.es/conference/pycon-taiwan-2023/</link>
 				<guid isPermaLink="false">pyconTW2023</guid>
+				<category>PY</category>
+			</item>
+		
+		
+		
+			<item>
+				<title>PyDay La Paz 2023 Conference Deadline</title>
+				<description>Conference in La Paz, Bolivia on 3 June, 2023. CfP: 2023-03-30 23:59:00 AoE.&lt;br /&gt;Find them here: @PyDayLaPaz </description>
+				<pubDate>Thu, 30 Mar 2023 23:59:00 +0000</pubDate>
+				<link>https://pythondeadlin.es/conference/pyday-la-paz-2023/</link>
+				<guid isPermaLink="false">pydayLaPaz23</guid>
 				<category>PY</category>
 			</item>
 		
@@ -250,17 +261,6 @@
 				<link>https://pythondeadlin.es/conference/pycascades-2023/</link>
 				<guid isPermaLink="false">pycascades23</guid>
 				<category>PY</category>
-			</item>
-		
-		
-		
-			<item>
-				<title>Python Web Conference 2023 Conference Deadline</title>
-				<description>Conference in Online on March 13 - 17, 2023. CfP: 2022-10-01 23:00:00 AoE.&lt;br /&gt;Find them here: @PythonWebConf </description>
-				<pubDate>Sat, 01 Oct 2022 23:00:00 +0000</pubDate>
-				<link>https://pythondeadlin.es/conference/python-web-conference-2023/</link>
-				<guid isPermaLink="false">pythonwebconference2023</guid>
-				<category>WEB</category>
 			</item>
 		
 		
