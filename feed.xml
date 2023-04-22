@@ -9,7 +9,7 @@
 		<title>Python Conference Deadlines</title>
 		<description>Countdowns to your favourite Python conferences with calls for participation and resources to submit awesome talks!</description>
 		<link>https://pythondeadlin.es/feed.xml</link>
-		<lastBuildDate>Sat, 22 Apr 2023 13:27:52 +0000</lastBuildDate>
+		<lastBuildDate>Sat, 22 Apr 2023 14:14:01 +0000</lastBuildDate>
 		
 		
 			<item>
@@ -29,6 +29,17 @@
 				<pubDate>Fri, 23 Jun 2023 23:59:00 +0000</pubDate>
 				<link>https://pythondeadlin.es/conference/pycones-2023/</link>
 				<guid isPermaLink="false">pycones23</guid>
+				<category>PY</category>
+			</item>
+		
+		
+		
+			<item>
+				<title>PyCon MEA @GlobalDevSlam 2023 Conference Deadline</title>
+				<description>Conference in Dubai, UAE on October 16 - 20, 2023. CfP: 2023-05-31 23:59:00 AoE.&lt;br /&gt;Find them here: @GlobalDevSlam </description>
+				<pubDate>Wed, 31 May 2023 23:59:00 +0000</pubDate>
+				<link>https://pythondeadlin.es/conference/pycon-mea-globaldevslam-2023/</link>
+				<guid isPermaLink="false">pyconMEA23</guid>
 				<category>PY</category>
 			</item>
 		
@@ -249,17 +260,6 @@
 				<pubDate>Fri, 09 Dec 2022 23:59:59 +0000</pubDate>
 				<link>https://pythondeadlin.es/conference/pycon-us-2023/</link>
 				<guid isPermaLink="false">pyconus23</guid>
-				<category>PY</category>
-			</item>
-		
-		
-		
-			<item>
-				<title>PyCascades 2023 Conference Deadline</title>
-				<description>Conference in Vancouver, Canada on March 18 - 19, 2023. CfP: 2022-11-16 23:59:59 AoE.&lt;br /&gt;Find them here: @pyCascades </description>
-				<pubDate>Wed, 16 Nov 2022 23:59:59 +0000</pubDate>
-				<link>https://pythondeadlin.es/conference/pycascades-2023/</link>
-				<guid isPermaLink="false">pycascades23</guid>
 				<category>PY</category>
 			</item>
 		
