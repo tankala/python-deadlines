@@ -56,7 +56,7 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/js-year-calendar.min.css?t=1682172841"
+      href="/static/css/js-year-calendar.min.css?t=1682366204"
       media="screen,projection"
     />
 
@@ -68,13 +68,13 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/deadlines.css?t=1682172841"
+      href="/static/css/deadlines.css?t=1682366204"
       media="screen,projection"
     />
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/calendar.css?t=1682172841"
+      href="/static/css/calendar.css?t=1682366204"
       media="screen,projection"
     />
 
@@ -728,6 +728,38 @@
 
         // add deadlines in red
         conf_list_all.push({
+          id: "pyConApac2023-deadline",
+          abbreviation: "pyConApac2023",
+          name: "PyCon APAC 2023 CfP",
+          color: "red",
+          location: "Tokyo, Japan",
+          date: "October 27 - 29, 2023",
+          subject: "PY",
+          startDate: Date.parse("2023-05-31 23:59:59"),
+          endDate: Date.parse("2023-05-31 23:59:59"),
+        });
+
+        // add Conferences in chosen color
+
+        var color = "black";
+        // use first sub to choose color
+
+        color = "#4B8BBE";
+
+        conf_list_all.push({
+          id: "pyConApac2023-conference",
+          abbreviation: "pyConApac2023",
+          name: "PyCon APAC 2023",
+          color: color,
+          location: "Tokyo, Japan",
+          date: "October 27 - 29, 2023",
+          subject: "PY",
+          startDate: Date.parse("2023-10-27"),
+          endDate: Date.parse("2023-10-29"),
+        });
+
+        // add deadlines in red
+        conf_list_all.push({
           id: "pyconMEA23-deadline",
           abbreviation: "pyconMEA23",
           name: "PyCon MEA @GlobalDevSlam 2023 CfP",
@@ -760,6 +792,70 @@
 
         // add deadlines in red
         conf_list_all.push({
+          id: "NorthBayPython23-deadline",
+          abbreviation: "NorthBayPython23",
+          name: "North Bay Python 2023 CfP",
+          color: "red",
+          location: "Petaluma, California, USA",
+          date: "July 29 - 30, 2023",
+          subject: "PY",
+          startDate: Date.parse("2023-05-19 23:59:00"),
+          endDate: Date.parse("2023-05-19 23:59:00"),
+        });
+
+        // add Conferences in chosen color
+
+        var color = "black";
+        // use first sub to choose color
+
+        color = "#4B8BBE";
+
+        conf_list_all.push({
+          id: "NorthBayPython23-conference",
+          abbreviation: "NorthBayPython23",
+          name: "North Bay Python 2023",
+          color: color,
+          location: "Petaluma, California, USA",
+          date: "July 29 - 30, 2023",
+          subject: "PY",
+          startDate: Date.parse("2023-07-29"),
+          endDate: Date.parse("2023-07-30"),
+        });
+
+        // add deadlines in red
+        conf_list_all.push({
+          id: "pyGotham23-deadline",
+          abbreviation: "pyGotham23",
+          name: "PyGotham 2023 CfP",
+          color: "red",
+          location: "Online",
+          date: "October 06 - 07, 2023",
+          subject: "PY",
+          startDate: Date.parse("2023-05-15 23:59:00"),
+          endDate: Date.parse("2023-05-15 23:59:00"),
+        });
+
+        // add Conferences in chosen color
+
+        var color = "black";
+        // use first sub to choose color
+
+        color = "#4B8BBE";
+
+        conf_list_all.push({
+          id: "pyGotham23-conference",
+          abbreviation: "pyGotham23",
+          name: "PyGotham 2023",
+          color: color,
+          location: "Online",
+          date: "October 06 - 07, 2023",
+          subject: "PY",
+          startDate: Date.parse("2023-10-06"),
+          endDate: Date.parse("2023-10-07"),
+        });
+
+        // add deadlines in red
+        conf_list_all.push({
           id: "djangoCon2023-deadline",
           abbreviation: "djangoCon2023",
           name: "DjangoCon US 2023 CfP",
@@ -788,6 +884,102 @@
           subject: "WEB",
           startDate: Date.parse("2023-10-15"),
           endDate: Date.parse("2023-10-20"),
+        });
+
+        // add deadlines in red
+        conf_list_all.push({
+          id: "PyConAU23-deadline",
+          abbreviation: "PyConAU23",
+          name: "PyCon AU 2023 CfP",
+          color: "red",
+          location: "Adelaide, Australia",
+          date: "August 18 - 22, 2023",
+          subject: "PY",
+          startDate: Date.parse("2023-05-14 23:59:00"),
+          endDate: Date.parse("2023-05-14 23:59:00"),
+        });
+
+        // add Conferences in chosen color
+
+        var color = "black";
+        // use first sub to choose color
+
+        color = "#4B8BBE";
+
+        conf_list_all.push({
+          id: "PyConAU23-conference",
+          abbreviation: "PyConAU23",
+          name: "PyCon AU 2023",
+          color: color,
+          location: "Adelaide, Australia",
+          date: "August 18 - 22, 2023",
+          subject: "PY",
+          startDate: Date.parse("2023-08-18"),
+          endDate: Date.parse("2023-08-22"),
+        });
+
+        // add deadlines in red
+        conf_list_all.push({
+          id: "pyConLatam23-deadline",
+          abbreviation: "pyConLatam23",
+          name: "PyCon Latam 2023 CfP",
+          color: "red",
+          location: "Monterrey, Mexico",
+          date: "August 24 - 26, 2023",
+          subject: "PY",
+          startDate: Date.parse("2023-05-07 23:59:00"),
+          endDate: Date.parse("2023-05-07 23:59:00"),
+        });
+
+        // add Conferences in chosen color
+
+        var color = "black";
+        // use first sub to choose color
+
+        color = "#4B8BBE";
+
+        conf_list_all.push({
+          id: "pyConLatam23-conference",
+          abbreviation: "pyConLatam23",
+          name: "PyCon Latam 2023",
+          color: color,
+          location: "Monterrey, Mexico",
+          date: "August 24 - 26, 2023",
+          subject: "PY",
+          startDate: Date.parse("2023-08-24"),
+          endDate: Date.parse("2023-08-26"),
+        });
+
+        // add deadlines in red
+        conf_list_all.push({
+          id: "pyConUganda23-deadline",
+          abbreviation: "pyConUganda23",
+          name: "PyCon Uganda 2023 CfP",
+          color: "red",
+          location: "Kampala, Uganda",
+          date: "September 21 - 23, 2023",
+          subject: "PY",
+          startDate: Date.parse("2023-05-05 23:59:00"),
+          endDate: Date.parse("2023-05-05 23:59:00"),
+        });
+
+        // add Conferences in chosen color
+
+        var color = "black";
+        // use first sub to choose color
+
+        color = "#4B8BBE";
+
+        conf_list_all.push({
+          id: "pyConUganda23-conference",
+          abbreviation: "pyConUganda23",
+          name: "PyCon Uganda 2023",
+          color: color,
+          location: "Kampala, Uganda",
+          date: "September 21 - 23, 2023",
+          subject: "PY",
+          startDate: Date.parse("2023-09-21"),
+          endDate: Date.parse("2023-09-23"),
         });
 
         // add deadlines in red
@@ -924,7 +1116,7 @@
           abbreviation: "pyconTW2023",
           name: "PyCon Taiwan 2023 CfP",
           color: "red",
-          location: "Taiwan",
+          location: "Taipei, Taiwan",
           date: "September 02 - 03, 2023",
           subject: "PY",
           startDate: Date.parse("2023-03-31 23:59:59"),
@@ -943,7 +1135,7 @@
           abbreviation: "pyconTW2023",
           name: "PyCon Taiwan 2023",
           color: color,
-          location: "Taiwan",
+          location: "Taipei, Taiwan",
           date: "September 02 - 03, 2023",
           subject: "PY",
           startDate: Date.parse("2023-09-02"),
@@ -1432,38 +1624,6 @@
 
         // add deadlines in red
         conf_list_all.push({
-          id: "pythonwebconference2023-deadline",
-          abbreviation: "pythonwebconference2023",
-          name: "Python Web Conference 2023 CfP",
-          color: "red",
-          location: "Online",
-          date: "March 13 - 17, 2023",
-          subject: "WEB",
-          startDate: Date.parse("2022-10-01 23:00:00"),
-          endDate: Date.parse("2022-10-01 23:00:00"),
-        });
-
-        // add Conferences in chosen color
-
-        var color = "black";
-        // use first sub to choose color
-
-        color = "#0D0A0B";
-
-        conf_list_all.push({
-          id: "pythonwebconference2023-conference",
-          abbreviation: "pythonwebconference2023",
-          name: "Python Web Conference 2023",
-          color: color,
-          location: "Online",
-          date: "March 13 - 17, 2023",
-          subject: "WEB",
-          startDate: Date.parse("2023-03-13"),
-          endDate: Date.parse("2023-03-17"),
-        });
-
-        // add deadlines in red
-        conf_list_all.push({
           id: "pydataTelAviv23-deadline",
           abbreviation: "pydataTelAviv23",
           name: "PyData Tel Aviv 2023 CfP",
@@ -1588,6 +1748,38 @@
           subject: "PY",
           startDate: Date.parse("2023-09-29"),
           endDate: Date.parse("2023-10-02"),
+        });
+
+        // add deadlines in red
+        conf_list_all.push({
+          id: "afroPython23-deadline",
+          abbreviation: "afroPython23",
+          name: "Afro Python 2023 CfP",
+          color: "red",
+          location: "Salvador, Brasil",
+          date: "July 22, 2023",
+          subject: "PY",
+          startDate: Date.parse("TBA"),
+          endDate: Date.parse("TBA"),
+        });
+
+        // add Conferences in chosen color
+
+        var color = "black";
+        // use first sub to choose color
+
+        color = "#4B8BBE";
+
+        conf_list_all.push({
+          id: "afroPython23-conference",
+          abbreviation: "afroPython23",
+          name: "Afro Python 2023",
+          color: color,
+          location: "Salvador, Brasil",
+          date: "July 22, 2023",
+          subject: "PY",
+          startDate: Date.parse("2023-07-22"),
+          endDate: Date.parse("2023-07-22"),
         });
 
         return conf_list_all;
