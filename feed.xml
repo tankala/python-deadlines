@@ -9,7 +9,7 @@
 		<title>Python Conference Deadlines</title>
 		<description>Countdowns to your favourite Python conferences with calls for participation and resources to submit awesome talks!</description>
 		<link>https://pythondeadlin.es/feed.xml</link>
-		<lastBuildDate>Fri, 05 May 2023 18:58:15 +0000</lastBuildDate>
+		<lastBuildDate>Fri, 05 May 2023 19:05:34 +0000</lastBuildDate>
 		
 		
 			<item>
@@ -52,6 +52,17 @@
 				<link>https://pythondeadlin.es/conference/pycon-hk-2023/</link>
 				<guid isPermaLink="false">pyconHK23</guid>
 				<category>PY</category>
+			</item>
+		
+		
+		
+			<item>
+				<title>Pydata Amsterdam 2023 Conference Deadline</title>
+				<description>Conference in Amsterdam, Netherlands on September 14 - 16, 2023. CfP: 2023-06-11 23:59:00 AoE. </description>
+				<pubDate>Sun, 11 Jun 2023 23:59:00 +0000</pubDate>
+				<link>https://pythondeadlin.es/conference/pydata-amsterdam-2023/</link>
+				<guid isPermaLink="false">pydataAmsterdam23</guid>
+				<category>PYDATA</category>
 			</item>
 		
 		
@@ -249,17 +260,6 @@
 				<pubDate>Sun, 19 Mar 2023 23:59:00 +0000</pubDate>
 				<link>https://pythondeadlin.es/conference/europython-2023/</link>
 				<guid isPermaLink="false">europython2023</guid>
-				<category>PY</category>
-			</item>
-		
-		
-		
-			<item>
-				<title>PyCon Lithuania 2023 Conference Deadline</title>
-				<description>Conference in Vilnius, Lithuania on May 17 - 20, 2023. CfP: 2023-03-18 00:00:00 AoE.&lt;br /&gt;Find them here: @PyConLT </description>
-				<pubDate>Sat, 18 Mar 2023 00:00:00 +0000</pubDate>
-				<link>https://pythondeadlin.es/conference/pycon-lithuania-2023/</link>
-				<guid isPermaLink="false">pyconlt2023</guid>
 				<category>PY</category>
 			</item>
 		

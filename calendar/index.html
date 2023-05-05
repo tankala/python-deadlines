@@ -56,7 +56,7 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/js-year-calendar.min.css?t=1683313095"
+      href="/static/css/js-year-calendar.min.css?t=1683313534"
       media="screen,projection"
     />
 
@@ -68,13 +68,13 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/deadlines.css?t=1683313095"
+      href="/static/css/deadlines.css?t=1683313534"
       media="screen,projection"
     />
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/calendar.css?t=1683313095"
+      href="/static/css/calendar.css?t=1683313534"
       media="screen,projection"
     />
 
@@ -788,6 +788,38 @@
           subject: "PY",
           startDate: Date.parse("2023-11-10"),
           endDate: Date.parse("2023-11-11"),
+        });
+
+        // add deadlines in red
+        conf_list_all.push({
+          id: "pydataAmsterdam23-deadline",
+          abbreviation: "pydataAmsterdam23",
+          name: "Pydata Amsterdam 2023 CfP",
+          color: "red",
+          location: "Amsterdam, Netherlands",
+          date: "September 14 - 16, 2023",
+          subject: "PYDATA",
+          startDate: Date.parse("2023-06-11 23:59:00"),
+          endDate: Date.parse("2023-06-11 23:59:00"),
+        });
+
+        // add Conferences in chosen color
+
+        var color = "black";
+        // use first sub to choose color
+
+        color = "#849324";
+
+        conf_list_all.push({
+          id: "pydataAmsterdam23-conference",
+          abbreviation: "pydataAmsterdam23",
+          name: "Pydata Amsterdam 2023",
+          color: color,
+          location: "Amsterdam, Netherlands",
+          date: "September 14 - 16, 2023",
+          subject: "PYDATA",
+          startDate: Date.parse("2023-09-14"),
+          endDate: Date.parse("2023-09-16"),
         });
 
         // add deadlines in red
