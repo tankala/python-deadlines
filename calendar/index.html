@@ -56,7 +56,7 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/js-year-calendar.min.css?t=1683312793"
+      href="/static/css/js-year-calendar.min.css?t=1683313095"
       media="screen,projection"
     />
 
@@ -68,13 +68,13 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/deadlines.css?t=1683312793"
+      href="/static/css/deadlines.css?t=1683313095"
       media="screen,projection"
     />
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/calendar.css?t=1683312793"
+      href="/static/css/calendar.css?t=1683313095"
       media="screen,projection"
     />
 
@@ -1016,6 +1016,38 @@
 
         // add deadlines in red
         conf_list_all.push({
+          id: "scipyEU23-deadline",
+          abbreviation: "scipyEU23",
+          name: "euroSciPy 2023 CfP",
+          color: "red",
+          location: "Basel, Switzerland",
+          date: "Aug 14 - 18, 2023",
+          subject: "SCIPY",
+          startDate: Date.parse("2023-05-14 23:59:59"),
+          endDate: Date.parse("2023-05-14 23:59:59"),
+        });
+
+        // add Conferences in chosen color
+
+        var color = "black";
+        // use first sub to choose color
+
+        color = "#70163C";
+
+        conf_list_all.push({
+          id: "scipyEU23-conference",
+          abbreviation: "scipyEU23",
+          name: "euroSciPy 2023",
+          color: color,
+          location: "Basel, Switzerland",
+          date: "Aug 14 - 18, 2023",
+          subject: "SCIPY",
+          startDate: Date.parse("2023-08-14"),
+          endDate: Date.parse("2023-08-18"),
+        });
+
+        // add deadlines in red
+        conf_list_all.push({
           id: "pyConLatam23-deadline",
           abbreviation: "pyConLatam23",
           name: "PyCon Latam 2023 CfP",
@@ -1076,38 +1108,6 @@
           subject: "PY",
           startDate: Date.parse("2023-09-21"),
           endDate: Date.parse("2023-09-23"),
-        });
-
-        // add deadlines in red
-        conf_list_all.push({
-          id: "scipyEU23-deadline",
-          abbreviation: "scipyEU23",
-          name: "euroSciPy 2023 CfP",
-          color: "red",
-          location: "Basel, Switzerland",
-          date: "Aug 14 - 18, 2023",
-          subject: "SCIPY",
-          startDate: Date.parse("2023-04-30 23:59:59"),
-          endDate: Date.parse("2023-04-30 23:59:59"),
-        });
-
-        // add Conferences in chosen color
-
-        var color = "black";
-        // use first sub to choose color
-
-        color = "#70163C";
-
-        conf_list_all.push({
-          id: "scipyEU23-conference",
-          abbreviation: "scipyEU23",
-          name: "euroSciPy 2023",
-          color: color,
-          location: "Basel, Switzerland",
-          date: "Aug 14 - 18, 2023",
-          subject: "SCIPY",
-          startDate: Date.parse("2023-08-14"),
-          endDate: Date.parse("2023-08-18"),
         });
 
         // add deadlines in red
