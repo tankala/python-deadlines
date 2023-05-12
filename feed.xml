@@ -9,7 +9,7 @@
 		<title>Python Conference Deadlines</title>
 		<description>Countdowns to your favourite Python conferences with calls for participation and resources to submit awesome talks!</description>
 		<link>https://pythondeadlin.es/feed.xml</link>
-		<lastBuildDate>Fri, 12 May 2023 10:18:32 +0000</lastBuildDate>
+		<lastBuildDate>Fri, 12 May 2023 10:24:24 +0000</lastBuildDate>
 		
 		
 			<item>
@@ -18,6 +18,17 @@
 				<pubDate>Fri, 18 Aug 2023 23:59:00 +0000</pubDate>
 				<link>https://pythondeadlin.es/conference/pycon-za-2023/</link>
 				<guid isPermaLink="false">pyconZA23</guid>
+				<category>PY</category>
+			</item>
+		
+		
+		
+			<item>
+				<title>Swiss Python Summit 2023 Conference Deadline</title>
+				<description>Conference in Rapperswil, Switzerland on September 21 - 21, 2023. CfP: 2023-07-01 23:59:00 AoE.&lt;br /&gt;Find them here: @pythonsummit </description>
+				<pubDate>Sat, 01 Jul 2023 23:59:00 +0000</pubDate>
+				<link>https://pythondeadlin.es/conference/swiss-python-summit-2023/</link>
+				<guid isPermaLink="false">swissPythonSummit23</guid>
 				<category>PY</category>
 			</item>
 		
@@ -249,17 +260,6 @@
 				<pubDate>Sun, 26 Mar 2023 23:59:59 +0000</pubDate>
 				<link>https://pythondeadlin.es/conference/pycon-israel-2023/</link>
 				<guid isPermaLink="false">pyconisrael2023</guid>
-				<category>PY</category>
-			</item>
-		
-		
-		
-			<item>
-				<title>EuroPython 2023 Conference Deadline</title>
-				<description>Conference in Prague, Czech Republic on July 17 - 23, 2023. CfP: 2023-03-19 23:59:00 AoE.&lt;br /&gt;Find them here: @EuroPython </description>
-				<pubDate>Sun, 19 Mar 2023 23:59:00 +0000</pubDate>
-				<link>https://pythondeadlin.es/conference/europython-2023/</link>
-				<guid isPermaLink="false">europython2023</guid>
 				<category>PY</category>
 			</item>
 		
