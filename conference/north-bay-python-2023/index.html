@@ -69,7 +69,7 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/js-year-calendar.min.css?t=1684599283"
+      href="/static/css/js-year-calendar.min.css?t=1684601300"
       media="screen,projection"
     />
 
@@ -81,13 +81,13 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/deadlines.css?t=1684599283"
+      href="/static/css/deadlines.css?t=1684601300"
       media="screen,projection"
     />
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/calendar.css?t=1684599283"
+      href="/static/css/calendar.css?t=1684601300"
       media="screen,projection"
     />
 
@@ -179,15 +179,29 @@
             var xml = parser.parseFromString(xmlText, "text/xml");
             var items = xml.querySelectorAll("item");
             var feedContainer = document.getElementById("mastodon-feed");
+            var postLimit = 3; // Number of posts to display
 
-            items.forEach(function (item) {
-              var title = item.querySelector("title").textContent;
+            for (var i = 0; i < postLimit && i < items.length; i++) {
+              var item = items[i];
+              var doc = new DOMParser().parseFromString(
+                item.querySelector("description").textContent,
+                "text/html"
+              );
+              var post = doc.documentElement.textContent;
               var link = item.querySelector("link").textContent;
+              var pubDate = item.querySelector("pubDate").textContent;
 
               var feedItem = document.createElement("div");
-              feedItem.innerHTML = '<a href="' + link + '">' + title + "</a>";
+              feedItem.innerHTML =
+                "<div>" +
+                post +
+                '</div><a href="' +
+                link +
+                '">' +
+                pubDate +
+                " by North Bay Python</a>";
               feedContainer.appendChild(feedItem);
-            });
+            }
           })
           .catch(function (error) {
             console.log("Error fetching Mastodon RSS feed:", error);
@@ -469,7 +483,7 @@
       </div>
       <div id="page-content">
         <div id="conf-key-facts" class="row">
-          <div class="col-12 col-md-8">
+          <div class="col-12 col-md-6">
             <div>
               <img
                 src="/static/img/084-calendar.svg"
@@ -575,38 +589,24 @@
               >
             </div>
           </div>
-          <div class="meta deadline">Download Conference deadline:</div>
-          <div id="conference-deadline" class="calendar meta"></div>
-          <div class="meta deadline">
-            Deadline in timezone from conference website:
+
+          <div class="col-12 col-md-6">
+            <!-- Mastodon timeline -->
+            <div id="mastodon-feed"></div>
           </div>
-          <div class="meta">
-            <span class="deadline-time"></span>
-          </div>
-          <div class="meta">
-            Deadline in your local
-            <span class="local-timezone"></span> timezone:
-          </div>
-          <div class="local-timezone-hide meta">
-            <span class="deadline-local-time"></span>
-          </div>
-        </div>
-        <div class="col-12 col-md-4">
-          <!-- Mastodon timeline -->
-          <div id="mastodon-feed"></div>
         </div>
         <div id="conf-deadline-timer" class="row">
           <div id="cfp-timer" class="col-12 conf-timer"></div>
         </div>
         <div class="row">
           <div
-            id="d88385a7-6950-470b-b61e-c346e05b5bff"
+            id="b36b46ba-55a4-4209-b399-27a7e01e7a18"
             style="width: 100%; height: 400px"
             class="jekyll-map"
           ></div>
           <script type="text/javascript">
             jekyllMaps.register(
-              "d88385a7-6950-470b-b61e-c346e05b5bff",
+              "b36b46ba-55a4-4209-b399-27a7e01e7a18",
               [
                 {
                   latitude: 38.295411,
