@@ -69,7 +69,7 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/js-year-calendar.min.css?t=1684603358"
+      href="/static/css/js-year-calendar.min.css?t=1684604326"
       media="screen,projection"
     />
 
@@ -81,13 +81,13 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/deadlines.css?t=1684603358"
+      href="/static/css/deadlines.css?t=1684604326"
       media="screen,projection"
     />
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/calendar.css?t=1684603358"
+      href="/static/css/calendar.css?t=1684604326"
       media="screen,projection"
     />
 
@@ -188,14 +188,15 @@
               var pubDate = item.querySelector("pubDate").textContent;
 
               var feedItem = document.createElement("div");
+              feedItem.setAttribute("class", "timeline-item");
               feedItem.innerHTML =
-                '<div class="timeline-item"><div class="timeline-content">' +
+                '<div class="timeline-content">' +
                 post +
                 '</div><a href="' +
                 link +
                 '">' +
                 pubDate +
-                " by PyCon ZA</a></div>";
+                " by PyCon ZA</a>";
               feedContainer.appendChild(feedItem);
             }
           })
@@ -595,13 +596,13 @@
         </div>
         <div class="row">
           <div
-            id="426934c1-32a4-4fe7-8d32-ebd0b145ad60"
+            id="a6f6becc-0836-4d76-a2c2-1cabcd439ee3"
             style="width: 100%; height: 400px"
             class="jekyll-map"
           ></div>
           <script type="text/javascript">
             jekyllMaps.register(
-              "426934c1-32a4-4fe7-8d32-ebd0b145ad60",
+              "a6f6becc-0836-4d76-a2c2-1cabcd439ee3",
               [
                 {
                   latitude: -29.861825,
