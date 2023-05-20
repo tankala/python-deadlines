@@ -69,7 +69,7 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/js-year-calendar.min.css?t=1684601300"
+      href="/static/css/js-year-calendar.min.css?t=1684602026"
       media="screen,projection"
     />
 
@@ -81,13 +81,13 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/deadlines.css?t=1684601300"
+      href="/static/css/deadlines.css?t=1684602026"
       media="screen,projection"
     />
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/calendar.css?t=1684601300"
+      href="/static/css/calendar.css?t=1684602026"
       media="screen,projection"
     />
 
@@ -440,6 +440,9 @@
         </div>
       </div>
       <div id="page-content">
+        <div id="conf-deadline-timer" class="row">
+          <div id="cfp-timer" class="col-12 conf-timer"></div>
+        </div>
         <div id="conf-key-facts" class="row">
           <div class="col-12 col-md-6">
             <div>
@@ -498,6 +501,22 @@
                 >@PyConPH</a
               >
             </div>
+
+            <div class="meta deadline">Download Conference deadline:</div>
+            <div id="conference-deadline" class="calendar meta"></div>
+            <div class="meta deadline">
+              Deadline in timezone from conference website:
+            </div>
+            <div class="meta">
+              <span class="deadline-time"></span>
+            </div>
+            <div class="meta">
+              Deadline in your local
+              <span class="local-timezone"></span> timezone:
+            </div>
+            <div class="local-timezone-hide meta">
+              <span class="deadline-local-time"></span>
+            </div>
           </div>
 
           <div class="col-12 col-md-6">
@@ -517,18 +536,15 @@
             </div>
           </div>
         </div>
-        <div id="conf-deadline-timer" class="row">
-          <div id="cfp-timer" class="col-12 conf-timer"></div>
-        </div>
         <div class="row">
           <div
-            id="a1d68205-add5-4ee1-9376-30946f84ade1"
+            id="e4848e51-a41a-4e25-b66f-fa969411fb20"
             style="width: 100%; height: 400px"
             class="jekyll-map"
           ></div>
           <script type="text/javascript">
             jekyllMaps.register(
-              "a1d68205-add5-4ee1-9376-30946f84ade1",
+              "e4848e51-a41a-4e25-b66f-fa969411fb20",
               [
                 {
                   latitude: 14.5948914,
