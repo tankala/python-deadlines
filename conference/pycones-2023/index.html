@@ -69,7 +69,7 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/js-year-calendar.min.css?t=1684602026"
+      href="/static/css/js-year-calendar.min.css?t=1684603358"
       media="screen,projection"
     />
 
@@ -81,13 +81,13 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/deadlines.css?t=1684602026"
+      href="/static/css/deadlines.css?t=1684603358"
       media="screen,projection"
     />
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/calendar.css?t=1684602026"
+      href="/static/css/calendar.css?t=1684603358"
       media="screen,projection"
     />
 
@@ -179,27 +179,23 @@
             var xml = parser.parseFromString(xmlText, "text/xml");
             var items = xml.querySelectorAll("item");
             var feedContainer = document.getElementById("mastodon-feed");
-            var postLimit = 3; // Number of posts to display
+            var postLimit = 2; // Number of posts to display
 
             for (var i = 0; i < postLimit && i < items.length; i++) {
               var item = items[i];
-              var doc = new DOMParser().parseFromString(
-                item.querySelector("description").textContent,
-                "text/html"
-              );
-              var post = doc.documentElement.textContent;
+              var post = item.querySelector("description").textContent;
               var link = item.querySelector("link").textContent;
               var pubDate = item.querySelector("pubDate").textContent;
 
               var feedItem = document.createElement("div");
               feedItem.innerHTML =
-                "<div>" +
+                '<div class="timeline-item"><div class="timeline-content">' +
                 post +
                 '</div><a href="' +
                 link +
                 '">' +
                 pubDate +
-                " by PyConEs</a>";
+                " by PyConEs</a></div>";
               feedContainer.appendChild(feedItem);
             }
           })
@@ -609,18 +605,22 @@
 
           <div class="col-12 col-md-6">
             <!-- Mastodon timeline -->
+            <div class="meta">Mastodon Posts by PyConEs:</div>
             <div id="mastodon-feed"></div>
+            <a href="https://fosstodon.org/@pycones"
+              >See all Mastodon posts for PyConEs</a
+            >
           </div>
         </div>
         <div class="row">
           <div
-            id="92282e71-e151-40d7-849d-12e442da5fbc"
+            id="58bb3ac5-74c1-411d-a237-db3ed862b3ba"
             style="width: 100%; height: 400px"
             class="jekyll-map"
           ></div>
           <script type="text/javascript">
             jekyllMaps.register(
-              "92282e71-e151-40d7-849d-12e442da5fbc",
+              "58bb3ac5-74c1-411d-a237-db3ed862b3ba",
               [
                 {
                   latitude: 28.2935785,
