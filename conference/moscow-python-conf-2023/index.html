@@ -69,7 +69,7 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/js-year-calendar.min.css?t=1685105529"
+      href="/static/css/js-year-calendar.min.css?t=1685105716"
       media="screen,projection"
     />
 
@@ -81,13 +81,13 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/deadlines.css?t=1685105529"
+      href="/static/css/deadlines.css?t=1685105716"
       media="screen,projection"
     />
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/calendar.css?t=1685105529"
+      href="/static/css/calendar.css?t=1685105716"
       media="screen,projection"
     />
 
@@ -166,6 +166,16 @@
       type="text/javascript"
       src="/static/js/bootstrap-multiselect.min.js"
     ></script>
+
+    <style>
+      #twitter-widget {
+        width: 100%;
+      }
+
+      .twitter-timeline {
+        width: 100% !important;
+      }
+    </style>
 
     <script type="text/javascript">
       /* global google */
@@ -441,7 +451,7 @@
       </div>
       <div id="page-content">
         <div id="conf-deadline-timer" class="row">
-          <div id="cfp-timer" class="col-12 conf-timer">TBA</div>
+          <div id="cfp-timer" class="col-12 conf-timer"></div>
         </div>
         <div id="conf-key-facts" class="row">
           <div class="col-12 col-md-6">
@@ -486,6 +496,38 @@
               >
             </div>
 
+            <div>
+              <img
+                src="/static/img/035-file-text.svg"
+                class="badge-link"
+                alt="Document Icon for CfP link"
+                width="16"
+                height="16"
+              />
+              <a
+                id="conf-cfp_link"
+                target="_blank"
+                href="https://cfp.conf.python.ru"
+                >Call for Participation</a
+              >
+            </div>
+
+            <div>
+              <img
+                src="/static/img/407-twitter.svg"
+                class="badge-link"
+                alt="Twitter icon"
+                width="16"
+                height="16"
+              />
+              <a
+                id="conf-twitter"
+                target="_blank"
+                href="https://twitter.com/moscowpython"
+                >@moscowpython</a
+              >
+            </div>
+
             <div class="meta deadline">Download Conference deadline:</div>
             <div id="conference-deadline" class="calendar meta"></div>
             <div class="meta deadline">
@@ -503,17 +545,32 @@
             </div>
           </div>
 
-          <div class="col-12 col-md-6"></div>
+          <div class="col-12 col-md-6">
+            <!-- Twitter timeline -->
+            <div id="twitter-widget">
+              <a
+                class="twitter-timeline"
+                href="https://twitter.com/moscowpython"
+                data-tweet-limit="2"
+                >Tweets by moscowpython</a
+              >
+              <script
+                async
+                src="https://platform.twitter.com/widgets.js"
+                charset="utf-8"
+              ></script>
+            </div>
+          </div>
         </div>
         <div class="row">
           <div
-            id="e0583f9d-ecb0-4e66-99a4-14b121fd68cb"
+            id="f95bf0c4-716a-44c2-b39e-aacfb041eca4"
             style="width: 100%; height: 400px"
             class="jekyll-map"
           ></div>
           <script type="text/javascript">
             jekyllMaps.register(
-              "e0583f9d-ecb0-4e66-99a4-14b121fd68cb",
+              "f95bf0c4-716a-44c2-b39e-aacfb041eca4",
               [
                 {
                   latitude: 55.7504461,
@@ -664,9 +721,48 @@
 
         // other
 
-        $("#cfp-timer").html("TBA");
-        $(".deadline-time").html("TBA");
-        $(".deadline-local-time").html("TBA");
+        // Use specified timezone for deadlines if available else use AoE timezone
+
+        var confDeadline = DateTime.fromSQL("2023-04-17 23:59:00", {
+          zone: "Europe/Moscow",
+        });
+
+        // check if timezone is valid otherwise replace by system timezone
+        if (confDeadline.invalid) {
+          var confDeadline = DateTime.fromSQL("2023-04-17 23:59:00");
+          console.log("Invalid timezone. Using system timezone instead.");
+        }
+
+        // add calendar
+        var conferenceDeadlineCalendar = createCalendarFromObject({
+          id: "-",
+          title: "Moscow Python Conf++ 2023 deadline",
+          date: confDeadline.toJSDate(),
+          duration: 60,
+        });
+        document
+          .querySelector("#conference-deadline")
+          .appendChild(conferenceDeadlineCalendar);
+
+        // render countdown timer
+        $("#cfp-timer").countdown(confDeadline.toJSDate(), function (event) {
+          $(this).html(event.strftime("%D days %Hh %Mm %Ss"));
+        });
+
+        // render deadline conference time
+
+        $(".deadline-time").html(
+          confDeadline
+            .setZone("Europe/Moscow")
+            .toLocaleString(DateTime.DATETIME_HUGE_WITH_SECONDS)
+        );
+
+        // render deadline in local timezone
+        $(".deadline-local-time").html(
+          confDeadline
+            .setZone("system")
+            .toLocaleString(DateTime.DATETIME_HUGE_WITH_SECONDS)
+        );
       });
     </script>
     <script async defer>

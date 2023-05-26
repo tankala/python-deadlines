@@ -69,7 +69,7 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/js-year-calendar.min.css?t=1685105529"
+      href="/static/css/js-year-calendar.min.css?t=1685105716"
       media="screen,projection"
     />
 
@@ -81,13 +81,13 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/deadlines.css?t=1685105529"
+      href="/static/css/deadlines.css?t=1685105716"
       media="screen,projection"
     />
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/calendar.css?t=1685105529"
+      href="/static/css/calendar.css?t=1685105716"
       media="screen,projection"
     />
 
@@ -449,7 +449,7 @@
       </div>
       <div id="page-content">
         <div id="conf-deadline-timer" class="row">
-          <div id="cfp-timer" class="col-12 conf-timer">TBA</div>
+          <div id="cfp-timer" class="col-12 conf-timer"></div>
         </div>
         <div id="conf-key-facts" class="row">
           <div class="col-12 col-md-6">
@@ -491,6 +491,38 @@
                 target="_blank"
                 href="https://in.pycon.org/2023/"
                 >https://in.pycon.org/2023/</a
+              >
+            </div>
+
+            <div>
+              <img
+                src="/static/img/035-file-text.svg"
+                class="badge-link"
+                alt="Document Icon for CfP link"
+                width="16"
+                height="16"
+              />
+              <a
+                id="conf-cfp_link"
+                target="_blank"
+                href="https://in.pycon.org/cfp/pycon-india-2023/proposals/"
+                >Call for Participation</a
+              >
+            </div>
+
+            <div>
+              <img
+                src="/static/img/060-coin-dollar.svg"
+                class="badge-link"
+                alt="Coin Dollar Icon for Sponsorship"
+                width="16"
+                height="16"
+              />
+              <a
+                id="conf-sponsor"
+                target="_blank"
+                href="https://docs.google.com/forms/d/13MVcj2XEF1DfTmV3fPjq9SN5qzY22k3R7cJVKlfbhZ4/"
+                >Sponsorship Opportunity</a
               >
             </div>
 
@@ -546,13 +578,13 @@
         </div>
         <div class="row">
           <div
-            id="3abddd37-f16e-4e19-9fcc-a6eae1bbc50d"
+            id="1cbed522-e8a8-4759-b49b-7f44567b692c"
             style="width: 100%; height: 400px"
             class="jekyll-map"
           ></div>
           <script type="text/javascript">
             jekyllMaps.register(
-              "3abddd37-f16e-4e19-9fcc-a6eae1bbc50d",
+              "1cbed522-e8a8-4759-b49b-7f44567b692c",
               [
                 {
                   latitude: 17.360589,
@@ -703,9 +735,48 @@
 
         // other
 
-        $("#cfp-timer").html("TBA");
-        $(".deadline-time").html("TBA");
-        $(".deadline-local-time").html("TBA");
+        // Use specified timezone for deadlines if available else use AoE timezone
+
+        var confDeadline = DateTime.fromSQL("2023-08-05 23:59:00", {
+          zone: "Asia/Kolkata",
+        });
+
+        // check if timezone is valid otherwise replace by system timezone
+        if (confDeadline.invalid) {
+          var confDeadline = DateTime.fromSQL("2023-08-05 23:59:00");
+          console.log("Invalid timezone. Using system timezone instead.");
+        }
+
+        // add calendar
+        var conferenceDeadlineCalendar = createCalendarFromObject({
+          id: "-",
+          title: "PyCon India 2023 deadline",
+          date: confDeadline.toJSDate(),
+          duration: 60,
+        });
+        document
+          .querySelector("#conference-deadline")
+          .appendChild(conferenceDeadlineCalendar);
+
+        // render countdown timer
+        $("#cfp-timer").countdown(confDeadline.toJSDate(), function (event) {
+          $(this).html(event.strftime("%D days %Hh %Mm %Ss"));
+        });
+
+        // render deadline conference time
+
+        $(".deadline-time").html(
+          confDeadline
+            .setZone("Asia/Kolkata")
+            .toLocaleString(DateTime.DATETIME_HUGE_WITH_SECONDS)
+        );
+
+        // render deadline in local timezone
+        $(".deadline-local-time").html(
+          confDeadline
+            .setZone("system")
+            .toLocaleString(DateTime.DATETIME_HUGE_WITH_SECONDS)
+        );
       });
     </script>
     <script async defer>

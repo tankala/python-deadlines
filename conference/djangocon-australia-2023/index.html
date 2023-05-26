@@ -69,7 +69,7 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/js-year-calendar.min.css?t=1685105529"
+      href="/static/css/js-year-calendar.min.css?t=1685105716"
       media="screen,projection"
     />
 
@@ -81,13 +81,13 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/deadlines.css?t=1685105529"
+      href="/static/css/deadlines.css?t=1685105716"
       media="screen,projection"
     />
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/calendar.css?t=1685105529"
+      href="/static/css/calendar.css?t=1685105716"
       media="screen,projection"
     />
 
@@ -166,6 +166,45 @@
       type="text/javascript"
       src="/static/js/bootstrap-multiselect.min.js"
     ></script>
+
+    <link rel="stylesheet" type="text/css" href="/static/css/mastodon.css" />
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        fetch("https://fosstodon.org/@djangoconau.rss")
+          .then(function (response) {
+            return response.text();
+          })
+          .then(function (xmlText) {
+            var parser = new DOMParser();
+            var xml = parser.parseFromString(xmlText, "text/xml");
+            var items = xml.querySelectorAll("item");
+            var feedContainer = document.getElementById("mastodon-feed");
+            var postLimit = 2; // Number of posts to display
+
+            for (var i = 0; i < postLimit && i < items.length; i++) {
+              var item = items[i];
+              var post = item.querySelector("description").textContent;
+              var link = item.querySelector("link").textContent;
+              var pubDate = item.querySelector("pubDate").textContent;
+
+              var feedItem = document.createElement("div");
+              feedItem.setAttribute("class", "timeline-item");
+              feedItem.innerHTML =
+                '<div class="timeline-content">' +
+                post +
+                '</div><a href="' +
+                link +
+                '">' +
+                pubDate +
+                " by DjangoCon Australia</a>";
+              feedContainer.appendChild(feedItem);
+            }
+          })
+          .catch(function (error) {
+            console.log("Error fetching Mastodon RSS feed:", error);
+          });
+      });
+    </script>
   </head>
 
   <body>
@@ -351,6 +390,38 @@
               >
             </div>
 
+            <div>
+              <img
+                src="/static/img/407-twitter.svg"
+                class="badge-link"
+                alt="Twitter icon"
+                width="16"
+                height="16"
+              />
+              <a
+                id="conf-twitter"
+                target="_blank"
+                href="https://twitter.com/DjangoConAU"
+                >@DjangoConAU</a
+              >
+            </div>
+
+            <div>
+              <img
+                src="/static/img/407-mastodon.svg"
+                class="badge-link"
+                alt="Mastodon icon"
+                width="16"
+                height="16"
+              />
+              <a
+                id="conf-mastodon"
+                target="_blank"
+                href="https://fosstodon.org/@djangoconau"
+                >Mastodon</a
+              >
+            </div>
+
             <div class="meta deadline">Download Conference deadline:</div>
             <div id="conference-deadline" class="calendar meta"></div>
             <div class="meta deadline">
@@ -368,7 +439,14 @@
             </div>
           </div>
 
-          <div class="col-12 col-md-6"></div>
+          <div class="col-12 col-md-6">
+            <!-- Mastodon timeline -->
+            <div class="meta">Mastodon Posts by DjangoCon Australia:</div>
+            <div id="mastodon-feed"></div>
+            <a href="https://fosstodon.org/@djangoconau"
+              >See all Mastodon posts for DjangoCon Australia</a
+            >
+          </div>
         </div>
         <div class="row"></div>
       </div>

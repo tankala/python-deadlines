@@ -56,7 +56,7 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/js-year-calendar.min.css?t=1685105529"
+      href="/static/css/js-year-calendar.min.css?t=1685105716"
       media="screen,projection"
     />
 
@@ -68,13 +68,13 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/deadlines.css?t=1685105529"
+      href="/static/css/deadlines.css?t=1685105716"
       media="screen,projection"
     />
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/calendar.css?t=1685105529"
+      href="/static/css/calendar.css?t=1685105716"
       media="screen,projection"
     />
 
@@ -708,6 +708,70 @@
 
         // add deadlines in red
         conf_list_all.push({
+          id: "pycon-india-2023-deadline",
+          abbreviation: "pycon-india-2023",
+          name: "PyCon India 2023 CfP",
+          color: "red",
+          location: "Hyderabad, India",
+          date: "29 September - 2 October, 2023",
+          subject: "PY",
+          startDate: Date.parse("2023-08-05 23:59:00"),
+          endDate: Date.parse("2023-08-05 23:59:00"),
+        });
+
+        // add Conferences in chosen color
+
+        var color = "black";
+        // use first sub to choose color
+
+        color = "#4B8BBE";
+
+        conf_list_all.push({
+          id: "pycon-india-2023-conference",
+          abbreviation: "pycon-india-2023",
+          name: "PyCon India 2023",
+          color: color,
+          location: "Hyderabad, India",
+          date: "29 September - 2 October, 2023",
+          subject: "PY",
+          startDate: Date.parse("2023-09-29"),
+          endDate: Date.parse("2023-10-02"),
+        });
+
+        // add deadlines in red
+        conf_list_all.push({
+          id: "pydata-tel-aviv-2023-deadline",
+          abbreviation: "pydata-tel-aviv-2023",
+          name: "PyData Tel Aviv 2023 CfP",
+          color: "red",
+          location: "Tel Aviv, Israel",
+          date: "November 14th, 2023",
+          subject: "PYDATA",
+          startDate: Date.parse("2023-07-14 23:59:00"),
+          endDate: Date.parse("2023-07-14 23:59:00"),
+        });
+
+        // add Conferences in chosen color
+
+        var color = "black";
+        // use first sub to choose color
+
+        color = "#849324";
+
+        conf_list_all.push({
+          id: "pydata-tel-aviv-2023-conference",
+          abbreviation: "pydata-tel-aviv-2023",
+          name: "PyData Tel Aviv 2023",
+          color: color,
+          location: "Tel Aviv, Israel",
+          date: "November 14th, 2023",
+          subject: "PYDATA",
+          startDate: Date.parse("2023-11-14"),
+          endDate: Date.parse("2023-11-14"),
+        });
+
+        // add deadlines in red
+        conf_list_all.push({
           id: "swiss-python-summit-2023-deadline",
           abbreviation: "swiss-python-summit-2023",
           name: "Swiss Python Summit 2023 CfP",
@@ -888,6 +952,38 @@
           subject: "PYDATA",
           startDate: Date.parse("2023-09-14"),
           endDate: Date.parse("2023-09-16"),
+        });
+
+        // add deadlines in red
+        conf_list_all.push({
+          id: "python-brasil-2023-deadline",
+          abbreviation: "python-brasil-2023",
+          name: "Python Brasil 2023 CfP",
+          color: "red",
+          location: "Serra Gaúcha, Rio Grande do Sul, Brazil",
+          date: "October 30 - November 05, 2023",
+          subject: "PY",
+          startDate: Date.parse("2023-06-08 23:59:00"),
+          endDate: Date.parse("2023-06-08 23:59:00"),
+        });
+
+        // add Conferences in chosen color
+
+        var color = "black";
+        // use first sub to choose color
+
+        color = "#4B8BBE";
+
+        conf_list_all.push({
+          id: "python-brasil-2023-conference",
+          abbreviation: "python-brasil-2023",
+          name: "Python Brasil 2023",
+          color: color,
+          location: "Serra Gaúcha, Rio Grande do Sul, Brazil",
+          date: "October 30 - November 05, 2023",
+          subject: "PY",
+          startDate: Date.parse("2023-10-30"),
+          endDate: Date.parse("2023-11-05"),
         });
 
         // add deadlines in red
@@ -1364,6 +1460,38 @@
 
         // add deadlines in red
         conf_list_all.push({
+          id: "moscow-python-conf-2023-deadline",
+          abbreviation: "moscow-python-conf-2023",
+          name: "Moscow Python Conf++ 2023 CfP",
+          color: "red",
+          location: "Moscow, Central Federal District, Russia",
+          date: "May 19 - 20, 2023",
+          subject: "PY",
+          startDate: Date.parse("2023-04-17 23:59:00"),
+          endDate: Date.parse("2023-04-17 23:59:00"),
+        });
+
+        // add Conferences in chosen color
+
+        var color = "black";
+        // use first sub to choose color
+
+        color = "#4B8BBE";
+
+        conf_list_all.push({
+          id: "moscow-python-conf-2023-conference",
+          abbreviation: "moscow-python-conf-2023",
+          name: "Moscow Python Conf++ 2023",
+          color: color,
+          location: "Moscow, Central Federal District, Russia",
+          date: "May 19 - 20, 2023",
+          subject: "PY",
+          startDate: Date.parse("2023-05-19"),
+          endDate: Date.parse("2023-05-20"),
+        });
+
+        // add deadlines in red
+        conf_list_all.push({
           id: "pycon-taiwan-2023-deadline",
           abbreviation: "pycon-taiwan-2023",
           name: "PyCon Taiwan 2023 CfP",
@@ -1531,8 +1659,8 @@
           location: "Israel",
           date: "July 04 - 05, 2023",
           subject: "PY",
-          startDate: Date.parse("2023-03-26 23:59:59"),
-          endDate: Date.parse("2023-03-26 23:59:59"),
+          startDate: Date.parse("2023-04-02 22:59"),
+          endDate: Date.parse("2023-04-02 22:59"),
         });
 
         // add Conferences in chosen color
@@ -1584,6 +1712,38 @@
           subject: "PY",
           startDate: Date.parse("2023-05-17"),
           endDate: Date.parse("2023-05-20"),
+        });
+
+        // add deadlines in red
+        conf_list_all.push({
+          id: "pycon-russia-2023-deadline",
+          abbreviation: "pycon-russia-2023",
+          name: "PyCon Russia 2023 CfP",
+          color: "red",
+          location: "Moscow, Central Federal District, Russia",
+          date: "July 28 - 29, 2023",
+          subject: "PY",
+          startDate: Date.parse("2023-03-15 23:59:00"),
+          endDate: Date.parse("2023-03-15 23:59:00"),
+        });
+
+        // add Conferences in chosen color
+
+        var color = "black";
+        // use first sub to choose color
+
+        color = "#4B8BBE";
+
+        conf_list_all.push({
+          id: "pycon-russia-2023-conference",
+          abbreviation: "pycon-russia-2023",
+          name: "PyCon Russia 2023",
+          color: color,
+          location: "Moscow, Central Federal District, Russia",
+          date: "July 28 - 29, 2023",
+          subject: "PY",
+          startDate: Date.parse("2023-07-28"),
+          endDate: Date.parse("2023-07-29"),
         });
 
         // add deadlines in red
@@ -1956,75 +2116,11 @@
 
         // add deadlines in red
         conf_list_all.push({
-          id: "moscow-python-conf-2023-deadline",
-          abbreviation: "moscow-python-conf-2023",
-          name: "Moscow Python Conf++ 2023 CfP",
+          id: "pycon-czechia-2023-deadline",
+          abbreviation: "pycon-czechia-2023",
+          name: "PyCon Czechia 2023 CfP",
           color: "red",
-          location: "Moscow, Central Federal District, Russia",
-          date: "May 19 - 20, 2023",
-          subject: "PY",
-          startDate: Date.parse("TBA"),
-          endDate: Date.parse("TBA"),
-        });
-
-        // add Conferences in chosen color
-
-        var color = "black";
-        // use first sub to choose color
-
-        color = "#4B8BBE";
-
-        conf_list_all.push({
-          id: "moscow-python-conf-2023-conference",
-          abbreviation: "moscow-python-conf-2023",
-          name: "Moscow Python Conf++ 2023",
-          color: color,
-          location: "Moscow, Central Federal District, Russia",
-          date: "May 19 - 20, 2023",
-          subject: "PY",
-          startDate: Date.parse("2023-05-19"),
-          endDate: Date.parse("2023-05-20"),
-        });
-
-        // add deadlines in red
-        conf_list_all.push({
-          id: "pycamp-leipzig-2023-deadline",
-          abbreviation: "pycamp-leipzig-2023",
-          name: "PyCamp Leipzig 2023 CfP",
-          color: "red",
-          location: "Leipzig, Saxony, Germany",
-          date: "July 29 - 30, 2023",
-          subject: "PY",
-          startDate: Date.parse("TBA"),
-          endDate: Date.parse("TBA"),
-        });
-
-        // add Conferences in chosen color
-
-        var color = "black";
-        // use first sub to choose color
-
-        color = "#4B8BBE";
-
-        conf_list_all.push({
-          id: "pycamp-leipzig-2023-conference",
-          abbreviation: "pycamp-leipzig-2023",
-          name: "PyCamp Leipzig 2023",
-          color: color,
-          location: "Leipzig, Saxony, Germany",
-          date: "July 29 - 30, 2023",
-          subject: "PY",
-          startDate: Date.parse("2023-07-29"),
-          endDate: Date.parse("2023-07-30"),
-        });
-
-        // add deadlines in red
-        conf_list_all.push({
-          id: "pycon-czech-republic-2023-deadline",
-          abbreviation: "pycon-czech-republic-2023",
-          name: "PyCon Czech Republic 2023 CfP",
-          color: "red",
-          location: "Prague, Bohemia, Czech Republic",
+          location: "Prague, Bohemia, Czechia",
           date: "September 15 - 17, 2023",
           subject: "PY",
           startDate: Date.parse("TBA"),
@@ -2039,79 +2135,15 @@
         color = "#4B8BBE";
 
         conf_list_all.push({
-          id: "pycon-czech-republic-2023-conference",
-          abbreviation: "pycon-czech-republic-2023",
-          name: "PyCon Czech Republic 2023",
+          id: "pycon-czechia-2023-conference",
+          abbreviation: "pycon-czechia-2023",
+          name: "PyCon Czechia 2023",
           color: color,
-          location: "Prague, Bohemia, Czech Republic",
+          location: "Prague, Bohemia, Czechia",
           date: "September 15 - 17, 2023",
           subject: "PY",
           startDate: Date.parse("2023-09-15"),
           endDate: Date.parse("2023-09-17"),
-        });
-
-        // add deadlines in red
-        conf_list_all.push({
-          id: "pycon-india-2023-deadline",
-          abbreviation: "pycon-india-2023",
-          name: "PyCon India 2023 CfP",
-          color: "red",
-          location: "Hyderabad, India",
-          date: "29 September - 2 October, 2023",
-          subject: "PY",
-          startDate: Date.parse("TBA"),
-          endDate: Date.parse("TBA"),
-        });
-
-        // add Conferences in chosen color
-
-        var color = "black";
-        // use first sub to choose color
-
-        color = "#4B8BBE";
-
-        conf_list_all.push({
-          id: "pycon-india-2023-conference",
-          abbreviation: "pycon-india-2023",
-          name: "PyCon India 2023",
-          color: color,
-          location: "Hyderabad, India",
-          date: "29 September - 2 October, 2023",
-          subject: "PY",
-          startDate: Date.parse("2023-09-29"),
-          endDate: Date.parse("2023-10-02"),
-        });
-
-        // add deadlines in red
-        conf_list_all.push({
-          id: "pycon-russia-2023-deadline",
-          abbreviation: "pycon-russia-2023",
-          name: "PyCon Russia 2023 CfP",
-          color: "red",
-          location: "Moscow, Central Federal District, Russia",
-          date: "July 28 - 29, 2023",
-          subject: "PY",
-          startDate: Date.parse("TBA"),
-          endDate: Date.parse("TBA"),
-        });
-
-        // add Conferences in chosen color
-
-        var color = "black";
-        // use first sub to choose color
-
-        color = "#4B8BBE";
-
-        conf_list_all.push({
-          id: "pycon-russia-2023-conference",
-          abbreviation: "pycon-russia-2023",
-          name: "PyCon Russia 2023",
-          color: color,
-          location: "Moscow, Central Federal District, Russia",
-          date: "July 28 - 29, 2023",
-          subject: "PY",
-          startDate: Date.parse("2023-07-28"),
-          endDate: Date.parse("2023-07-29"),
         });
 
         // add deadlines in red
@@ -2144,70 +2176,6 @@
           subject: "PY",
           startDate: Date.parse("2023-09-22"),
           endDate: Date.parse("2023-09-25"),
-        });
-
-        // add deadlines in red
-        conf_list_all.push({
-          id: "pydata-tel-aviv-2023-deadline",
-          abbreviation: "pydata-tel-aviv-2023",
-          name: "PyData Tel Aviv 2023 CfP",
-          color: "red",
-          location: "Tel Aviv, Israel",
-          date: "November 14th, 2023",
-          subject: "PYDATA",
-          startDate: Date.parse("TBA"),
-          endDate: Date.parse("TBA"),
-        });
-
-        // add Conferences in chosen color
-
-        var color = "black";
-        // use first sub to choose color
-
-        color = "#849324";
-
-        conf_list_all.push({
-          id: "pydata-tel-aviv-2023-conference",
-          abbreviation: "pydata-tel-aviv-2023",
-          name: "PyData Tel Aviv 2023",
-          color: color,
-          location: "Tel Aviv, Israel",
-          date: "November 14th, 2023",
-          subject: "PYDATA",
-          startDate: Date.parse("2023-11-14"),
-          endDate: Date.parse("2023-11-14"),
-        });
-
-        // add deadlines in red
-        conf_list_all.push({
-          id: "python-brasil-2023-deadline",
-          abbreviation: "python-brasil-2023",
-          name: "Python Brasil 2023 CfP",
-          color: "red",
-          location: "Serra Gaúcha, Rio Grande do Sul, Brazil",
-          date: "October 30 - November 05, 2023",
-          subject: "PY",
-          startDate: Date.parse("TBA"),
-          endDate: Date.parse("TBA"),
-        });
-
-        // add Conferences in chosen color
-
-        var color = "black";
-        // use first sub to choose color
-
-        color = "#4B8BBE";
-
-        conf_list_all.push({
-          id: "python-brasil-2023-conference",
-          abbreviation: "python-brasil-2023",
-          name: "Python Brasil 2023",
-          color: color,
-          location: "Serra Gaúcha, Rio Grande do Sul, Brazil",
-          date: "October 30 - November 05, 2023",
-          subject: "PY",
-          startDate: Date.parse("2023-10-30"),
-          endDate: Date.parse("2023-11-05"),
         });
 
         // add deadlines in red

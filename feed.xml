@@ -9,7 +9,7 @@
 		<title>Python Conference Deadlines</title>
 		<description>Countdowns to your favourite Python conferences with calls for participation and resources to submit awesome talks!</description>
 		<link>https://pythondeadlin.es/feed.xml</link>
-		<lastBuildDate>Fri, 26 May 2023 12:52:09 +0000</lastBuildDate>
+		<lastBuildDate>Fri, 26 May 2023 12:55:16 +0000</lastBuildDate>
 		
 		
 			<item>
@@ -19,6 +19,28 @@
 				<link>https://pythondeadlin.es/conference/pycon-south-africa-2023/</link>
 				<guid isPermaLink="false"></guid>
 				<category>PY</category>
+			</item>
+		
+		
+		
+			<item>
+				<title>PyCon India 2023 Conference Deadline</title>
+				<description>Conference in Hyderabad, India on 29 September - 2 October, 2023. CfP: 2023-08-05 23:59:00 AoE.&lt;br /&gt;Find them here: @PyConIndia </description>
+				<pubDate>Sat, 05 Aug 2023 23:59:00 +0000</pubDate>
+				<link>https://pythondeadlin.es/conference/pycon-india-2023/</link>
+				<guid isPermaLink="false"></guid>
+				<category>PY</category>
+			</item>
+		
+		
+		
+			<item>
+				<title>PyData Tel Aviv 2023 Conference Deadline</title>
+				<description>Conference in Tel Aviv, Israel on November 14th, 2023. CfP: 2023-07-14 23:59:00 AoE.&lt;br /&gt;Find them here: @PyDataTLV </description>
+				<pubDate>Fri, 14 Jul 2023 23:59:00 +0000</pubDate>
+				<link>https://pythondeadlin.es/conference/pydata-tel-aviv-2023/</link>
+				<guid isPermaLink="false"></guid>
+				<category>PYDATA</category>
 			</item>
 		
 		
@@ -74,6 +96,17 @@
 				<link>https://pythondeadlin.es/conference/pydata-amsterdam-2023/</link>
 				<guid isPermaLink="false"></guid>
 				<category>PYDATA</category>
+			</item>
+		
+		
+		
+			<item>
+				<title>Python Brasil 2023 Conference Deadline</title>
+				<description>Conference in Serra Gaúcha, Rio Grande do Sul, Brazil on October 30 - November 05, 2023. CfP: 2023-06-08 23:59:00 AoE.&lt;br /&gt;Find them here: @PyConBrasil </description>
+				<pubDate>Thu, 08 Jun 2023 23:59:00 +0000</pubDate>
+				<link>https://pythondeadlin.es/conference/python-brasil-2023/</link>
+				<guid isPermaLink="false"></guid>
+				<category>PY</category>
 			</item>
 		
 		
@@ -190,7 +223,7 @@
 		
 			<item>
 				<title>DjangoCon Australia 2023 Conference Deadline</title>
-				<description>Conference in Tarndanya (Adelaide), Australia on August 18th, 2023. CfP: 2023-05-14 23:59:00 AoE. </description>
+				<description>Conference in Tarndanya (Adelaide), Australia on August 18th, 2023. CfP: 2023-05-14 23:59:00 AoE.&lt;br /&gt;Find them here: @DjangoConAU </description>
 				<pubDate>Sun, 14 May 2023 23:59:00 +0000</pubDate>
 				<link>https://pythondeadlin.es/conference/djangocon-australia-2023/</link>
 				<guid isPermaLink="false"></guid>
@@ -226,39 +259,6 @@
 				<description>Conference in Kampala, Uganda on September 21 - 23, 2023. CfP: 2023-05-05 23:59:00 AoE. </description>
 				<pubDate>Fri, 05 May 2023 23:59:00 +0000</pubDate>
 				<link>https://pythondeadlin.es/conference/pycon-uganda-2023/</link>
-				<guid isPermaLink="false"></guid>
-				<category>PY</category>
-			</item>
-		
-		
-		
-			<item>
-				<title>PyCon Taiwan 2023 Conference Deadline</title>
-				<description>Conference in Taipei, Taiwan on September 02 - 03, 2023. CfP: 2023-03-31 23:59:59 AoE.&lt;br /&gt;Find them here: @PyConTW </description>
-				<pubDate>Fri, 31 Mar 2023 23:59:59 +0000</pubDate>
-				<link>https://pythondeadlin.es/conference/pycon-taiwan-2023/</link>
-				<guid isPermaLink="false"></guid>
-				<category>PY</category>
-			</item>
-		
-		
-		
-			<item>
-				<title>PyCon Colombia 2023 Conference Deadline</title>
-				<description>Conference in Online on June 09 - 11, 2023. CfP: 2023-03-30 23:59:59 AoE.&lt;br /&gt;Find them here: @PyConColombia </description>
-				<pubDate>Thu, 30 Mar 2023 23:59:59 +0000</pubDate>
-				<link>https://pythondeadlin.es/conference/pycon-colombia-2023/</link>
-				<guid isPermaLink="false"></guid>
-				<category>PY</category>
-			</item>
-		
-		
-		
-			<item>
-				<title>PyDay La Paz 2023 Conference Deadline</title>
-				<description>Conference in La Paz, Bolivia on 3 June, 2023. CfP: 2023-03-30 23:59:00 AoE.&lt;br /&gt;Find them here: @PyDayLaPaz </description>
-				<pubDate>Thu, 30 Mar 2023 23:59:00 +0000</pubDate>
-				<link>https://pythondeadlin.es/conference/pyday-la-paz-2023/</link>
 				<guid isPermaLink="false"></guid>
 				<category>PY</category>
 			</item>
