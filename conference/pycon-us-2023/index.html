@@ -69,7 +69,7 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/js-year-calendar.min.css?t=1684959495"
+      href="/static/css/js-year-calendar.min.css?t=1685099903"
       media="screen,projection"
     />
 
@@ -81,13 +81,13 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/deadlines.css?t=1684959495"
+      href="/static/css/deadlines.css?t=1685099903"
       media="screen,projection"
     />
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/calendar.css?t=1684959495"
+      href="/static/css/calendar.css?t=1685099903"
       media="screen,projection"
     />
 
@@ -525,6 +525,38 @@
 
             <div>
               <img
+                src="/static/img/035-file-text.svg"
+                class="badge-link"
+                alt="Document Icon for CfP link"
+                width="16"
+                height="16"
+              />
+              <a
+                id="conf-cfp_link"
+                target="_blank"
+                href="https://us.pycon.org/2023/speaking/guidelines"
+                >Call for Participation</a
+              >
+            </div>
+
+            <div>
+              <img
+                src="/static/img/060-coin-dollar.svg"
+                class="badge-link"
+                alt="Coin Dollar Icon for Sponsorship"
+                width="16"
+                height="16"
+              />
+              <a
+                id="conf-sponsor"
+                target="_blank"
+                href="https://us.pycon.org/2023/sponsorship/why-sponsor"
+                >Sponsorship Opportunity</a
+              >
+            </div>
+
+            <div>
+              <img
                 src="/static/img/407-twitter.svg"
                 class="badge-link"
                 alt="Twitter icon"
@@ -583,13 +615,13 @@
         </div>
         <div class="row">
           <div
-            id="763dc11e-3a42-4ecb-b0cb-57af82b2f3d6"
+            id="294b2ec2-5bb9-4d7b-88bb-d165d51f7c2c"
             style="width: 100%; height: 400px"
             class="jekyll-map"
           ></div>
           <script type="text/javascript">
             jekyllMaps.register(
-              "763dc11e-3a42-4ecb-b0cb-57af82b2f3d6",
+              "294b2ec2-5bb9-4d7b-88bb-d165d51f7c2c",
               [
                 {
                   latitude: 40.7596198,
@@ -742,19 +774,19 @@
 
         // Use specified timezone for deadlines if available else use AoE timezone
 
-        var confDeadline = DateTime.fromSQL("2022-12-09 23:59:59", {
+        var confDeadline = DateTime.fromSQL("2022-12-11 23:59:59", {
           zone: "UTC-12",
         });
 
         // check if timezone is valid otherwise replace by system timezone
         if (confDeadline.invalid) {
-          var confDeadline = DateTime.fromSQL("2022-12-09 23:59:59");
+          var confDeadline = DateTime.fromSQL("2022-12-11 23:59:59");
           console.log("Invalid timezone. Using system timezone instead.");
         }
 
         // add calendar
         var conferenceDeadlineCalendar = createCalendarFromObject({
-          id: "pyconus23",
+          id: "-",
           title: "PyCon US 2023 deadline",
           date: confDeadline.toJSDate(),
           duration: 60,

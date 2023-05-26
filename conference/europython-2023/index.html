@@ -69,7 +69,7 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/js-year-calendar.min.css?t=1684959495"
+      href="/static/css/js-year-calendar.min.css?t=1685099903"
       media="screen,projection"
     />
 
@@ -81,13 +81,13 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/deadlines.css?t=1684959495"
+      href="/static/css/deadlines.css?t=1685099903"
       media="screen,projection"
     />
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/calendar.css?t=1684959495"
+      href="/static/css/calendar.css?t=1685099903"
       media="screen,projection"
     />
 
@@ -503,7 +503,7 @@
                 height="16"
               />
               <a
-                id="conf-cfplink"
+                id="conf-cfp_link"
                 target="_blank"
                 href="https://ep2023.europython.eu/cfp"
                 >Call for Participation</a
@@ -594,13 +594,13 @@
         </div>
         <div class="row">
           <div
-            id="bcb229c7-d8aa-4eaf-aeb0-adfca5bb5255"
+            id="e3689850-555c-4e69-a044-45441b9c45bf"
             style="width: 100%; height: 400px"
             class="jekyll-map"
           ></div>
           <script type="text/javascript">
             jekyllMaps.register(
-              "bcb229c7-d8aa-4eaf-aeb0-adfca5bb5255",
+              "e3689850-555c-4e69-a044-45441b9c45bf",
               [
                 {
                   latitude: 50.0874654,
@@ -753,19 +753,19 @@
 
         // Use specified timezone for deadlines if available else use AoE timezone
 
-        var confDeadline = DateTime.fromSQL("2023-03-19 23:59:00", {
+        var confDeadline = DateTime.fromSQL("2023-03-26 23:59:00", {
           zone: "UTC-12",
         });
 
         // check if timezone is valid otherwise replace by system timezone
         if (confDeadline.invalid) {
-          var confDeadline = DateTime.fromSQL("2023-03-19 23:59:00");
+          var confDeadline = DateTime.fromSQL("2023-03-26 23:59:00");
           console.log("Invalid timezone. Using system timezone instead.");
         }
 
         // add calendar
         var conferenceDeadlineCalendar = createCalendarFromObject({
-          id: "europython2023",
+          id: "-",
           title: "EuroPython 2023 deadline",
           date: confDeadline.toJSDate(),
           duration: 60,

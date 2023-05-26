@@ -69,7 +69,7 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/js-year-calendar.min.css?t=1684959495"
+      href="/static/css/js-year-calendar.min.css?t=1685099903"
       media="screen,projection"
     />
 
@@ -81,13 +81,13 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/deadlines.css?t=1684959495"
+      href="/static/css/deadlines.css?t=1685099903"
       media="screen,projection"
     />
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/calendar.css?t=1684959495"
+      href="/static/css/calendar.css?t=1685099903"
       media="screen,projection"
     />
 
@@ -515,11 +515,40 @@
                 width="16"
                 height="16"
               />
+              <a id="conf-website" target="_blank" href="https://pycon.fr/2023/"
+                >https://pycon.fr/2023/</a
+              >
+            </div>
+
+            <div>
+              <img
+                src="/static/img/035-file-text.svg"
+                class="badge-link"
+                alt="Document Icon for CfP link"
+                width="16"
+                height="16"
+              />
               <a
-                id="conf-website"
+                id="conf-cfp_link"
                 target="_blank"
-                href="https://www.pycon.fr/2023/"
-                >https://www.pycon.fr/2023/</a
+                href="https://cfp-2023.pycon.fr/cfp"
+                >Call for Participation</a
+              >
+            </div>
+
+            <div>
+              <img
+                src="/static/img/060-coin-dollar.svg"
+                class="badge-link"
+                alt="Coin Dollar Icon for Sponsorship"
+                width="16"
+                height="16"
+              />
+              <a
+                id="conf-sponsor"
+                target="_blank"
+                href="https://pycon.fr/2023/fr/support.html"
+                >Sponsorship Opportunity</a
               >
             </div>
 
@@ -583,13 +612,13 @@
         </div>
         <div class="row">
           <div
-            id="b63c1981-58d9-432d-bc05-e29a9e0a753b"
+            id="dc115e59-e260-4d9e-9243-fde3752d218c"
             style="width: 100%; height: 400px"
             class="jekyll-map"
           ></div>
           <script type="text/javascript">
             jekyllMaps.register(
-              "b63c1981-58d9-432d-bc05-e29a9e0a753b",
+              "dc115e59-e260-4d9e-9243-fde3752d218c",
               [
                 {
                   latitude: 44.841225,
@@ -754,7 +783,7 @@
 
         // add calendar
         var conferenceDeadlineCalendar = createCalendarFromObject({
-          id: "pyconFrance23",
+          id: "-",
           title: "PyCon France 2023 deadline",
           date: confDeadline.toJSDate(),
           duration: 60,

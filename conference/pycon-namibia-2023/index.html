@@ -69,7 +69,7 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/js-year-calendar.min.css?t=1684959495"
+      href="/static/css/js-year-calendar.min.css?t=1685099903"
       media="screen,projection"
     />
 
@@ -81,13 +81,13 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/deadlines.css?t=1684959495"
+      href="/static/css/deadlines.css?t=1685099903"
       media="screen,projection"
     />
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/calendar.css?t=1684959495"
+      href="/static/css/calendar.css?t=1685099903"
       media="screen,projection"
     />
 
@@ -493,6 +493,38 @@
 
             <div>
               <img
+                src="/static/img/035-file-text.svg"
+                class="badge-link"
+                alt="Document Icon for CfP link"
+                width="16"
+                height="16"
+              />
+              <a
+                id="conf-cfp_link"
+                target="_blank"
+                href="https://pretalx.com/pycon-namibia-2022/cfp"
+                >Call for Participation</a
+              >
+            </div>
+
+            <div>
+              <img
+                src="/static/img/060-coin-dollar.svg"
+                class="badge-link"
+                alt="Coin Dollar Icon for Sponsorship"
+                width="16"
+                height="16"
+              />
+              <a
+                id="conf-sponsor"
+                target="_blank"
+                href="https://na.pycon.org/sponsorship"
+                >Sponsorship Opportunity</a
+              >
+            </div>
+
+            <div>
+              <img
                 src="/static/img/407-twitter.svg"
                 class="badge-link"
                 alt="Twitter icon"
@@ -543,13 +575,13 @@
         </div>
         <div class="row">
           <div
-            id="bdaf2ede-470c-4173-b685-ab19d5d5b10e"
+            id="8b9e8386-6b91-4054-9d9d-3b4f03169917"
             style="width: 100%; height: 400px"
             class="jekyll-map"
           ></div>
           <script type="text/javascript">
             jekyllMaps.register(
-              "bdaf2ede-470c-4173-b685-ab19d5d5b10e",
+              "8b9e8386-6b91-4054-9d9d-3b4f03169917",
               [
                 {
                   latitude: -22.5776104,
@@ -702,19 +734,19 @@
 
         // Use specified timezone for deadlines if available else use AoE timezone
 
-        var confDeadline = DateTime.fromSQL("2023-01-06 23:59:59", {
+        var confDeadline = DateTime.fromSQL("2023-01-22 23:59:59", {
           zone: "Africa/Windhoek",
         });
 
         // check if timezone is valid otherwise replace by system timezone
         if (confDeadline.invalid) {
-          var confDeadline = DateTime.fromSQL("2023-01-06 23:59:59");
+          var confDeadline = DateTime.fromSQL("2023-01-22 23:59:59");
           console.log("Invalid timezone. Using system timezone instead.");
         }
 
         // add calendar
         var conferenceDeadlineCalendar = createCalendarFromObject({
-          id: "pyconnamibia23",
+          id: "-",
           title: "PyCon Namibia 2023 deadline",
           date: confDeadline.toJSDate(),
           duration: 60,

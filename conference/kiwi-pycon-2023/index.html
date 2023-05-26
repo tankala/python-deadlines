@@ -69,7 +69,7 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/js-year-calendar.min.css?t=1684959495"
+      href="/static/css/js-year-calendar.min.css?t=1685099903"
       media="screen,projection"
     />
 
@@ -81,13 +81,13 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/deadlines.css?t=1684959495"
+      href="/static/css/deadlines.css?t=1685099903"
       media="screen,projection"
     />
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/calendar.css?t=1684959495"
+      href="/static/css/calendar.css?t=1685099903"
       media="screen,projection"
     />
 
@@ -474,8 +474,8 @@
               <a
                 id="conf-place"
                 target="_blank"
-                href="https://maps.google.com/?q=Waihopai Invercargill, Aotearoa New Zealand"
-                >Waihopai Invercargill, Aotearoa New Zealand</a
+                href="https://maps.google.com/?q=Waihōpai (Invercargill), Aotearoa, New Zealand"
+                >Waihōpai (Invercargill), Aotearoa, New Zealand</a
               >
             </div>
             <div>
@@ -500,9 +500,9 @@
                 height="16"
               />
               <a
-                id="conf-cfplink"
+                id="conf-cfp_link"
                 target="_blank"
-                href="https://pretalx.com/kiwi-pycon-xii-2023/cfp"
+                href="https://kiwipycon.nz/call-for-proposals"
                 >Call for Participation</a
               >
             </div>
@@ -591,13 +591,13 @@
         </div>
         <div class="row">
           <div
-            id="1fc63c6f-78a0-47ee-81e8-ef2ca221f03b"
+            id="6de3d114-4a4b-4dde-9d9d-523c76db20c4"
             style="width: 100%; height: 400px"
             class="jekyll-map"
           ></div>
           <script type="text/javascript">
             jekyllMaps.register(
-              "1fc63c6f-78a0-47ee-81e8-ef2ca221f03b",
+              "6de3d114-4a4b-4dde-9d9d-523c76db20c4",
               [
                 {
                   latitude: -46.4099902,
@@ -750,19 +750,19 @@
 
         // Use specified timezone for deadlines if available else use AoE timezone
 
-        var confDeadline = DateTime.fromSQL("2023-04-14 23:59:00", {
+        var confDeadline = DateTime.fromSQL("2023-05-19 23:59:00", {
           zone: "Pacific/Auckland",
         });
 
         // check if timezone is valid otherwise replace by system timezone
         if (confDeadline.invalid) {
-          var confDeadline = DateTime.fromSQL("2023-04-14 23:59:00");
+          var confDeadline = DateTime.fromSQL("2023-05-19 23:59:00");
           console.log("Invalid timezone. Using system timezone instead.");
         }
 
         // add calendar
         var conferenceDeadlineCalendar = createCalendarFromObject({
-          id: "KiwiPycon23",
+          id: "-",
           title: "Kiwi PyCon 2023 deadline",
           date: confDeadline.toJSDate(),
           duration: 60,

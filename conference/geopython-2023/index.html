@@ -69,7 +69,7 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/js-year-calendar.min.css?t=1684959495"
+      href="/static/css/js-year-calendar.min.css?t=1685099903"
       media="screen,projection"
     />
 
@@ -81,13 +81,13 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/deadlines.css?t=1684959495"
+      href="/static/css/deadlines.css?t=1685099903"
       media="screen,projection"
     />
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/calendar.css?t=1684959495"
+      href="/static/css/calendar.css?t=1685099903"
       media="screen,projection"
     />
 
@@ -496,6 +496,22 @@
 
             <div>
               <img
+                src="/static/img/035-file-text.svg"
+                class="badge-link"
+                alt="Document Icon for CfP link"
+                width="16"
+                height="16"
+              />
+              <a
+                id="conf-cfp_link"
+                target="_blank"
+                href="https://submit.geopython.net/geopython-2023/cfp"
+                >Call for Participation</a
+              >
+            </div>
+
+            <div>
+              <img
                 src="/static/img/407-twitter.svg"
                 class="badge-link"
                 alt="Twitter icon"
@@ -546,13 +562,13 @@
         </div>
         <div class="row">
           <div
-            id="6706626a-b034-46c0-820e-9e3c2d13219e"
+            id="2b277dea-abde-4750-9341-be7c2e1e19cf"
             style="width: 100%; height: 400px"
             class="jekyll-map"
           ></div>
           <script type="text/javascript">
             jekyllMaps.register(
-              "6706626a-b034-46c0-820e-9e3c2d13219e",
+              "2b277dea-abde-4750-9341-be7c2e1e19cf",
               [
                 {
                   latitude: 47.6081077,
@@ -717,7 +733,7 @@
 
         // add calendar
         var conferenceDeadlineCalendar = createCalendarFromObject({
-          id: "geopython2023",
+          id: "-",
           title: "GeoPython 2023 deadline",
           date: confDeadline.toJSDate(),
           duration: 60,
