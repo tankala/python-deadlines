@@ -125,6 +125,9 @@
 <loc>https://pythondeadlin.es/conference/moscow-python-conf-2023/</loc>
 </url>
 <url>
+<loc>https://pythondeadlin.es/conference/pycon-israel-2023/</loc>
+</url>
+<url>
 <loc>https://pythondeadlin.es/conference/pycon-taiwan-2023/</loc>
 </url>
 <url>
@@ -138,9 +141,6 @@
 </url>
 <url>
 <loc>https://pythondeadlin.es/conference/europython-2023/</loc>
-</url>
-<url>
-<loc>https://pythondeadlin.es/conference/pycon-israel-2023/</loc>
 </url>
 <url>
 <loc>https://pythondeadlin.es/conference/pycon-lithuania-2023/</loc>
@@ -164,9 +164,6 @@
 <loc>https://pythondeadlin.es/conference/pycon-italia-2023/</loc>
 </url>
 <url>
-<loc>https://pythondeadlin.es/conference/pycon-germany--pydata-berlin-2023/</loc>
-</url>
-<url>
 <loc>https://pythondeadlin.es/conference/jupytercon-2023/</loc>
 </url>
 <url>
@@ -179,7 +176,7 @@
 <loc>https://pythondeadlin.es/conference/djangocon-africa-2023/</loc>
 </url>
 <url>
-<loc>https://pythondeadlin.es/conference/pycon-czechia-2023/</loc>
+<loc>https://pythondeadlin.es/conference/pycon-czech-republic-2023/</loc>
 </url>
 <url>
 <loc>https://pythondeadlin.es/conference/pycon-uk-2023/</loc>
@@ -194,9 +191,6 @@
 <loc>https://pythondeadlin.es/conference/pytexas-2024/</loc>
 </url>
 <url>
-<loc>https://pythondeadlin.es/conference/pycon-slovakia-2024/</loc>
-</url>
-<url>
 <loc>https://pythondeadlin.es/conference/pycon-namibia-2023/</loc>
 </url>
 <url>
@@ -204,6 +198,9 @@
 </url>
 <url>
 <loc>https://pythondeadlin.es/conference/pycon-france-2023/</loc>
+</url>
+<url>
+<loc>https://pythondeadlin.es/conference/pycon-germany--pydata-berlin-2023/</loc>
 </url>
 <url>
 <loc>https://pythondeadlin.es/conference/pycon-philippines-2023/</loc>
