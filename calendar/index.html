@@ -56,7 +56,7 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/js-year-calendar.min.css?t=1685485692"
+      href="/static/css/js-year-calendar.min.css?t=1685486082"
       media="screen,projection"
     />
 
@@ -68,13 +68,13 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/deadlines.css?t=1685485692"
+      href="/static/css/deadlines.css?t=1685486082"
       media="screen,projection"
     />
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/calendar.css?t=1685485692"
+      href="/static/css/calendar.css?t=1685486082"
       media="screen,projection"
     />
 
@@ -772,6 +772,38 @@
 
         // add deadlines in red
         conf_list_all.push({
+          id: "djangocon-africa-2023-deadline",
+          abbreviation: "djangocon-africa-2023",
+          name: "DjangoCon Africa 2023 CfP",
+          color: "red",
+          location: "Zanzibar, Tanzania",
+          date: "November 06 - 11, 2023",
+          subject: "WEB",
+          startDate: Date.parse("2023-07-12 23:59:00"),
+          endDate: Date.parse("2023-07-12 23:59:00"),
+        });
+
+        // add Conferences in chosen color
+
+        var color = "black";
+        // use first sub to choose color
+
+        color = "#0D0A0B";
+
+        conf_list_all.push({
+          id: "djangocon-africa-2023-conference",
+          abbreviation: "djangocon-africa-2023",
+          name: "DjangoCon Africa 2023",
+          color: color,
+          location: "Zanzibar, Tanzania",
+          date: "November 06 - 11, 2023",
+          subject: "WEB",
+          startDate: Date.parse("2023-11-06"),
+          endDate: Date.parse("2023-11-11"),
+        });
+
+        // add deadlines in red
+        conf_list_all.push({
           id: "swiss-python-summit-2023-deadline",
           abbreviation: "swiss-python-summit-2023",
           name: "Swiss Python Summit 2023 CfP",
@@ -848,6 +880,38 @@
 
         // add deadlines in red
         conf_list_all.push({
+          id: "pycon-uk-2023-deadline",
+          abbreviation: "pycon-uk-2023",
+          name: "PyCon UK 2023 CfP",
+          color: "red",
+          location: "Cardiff, UK",
+          date: "September 22 - 25, 2023",
+          subject: "PY",
+          startDate: Date.parse("2023-06-30 16:59:00"),
+          endDate: Date.parse("2023-06-30 16:59:00"),
+        });
+
+        // add Conferences in chosen color
+
+        var color = "black";
+        // use first sub to choose color
+
+        color = "#4B8BBE";
+
+        conf_list_all.push({
+          id: "pycon-uk-2023-conference",
+          abbreviation: "pycon-uk-2023",
+          name: "PyCon UK 2023",
+          color: color,
+          location: "Cardiff, UK",
+          date: "September 22 - 25, 2023",
+          subject: "PY",
+          startDate: Date.parse("2023-09-22"),
+          endDate: Date.parse("2023-09-25"),
+        });
+
+        // add deadlines in red
+        conf_list_all.push({
           id: "pycon-españa-2023-deadline",
           abbreviation: "pycon-españa-2023",
           name: "PyCon España 2023 CfP",
@@ -876,6 +940,38 @@
           subject: "PY",
           startDate: Date.parse("2023-10-06"),
           endDate: Date.parse("2023-10-08"),
+        });
+
+        // add deadlines in red
+        conf_list_all.push({
+          id: "afropython-conf-2023-deadline",
+          abbreviation: "afropython-conf-2023",
+          name: "AfroPython Conf 2023 CfP",
+          color: "red",
+          location: "Salvador, Brazil",
+          date: "July 22, 2023",
+          subject: "PY",
+          startDate: Date.parse("2023-06-19 23:59:00"),
+          endDate: Date.parse("2023-06-19 23:59:00"),
+        });
+
+        // add Conferences in chosen color
+
+        var color = "black";
+        // use first sub to choose color
+
+        color = "#4B8BBE";
+
+        conf_list_all.push({
+          id: "afropython-conf-2023-conference",
+          abbreviation: "afropython-conf-2023",
+          name: "AfroPython Conf 2023",
+          color: color,
+          location: "Salvador, Brazil",
+          date: "July 22, 2023",
+          subject: "PY",
+          startDate: Date.parse("2023-07-22"),
+          endDate: Date.parse("2023-07-22"),
         });
 
         // add deadlines in red
@@ -2008,70 +2104,6 @@
 
         // add deadlines in red
         conf_list_all.push({
-          id: "afropython-conf-2023-deadline",
-          abbreviation: "afropython-conf-2023",
-          name: "AfroPython Conf 2023 CfP",
-          color: "red",
-          location: "Salvador, Brazil",
-          date: "July 22, 2023",
-          subject: "PY",
-          startDate: Date.parse("2023-06-19 23:59:00"),
-          endDate: Date.parse("2023-06-19 23:59:00"),
-        });
-
-        // add Conferences in chosen color
-
-        var color = "black";
-        // use first sub to choose color
-
-        color = "#4B8BBE";
-
-        conf_list_all.push({
-          id: "afropython-conf-2023-conference",
-          abbreviation: "afropython-conf-2023",
-          name: "AfroPython Conf 2023",
-          color: color,
-          location: "Salvador, Brazil",
-          date: "July 22, 2023",
-          subject: "PY",
-          startDate: Date.parse("2023-07-22"),
-          endDate: Date.parse("2023-07-22"),
-        });
-
-        // add deadlines in red
-        conf_list_all.push({
-          id: "djangocon-africa-2023-deadline",
-          abbreviation: "djangocon-africa-2023",
-          name: "DjangoCon Africa 2023 CfP",
-          color: "red",
-          location: "Zanzibar, Tanzania",
-          date: "November 06 - 11, 2023",
-          subject: "WEB",
-          startDate: Date.parse("2023-07-12 23:59:00"),
-          endDate: Date.parse("2023-07-12 23:59:00"),
-        });
-
-        // add Conferences in chosen color
-
-        var color = "black";
-        // use first sub to choose color
-
-        color = "#0D0A0B";
-
-        conf_list_all.push({
-          id: "djangocon-africa-2023-conference",
-          abbreviation: "djangocon-africa-2023",
-          name: "DjangoCon Africa 2023",
-          color: color,
-          location: "Zanzibar, Tanzania",
-          date: "November 06 - 11, 2023",
-          subject: "WEB",
-          startDate: Date.parse("2023-11-06"),
-          endDate: Date.parse("2023-11-11"),
-        });
-
-        // add deadlines in red
-        conf_list_all.push({
           id: "pycon-czech-republic-2023-deadline",
           abbreviation: "pycon-czech-republic-2023",
           name: "PyCon Czech Republic 2023 CfP",
@@ -2100,38 +2132,6 @@
           subject: "PY",
           startDate: Date.parse("2023-09-15"),
           endDate: Date.parse("2023-09-17"),
-        });
-
-        // add deadlines in red
-        conf_list_all.push({
-          id: "pycon-uk-2023-deadline",
-          abbreviation: "pycon-uk-2023",
-          name: "PyCon UK 2023 CfP",
-          color: "red",
-          location: "Cardiff, UK",
-          date: "September 22 - 25, 2023",
-          subject: "PY",
-          startDate: Date.parse("2023-06-30 16:59:00"),
-          endDate: Date.parse("2023-06-30 16:59:00"),
-        });
-
-        // add Conferences in chosen color
-
-        var color = "black";
-        // use first sub to choose color
-
-        color = "#4B8BBE";
-
-        conf_list_all.push({
-          id: "pycon-uk-2023-conference",
-          abbreviation: "pycon-uk-2023",
-          name: "PyCon UK 2023",
-          color: color,
-          location: "Cardiff, UK",
-          date: "September 22 - 25, 2023",
-          subject: "PY",
-          startDate: Date.parse("2023-09-22"),
-          endDate: Date.parse("2023-09-25"),
         });
 
         // add deadlines in red
