@@ -63,7 +63,7 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/js-year-calendar.min.css?t=1685372370"
+      href="/static/css/js-year-calendar.min.css?t=1685485692"
       media="screen,projection"
     />
 
@@ -75,13 +75,13 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/deadlines.css?t=1685372370"
+      href="/static/css/deadlines.css?t=1685485692"
       media="screen,projection"
     />
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/calendar.css?t=1685372370"
+      href="/static/css/calendar.css?t=1685485692"
       media="screen,projection"
     />
 
@@ -4815,6 +4815,21 @@
 
                 <span class="conf-title-icon">
                   <a
+                    title="Call for Participation for AfroPython Conf"
+                    href="https://bit.ly/conf2023-palestrantes"
+                    target="_blank"
+                    ><img
+                      src="/static/img/035-file-text.svg"
+                      class="badge-link"
+                      alt="Link to Call for Participation for AfroPython Conf"
+                      width="16"
+                      height="16"
+                  /></a>
+                  &ZeroWidthSpace;
+                </span>
+
+                <span class="conf-title-icon">
+                  <a
                     title="Sponsorship Opportunity for AfroPython Conf"
                     href="https://docs.google.com/forms/d/e/1FAIpQLSclMmFsjw5qcJaFwCC-z7zhN0Uaf8t4zF74qL_KKsBjh-y-aA/viewform"
                     target="_blank"
@@ -4918,7 +4933,7 @@
                 <span class="conf-title-icon">
                   <a
                     title="Call for Participation for DjangoCon Africa"
-                    href="https://2023.djangocon.africa/talks"
+                    href="https://cfp-2023.djangocon.africa/"
                     target="_blank"
                     ><img
                       src="/static/img/035-file-text.svg"
@@ -5124,6 +5139,21 @@
                       src="/static/img/203-earth.svg"
                       class="badge-link"
                       alt="Link to Conference Website"
+                      width="16"
+                      height="16"
+                  /></a>
+                  &ZeroWidthSpace;
+                </span>
+
+                <span class="conf-title-icon">
+                  <a
+                    title="Call for Participation for PyCon UK"
+                    href="https://2023.pyconuk.org/call-for-proposals/"
+                    target="_blank"
+                    ><img
+                      src="/static/img/035-file-text.svg"
+                      class="badge-link"
+                      alt="Link to Call for Participation for PyCon UK"
                       width="16"
                       height="16"
                   /></a>
@@ -9230,17 +9260,183 @@
           sub2name["PY"].toLocaleLowerCase()
         );
 
-        $("#afropython-conf-2023 .timer").html("TBA");
-        $("#afropython-conf-2023 .deadline-time").html("TBA");
-        $("#afropython-conf-2023").attr("cfpDiff", -Infinity);
+        // Use specified timezone for deadlines if available else use AoE timezone
+
+        var cfpDate = DateTime.fromSQL("2023-06-19 23:59:00", {
+          zone: "America/Bahia",
+        });
+        var confDate = DateTime.fromSQL("2023-07-22", {
+          zone: "America/Bahia",
+        });
+
+        // check if timezone is valid otherwise replace by system timezone
+        if (cfpDate.invalid || confDate.invalid) {
+          var cfpDate = DateTime.fromSQL("2023-06-19 23:59:00");
+          var confDate = DateTime.fromSQL("2023-07-22");
+          console.log(
+            "Invalid timezone in afropython-conf-2023. Using system timezone instead."
+          );
+        }
+
+        // render countdown timer
+        $("#afropython-conf-2023 .timer").countdown(
+          cfpDate.toJSDate(),
+          function (event) {
+            $(this).html(event.strftime("%D days %Hh %Mm %Ss"));
+          }
+        );
+
+        // render countdown timer small
+        $("#afropython-conf-2023 .timer-small").countdown(
+          cfpDate.toJSDate(),
+          function (event) {
+            $(this).html(event.strftime("%Dd %H:%M:%S"));
+          }
+        );
+
+        // deadline in local timezone
+        $("#afropython-conf-2023 .deadline-time").html(
+          cfpDate.setZone("system").toLocaleString(DateTime.DATE_HUGE)
+        );
+
+        // add calendar button
+        try {
+          var myCalendar = createCalendarFromObject({
+            id: "afropython-conf-2023",
+            title: "AfroPython Conf 2023 deadline",
+            date: cfpDate.toJSDate(),
+            duration: 60,
+          });
+          document
+            .querySelector("#afropython-conf-2023 .calendar")
+            .appendChild(myCalendar);
+        } catch (err) {
+          document
+            .querySelector("#afropython-conf-2023 .calendar")
+            .appendChild("<p>Calendar not available.</p>");
+          console.log("Error in cfp date.");
+        }
+
+        // check if date has passed, add 'past' class to it
+        cfpDiff = today.diff(cfpDate);
+        confDiff = today.diff(confDate);
+
+        $("#afropython-conf-2023").attr("cfpDiff", cfpDiff.milliseconds);
+        $("#afropython-conf-2023").attr("confDiff", confDiff.milliseconds);
+
+        if (cfpDiff > 0) {
+          $("#afropython-conf-2023").addClass("pastcfp");
+          $("#afropython-conf-2023").appendTo($("#past_cfps"));
+          $("#afropython-conf-2023 .timer").replaceWith(
+            $("#afropython-conf-2023 .deadline")
+          );
+          $("#afropython-conf-2023 .timer-small").replaceWith(
+            $("#afropython-conf-2023 .deadline")
+          );
+          $("#afropython-conf-2023 .calendar").remove();
+        }
+
+        if (confDiff > 0) {
+          $("#afropython-conf-2023").addClass("pastconf");
+          $("#afropython-conf-2023").appendTo($("#past_confs"));
+          $("#afropython-conf-2023 .timer").replaceWith(
+            $("#afropython-conf-2023 .deadline")
+          );
+          $("#afropython-conf-2023 .timer-small").replaceWith(
+            $("#afropython-conf-2023 .deadline")
+          );
+          $("#afropython-conf-2023 .calendar").remove();
+        }
 
         $("#djangocon-africa-2023 .WEB-tag").html(
           sub2name["WEB"].toLocaleLowerCase()
         );
 
-        $("#djangocon-africa-2023 .timer").html("TBA");
-        $("#djangocon-africa-2023 .deadline-time").html("TBA");
-        $("#djangocon-africa-2023").attr("cfpDiff", -Infinity);
+        // Use specified timezone for deadlines if available else use AoE timezone
+
+        var cfpDate = DateTime.fromSQL("2023-07-12 23:59:00", {
+          zone: "UTC-12",
+        });
+        var confDate = DateTime.fromSQL("2023-11-06", { zone: "UTC-12" });
+
+        // check if timezone is valid otherwise replace by system timezone
+        if (cfpDate.invalid || confDate.invalid) {
+          var cfpDate = DateTime.fromSQL("2023-07-12 23:59:00");
+          var confDate = DateTime.fromSQL("2023-11-06");
+          console.log(
+            "Invalid timezone in djangocon-africa-2023. Using system timezone instead."
+          );
+        }
+
+        // render countdown timer
+        $("#djangocon-africa-2023 .timer").countdown(
+          cfpDate.toJSDate(),
+          function (event) {
+            $(this).html(event.strftime("%D days %Hh %Mm %Ss"));
+          }
+        );
+
+        // render countdown timer small
+        $("#djangocon-africa-2023 .timer-small").countdown(
+          cfpDate.toJSDate(),
+          function (event) {
+            $(this).html(event.strftime("%Dd %H:%M:%S"));
+          }
+        );
+
+        // deadline in local timezone
+        $("#djangocon-africa-2023 .deadline-time").html(
+          cfpDate.setZone("system").toLocaleString(DateTime.DATE_HUGE)
+        );
+
+        // add calendar button
+        try {
+          var myCalendar = createCalendarFromObject({
+            id: "djangocon-africa-2023",
+            title: "DjangoCon Africa 2023 deadline",
+            date: cfpDate.toJSDate(),
+            duration: 60,
+          });
+          document
+            .querySelector("#djangocon-africa-2023 .calendar")
+            .appendChild(myCalendar);
+        } catch (err) {
+          document
+            .querySelector("#djangocon-africa-2023 .calendar")
+            .appendChild("<p>Calendar not available.</p>");
+          console.log("Error in cfp date.");
+        }
+
+        // check if date has passed, add 'past' class to it
+        cfpDiff = today.diff(cfpDate);
+        confDiff = today.diff(confDate);
+
+        $("#djangocon-africa-2023").attr("cfpDiff", cfpDiff.milliseconds);
+        $("#djangocon-africa-2023").attr("confDiff", confDiff.milliseconds);
+
+        if (cfpDiff > 0) {
+          $("#djangocon-africa-2023").addClass("pastcfp");
+          $("#djangocon-africa-2023").appendTo($("#past_cfps"));
+          $("#djangocon-africa-2023 .timer").replaceWith(
+            $("#djangocon-africa-2023 .deadline")
+          );
+          $("#djangocon-africa-2023 .timer-small").replaceWith(
+            $("#djangocon-africa-2023 .deadline")
+          );
+          $("#djangocon-africa-2023 .calendar").remove();
+        }
+
+        if (confDiff > 0) {
+          $("#djangocon-africa-2023").addClass("pastconf");
+          $("#djangocon-africa-2023").appendTo($("#past_confs"));
+          $("#djangocon-africa-2023 .timer").replaceWith(
+            $("#djangocon-africa-2023 .deadline")
+          );
+          $("#djangocon-africa-2023 .timer-small").replaceWith(
+            $("#djangocon-africa-2023 .deadline")
+          );
+          $("#djangocon-africa-2023 .calendar").remove();
+        }
 
         $("#pycon-czech-republic-2023 .PY-tag").html(
           sub2name["PY"].toLocaleLowerCase()
@@ -9252,9 +9448,88 @@
 
         $("#pycon-uk-2023 .PY-tag").html(sub2name["PY"].toLocaleLowerCase());
 
-        $("#pycon-uk-2023 .timer").html("TBA");
-        $("#pycon-uk-2023 .deadline-time").html("TBA");
-        $("#pycon-uk-2023").attr("cfpDiff", -Infinity);
+        // Use specified timezone for deadlines if available else use AoE timezone
+
+        var cfpDate = DateTime.fromSQL("2023-06-30 16:59:00", {
+          zone: "Europe/London",
+        });
+        var confDate = DateTime.fromSQL("2023-09-22", {
+          zone: "Europe/London",
+        });
+
+        // check if timezone is valid otherwise replace by system timezone
+        if (cfpDate.invalid || confDate.invalid) {
+          var cfpDate = DateTime.fromSQL("2023-06-30 16:59:00");
+          var confDate = DateTime.fromSQL("2023-09-22");
+          console.log(
+            "Invalid timezone in pycon-uk-2023. Using system timezone instead."
+          );
+        }
+
+        // render countdown timer
+        $("#pycon-uk-2023 .timer").countdown(cfpDate.toJSDate(), function (
+          event
+        ) {
+          $(this).html(event.strftime("%D days %Hh %Mm %Ss"));
+        });
+
+        // render countdown timer small
+        $("#pycon-uk-2023 .timer-small").countdown(
+          cfpDate.toJSDate(),
+          function (event) {
+            $(this).html(event.strftime("%Dd %H:%M:%S"));
+          }
+        );
+
+        // deadline in local timezone
+        $("#pycon-uk-2023 .deadline-time").html(
+          cfpDate.setZone("system").toLocaleString(DateTime.DATE_HUGE)
+        );
+
+        // add calendar button
+        try {
+          var myCalendar = createCalendarFromObject({
+            id: "pycon-uk-2023",
+            title: "PyCon UK 2023 deadline",
+            date: cfpDate.toJSDate(),
+            duration: 60,
+          });
+          document
+            .querySelector("#pycon-uk-2023 .calendar")
+            .appendChild(myCalendar);
+        } catch (err) {
+          document
+            .querySelector("#pycon-uk-2023 .calendar")
+            .appendChild("<p>Calendar not available.</p>");
+          console.log("Error in cfp date.");
+        }
+
+        // check if date has passed, add 'past' class to it
+        cfpDiff = today.diff(cfpDate);
+        confDiff = today.diff(confDate);
+
+        $("#pycon-uk-2023").attr("cfpDiff", cfpDiff.milliseconds);
+        $("#pycon-uk-2023").attr("confDiff", confDiff.milliseconds);
+
+        if (cfpDiff > 0) {
+          $("#pycon-uk-2023").addClass("pastcfp");
+          $("#pycon-uk-2023").appendTo($("#past_cfps"));
+          $("#pycon-uk-2023 .timer").replaceWith($("#pycon-uk-2023 .deadline"));
+          $("#pycon-uk-2023 .timer-small").replaceWith(
+            $("#pycon-uk-2023 .deadline")
+          );
+          $("#pycon-uk-2023 .calendar").remove();
+        }
+
+        if (confDiff > 0) {
+          $("#pycon-uk-2023").addClass("pastconf");
+          $("#pycon-uk-2023").appendTo($("#past_confs"));
+          $("#pycon-uk-2023 .timer").replaceWith($("#pycon-uk-2023 .deadline"));
+          $("#pycon-uk-2023 .timer-small").replaceWith(
+            $("#pycon-uk-2023 .deadline")
+          );
+          $("#pycon-uk-2023 .calendar").remove();
+        }
 
         $("#pycon-slovakia-2024 .PY-tag").html(
           sub2name["PY"].toLocaleLowerCase()
