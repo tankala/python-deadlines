@@ -9,7 +9,18 @@
 		<title>Python Conference Deadlines</title>
 		<description>Countdowns to your favourite Python conferences with calls for participation and resources to submit awesome talks!</description>
 		<link>https://pythondeadlin.es/feed.xml</link>
-		<lastBuildDate>Mon, 12 Jun 2023 22:42:01 +0000</lastBuildDate>
+		<lastBuildDate>Mon, 19 Jun 2023 07:56:34 +0000</lastBuildDate>
+		
+		
+			<item>
+				<title>PyCon Sweden 2023 Conference Deadline</title>
+				<description>Conference in Stockholm, Sweden on November 09 - 10, 2023. CfP: 2023-09-01 23:59:00 AoE.&lt;br /&gt;Find them here: @pyconse </description>
+				<pubDate>Fri, 01 Sep 2023 23:59:00 +0000</pubDate>
+				<link>https://pythondeadlin.es/conference/pycon-sweden-2023/</link>
+				<guid isPermaLink="false"></guid>
+				<category>PY</category>
+			</item>
+		
 		
 		
 			<item>
@@ -250,17 +261,6 @@
 				<link>https://pythondeadlin.es/conference/euroscipy-2023/</link>
 				<guid isPermaLink="false"></guid>
 				<category>SCIPY</category>
-			</item>
-		
-		
-		
-			<item>
-				<title>PyCon Korea 2023 Conference Deadline</title>
-				<description>Conference in Seoul, South Korea on August 11 - 13, 2023. CfP: 2023-05-14 23:59:00 AoE.&lt;br /&gt;Find them here: @PyConKR </description>
-				<pubDate>Sun, 14 May 2023 23:59:00 +0000</pubDate>
-				<link>https://pythondeadlin.es/conference/pycon-korea-2023/</link>
-				<guid isPermaLink="false"></guid>
-				<category>PY</category>
 			</item>
 		
 		
