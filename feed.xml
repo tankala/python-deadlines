@@ -9,7 +9,7 @@
 		<title>Python Conference Deadlines</title>
 		<description>Countdowns to your favourite Python conferences with calls for participation and resources to submit awesome talks!</description>
 		<link>https://pythondeadlin.es/feed.xml</link>
-		<lastBuildDate>Wed, 21 Jun 2023 23:48:19 +0000</lastBuildDate>
+		<lastBuildDate>Sun, 25 Jun 2023 17:36:03 +0000</lastBuildDate>
 		
 		
 			<item>
@@ -28,6 +28,17 @@
 				<description>Conference in Durban, South Africa on October 5 - 6, 2023. CfP: 2023-08-18 23:59:00 AoE.&lt;br /&gt;Find them here: @pyconza </description>
 				<pubDate>Fri, 18 Aug 2023 23:59:00 +0000</pubDate>
 				<link>https://pythondeadlin.es/conference/pycon-south-africa-2023/</link>
+				<guid isPermaLink="false"></guid>
+				<category>PY</category>
+			</item>
+		
+		
+		
+			<item>
+				<title>PyCon Thailand 2023 Conference Deadline</title>
+				<description>Conference in Bangkok, Thailand on December 14 - 16, 2023. CfP: 2023-08-16 23:59:00 AoE. </description>
+				<pubDate>Wed, 16 Aug 2023 23:59:00 +0000</pubDate>
+				<link>https://pythondeadlin.es/conference/pycon-thailand-2023/</link>
 				<guid isPermaLink="false"></guid>
 				<category>PY</category>
 			</item>
@@ -250,17 +261,6 @@
 				<link>https://pythondeadlin.es/conference/pycon-australia-2023/</link>
 				<guid isPermaLink="false"></guid>
 				<category>PY</category>
-			</item>
-		
-		
-		
-			<item>
-				<title>EuroSciPy 2023 Conference Deadline</title>
-				<description>Conference in Basel, Switzerland on Aug 14 - 18, 2023. CfP: 2023-05-14 23:59:59 AoE.&lt;br /&gt;Find them here: @euroSciPy </description>
-				<pubDate>Sun, 14 May 2023 23:59:59 +0000</pubDate>
-				<link>https://pythondeadlin.es/conference/euroscipy-2023/</link>
-				<guid isPermaLink="false"></guid>
-				<category>SCIPY</category>
 			</item>
 		
 		

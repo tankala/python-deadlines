@@ -9,7 +9,7 @@
 		<title>Newsfeed for Python Events Calendar from Python Conference Deadlines</title>
 		<description>Countdowns to your favourite Python conferences with calls for participation and resources to submit awesome talks!</description>
 		<link>https://pythondeadlin.es/feed.xml</link>
-		<lastBuildDate>Wed, 21 Jun 2023 23:48:19 +0000</lastBuildDate>
+		<lastBuildDate>Sun, 25 Jun 2023 17:36:03 +0000</lastBuildDate>
 		
 			<item>
 				<title>PyCon Sweden 2023 Conference Deadline</title>
@@ -25,6 +25,15 @@
 				<description><![CDATA[* name of the event: PyCon South Africa 2023<br/>* type of event: Conference <br/>* focus on Python: Yes<br/>* approximate number of attendees: Unknown<br/>* location (incl. country): Durban, South Africa<br/>* dates/times/recurrence (incl. time zone): October 5 - 6, 2023<br/>* HTML link : <a href="https://za.pycon.org/">PyCon South Africa 2023</a>]]></description>
 				<pubDate>Thu, 05 Oct 2023 00:00:00 +0000</pubDate>
 				<link>https://pythondeadlin.es/conference/pycon-south-africa-2023/</link>
+				<guid isPermaLink="false"></guid>
+				<category>PY</category>
+			</item>
+		
+			<item>
+				<title>PyCon Thailand 2023 Conference Deadline</title>
+				<description><![CDATA[* name of the event: PyCon Thailand 2023<br/>* type of event: Conference <br/>* focus on Python: Yes<br/>* approximate number of attendees: Unknown<br/>* location (incl. country): Bangkok, Thailand<br/>* dates/times/recurrence (incl. time zone): December 14 - 16, 2023<br/>* HTML link : <a href="https://th.pycon.org">PyCon Thailand 2023</a>]]></description>
+				<pubDate>Thu, 14 Dec 2023 00:00:00 +0000</pubDate>
+				<link>https://pythondeadlin.es/conference/pycon-thailand-2023/</link>
 				<guid isPermaLink="false"></guid>
 				<category>PY</category>
 			</item>
@@ -207,15 +216,6 @@
 				<link>https://pythondeadlin.es/conference/pycon-australia-2023/</link>
 				<guid isPermaLink="false"></guid>
 				<category>PY</category>
-			</item>
-		
-			<item>
-				<title>EuroSciPy 2023 Conference Deadline</title>
-				<description><![CDATA[* name of the event: EuroSciPy 2023<br/>* type of event: Conference <br/>* focus on Python: Yes<br/>* approximate number of attendees: Unknown<br/>* location (incl. country): Basel, Switzerland<br/>* dates/times/recurrence (incl. time zone): Aug 14 - 18, 2023<br/>* HTML link : <a href="https://euroscipy.org/2023/">EuroSciPy 2023</a>]]></description>
-				<pubDate>Mon, 14 Aug 2023 00:00:00 +0000</pubDate>
-				<link>https://pythondeadlin.es/conference/euroscipy-2023/</link>
-				<guid isPermaLink="false"></guid>
-				<category>SCIPY</category>
 			</item>
 		
 	</channel>

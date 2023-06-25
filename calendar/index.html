@@ -56,7 +56,7 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/js-year-calendar.min.css?t=1687391299"
+      href="/static/css/js-year-calendar.min.css?t=1687714563"
       media="screen,projection"
     />
 
@@ -68,13 +68,13 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/deadlines.css?t=1687391299"
+      href="/static/css/deadlines.css?t=1687714563"
       media="screen,projection"
     />
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/calendar.css?t=1687391299"
+      href="/static/css/calendar.css?t=1687714563"
       media="screen,projection"
     />
 
@@ -722,6 +722,38 @@
           subject: "PY",
           startDate: Date.parse("2023-10-05"),
           endDate: Date.parse("2023-10-06"),
+        });
+
+        // add deadlines in red
+        conf_list_all.push({
+          id: "pycon-thailand-2023-deadline",
+          abbreviation: "pycon-thailand-2023",
+          name: "PyCon Thailand 2023 CfP",
+          color: "red",
+          location: "Bangkok, Thailand",
+          date: "December 14 - 16, 2023",
+          subject: "PY",
+          startDate: Date.parse("2023-08-16 23:59:00"),
+          endDate: Date.parse("2023-08-16 23:59:00"),
+        });
+
+        // add Conferences in chosen color
+
+        var color = "black";
+        // use first sub to choose color
+
+        color = "#4B8BBE";
+
+        conf_list_all.push({
+          id: "pycon-thailand-2023-conference",
+          abbreviation: "pycon-thailand-2023",
+          name: "PyCon Thailand 2023",
+          color: color,
+          location: "Bangkok, Thailand",
+          date: "December 14 - 16, 2023",
+          subject: "PY",
+          startDate: Date.parse("2023-12-14"),
+          endDate: Date.parse("2023-12-16"),
         });
 
         // add deadlines in red
@@ -2066,6 +2098,36 @@
           subject: "PY",
           startDate: Date.parse("2023-05-25"),
           endDate: Date.parse("2023-05-28"),
+        });
+
+        // add deadlines in red
+        conf_list_all.push({
+          id: "pycamp-leipzig-2023-deadline",
+          abbreviation: "pycamp-leipzig-2023",
+          name: "PyCamp Leipzig 2023 CfP",
+          color: "red",
+          location: "Leipzig, Saxony, Germany",
+          date: "July 29 - 30, 2023",
+          subject: "",
+          startDate: Date.parse("TBA"),
+          endDate: Date.parse("TBA"),
+        });
+
+        // add Conferences in chosen color
+
+        var color = "black";
+        // use first sub to choose color
+
+        conf_list_all.push({
+          id: "pycamp-leipzig-2023-conference",
+          abbreviation: "pycamp-leipzig-2023",
+          name: "PyCamp Leipzig 2023",
+          color: color,
+          location: "Leipzig, Saxony, Germany",
+          date: "July 29 - 30, 2023",
+          subject: "",
+          startDate: Date.parse("2023-07-29"),
+          endDate: Date.parse("2023-07-30"),
         });
 
         // add deadlines in red
