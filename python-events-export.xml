@@ -9,7 +9,7 @@
 		<title>Newsfeed for Python Events Calendar from Python Conference Deadlines</title>
 		<description>Countdowns to your favourite Python conferences with calls for participation and resources to submit awesome talks!</description>
 		<link>https://pythondeadlin.es/feed.xml</link>
-		<lastBuildDate>Sun, 25 Jun 2023 17:55:23 +0000</lastBuildDate>
+		<lastBuildDate>Mon, 26 Jun 2023 17:47:49 +0000</lastBuildDate>
 		
 			<item>
 				<title>PyCon Sweden 2023 Conference Deadline</title>
@@ -43,6 +43,15 @@
 				<description><![CDATA[* name of the event: PyCon India 2023<br/>* type of event: Conference <br/>* focus on Python: Yes<br/>* approximate number of attendees: Unknown<br/>* location (incl. country): Hyderabad, India<br/>* dates/times/recurrence (incl. time zone): 29 September - 2 October, 2023<br/>* HTML link : <a href="https://in.pycon.org/2023/">PyCon India 2023</a>]]></description>
 				<pubDate>Fri, 29 Sep 2023 00:00:00 +0000</pubDate>
 				<link>https://pythondeadlin.es/conference/pycon-india-2023/</link>
+				<guid isPermaLink="false"></guid>
+				<category>PY</category>
+			</item>
+		
+			<item>
+				<title>PyCon Ireland 2023 Conference Deadline</title>
+				<description><![CDATA[* name of the event: PyCon Ireland 2023<br/>* type of event: Conference <br/>* focus on Python: Yes<br/>* approximate number of attendees: Unknown<br/>* location (incl. country): Dublin, Ireland<br/>* dates/times/recurrence (incl. time zone): November 12 - 13, 2023<br/>* HTML link : <a href="https://python.ie/pycon-2023/">PyCon Ireland 2023</a>]]></description>
+				<pubDate>Sun, 12 Nov 2023 00:00:00 +0000</pubDate>
+				<link>https://pythondeadlin.es/conference/pycon-ireland-2023/</link>
 				<guid isPermaLink="false"></guid>
 				<category>PY</category>
 			</item>
@@ -207,15 +216,6 @@
 				<link>https://pythondeadlin.es/conference/djangocon-us-2023/</link>
 				<guid isPermaLink="false"></guid>
 				<category>WEB</category>
-			</item>
-		
-			<item>
-				<title>PyCon Australia 2023 Conference Deadline</title>
-				<description><![CDATA[* name of the event: PyCon Australia 2023<br/>* type of event: Conference <br/>* focus on Python: Yes<br/>* approximate number of attendees: Unknown<br/>* location (incl. country): Tarndanya (Adelaide), Australia<br/>* dates/times/recurrence (incl. time zone): August 18 - 22, 2023<br/>* HTML link : <a href="https://2023.pycon.org.au/">PyCon Australia 2023</a>]]></description>
-				<pubDate>Fri, 18 Aug 2023 00:00:00 +0000</pubDate>
-				<link>https://pythondeadlin.es/conference/pycon-australia-2023/</link>
-				<guid isPermaLink="false"></guid>
-				<category>PY</category>
 			</item>
 		
 	</channel>

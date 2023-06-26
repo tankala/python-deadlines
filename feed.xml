@@ -9,7 +9,7 @@
 		<title>Python Conference Deadlines</title>
 		<description>Countdowns to your favourite Python conferences with calls for participation and resources to submit awesome talks!</description>
 		<link>https://pythondeadlin.es/feed.xml</link>
-		<lastBuildDate>Sun, 25 Jun 2023 17:55:23 +0000</lastBuildDate>
+		<lastBuildDate>Mon, 26 Jun 2023 17:47:49 +0000</lastBuildDate>
 		
 		
 			<item>
@@ -50,6 +50,17 @@
 				<description>Conference in Hyderabad, India on 29 September - 2 October, 2023. CfP: 2023-08-05 23:59:00 AoE.&lt;br /&gt;Find them here: @PyConIndia </description>
 				<pubDate>Sat, 05 Aug 2023 23:59:00 +0000</pubDate>
 				<link>https://pythondeadlin.es/conference/pycon-india-2023/</link>
+				<guid isPermaLink="false"></guid>
+				<category>PY</category>
+			</item>
+		
+		
+		
+			<item>
+				<title>PyCon Ireland 2023 Conference Deadline</title>
+				<description>Conference in Dublin, Ireland on November 12 - 13, 2023. CfP: 2023-07-16 23:59:00 AoE. </description>
+				<pubDate>Sun, 16 Jul 2023 23:59:00 +0000</pubDate>
+				<link>https://pythondeadlin.es/conference/pycon-ireland-2023/</link>
 				<guid isPermaLink="false"></guid>
 				<category>PY</category>
 			</item>
@@ -250,17 +261,6 @@
 				<link>https://pythondeadlin.es/conference/djangocon-us-2023/</link>
 				<guid isPermaLink="false"></guid>
 				<category>WEB</category>
-			</item>
-		
-		
-		
-			<item>
-				<title>PyCon Australia 2023 Conference Deadline</title>
-				<description>Conference in Tarndanya (Adelaide), Australia on August 18 - 22, 2023. CfP: 2023-05-15 23:59:00 AoE.&lt;br /&gt;Find them here: @PyConAU </description>
-				<pubDate>Mon, 15 May 2023 23:59:00 +0000</pubDate>
-				<link>https://pythondeadlin.es/conference/pycon-australia-2023/</link>
-				<guid isPermaLink="false"></guid>
-				<category>PY</category>
 			</item>
 		
 		
