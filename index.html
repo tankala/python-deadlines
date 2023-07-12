@@ -63,7 +63,7 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/js-year-calendar.min.css?t=1687801669"
+      href="/static/css/js-year-calendar.min.css?t=1689161766"
       media="screen,projection"
     />
 
@@ -75,13 +75,13 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/deadlines.css?t=1687801669"
+      href="/static/css/deadlines.css?t=1689161766"
       media="screen,projection"
     />
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/calendar.css?t=1687801669"
+      href="/static/css/calendar.css?t=1689161766"
       media="screen,projection"
     />
 
@@ -5655,6 +5655,78 @@
             </div>
             <hr />
           </div>
+
+          <div id="pyjamas-conf-2023" class="ConfItem PY-conf">
+            <div class="row conf-row">
+              <div class="col-6">
+                <span class="conf-title">
+                  <a
+                    title="Deadline Details"
+                    href="/conference/pyjamas-conf-2023/"
+                    >Pyjamas Conf 2023</a
+                  >
+                </span>
+                <span class="conf-title-small">
+                  <a
+                    title="Deadline Details"
+                    href="/conference/pyjamas-conf-2023/"
+                    >Pyjamas Conf '23</a
+                  >
+                </span>
+                <span class="conf-title-icon">
+                  <a
+                    title="Conference Website"
+                    href="https://pyjamas.live"
+                    target="_blank"
+                    ><img
+                      src="/static/img/203-earth.svg"
+                      class="badge-link"
+                      alt="Link to Conference Website"
+                      width="16"
+                      height="16"
+                  /></a>
+                  &ZeroWidthSpace;
+                </span>
+              </div>
+              <div class="col-6">
+                <span class="timer"></span>
+                <span class="timer-small"></span>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12 col-sm-6">
+                <div class="meta">
+                  <span class="conf-date">.</span>
+                  <span class="conf-place"> <a href="#">Online</a>. </span>
+                </div>
+
+                <div class="note">
+                  <b>Note: </b>Supports any language of talks
+                </div>
+              </div>
+              <div class="col-12 col-sm-6">
+                <div class="deadline">
+                  <div>
+                    Deadline:
+                    <span class="deadline-time"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-6">
+                <span
+                  title="Click to only show PY conferences"
+                  data-sub="PY"
+                  class="badge badge-light conf-sub PY-tag"
+                ></span>
+              </div>
+              <div class="col-6">
+                <div class="calendar"></div>
+              </div>
+            </div>
+            <hr />
+          </div>
         </div>
         <div id="past_cfps">
           <h1 id="past-cfps-title">Past Calls for Participation</h1>
@@ -9734,6 +9806,14 @@
         $("#pytexas-2024 .timer").html("TBA");
         $("#pytexas-2024 .deadline-time").html("TBA");
         $("#pytexas-2024").attr("cfpDiff", -Infinity);
+
+        $("#pyjamas-conf-2023 .PY-tag").html(
+          sub2name["PY"].toLocaleLowerCase()
+        );
+
+        $("#pyjamas-conf-2023 .timer").html("TBA");
+        $("#pyjamas-conf-2023 .deadline-time").html("TBA");
+        $("#pyjamas-conf-2023").attr("cfpDiff", -Infinity);
 
         // Sort coming_confs and past_confs
         $("#coming_confs .ConfItem")
