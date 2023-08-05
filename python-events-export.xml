@@ -9,7 +9,16 @@
 		<title>Newsfeed for Python Events Calendar from Python Conference Deadlines</title>
 		<description>Countdowns to your favourite Python conferences with calls for participation and resources to submit awesome talks!</description>
 		<link>https://pythondeadlin.es/feed.xml</link>
-		<lastBuildDate>Fri, 04 Aug 2023 19:48:26 +0000</lastBuildDate>
+		<lastBuildDate>Sat, 05 Aug 2023 07:16:08 +0000</lastBuildDate>
+		
+			<item>
+				<title>PyLadiesCon 2023 Conference Deadline</title>
+				<description><![CDATA[* name of the event: PyLadiesCon 2023<br/>* type of event: Conference <br/>* focus on Python: Yes<br/>* approximate number of attendees: Unknown<br/>* location (incl. country): Online<br/>* dates/times/recurrence (incl. time zone): December 02 - 03, 2023<br/>* HTML link : <a href="https://conference.pyladies.com">PyLadiesCon 2023</a>]]></description>
+				<pubDate>Sat, 02 Dec 2023 00:00:00 +0000</pubDate>
+				<link>https://pythondeadlin.es/conference/pyladiescon-2023/</link>
+				<guid isPermaLink="false"></guid>
+				<category>PY</category>
+			</item>
 		
 			<item>
 				<title>PyCon Sweden 2023 Conference Deadline</title>
@@ -205,15 +214,6 @@
 				<description><![CDATA[* name of the event: Kiwi PyCon 2023<br/>* type of event: Conference <br/>* focus on Python: Yes<br/>* approximate number of attendees: Unknown<br/>* location (incl. country): Waihōpai (Invercargill), Aotearoa, New Zealand<br/>* dates/times/recurrence (incl. time zone): September 15 - 17, 2022<br/>* HTML link : <a href="https://kiwipycon.nz/">Kiwi PyCon 2023</a>]]></description>
 				<pubDate>Fri, 15 Sep 2023 00:00:00 +0000</pubDate>
 				<link>https://pythondeadlin.es/conference/kiwi-pycon-2023/</link>
-				<guid isPermaLink="false"></guid>
-				<category>PY</category>
-			</item>
-		
-			<item>
-				<title>PyGotham TV 2023 Conference Deadline</title>
-				<description><![CDATA[* name of the event: PyGotham TV 2023<br/>* type of event: Conference <br/>* focus on Python: Yes<br/>* approximate number of attendees: Unknown<br/>* location (incl. country): Online<br/>* dates/times/recurrence (incl. time zone): October 06 - 07, 2023<br/>* HTML link : <a href="https://2023.pygotham.tv/">PyGotham TV 2023</a>]]></description>
-				<pubDate>Fri, 06 Oct 2023 00:00:00 +0000</pubDate>
-				<link>https://pythondeadlin.es/conference/pygotham-tv-2023/</link>
 				<guid isPermaLink="false"></guid>
 				<category>PY</category>
 			</item>

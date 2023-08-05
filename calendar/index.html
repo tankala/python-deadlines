@@ -56,7 +56,7 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/js-year-calendar.min.css?t=1691178506"
+      href="/static/css/js-year-calendar.min.css?t=1691219768"
       media="screen,projection"
     />
 
@@ -68,13 +68,13 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/deadlines.css?t=1691178506"
+      href="/static/css/deadlines.css?t=1691219768"
       media="screen,projection"
     />
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/calendar.css?t=1691178506"
+      href="/static/css/calendar.css?t=1691219768"
       media="screen,projection"
     />
 
@@ -647,6 +647,38 @@
       function load_conference_list() {
         // Gather data
         var conf_list_all = [];
+
+        // add deadlines in red
+        conf_list_all.push({
+          id: "pyladiescon-2023-deadline",
+          abbreviation: "pyladiescon-2023",
+          name: "PyLadiesCon 2023 CfP",
+          color: "red",
+          location: "Online",
+          date: "December 02 - 03, 2023",
+          subject: "PY",
+          startDate: Date.parse("2023-09-04 23:59:00"),
+          endDate: Date.parse("2023-09-04 23:59:00"),
+        });
+
+        // add Conferences in chosen color
+
+        var color = "black";
+        // use first sub to choose color
+
+        color = "#4B8BBE";
+
+        conf_list_all.push({
+          id: "pyladiescon-2023-conference",
+          abbreviation: "pyladiescon-2023",
+          name: "PyLadiesCon 2023",
+          color: color,
+          location: "Online",
+          date: "December 02 - 03, 2023",
+          subject: "PY",
+          startDate: Date.parse("2023-12-02"),
+          endDate: Date.parse("2023-12-03"),
+        });
 
         // add deadlines in red
         conf_list_all.push({
