@@ -9,7 +9,16 @@
 		<title>Newsfeed for Python Events Calendar from Python Conference Deadlines</title>
 		<description>Countdowns to your favourite Python conferences with calls for participation and resources to submit awesome talks!</description>
 		<link>https://pythondeadlin.es/feed.xml</link>
-		<lastBuildDate>Sat, 05 Aug 2023 07:16:08 +0000</lastBuildDate>
+		<lastBuildDate>Sun, 06 Aug 2023 12:59:23 +0000</lastBuildDate>
+		
+			<item>
+				<title>PyHEP 2023 Conference Deadline</title>
+				<description><![CDATA[* name of the event: PyHEP 2023<br/>* type of event: Conference <br/>* focus on Python: Yes<br/>* approximate number of attendees: Unknown<br/>* location (incl. country): Online<br/>* dates/times/recurrence (incl. time zone): October 09 - 12, 2023<br/>* HTML link : <a href="https://indico.cern.ch/e/PyHEP2023">PyHEP 2023</a>]]></description>
+				<pubDate>Mon, 09 Oct 2023 00:00:00 +0000</pubDate>
+				<link>https://pythondeadlin.es/conference/pyhep-2023/</link>
+				<guid isPermaLink="false"></guid>
+				<category>SCIPY</category>
+			</item>
 		
 			<item>
 				<title>PyLadiesCon 2023 Conference Deadline</title>
@@ -193,7 +202,7 @@
 		
 			<item>
 				<title>PyCon Malaysia 2023 Conference Deadline</title>
-				<description><![CDATA[* name of the event: PyCon Malaysia 2023<br/>* type of event: Conference <br/>* focus on Python: Yes<br/>* approximate number of attendees: Unknown<br/>* location (incl. country): Malaysia<br/>* dates/times/recurrence (incl. time zone): August 26, 2023<br/>* HTML link : <a href="https://pycon.my">PyCon Malaysia 2023</a>]]></description>
+				<description><![CDATA[* name of the event: PyCon Malaysia 2023<br/>* type of event: Conference <br/>* focus on Python: Yes<br/>* approximate number of attendees: Unknown<br/>* location (incl. country): Kuala Lumpur, Malaysia<br/>* dates/times/recurrence (incl. time zone): August 26, 2023<br/>* HTML link : <a href="https://pycon.my">PyCon Malaysia 2023</a>]]></description>
 				<pubDate>Sat, 26 Aug 2023 00:00:00 +0000</pubDate>
 				<link>https://pythondeadlin.es/conference/pycon-malaysia-2023/</link>
 				<guid isPermaLink="false"></guid>
@@ -205,15 +214,6 @@
 				<description><![CDATA[* name of the event: North Bay Python 2023<br/>* type of event: Conference <br/>* focus on Python: Yes<br/>* approximate number of attendees: Unknown<br/>* location (incl. country): Petaluma, California, USA<br/>* dates/times/recurrence (incl. time zone): July 29 - 30, 2023<br/>* HTML link : <a href="https://2023.northbaypython.org/">North Bay Python 2023</a>]]></description>
 				<pubDate>Sat, 29 Jul 2023 00:00:00 +0000</pubDate>
 				<link>https://pythondeadlin.es/conference/north-bay-python-2023/</link>
-				<guid isPermaLink="false"></guid>
-				<category>PY</category>
-			</item>
-		
-			<item>
-				<title>Kiwi PyCon 2023 Conference Deadline</title>
-				<description><![CDATA[* name of the event: Kiwi PyCon 2023<br/>* type of event: Conference <br/>* focus on Python: Yes<br/>* approximate number of attendees: Unknown<br/>* location (incl. country): Waihōpai (Invercargill), Aotearoa, New Zealand<br/>* dates/times/recurrence (incl. time zone): September 15 - 17, 2022<br/>* HTML link : <a href="https://kiwipycon.nz/">Kiwi PyCon 2023</a>]]></description>
-				<pubDate>Fri, 15 Sep 2023 00:00:00 +0000</pubDate>
-				<link>https://pythondeadlin.es/conference/kiwi-pycon-2023/</link>
 				<guid isPermaLink="false"></guid>
 				<category>PY</category>
 			</item>

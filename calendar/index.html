@@ -56,7 +56,7 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/js-year-calendar.min.css?t=1691219768"
+      href="/static/css/js-year-calendar.min.css?t=1691326763"
       media="screen,projection"
     />
 
@@ -68,13 +68,13 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/deadlines.css?t=1691219768"
+      href="/static/css/deadlines.css?t=1691326763"
       media="screen,projection"
     />
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/calendar.css?t=1691219768"
+      href="/static/css/calendar.css?t=1691326763"
       media="screen,projection"
     />
 
@@ -647,6 +647,38 @@
       function load_conference_list() {
         // Gather data
         var conf_list_all = [];
+
+        // add deadlines in red
+        conf_list_all.push({
+          id: "pyhep-2023-deadline",
+          abbreviation: "pyhep-2023",
+          name: "PyHEP 2023 CfP",
+          color: "red",
+          location: "Online",
+          date: "October 09 - 12, 2023",
+          subject: "SCIPY",
+          startDate: Date.parse("2023-09-06 23:59:00"),
+          endDate: Date.parse("2023-09-06 23:59:00"),
+        });
+
+        // add Conferences in chosen color
+
+        var color = "black";
+        // use first sub to choose color
+
+        color = "#70163C";
+
+        conf_list_all.push({
+          id: "pyhep-2023-conference",
+          abbreviation: "pyhep-2023",
+          name: "PyHEP 2023",
+          color: color,
+          location: "Online",
+          date: "October 09 - 12, 2023",
+          subject: "SCIPY",
+          startDate: Date.parse("2023-10-09"),
+          endDate: Date.parse("2023-10-12"),
+        });
 
         // add deadlines in red
         conf_list_all.push({
@@ -1366,7 +1398,7 @@
           abbreviation: "pycon-malaysia-2023",
           name: "PyCon Malaysia 2023 CfP",
           color: "red",
-          location: "Malaysia",
+          location: "Kuala Lumpur, Malaysia",
           date: "August 26, 2023",
           subject: "PY",
           startDate: Date.parse("2023-05-31 23:59:00"),
@@ -1385,7 +1417,7 @@
           abbreviation: "pycon-malaysia-2023",
           name: "PyCon Malaysia 2023",
           color: color,
-          location: "Malaysia",
+          location: "Kuala Lumpur, Malaysia",
           date: "August 26, 2023",
           subject: "PY",
           startDate: Date.parse("2023-08-26"),
