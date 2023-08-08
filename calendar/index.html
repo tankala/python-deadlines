@@ -56,7 +56,7 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/js-year-calendar.min.css?t=1691488317"
+      href="/static/css/js-year-calendar.min.css?t=1691533825"
       media="screen,projection"
     />
 
@@ -68,13 +68,13 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/deadlines.css?t=1691488317"
+      href="/static/css/deadlines.css?t=1691533825"
       media="screen,projection"
     />
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/calendar.css?t=1691488317"
+      href="/static/css/calendar.css?t=1691533825"
       media="screen,projection"
     />
 
@@ -2182,6 +2182,38 @@
           subject: "PY",
           startDate: Date.parse("2024-04-20"),
           endDate: Date.parse("2024-04-21"),
+        });
+
+        // add deadlines in red
+        conf_list_all.push({
+          id: "pycon-de-pydata-berlin-2024-deadline",
+          abbreviation: "pycon-de-pydata-berlin-2024",
+          name: "PyCon DE & PyData Berlin 2024 CfP",
+          color: "red",
+          location: "Berlin, Germany",
+          date: "April 21 - 24, 2024",
+          subject: "PY,PYDATA",
+          startDate: Date.parse("TBA"),
+          endDate: Date.parse("TBA"),
+        });
+
+        // add Conferences in chosen color
+
+        var color = "black";
+        // use first sub to choose color
+
+        color = "#4B8BBE";
+
+        conf_list_all.push({
+          id: "pycon-de-pydata-berlin-2024-conference",
+          abbreviation: "pycon-de-pydata-berlin-2024",
+          name: "PyCon DE & PyData Berlin 2024",
+          color: color,
+          location: "Berlin, Germany",
+          date: "April 21 - 24, 2024",
+          subject: "PY,PYDATA",
+          startDate: Date.parse("2024-04-21"),
+          endDate: Date.parse("2024-04-24"),
         });
 
         return conf_list_all;
