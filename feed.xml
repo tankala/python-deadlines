@@ -9,7 +9,7 @@
 		<title>Python Conference Deadlines</title>
 		<description>Countdowns to your favourite Python conferences with calls for participation and resources to submit awesome talks!</description>
 		<link>https://pythondeadlin.es/feed.xml</link>
-		<lastBuildDate>Wed, 09 Aug 2023 19:16:25 +0000</lastBuildDate>
+		<lastBuildDate>Wed, 09 Aug 2023 19:44:12 +0000</lastBuildDate>
 		
 		
 			<item>
@@ -61,6 +61,17 @@
 				<description>Conference in Bangkok, Thailand on December 14 - 16, 2023. CfP: 2023-08-16 23:59:00 AoE. </description>
 				<pubDate>Wed, 16 Aug 2023 23:59:00 +0000</pubDate>
 				<link>https://pythondeadlin.es/conference/pycon-thailand-2023/</link>
+				<guid isPermaLink="false"></guid>
+				<category>PY</category>
+			</item>
+		
+		
+		
+			<item>
+				<title>PackagingCon 2023 Conference Deadline</title>
+				<description>Conference in Berlin, Germany on October 26 - 28, 2023. CfP: 2023-08-06 23:59:59 AoE. </description>
+				<pubDate>Sun, 06 Aug 2023 23:59:59 +0000</pubDate>
+				<link>https://pythondeadlin.es/conference/packagingcon-2023/</link>
 				<guid isPermaLink="false"></guid>
 				<category>PY</category>
 			</item>
@@ -248,17 +259,6 @@
 				<description>Conference in Kuala Lumpur, Malaysia on August 26, 2023. CfP: 2023-05-31 23:59:00 AoE.&lt;br /&gt;Find them here: @pyconmy </description>
 				<pubDate>Wed, 31 May 2023 23:59:00 +0000</pubDate>
 				<link>https://pythondeadlin.es/conference/pycon-malaysia-2023/</link>
-				<guid isPermaLink="false"></guid>
-				<category>PY</category>
-			</item>
-		
-		
-		
-			<item>
-				<title>North Bay Python 2023 Conference Deadline</title>
-				<description>Conference in Petaluma, California, USA on July 29 - 30, 2023. CfP: 2023-05-19 23:59:00 AoE.&lt;br /&gt;Find them here: @NorthBayPython </description>
-				<pubDate>Fri, 19 May 2023 23:59:00 +0000</pubDate>
-				<link>https://pythondeadlin.es/conference/north-bay-python-2023/</link>
 				<guid isPermaLink="false"></guid>
 				<category>PY</category>
 			</item>
