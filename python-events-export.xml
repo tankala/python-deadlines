@@ -9,7 +9,16 @@
 		<title>Newsfeed for Python Events Calendar from Python Conference Deadlines</title>
 		<description>Countdowns to your favourite Python conferences with calls for participation and resources to submit awesome talks!</description>
 		<link>https://pythondeadlin.es/feed.xml</link>
-		<lastBuildDate>Wed, 09 Aug 2023 19:44:12 +0000</lastBuildDate>
+		<lastBuildDate>Fri, 11 Aug 2023 22:47:59 +0000</lastBuildDate>
+		
+			<item>
+				<title>PyCon Chile 2023 Conference Deadline</title>
+				<description><![CDATA[* name of the event: PyCon Chile 2023<br/>* type of event: Conference <br/>* focus on Python: Yes<br/>* approximate number of attendees: Unknown<br/>* location (incl. country): Valparaiso, Chile &amp; Online<br/>* dates/times/recurrence (incl. time zone): November 24 - 26, 2023<br/>* HTML link : <a href="https://pycon.cl/">PyCon Chile 2023</a>]]></description>
+				<pubDate>Fri, 24 Nov 2023 00:00:00 +0000</pubDate>
+				<link>https://pythondeadlin.es/conference/pycon-chile-2023/</link>
+				<guid isPermaLink="false"></guid>
+				<category>PY</category>
+			</item>
 		
 			<item>
 				<title>PyHEP 2023 Conference Deadline</title>
@@ -205,15 +214,6 @@
 				<description><![CDATA[* name of the event: PyCon MEA @GlobalDevSlam 2023<br/>* type of event: Conference <br/>* focus on Python: Yes<br/>* approximate number of attendees: Unknown<br/>* location (incl. country): Dubai, UAE<br/>* dates/times/recurrence (incl. time zone): October 16 - 20, 2023<br/>* HTML link : <a href="https://globaldevslam.com/">PyCon MEA @GlobalDevSlam 2023</a>]]></description>
 				<pubDate>Mon, 16 Oct 2023 00:00:00 +0000</pubDate>
 				<link>https://pythondeadlin.es/conference/pycon-mea-globaldevslam-2023/</link>
-				<guid isPermaLink="false"></guid>
-				<category>PY</category>
-			</item>
-		
-			<item>
-				<title>PyCon Malaysia 2023 Conference Deadline</title>
-				<description><![CDATA[* name of the event: PyCon Malaysia 2023<br/>* type of event: Conference <br/>* focus on Python: Yes<br/>* approximate number of attendees: Unknown<br/>* location (incl. country): Kuala Lumpur, Malaysia<br/>* dates/times/recurrence (incl. time zone): August 26, 2023<br/>* HTML link : <a href="https://pycon.my">PyCon Malaysia 2023</a>]]></description>
-				<pubDate>Sat, 26 Aug 2023 00:00:00 +0000</pubDate>
-				<link>https://pythondeadlin.es/conference/pycon-malaysia-2023/</link>
 				<guid isPermaLink="false"></guid>
 				<category>PY</category>
 			</item>

@@ -9,7 +9,18 @@
 		<title>Python Conference Deadlines</title>
 		<description>Countdowns to your favourite Python conferences with calls for participation and resources to submit awesome talks!</description>
 		<link>https://pythondeadlin.es/feed.xml</link>
-		<lastBuildDate>Wed, 09 Aug 2023 19:44:12 +0000</lastBuildDate>
+		<lastBuildDate>Fri, 11 Aug 2023 22:47:59 +0000</lastBuildDate>
+		
+		
+			<item>
+				<title>PyCon Chile 2023 Conference Deadline</title>
+				<description>Conference in Valparaiso, Chile &amp; Online on November 24 - 26, 2023. CfP: 2023-09-15 23:59:59 AoE.&lt;br /&gt;Find them here: @PythonChileDev </description>
+				<pubDate>Fri, 15 Sep 2023 23:59:59 +0000</pubDate>
+				<link>https://pythondeadlin.es/conference/pycon-chile-2023/</link>
+				<guid isPermaLink="false"></guid>
+				<category>PY</category>
+			</item>
+		
 		
 		
 			<item>
@@ -248,17 +259,6 @@
 				<description>Conference in Dubai, UAE on October 16 - 20, 2023. CfP: 2023-05-31 23:59:00 AoE.&lt;br /&gt;Find them here: @GlobalDevSlam </description>
 				<pubDate>Wed, 31 May 2023 23:59:00 +0000</pubDate>
 				<link>https://pythondeadlin.es/conference/pycon-mea-globaldevslam-2023/</link>
-				<guid isPermaLink="false"></guid>
-				<category>PY</category>
-			</item>
-		
-		
-		
-			<item>
-				<title>PyCon Malaysia 2023 Conference Deadline</title>
-				<description>Conference in Kuala Lumpur, Malaysia on August 26, 2023. CfP: 2023-05-31 23:59:00 AoE.&lt;br /&gt;Find them here: @pyconmy </description>
-				<pubDate>Wed, 31 May 2023 23:59:00 +0000</pubDate>
-				<link>https://pythondeadlin.es/conference/pycon-malaysia-2023/</link>
 				<guid isPermaLink="false"></guid>
 				<category>PY</category>
 			</item>
