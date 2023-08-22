@@ -9,7 +9,18 @@
 		<title>Python Conference Deadlines</title>
 		<description>Countdowns to your favourite Python conferences with calls for participation and resources to submit awesome talks!</description>
 		<link>https://pythondeadlin.es/feed.xml</link>
-		<lastBuildDate>Sat, 12 Aug 2023 00:48:09 +0000</lastBuildDate>
+		<lastBuildDate>Tue, 22 Aug 2023 12:30:51 +0000</lastBuildDate>
+		
+		
+			<item>
+				<title>Python Pizza 2023 Conference Deadline</title>
+				<description>Conference in Online on November 17th, 2023. CfP: 2023-09-30 23:59:00 AoE.&lt;br /&gt;Find them here: @PythonPizzaConf </description>
+				<pubDate>Sat, 30 Sep 2023 23:59:00 +0000</pubDate>
+				<link>https://pythondeadlin.es/conference/python-pizza-2023/</link>
+				<guid isPermaLink="false"></guid>
+				<category>PY</category>
+			</item>
+		
 		
 		
 			<item>
@@ -248,17 +259,6 @@
 				<description>Conference in Tokyo, Japan on October 27 - 29, 2023. CfP: 2023-05-31 23:59:59 AoE. </description>
 				<pubDate>Wed, 31 May 2023 23:59:59 +0000</pubDate>
 				<link>https://pythondeadlin.es/conference/pycon-asia-pacific-2023/</link>
-				<guid isPermaLink="false"></guid>
-				<category>PY</category>
-			</item>
-		
-		
-		
-			<item>
-				<title>PyCon MEA @GlobalDevSlam 2023 Conference Deadline</title>
-				<description>Conference in Dubai, UAE on October 16 - 20, 2023. CfP: 2023-05-31 23:59:00 AoE.&lt;br /&gt;Find them here: @GlobalDevSlam </description>
-				<pubDate>Wed, 31 May 2023 23:59:00 +0000</pubDate>
-				<link>https://pythondeadlin.es/conference/pycon-mea-globaldevslam-2023/</link>
 				<guid isPermaLink="false"></guid>
 				<category>PY</category>
 			</item>

@@ -9,7 +9,16 @@
 		<title>Newsfeed for Python Events Calendar from Python Conference Deadlines</title>
 		<description>Countdowns to your favourite Python conferences with calls for participation and resources to submit awesome talks!</description>
 		<link>https://pythondeadlin.es/feed.xml</link>
-		<lastBuildDate>Sat, 12 Aug 2023 00:48:09 +0000</lastBuildDate>
+		<lastBuildDate>Tue, 22 Aug 2023 12:30:51 +0000</lastBuildDate>
+		
+			<item>
+				<title>Python Pizza 2023 Conference Deadline</title>
+				<description><![CDATA[* name of the event: Python Pizza 2023<br/>* type of event: Conference <br/>* focus on Python: Yes<br/>* approximate number of attendees: Unknown<br/>* location (incl. country): Online<br/>* dates/times/recurrence (incl. time zone): November 17th, 2023<br/>* HTML link : <a href="https://hamburg.python.pizza/">Python Pizza 2023</a>]]></description>
+				<pubDate>Fri, 17 Nov 2023 00:00:00 +0000</pubDate>
+				<link>https://pythondeadlin.es/conference/python-pizza-2023/</link>
+				<guid isPermaLink="false"></guid>
+				<category>PY</category>
+			</item>
 		
 			<item>
 				<title>PyCon Chile 2023 Conference Deadline</title>
@@ -205,15 +214,6 @@
 				<description><![CDATA[* name of the event: PyCon Asia Pacific 2023<br/>* type of event: Conference <br/>* focus on Python: Yes<br/>* approximate number of attendees: Unknown<br/>* location (incl. country): Tokyo, Japan<br/>* dates/times/recurrence (incl. time zone): October 27 - 29, 2023<br/>* HTML link : <a href="https://2023-apac.pycon.jp/">PyCon Asia Pacific 2023</a>]]></description>
 				<pubDate>Fri, 27 Oct 2023 00:00:00 +0000</pubDate>
 				<link>https://pythondeadlin.es/conference/pycon-asia-pacific-2023/</link>
-				<guid isPermaLink="false"></guid>
-				<category>PY</category>
-			</item>
-		
-			<item>
-				<title>PyCon MEA @GlobalDevSlam 2023 Conference Deadline</title>
-				<description><![CDATA[* name of the event: PyCon MEA @GlobalDevSlam 2023<br/>* type of event: Conference <br/>* focus on Python: Yes<br/>* approximate number of attendees: Unknown<br/>* location (incl. country): Dubai, UAE<br/>* dates/times/recurrence (incl. time zone): October 16 - 20, 2023<br/>* HTML link : <a href="https://globaldevslam.com/">PyCon MEA @GlobalDevSlam 2023</a>]]></description>
-				<pubDate>Mon, 16 Oct 2023 00:00:00 +0000</pubDate>
-				<link>https://pythondeadlin.es/conference/pycon-mea-globaldevslam-2023/</link>
 				<guid isPermaLink="false"></guid>
 				<category>PY</category>
 			</item>
