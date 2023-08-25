@@ -4,11 +4,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
-    <title>PyCon Israel</title>
+    <title>DjangoDay Copenhagen</title>
     <!-- Begin Jekyll SEO tag v2.8.0 -->
-    <title>PyCon Israel | Python Conference Deadlines</title>
+    <title>DjangoDay Copenhagen | Python Conference Deadlines</title>
     <meta name="generator" content="Jekyll v3.9.3" />
-    <meta property="og:title" content="PyCon Israel" />
+    <meta property="og:title" content="DjangoDay Copenhagen" />
     <meta name="author" content="Jesper Dramsch" />
     <meta property="og:locale" content="en_US" />
     <meta
@@ -21,20 +21,20 @@
     />
     <link
       rel="canonical"
-      href="https://pythondeadlin.es/conference/pycon-israel-2022/"
+      href="https://pythondeadlin.es/conference/djangoday-copenhagen-2023/"
     />
     <meta
       property="og:url"
-      content="https://pythondeadlin.es/conference/pycon-israel-2022/"
+      content="https://pythondeadlin.es/conference/djangoday-copenhagen-2023/"
     />
     <meta property="og:site_name" content="Python Conference Deadlines" />
     <meta property="og:type" content="article" />
     <meta
       property="article:published_time"
-      content="2023-06-28T00:00:00+00:00"
+      content="2023-10-06T00:00:00+00:00"
     />
     <meta name="twitter:card" content="summary" />
-    <meta property="twitter:title" content="PyCon Israel" />
+    <meta property="twitter:title" content="DjangoDay Copenhagen" />
     <meta name="twitter:site" content="@jesperdramsch" />
     <meta name="twitter:creator" content="@jesperdramsch" />
     <script type="application/ld+json">
@@ -46,15 +46,15 @@
           "name": "Jesper Dramsch",
           "url": "https://dramsch.net"
         },
-        "dateModified": "2023-06-28T00:00:00+00:00",
-        "datePublished": "2023-06-28T00:00:00+00:00",
+        "dateModified": "2023-10-06T00:00:00+00:00",
+        "datePublished": "2023-10-06T00:00:00+00:00",
         "description": "Countdown for the Call for Participation of this conference including conference dates and details.",
-        "headline": "PyCon Israel",
+        "headline": "DjangoDay Copenhagen",
         "mainEntityOfPage": {
           "@type": "WebPage",
-          "@id": "https://pythondeadlin.es/conference/pycon-israel-2022/"
+          "@id": "https://pythondeadlin.es/conference/djangoday-copenhagen-2023/"
         },
-        "url": "https://pythondeadlin.es/conference/pycon-israel-2022/"
+        "url": "https://pythondeadlin.es/conference/djangoday-copenhagen-2023/"
       }
     </script>
     <!-- End Jekyll SEO tag -->
@@ -166,6 +166,45 @@
       type="text/javascript"
       src="/static/js/bootstrap-multiselect.min.js"
     ></script>
+
+    <link rel="stylesheet" type="text/css" href="/static/css/mastodon.css" />
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        fetch("https://fosstodon.org/@djangodenmark.rss")
+          .then(function (response) {
+            return response.text();
+          })
+          .then(function (xmlText) {
+            var parser = new DOMParser();
+            var xml = parser.parseFromString(xmlText, "text/xml");
+            var items = xml.querySelectorAll("item");
+            var feedContainer = document.getElementById("mastodon-feed");
+            var postLimit = 2; // Number of posts to display
+
+            for (var i = 0; i < postLimit && i < items.length; i++) {
+              var item = items[i];
+              var post = item.querySelector("description").textContent;
+              var link = item.querySelector("link").textContent;
+              var pubDate = item.querySelector("pubDate").textContent;
+
+              var feedItem = document.createElement("div");
+              feedItem.setAttribute("class", "timeline-item");
+              feedItem.innerHTML =
+                '<div class="timeline-content">' +
+                post +
+                '</div><a href="' +
+                link +
+                '">' +
+                pubDate +
+                " by DjangoDay Copenhagen</a>";
+              feedContainer.appendChild(feedItem);
+            }
+          })
+          .catch(function (error) {
+            console.log("Error fetching Mastodon RSS feed:", error);
+          });
+      });
+    </script>
 
     <script type="text/javascript">
       /* global google */
@@ -406,14 +445,16 @@
         <div class="row">
           <div class="col-sm-12">
             <h1>
-              <span id="conf-title-href" href="/conference/pycon-israel-2022/"
-                >PyCon Israel 2022</span
+              <span
+                id="conf-title-href"
+                href="/conference/djangoday-copenhagen-2023/"
+                >DjangoDay Copenhagen 2023</span
               >
               <span id="twitter-box"
                 ><a
                   href="https://twitter.com/share"
                   class="twitter-share-button"
-                  data-text="Countdown to the #PyCon Israel2022 deadline!"
+                  data-text="Countdown to the #DjangoDay Copenhagen2023 deadline!"
                   data-show-count="false"
                   style="font-size: 13px"
                   >Tweet</a
@@ -430,8 +471,8 @@
         <div class="row">
           <div class="col-sm-12" id="conf-subs">
             <span id="conf-subs" title="Conference subjects">
-              <span class="PY-tag badge badge-light conf-sub conf-PY">
-                General Python
+              <span class="WEB-tag badge badge-light conf-sub conf-WEB">
+                Python for Web
               </span>
             </span>
           </div>
@@ -451,7 +492,7 @@
                 width="16"
                 height="16"
               />
-              <span id="conf-date">June 28 - 30, 2022</span>
+              <span id="conf-date">October 06, 2023</span>
             </div>
             <div>
               <img
@@ -464,8 +505,8 @@
               <a
                 id="conf-place"
                 target="_blank"
-                href="https://maps.google.com/?q=Ramat-Gan, Israel"
-                >Ramat-Gan, Israel</a
+                href="https://maps.google.com/?q=Copenhagen, Denmark"
+                >Copenhagen, Denmark</a
               >
             </div>
             <div>
@@ -479,8 +520,56 @@
               <a
                 id="conf-website"
                 target="_blank"
-                href="https://pycon.org.il/2022/"
-                >https://pycon.org.il/2022/</a
+                href="https://2023.djangoday.dk/"
+                >https://2023.djangoday.dk/</a
+              >
+            </div>
+
+            <div>
+              <img
+                src="/static/img/035-file-text.svg"
+                class="badge-link"
+                alt="Document Icon for CfP link"
+                width="16"
+                height="16"
+              />
+              <a
+                id="conf-cfp_link"
+                target="_blank"
+                href="https://2023.djangoday.dk/cfp/"
+                >Call for Participation</a
+              >
+            </div>
+
+            <div>
+              <img
+                src="/static/img/407-twitter.svg"
+                class="badge-link"
+                alt="Twitter icon"
+                width="16"
+                height="16"
+              />
+              <a
+                id="conf-twitter"
+                target="_blank"
+                href="https://twitter.com/djangodenmark"
+                >@djangodenmark</a
+              >
+            </div>
+
+            <div>
+              <img
+                src="/static/img/407-mastodon.svg"
+                class="badge-link"
+                alt="Mastodon icon"
+                width="16"
+                height="16"
+              />
+              <a
+                id="conf-mastodon"
+                target="_blank"
+                href="https://fosstodon.org/@djangodenmark"
+                >Mastodon</a
               >
             </div>
 
@@ -501,24 +590,31 @@
             </div>
           </div>
 
-          <div class="col-12 col-md-6"></div>
+          <div class="col-12 col-md-6">
+            <!-- Mastodon timeline -->
+            <div class="meta">Mastodon Posts by DjangoDay Copenhagen:</div>
+            <div id="mastodon-feed"></div>
+            <a href="https://fosstodon.org/@djangodenmark"
+              >See all Mastodon posts for DjangoDay Copenhagen</a
+            >
+          </div>
         </div>
         <div class="row">
           <div
-            id="63d3796d-7026-49fc-b4bd-7e0e85277b10"
+            id="39983066-8c74-41e4-a7e3-c0a62e3c9924"
             style="width: 100%; height: 400px"
             class="jekyll-map"
           ></div>
           <script type="text/javascript">
             jekyllMaps.register(
-              "63d3796d-7026-49fc-b4bd-7e0e85277b10",
+              "39983066-8c74-41e4-a7e3-c0a62e3c9924",
               [
                 {
-                  latitude: 32.0686867,
-                  longitude: 34.8246812,
-                  title: "PyCon Israel",
+                  latitude: 55.6867243,
+                  longitude: 12.5700724,
+                  title: "DjangoDay Copenhagen",
                   icon: null,
-                  url: "/conference/pycon-israel-2022/",
+                  url: "/conference/djangoday-copenhagen-2023/",
                   url_text: null,
                   image: "",
                   popup_html: "",
@@ -650,20 +746,20 @@
 
         // Use specified timezone for deadlines if available else use AoE timezone
 
-        var confDeadline = DateTime.fromSQL("2022-04-30 23:59:59", {
-          zone: "Asia/Jerusalem",
+        var confDeadline = DateTime.fromSQL("2023-08-31 23:59:59", {
+          zone: "Europe/Copenhagen",
         });
 
         // check if timezone is valid otherwise replace by system timezone
         if (confDeadline.invalid) {
-          var confDeadline = DateTime.fromSQL("2022-04-30 23:59:59");
+          var confDeadline = DateTime.fromSQL("2023-08-31 23:59:59");
           console.log("Invalid timezone. Using system timezone instead.");
         }
 
         // add calendar
         var conferenceDeadlineCalendar = createCalendarFromObject({
           id: "-",
-          title: "PyCon Israel 2022 deadline",
+          title: "DjangoDay Copenhagen 2023 deadline",
           date: confDeadline.toJSDate(),
           duration: 60,
         });
@@ -680,7 +776,7 @@
 
         $(".deadline-time").html(
           confDeadline
-            .setZone("Asia/Jerusalem")
+            .setZone("Europe/Copenhagen")
             .toLocaleString(DateTime.DATETIME_HUGE_WITH_SECONDS)
         );
 

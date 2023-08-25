@@ -56,7 +56,7 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/js-year-calendar.min.css?t=1692707451"
+      href="/static/css/js-year-calendar.min.css?t=1693001415"
       media="screen,projection"
     />
 
@@ -68,13 +68,13 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/deadlines.css?t=1692707451"
+      href="/static/css/deadlines.css?t=1693001415"
       media="screen,projection"
     />
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/calendar.css?t=1692707451"
+      href="/static/css/calendar.css?t=1693001415"
       media="screen,projection"
     />
 
@@ -650,6 +650,38 @@
 
         // add deadlines in red
         conf_list_all.push({
+          id: "xtremepython-2023-deadline",
+          abbreviation: "xtremepython-2023",
+          name: "XtremePython 2023 CfP",
+          color: "red",
+          location: "Online",
+          date: "December 5th, 2023",
+          subject: "PY",
+          startDate: Date.parse("2023-11-01 23:59:00"),
+          endDate: Date.parse("2023-11-01 23:59:00"),
+        });
+
+        // add Conferences in chosen color
+
+        var color = "black";
+        // use first sub to choose color
+
+        color = "#4B8BBE";
+
+        conf_list_all.push({
+          id: "xtremepython-2023-conference",
+          abbreviation: "xtremepython-2023",
+          name: "XtremePython 2023",
+          color: color,
+          location: "Online",
+          date: "December 5th, 2023",
+          subject: "PY",
+          startDate: Date.parse("2023-12-05"),
+          endDate: Date.parse("2023-12-05"),
+        });
+
+        // add deadlines in red
+        conf_list_all.push({
           id: "python-pizza-2023-deadline",
           abbreviation: "python-pizza-2023",
           name: "Python Pizza 2023 CfP",
@@ -806,6 +838,38 @@
           subject: "PY",
           startDate: Date.parse("2023-11-09"),
           endDate: Date.parse("2023-11-10"),
+        });
+
+        // add deadlines in red
+        conf_list_all.push({
+          id: "djangoday-copenhagen-2023-deadline",
+          abbreviation: "djangoday-copenhagen-2023",
+          name: "DjangoDay Copenhagen 2023 CfP",
+          color: "red",
+          location: "Copenhagen, Denmark",
+          date: "October 06, 2023",
+          subject: "WEB",
+          startDate: Date.parse("2023-08-31 23:59:59"),
+          endDate: Date.parse("2023-08-31 23:59:59"),
+        });
+
+        // add Conferences in chosen color
+
+        var color = "black";
+        // use first sub to choose color
+
+        color = "#0D0A0B";
+
+        conf_list_all.push({
+          id: "djangoday-copenhagen-2023-conference",
+          abbreviation: "djangoday-copenhagen-2023",
+          name: "DjangoDay Copenhagen 2023",
+          color: color,
+          location: "Copenhagen, Denmark",
+          date: "October 06, 2023",
+          subject: "WEB",
+          startDate: Date.parse("2023-10-06"),
+          endDate: Date.parse("2023-10-06"),
         });
 
         // add deadlines in red
@@ -1990,38 +2054,6 @@
           subject: "PY",
           startDate: Date.parse("2023-07-28"),
           endDate: Date.parse("2023-07-29"),
-        });
-
-        // add deadlines in red
-        conf_list_all.push({
-          id: "scipy-2023-deadline",
-          abbreviation: "scipy-2023",
-          name: "SciPy 2023 CfP",
-          color: "red",
-          location: "Austin, Texas, USA",
-          date: "July 10 - 16, 2023",
-          subject: "SCIPY",
-          startDate: Date.parse("2023-03-01 23:59:00"),
-          endDate: Date.parse("2023-03-01 23:59:00"),
-        });
-
-        // add Conferences in chosen color
-
-        var color = "black";
-        // use first sub to choose color
-
-        color = "#70163C";
-
-        conf_list_all.push({
-          id: "scipy-2023-conference",
-          abbreviation: "scipy-2023",
-          name: "SciPy 2023",
-          color: color,
-          location: "Austin, Texas, USA",
-          date: "July 10 - 16, 2023",
-          subject: "SCIPY",
-          startDate: Date.parse("2023-07-10"),
-          endDate: Date.parse("2023-07-16"),
         });
 
         // add deadlines in red
