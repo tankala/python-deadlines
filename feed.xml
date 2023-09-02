@@ -9,7 +9,7 @@
 		<title>Python Conference Deadlines</title>
 		<description>Countdowns to your favourite Python conferences with calls for participation and resources to submit awesome talks!</description>
 		<link>https://pythondeadlin.es/feed.xml</link>
-		<lastBuildDate>Fri, 25 Aug 2023 22:10:15 +0000</lastBuildDate>
+		<lastBuildDate>Sat, 02 Sep 2023 08:51:27 +0000</lastBuildDate>
 		
 		
 			<item>
@@ -19,6 +19,17 @@
 				<link>https://pythondeadlin.es/conference/xtremepython-2023/</link>
 				<guid isPermaLink="false"></guid>
 				<category>PY</category>
+			</item>
+		
+		
+		
+			<item>
+				<title>Pydata Global 2023 Conference Deadline</title>
+				<description>Conference in Online on December 06 - 08, 2023. CfP: 2023-10-01 23:59:00 AoE. </description>
+				<pubDate>Sun, 01 Oct 2023 23:59:00 +0000</pubDate>
+				<link>https://pythondeadlin.es/conference/pydata-global-2023/</link>
+				<guid isPermaLink="false"></guid>
+				<category>PYDATA</category>
 			</item>
 		
 		
@@ -226,17 +237,6 @@
 				<description>Conference in Tenerife, Spain on October 06 - 08, 2023. CfP: 2023-06-23 23:59:00 AoE.&lt;br /&gt;Find them here: @PyConES </description>
 				<pubDate>Fri, 23 Jun 2023 23:59:00 +0000</pubDate>
 				<link>https://pythondeadlin.es/conference/pycon-españa-2023/</link>
-				<guid isPermaLink="false"></guid>
-				<category>PY</category>
-			</item>
-		
-		
-		
-			<item>
-				<title>AfroPython Conf 2023 Conference Deadline</title>
-				<description>Conference in Salvador, Brazil on July 22, 2023. CfP: 2023-06-19 23:59:00 AoE.&lt;br /&gt;Find them here: @AfroPython </description>
-				<pubDate>Mon, 19 Jun 2023 23:59:00 +0000</pubDate>
-				<link>https://pythondeadlin.es/conference/afropython-conf-2023/</link>
 				<guid isPermaLink="false"></guid>
 				<category>PY</category>
 			</item>

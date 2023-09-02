@@ -56,7 +56,7 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/js-year-calendar.min.css?t=1693001415"
+      href="/static/css/js-year-calendar.min.css?t=1693644687"
       media="screen,projection"
     />
 
@@ -68,13 +68,13 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/deadlines.css?t=1693001415"
+      href="/static/css/deadlines.css?t=1693644687"
       media="screen,projection"
     />
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/calendar.css?t=1693001415"
+      href="/static/css/calendar.css?t=1693644687"
       media="screen,projection"
     />
 
@@ -678,6 +678,38 @@
           subject: "PY",
           startDate: Date.parse("2023-12-05"),
           endDate: Date.parse("2023-12-05"),
+        });
+
+        // add deadlines in red
+        conf_list_all.push({
+          id: "pydata-global-2023-deadline",
+          abbreviation: "pydata-global-2023",
+          name: "Pydata Global 2023 CfP",
+          color: "red",
+          location: "Online",
+          date: "December 06 - 08, 2023",
+          subject: "PYDATA",
+          startDate: Date.parse("2023-10-01 23:59:00"),
+          endDate: Date.parse("2023-10-01 23:59:00"),
+        });
+
+        // add Conferences in chosen color
+
+        var color = "black";
+        // use first sub to choose color
+
+        color = "#849324";
+
+        conf_list_all.push({
+          id: "pydata-global-2023-conference",
+          abbreviation: "pydata-global-2023",
+          name: "Pydata Global 2023",
+          color: color,
+          location: "Online",
+          date: "December 06 - 08, 2023",
+          subject: "PYDATA",
+          startDate: Date.parse("2023-12-06"),
+          endDate: Date.parse("2023-12-08"),
         });
 
         // add deadlines in red
@@ -1350,38 +1382,6 @@
 
         // add deadlines in red
         conf_list_all.push({
-          id: "afropython-conf-2023-deadline",
-          abbreviation: "afropython-conf-2023",
-          name: "AfroPython Conf 2023 CfP",
-          color: "red",
-          location: "Salvador, Brazil",
-          date: "July 22, 2023",
-          subject: "PY",
-          startDate: Date.parse("2023-06-19 23:59:00"),
-          endDate: Date.parse("2023-06-19 23:59:00"),
-        });
-
-        // add Conferences in chosen color
-
-        var color = "black";
-        // use first sub to choose color
-
-        color = "#4B8BBE";
-
-        conf_list_all.push({
-          id: "afropython-conf-2023-conference",
-          abbreviation: "afropython-conf-2023",
-          name: "AfroPython Conf 2023",
-          color: color,
-          location: "Salvador, Brazil",
-          date: "July 22, 2023",
-          subject: "PY",
-          startDate: Date.parse("2023-07-22"),
-          endDate: Date.parse("2023-07-22"),
-        });
-
-        // add deadlines in red
-        conf_list_all.push({
           id: "pycon-hong-kong-2023-deadline",
           abbreviation: "pycon-hong-kong-2023",
           name: "PyCon Hong Kong 2023 CfP",
@@ -1623,7 +1623,7 @@
           name: "Kiwi PyCon 2023 CfP",
           color: "red",
           location: "Waihōpai (Invercargill), Aotearoa, New Zealand",
-          date: "September 15 - 17, 2022",
+          date: "September 15 - 17, 2023",
           subject: "PY",
           startDate: Date.parse("2023-05-19 23:59:00"),
           endDate: Date.parse("2023-05-19 23:59:00"),
@@ -1642,7 +1642,7 @@
           name: "Kiwi PyCon 2023",
           color: color,
           location: "Waihōpai (Invercargill), Aotearoa, New Zealand",
-          date: "September 15 - 17, 2022",
+          date: "September 15 - 17, 2023",
           subject: "PY",
           startDate: Date.parse("2023-09-15"),
           endDate: Date.parse("2023-09-17"),
@@ -1990,38 +1990,6 @@
           subject: "PY",
           startDate: Date.parse("2023-09-02"),
           endDate: Date.parse("2023-09-03"),
-        });
-
-        // add deadlines in red
-        conf_list_all.push({
-          id: "europython-2023-deadline",
-          abbreviation: "europython-2023",
-          name: "EuroPython 2023 CfP",
-          color: "red",
-          location: "Prague, Czechia",
-          date: "July 17 - 23, 2023",
-          subject: "PY",
-          startDate: Date.parse("2023-03-26 23:59:00"),
-          endDate: Date.parse("2023-03-26 23:59:00"),
-        });
-
-        // add Conferences in chosen color
-
-        var color = "black";
-        // use first sub to choose color
-
-        color = "#4B8BBE";
-
-        conf_list_all.push({
-          id: "europython-2023-conference",
-          abbreviation: "europython-2023",
-          name: "EuroPython 2023",
-          color: color,
-          location: "Prague, Czechia",
-          date: "July 17 - 23, 2023",
-          subject: "PY",
-          startDate: Date.parse("2023-07-17"),
-          endDate: Date.parse("2023-07-23"),
         });
 
         // add deadlines in red
