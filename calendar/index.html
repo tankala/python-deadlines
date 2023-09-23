@@ -56,7 +56,7 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/js-year-calendar.min.css?t=1693644687"
+      href="/static/css/js-year-calendar.min.css?t=1695428165"
       media="screen,projection"
     />
 
@@ -68,13 +68,13 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/deadlines.css?t=1693644687"
+      href="/static/css/deadlines.css?t=1695428165"
       media="screen,projection"
     />
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/calendar.css?t=1693644687"
+      href="/static/css/calendar.css?t=1695428165"
       media="screen,projection"
     />
 
@@ -678,6 +678,38 @@
           subject: "PY",
           startDate: Date.parse("2023-12-05"),
           endDate: Date.parse("2023-12-05"),
+        });
+
+        // add deadlines in red
+        conf_list_all.push({
+          id: "edupy-2023-deadline",
+          abbreviation: "edupy-2023",
+          name: "EduPy 2023 CfP",
+          color: "red",
+          location: "Cali, Colombia",
+          date: "October 21st, 2023",
+          subject: "PY",
+          startDate: Date.parse("2023-10-14 23:59:00"),
+          endDate: Date.parse("2023-10-14 23:59:00"),
+        });
+
+        // add Conferences in chosen color
+
+        var color = "black";
+        // use first sub to choose color
+
+        color = "#4B8BBE";
+
+        conf_list_all.push({
+          id: "edupy-2023-conference",
+          abbreviation: "edupy-2023",
+          name: "EduPy 2023",
+          color: color,
+          location: "Cali, Colombia",
+          date: "October 21st, 2023",
+          subject: "PY",
+          startDate: Date.parse("2023-10-21"),
+          endDate: Date.parse("2023-10-21"),
         });
 
         // add deadlines in red
@@ -1462,7 +1494,7 @@
           abbreviation: "python-brasil-2023",
           name: "Python Brasil 2023 CfP",
           color: "red",
-          location: "Serra Gaúcha, Rio Grande do Sul, Brazil",
+          location: "Caxias do Sul, Brazil",
           date: "October 30 - November 05, 2023",
           subject: "PY",
           startDate: Date.parse("2023-06-08 23:59:00"),
@@ -1481,7 +1513,7 @@
           abbreviation: "python-brasil-2023",
           name: "Python Brasil 2023",
           color: color,
-          location: "Serra Gaúcha, Rio Grande do Sul, Brazil",
+          location: "Caxias do Sul, Brazil",
           date: "October 30 - November 05, 2023",
           subject: "PY",
           startDate: Date.parse("2023-10-30"),
@@ -1582,38 +1614,6 @@
           subject: "PY",
           startDate: Date.parse("2023-08-26"),
           endDate: Date.parse("2023-08-26"),
-        });
-
-        // add deadlines in red
-        conf_list_all.push({
-          id: "north-bay-python-2023-deadline",
-          abbreviation: "north-bay-python-2023",
-          name: "North Bay Python 2023 CfP",
-          color: "red",
-          location: "Petaluma, California, USA",
-          date: "July 29 - 30, 2023",
-          subject: "PY",
-          startDate: Date.parse("2023-05-19 23:59:00"),
-          endDate: Date.parse("2023-05-19 23:59:00"),
-        });
-
-        // add Conferences in chosen color
-
-        var color = "black";
-        // use first sub to choose color
-
-        color = "#4B8BBE";
-
-        conf_list_all.push({
-          id: "north-bay-python-2023-conference",
-          abbreviation: "north-bay-python-2023",
-          name: "North Bay Python 2023",
-          color: color,
-          location: "Petaluma, California, USA",
-          date: "July 29 - 30, 2023",
-          subject: "PY",
-          startDate: Date.parse("2023-07-29"),
-          endDate: Date.parse("2023-07-30"),
         });
 
         // add deadlines in red
@@ -1790,38 +1790,6 @@
 
         // add deadlines in red
         conf_list_all.push({
-          id: "pycon-korea-2023-deadline",
-          abbreviation: "pycon-korea-2023",
-          name: "PyCon Korea 2023 CfP",
-          color: "red",
-          location: "Seoul, South Korea",
-          date: "August 11 - 13, 2023",
-          subject: "PY",
-          startDate: Date.parse("2023-05-14 23:59:00"),
-          endDate: Date.parse("2023-05-14 23:59:00"),
-        });
-
-        // add Conferences in chosen color
-
-        var color = "black";
-        // use first sub to choose color
-
-        color = "#4B8BBE";
-
-        conf_list_all.push({
-          id: "pycon-korea-2023-conference",
-          abbreviation: "pycon-korea-2023",
-          name: "PyCon Korea 2023",
-          color: color,
-          location: "Seoul, South Korea",
-          date: "August 11 - 13, 2023",
-          subject: "PY",
-          startDate: Date.parse("2023-08-11"),
-          endDate: Date.parse("2023-08-13"),
-        });
-
-        // add deadlines in red
-        conf_list_all.push({
           id: "djangocon-australia-2023-deadline",
           abbreviation: "djangocon-australia-2023",
           name: "DjangoCon Australia 2023 CfP",
@@ -1990,38 +1958,6 @@
           subject: "PY",
           startDate: Date.parse("2023-09-02"),
           endDate: Date.parse("2023-09-03"),
-        });
-
-        // add deadlines in red
-        conf_list_all.push({
-          id: "pycon-russia-2023-deadline",
-          abbreviation: "pycon-russia-2023",
-          name: "PyCon Russia 2023 CfP",
-          color: "red",
-          location: "Moscow, Central Federal District, Russia",
-          date: "July 28 - 29, 2023",
-          subject: "PY",
-          startDate: Date.parse("2023-03-15 23:59:00"),
-          endDate: Date.parse("2023-03-15 23:59:00"),
-        });
-
-        // add Conferences in chosen color
-
-        var color = "black";
-        // use first sub to choose color
-
-        color = "#4B8BBE";
-
-        conf_list_all.push({
-          id: "pycon-russia-2023-conference",
-          abbreviation: "pycon-russia-2023",
-          name: "PyCon Russia 2023",
-          color: color,
-          location: "Moscow, Central Federal District, Russia",
-          date: "July 28 - 29, 2023",
-          subject: "PY",
-          startDate: Date.parse("2023-07-28"),
-          endDate: Date.parse("2023-07-29"),
         });
 
         // add deadlines in red
