@@ -9,7 +9,18 @@
 		<title>Python Conference Deadlines</title>
 		<description>Countdowns to your favourite Python conferences with calls for participation and resources to submit awesome talks!</description>
 		<link>https://pythondeadlin.es/feed.xml</link>
-		<lastBuildDate>Wed, 04 Oct 2023 20:17:48 +0000</lastBuildDate>
+		<lastBuildDate>Mon, 09 Oct 2023 22:08:07 +0000</lastBuildDate>
+		
+		
+			<item>
+				<title>PyTexas 2024 Conference Deadline</title>
+				<description>Conference in Austin, Texas, USA on April 19 - 21, 2024. CfP: 2024-01-14 23:59:00 AoE. </description>
+				<pubDate>Sun, 14 Jan 2024 23:59:00 +0000</pubDate>
+				<link>https://pythondeadlin.es/conference/pytexas-2024/</link>
+				<guid isPermaLink="false"></guid>
+				<category>PY</category>
+			</item>
+		
 		
 		
 			<item>
@@ -248,17 +259,6 @@
 				<description>Conference in Tenerife, Spain on October 06 - 08, 2023. CfP: 2023-06-23 23:59:00 AoE.&lt;br /&gt;Find them here: @PyConES </description>
 				<pubDate>Fri, 23 Jun 2023 23:59:00 +0000</pubDate>
 				<link>https://pythondeadlin.es/conference/pycon-españa-2023/</link>
-				<guid isPermaLink="false"></guid>
-				<category>PY</category>
-			</item>
-		
-		
-		
-			<item>
-				<title>PyCon Hong Kong 2023 Conference Deadline</title>
-				<description>Conference in Hong Kong on November 10 - 11, 2023 (tentative). CfP: 2023-06-18 23:59:00 AoE.&lt;br /&gt;Find them here: @pyconhk </description>
-				<pubDate>Sun, 18 Jun 2023 23:59:00 +0000</pubDate>
-				<link>https://pythondeadlin.es/conference/pycon-hong-kong-2023/</link>
 				<guid isPermaLink="false"></guid>
 				<category>PY</category>
 			</item>

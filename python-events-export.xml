@@ -9,7 +9,16 @@
 		<title>Newsfeed for Python Events Calendar from Python Conference Deadlines</title>
 		<description>Countdowns to your favourite Python conferences with calls for participation and resources to submit awesome talks!</description>
 		<link>https://pythondeadlin.es/feed.xml</link>
-		<lastBuildDate>Wed, 04 Oct 2023 20:17:48 +0000</lastBuildDate>
+		<lastBuildDate>Mon, 09 Oct 2023 22:08:07 +0000</lastBuildDate>
+		
+			<item>
+				<title>PyTexas 2024 Conference Deadline</title>
+				<description><![CDATA[* name of the event: PyTexas 2024<br/>* type of event: Conference <br/>* focus on Python: Yes<br/>* approximate number of attendees: Unknown<br/>* location (incl. country): Austin, Texas, USA<br/>* dates/times/recurrence (incl. time zone): April 19 - 21, 2024<br/>* HTML link : <a href="https://pytexas.org/2024">PyTexas 2024</a>]]></description>
+				<pubDate>Fri, 19 Apr 2024 00:00:00 +0000</pubDate>
+				<link>https://pythondeadlin.es/conference/pytexas-2024/</link>
+				<guid isPermaLink="false"></guid>
+				<category>PY</category>
+			</item>
 		
 			<item>
 				<title>XtremePython 2023 Conference Deadline</title>
@@ -205,15 +214,6 @@
 				<description><![CDATA[* name of the event: PyCon España 2023<br/>* type of event: Conference <br/>* focus on Python: Yes<br/>* approximate number of attendees: Unknown<br/>* location (incl. country): Tenerife, Spain<br/>* dates/times/recurrence (incl. time zone): October 06 - 08, 2023<br/>* HTML link : <a href="https://2023.es.pycon.org/">PyCon España 2023</a>]]></description>
 				<pubDate>Fri, 06 Oct 2023 00:00:00 +0000</pubDate>
 				<link>https://pythondeadlin.es/conference/pycon-españa-2023/</link>
-				<guid isPermaLink="false"></guid>
-				<category>PY</category>
-			</item>
-		
-			<item>
-				<title>PyCon Hong Kong 2023 Conference Deadline</title>
-				<description><![CDATA[* name of the event: PyCon Hong Kong 2023<br/>* type of event: Conference <br/>* focus on Python: Yes<br/>* approximate number of attendees: Unknown<br/>* location (incl. country): Hong Kong<br/>* dates/times/recurrence (incl. time zone): November 10 - 11, 2023 (tentative)<br/>* HTML link : <a href="https://pycon.hk/2023/">PyCon Hong Kong 2023</a>]]></description>
-				<pubDate>Fri, 10 Nov 2023 00:00:00 +0000</pubDate>
-				<link>https://pythondeadlin.es/conference/pycon-hong-kong-2023/</link>
 				<guid isPermaLink="false"></guid>
 				<category>PY</category>
 			</item>
