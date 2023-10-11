@@ -69,7 +69,7 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/js-year-calendar.min.css?t=1697030582"
+      href="/static/css/js-year-calendar.min.css?t=1697031699"
       media="screen,projection"
     />
 
@@ -81,13 +81,13 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/deadlines.css?t=1697030582"
+      href="/static/css/deadlines.css?t=1697031699"
       media="screen,projection"
     />
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/calendar.css?t=1697030582"
+      href="/static/css/calendar.css?t=1697031699"
       media="screen,projection"
     />
 
@@ -450,7 +450,10 @@
             $("." + s + "-conf").show();
           }
 
-          if (data.subs.length === 0 || data.subs == data.all_subs) {
+          if (
+            data.subs.length === 0 ||
+            data.subs.length == data.all_subs.length
+          ) {
             window.history.pushState("", "", page_url);
           } else {
             // Join the selected values into a query parameter

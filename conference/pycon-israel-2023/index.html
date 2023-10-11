@@ -69,7 +69,7 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/js-year-calendar.min.css?t=1697030582"
+      href="/static/css/js-year-calendar.min.css?t=1697031699"
       media="screen,projection"
     />
 
@@ -81,13 +81,13 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/deadlines.css?t=1697030582"
+      href="/static/css/deadlines.css?t=1697031699"
       media="screen,projection"
     />
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/calendar.css?t=1697030582"
+      href="/static/css/calendar.css?t=1697031699"
       media="screen,projection"
     />
 
@@ -578,13 +578,13 @@
         </div>
         <div class="row">
           <div
-            id="eae0f878-fea7-427e-94d6-29b25e947236"
+            id="9a27d0ba-9189-417d-b524-74d7bc04c23e"
             style="width: 100%; height: 400px"
             class="jekyll-map"
           ></div>
           <script type="text/javascript">
             jekyllMaps.register(
-              "eae0f878-fea7-427e-94d6-29b25e947236",
+              "9a27d0ba-9189-417d-b524-74d7bc04c23e",
               [
                 {
                   latitude: 30.8124247,
@@ -684,7 +684,10 @@
             $("." + s + "-conf").show();
           }
 
-          if (data.subs.length === 0 || data.subs == data.all_subs) {
+          if (
+            data.subs.length === 0 ||
+            data.subs.length == data.all_subs.length
+          ) {
             window.history.pushState("", "", page_url);
           } else {
             // Join the selected values into a query parameter
