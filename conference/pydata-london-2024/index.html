@@ -69,7 +69,7 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/js-year-calendar.min.css?t=1696889287"
+      href="/static/css/js-year-calendar.min.css?t=1697029802"
       media="screen,projection"
     />
 
@@ -81,13 +81,13 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/deadlines.css?t=1696889287"
+      href="/static/css/deadlines.css?t=1697029802"
       media="screen,projection"
     />
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/calendar.css?t=1696889287"
+      href="/static/css/calendar.css?t=1697029802"
       media="screen,projection"
     />
 
@@ -546,13 +546,13 @@
         </div>
         <div class="row">
           <div
-            id="294d777c-213c-4507-b7f9-c3942e1af999"
+            id="99a7e111-67cc-430a-b629-4cdedac18f15"
             style="width: 100%; height: 400px"
             class="jekyll-map"
           ></div>
           <script type="text/javascript">
             jekyllMaps.register(
-              "294d777c-213c-4507-b7f9-c3942e1af999",
+              "99a7e111-67cc-430a-b629-4cdedac18f15",
               [
                 {
                   latitude: 51.51072,
@@ -645,17 +645,17 @@
           store.set("pythondeadlin.es-subs", data.subs);
 
           $(".confItem").hide();
-          for (const j in data.all_subs) {
-            const s = data.all_subs[j];
-            const identifier = "." + s + "-conf";
-            if (data.subs.includes(s)) {
-              $(identifier).show();
-            }
+
+          // Loop through selected values in data.subs
+          for (const s of data.subs) {
+            // Show elements with class .s-conf (where s is the selected value)
+            $("." + s + "-conf").show();
           }
 
-          if (subs.length == 0) {
+          if (data.subs.length === 0 || data.subs[0] === "all") {
             window.history.pushState("", "", page_url);
           } else {
+            // Join the selected values into a query parameter
             window.history.pushState(
               "",
               "",

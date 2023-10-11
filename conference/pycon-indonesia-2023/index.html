@@ -69,7 +69,7 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/js-year-calendar.min.css?t=1696889287"
+      href="/static/css/js-year-calendar.min.css?t=1697029802"
       media="screen,projection"
     />
 
@@ -81,13 +81,13 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/deadlines.css?t=1696889287"
+      href="/static/css/deadlines.css?t=1697029802"
       media="screen,projection"
     />
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/calendar.css?t=1696889287"
+      href="/static/css/calendar.css?t=1697029802"
       media="screen,projection"
     />
 
@@ -577,13 +577,13 @@
         </div>
         <div class="row">
           <div
-            id="1f080f90-db05-42c0-adf4-326f6118b17d"
+            id="b743b38b-3452-40e1-9ea7-96ce19daef66"
             style="width: 100%; height: 400px"
             class="jekyll-map"
           ></div>
           <script type="text/javascript">
             jekyllMaps.register(
-              "1f080f90-db05-42c0-adf4-326f6118b17d",
+              "b743b38b-3452-40e1-9ea7-96ce19daef66",
               [
                 {
                   latitude: -8.7326688,
@@ -676,17 +676,17 @@
           store.set("pythondeadlin.es-subs", data.subs);
 
           $(".confItem").hide();
-          for (const j in data.all_subs) {
-            const s = data.all_subs[j];
-            const identifier = "." + s + "-conf";
-            if (data.subs.includes(s)) {
-              $(identifier).show();
-            }
+
+          // Loop through selected values in data.subs
+          for (const s of data.subs) {
+            // Show elements with class .s-conf (where s is the selected value)
+            $("." + s + "-conf").show();
           }
 
-          if (subs.length == 0) {
+          if (data.subs.length === 0 || data.subs[0] === "all") {
             window.history.pushState("", "", page_url);
           } else {
+            // Join the selected values into a query parameter
             window.history.pushState(
               "",
               "",
