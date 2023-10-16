@@ -9,7 +9,7 @@
 		<title>Python Conference Deadlines</title>
 		<description>Countdowns to your favourite Python conferences with calls for participation and resources to submit awesome talks!</description>
 		<link>https://pythondeadlin.es/feed.xml</link>
-		<lastBuildDate>Mon, 16 Oct 2023 16:44:06 +0000</lastBuildDate>
+		<lastBuildDate>Mon, 16 Oct 2023 17:48:15 +0000</lastBuildDate>
 		
 		
 			<item>
@@ -35,6 +35,17 @@
 		
 		
 			<item>
+				<title>FlaskCon 2023 Conference Deadline</title>
+				<description>Conference in Online on December 16 - 17, 2023. CfP: 2023-10-31 23:59:00 AoE.&lt;br /&gt;Find them here: @FlaskCon </description>
+				<pubDate>Tue, 31 Oct 2023 23:59:00 +0000</pubDate>
+				<link>https://pythondeadlin.es/conference/flaskcon-2023/</link>
+				<guid isPermaLink="false"></guid>
+				<category>WEB</category>
+			</item>
+		
+		
+		
+			<item>
 				<title>EduPy 2023 Conference Deadline</title>
 				<description>Conference in Cali, Colombia on October 21st, 2023. CfP: 2023-10-14 23:59:00 AoE. </description>
 				<pubDate>Sat, 14 Oct 2023 23:59:00 +0000</pubDate>
@@ -52,17 +63,6 @@
 				<link>https://pythondeadlin.es/conference/pydata-global-2023/</link>
 				<guid isPermaLink="false"></guid>
 				<category>PYDATA</category>
-			</item>
-		
-		
-		
-			<item>
-				<title>FlaskCon 2023 Conference Deadline</title>
-				<description>Conference in Online on December 16 - 17, 2023. CfP: 2023-10-01 23:59:00 AoE.&lt;br /&gt;Find them here: @FlaskCon </description>
-				<pubDate>Sun, 01 Oct 2023 23:59:00 +0000</pubDate>
-				<link>https://pythondeadlin.es/conference/flaskcon-2023/</link>
-				<guid isPermaLink="false"></guid>
-				<category>WEB</category>
 			</item>
 		
 		

@@ -56,7 +56,7 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/js-year-calendar.min.css?t=1697474646"
+      href="/static/css/js-year-calendar.min.css?t=1697478495"
       media="screen,projection"
     />
 
@@ -68,13 +68,13 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/deadlines.css?t=1697474646"
+      href="/static/css/deadlines.css?t=1697478495"
       media="screen,projection"
     />
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/calendar.css?t=1697474646"
+      href="/static/css/calendar.css?t=1697478495"
       media="screen,projection"
     />
 
@@ -717,6 +717,38 @@
 
         // add deadlines in red
         conf_list_all.push({
+          id: "flaskcon-2023-deadline",
+          abbreviation: "flaskcon-2023",
+          name: "FlaskCon 2023 CfP",
+          color: "red",
+          location: "Online",
+          date: "December 16 - 17, 2023",
+          subject: "WEB",
+          startDate: Date.parse("2023-10-31 23:59:00"),
+          endDate: Date.parse("2023-10-31 23:59:00"),
+        });
+
+        // add Conferences in chosen color
+
+        var color = "black";
+        // use first sub to choose color
+
+        color = "#0D0A0B";
+
+        conf_list_all.push({
+          id: "flaskcon-2023-conference",
+          abbreviation: "flaskcon-2023",
+          name: "FlaskCon 2023",
+          color: color,
+          location: "Online",
+          date: "December 16 - 17, 2023",
+          subject: "WEB",
+          startDate: Date.parse("2023-12-16"),
+          endDate: Date.parse("2023-12-17"),
+        });
+
+        // add deadlines in red
+        conf_list_all.push({
           id: "edupy-2023-deadline",
           abbreviation: "edupy-2023",
           name: "EduPy 2023 CfP",
@@ -777,38 +809,6 @@
           subject: "PYDATA",
           startDate: Date.parse("2023-12-06"),
           endDate: Date.parse("2023-12-08"),
-        });
-
-        // add deadlines in red
-        conf_list_all.push({
-          id: "flaskcon-2023-deadline",
-          abbreviation: "flaskcon-2023",
-          name: "FlaskCon 2023 CfP",
-          color: "red",
-          location: "Online",
-          date: "December 16 - 17, 2023",
-          subject: "WEB",
-          startDate: Date.parse("2023-10-01 23:59:00"),
-          endDate: Date.parse("2023-10-01 23:59:00"),
-        });
-
-        // add Conferences in chosen color
-
-        var color = "black";
-        // use first sub to choose color
-
-        color = "#0D0A0B";
-
-        conf_list_all.push({
-          id: "flaskcon-2023-conference",
-          abbreviation: "flaskcon-2023",
-          name: "FlaskCon 2023",
-          color: color,
-          location: "Online",
-          date: "December 16 - 17, 2023",
-          subject: "WEB",
-          startDate: Date.parse("2023-12-16"),
-          endDate: Date.parse("2023-12-17"),
         });
 
         // add deadlines in red
