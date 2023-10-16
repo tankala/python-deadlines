@@ -56,7 +56,7 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/js-year-calendar.min.css?t=1697031699"
+      href="/static/css/js-year-calendar.min.css?t=1697474646"
       media="screen,projection"
     />
 
@@ -68,13 +68,13 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/deadlines.css?t=1697031699"
+      href="/static/css/deadlines.css?t=1697474646"
       media="screen,projection"
     />
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/calendar.css?t=1697031699"
+      href="/static/css/calendar.css?t=1697474646"
       media="screen,projection"
     />
 
@@ -777,6 +777,38 @@
           subject: "PYDATA",
           startDate: Date.parse("2023-12-06"),
           endDate: Date.parse("2023-12-08"),
+        });
+
+        // add deadlines in red
+        conf_list_all.push({
+          id: "flaskcon-2023-deadline",
+          abbreviation: "flaskcon-2023",
+          name: "FlaskCon 2023 CfP",
+          color: "red",
+          location: "Online",
+          date: "December 16 - 17, 2023",
+          subject: "WEB",
+          startDate: Date.parse("2023-10-01 23:59:00"),
+          endDate: Date.parse("2023-10-01 23:59:00"),
+        });
+
+        // add Conferences in chosen color
+
+        var color = "black";
+        // use first sub to choose color
+
+        color = "#0D0A0B";
+
+        conf_list_all.push({
+          id: "flaskcon-2023-conference",
+          abbreviation: "flaskcon-2023",
+          name: "FlaskCon 2023",
+          color: color,
+          location: "Online",
+          date: "December 16 - 17, 2023",
+          subject: "WEB",
+          startDate: Date.parse("2023-12-16"),
+          endDate: Date.parse("2023-12-17"),
         });
 
         // add deadlines in red
@@ -1729,50 +1761,6 @@
 
         // add deadlines in red
         conf_list_all.push({
-          id: "pycon-estonia-2023-deadline",
-          abbreviation: "pycon-estonia-2023",
-          name: "PyCon Estonia 2023 CfP",
-          color: "red",
-          location: "Tallinn, Estonia",
-          date: "September 07 - 08, 2023",
-          subject: "PY",
-          startDate: Date.parse("2023-05-09 23:59:59"),
-          endDate: Date.parse("2023-05-09 23:59:59"),
-        });
-
-        conf_list_all.push({
-          id: "pycon-estonia-2023-deadline",
-          abbreviation: "pycon-estonia-2023",
-          name: "PyCon Estonia 2023 Tutorial Deadline",
-          color: "red",
-          location: "Tallinn, Estonia",
-          date: "September 07 - 08, 2023",
-          subject: "PY",
-          startDate: Date.parse("2023-05-09 23:59:59"),
-          endDate: Date.parse("2023-05-09 23:59:59"),
-        });
-
-        // add Conferences in chosen color
-
-        var color = "black";
-        // use first sub to choose color
-
-        color = "#4B8BBE";
-
-        conf_list_all.push({
-          id: "pycon-estonia-2023-conference",
-          abbreviation: "pycon-estonia-2023",
-          name: "PyCon Estonia 2023",
-          color: color,
-          location: "Tallinn, Estonia",
-          date: "September 07 - 08, 2023",
-          subject: "PY",
-          startDate: Date.parse("2023-09-07"),
-          endDate: Date.parse("2023-09-08"),
-        });
-
-        // add deadlines in red
-        conf_list_all.push({
           id: "pycon-uganda-2023-deadline",
           abbreviation: "pycon-uganda-2023",
           name: "PyCon Uganda 2023 CfP",
@@ -1801,38 +1789,6 @@
           subject: "PY",
           startDate: Date.parse("2023-09-21"),
           endDate: Date.parse("2023-09-23"),
-        });
-
-        // add deadlines in red
-        conf_list_all.push({
-          id: "pycon-taiwan-2023-deadline",
-          abbreviation: "pycon-taiwan-2023",
-          name: "PyCon Taiwan 2023 CfP",
-          color: "red",
-          location: "Taipei, Taiwan",
-          date: "September 02 - 03, 2023",
-          subject: "PY",
-          startDate: Date.parse("2023-03-31 23:59:59"),
-          endDate: Date.parse("2023-03-31 23:59:59"),
-        });
-
-        // add Conferences in chosen color
-
-        var color = "black";
-        // use first sub to choose color
-
-        color = "#4B8BBE";
-
-        conf_list_all.push({
-          id: "pycon-taiwan-2023-conference",
-          abbreviation: "pycon-taiwan-2023",
-          name: "PyCon Taiwan 2023",
-          color: color,
-          location: "Taipei, Taiwan",
-          date: "September 02 - 03, 2023",
-          subject: "PY",
-          startDate: Date.parse("2023-09-02"),
-          endDate: Date.parse("2023-09-03"),
         });
 
         // add deadlines in red
