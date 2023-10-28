@@ -69,7 +69,7 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/js-year-calendar.min.css?t=1697478495"
+      href="/static/css/js-year-calendar.min.css?t=1698495871"
       media="screen,projection"
     />
 
@@ -81,13 +81,13 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/deadlines.css?t=1697478495"
+      href="/static/css/deadlines.css?t=1698495871"
       media="screen,projection"
     />
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/calendar.css?t=1697478495"
+      href="/static/css/calendar.css?t=1698495871"
       media="screen,projection"
     />
 
@@ -478,7 +478,7 @@
       </div>
       <div id="page-content">
         <div id="conf-deadline-timer" class="row">
-          <div id="cfp-timer" class="col-12 conf-timer">TBA</div>
+          <div id="cfp-timer" class="col-12 conf-timer"></div>
         </div>
         <div id="conf-key-facts" class="row">
           <div class="col-12 col-md-6">
@@ -520,6 +520,22 @@
                 target="_blank"
                 href="https://us.pycon.org/2024/"
                 >https://us.pycon.org/2024/</a
+              >
+            </div>
+
+            <div>
+              <img
+                src="/static/img/060-coin-dollar.svg"
+                class="badge-link"
+                alt="Coin Dollar Icon for Sponsorship"
+                width="16"
+                height="16"
+              />
+              <a
+                id="conf-sponsor"
+                target="_blank"
+                href="https://us.pycon.org/2024/sponsorship/why-sponsor/"
+                >Sponsorship Opportunity</a
               >
             </div>
 
@@ -583,13 +599,13 @@
         </div>
         <div class="row">
           <div
-            id="5b60879a-d2b3-41be-bc8f-04bc624e3d3a"
+            id="844bb47b-d004-4b56-8dd2-9a4a5fff63ee"
             style="width: 100%; height: 400px"
             class="jekyll-map"
           ></div>
           <script type="text/javascript">
             jekyllMaps.register(
-              "5b60879a-d2b3-41be-bc8f-04bc624e3d3a",
+              "844bb47b-d004-4b56-8dd2-9a4a5fff63ee",
               [
                 {
                   latitude: 40.4416941,
@@ -729,9 +745,48 @@
 
         // other
 
-        $("#cfp-timer").html("TBA");
-        $(".deadline-time").html("TBA");
-        $(".deadline-local-time").html("TBA");
+        // Use specified timezone for deadlines if available else use AoE timezone
+
+        var confDeadline = DateTime.fromSQL("2023-12-18 23:59:00", {
+          zone: "America/New_York",
+        });
+
+        // check if timezone is valid otherwise replace by system timezone
+        if (confDeadline.invalid) {
+          var confDeadline = DateTime.fromSQL("2023-12-18 23:59:00");
+          console.log("Invalid timezone. Using system timezone instead.");
+        }
+
+        // add calendar
+        var conferenceDeadlineCalendar = createCalendarFromObject({
+          id: "-",
+          title: "PyCon US 2024 deadline",
+          date: confDeadline.toJSDate(),
+          duration: 60,
+        });
+        document
+          .querySelector("#conference-deadline")
+          .appendChild(conferenceDeadlineCalendar);
+
+        // render countdown timer
+        $("#cfp-timer").countdown(confDeadline.toJSDate(), function (event) {
+          $(this).html(event.strftime("%D days %Hh %Mm %Ss"));
+        });
+
+        // render deadline conference time
+
+        $(".deadline-time").html(
+          confDeadline
+            .setZone("America/New_York")
+            .toLocaleString(DateTime.DATETIME_HUGE_WITH_SECONDS)
+        );
+
+        // render deadline in local timezone
+        $(".deadline-local-time").html(
+          confDeadline
+            .setZone("system")
+            .toLocaleString(DateTime.DATETIME_HUGE_WITH_SECONDS)
+        );
       });
     </script>
     <script async defer>
