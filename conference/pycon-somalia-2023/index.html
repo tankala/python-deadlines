@@ -4,11 +4,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
-    <title>PyCon Australia</title>
+    <title>PyCon Somalia</title>
     <!-- Begin Jekyll SEO tag v2.8.0 -->
-    <title>PyCon Australia | Python Conference Deadlines</title>
+    <title>PyCon Somalia | Python Conference Deadlines</title>
     <meta name="generator" content="Jekyll v3.9.3" />
-    <meta property="og:title" content="PyCon Australia" />
+    <meta property="og:title" content="PyCon Somalia" />
     <meta name="author" content="Jesper Dramsch" />
     <meta property="og:locale" content="en_US" />
     <meta
@@ -21,20 +21,20 @@
     />
     <link
       rel="canonical"
-      href="https://pythondeadlin.es/conference/pycon-australia-2023/"
+      href="https://pythondeadlin.es/conference/pycon-somalia-2023/"
     />
     <meta
       property="og:url"
-      content="https://pythondeadlin.es/conference/pycon-australia-2023/"
+      content="https://pythondeadlin.es/conference/pycon-somalia-2023/"
     />
     <meta property="og:site_name" content="Python Conference Deadlines" />
     <meta property="og:type" content="article" />
     <meta
       property="article:published_time"
-      content="2023-08-18T00:00:00+00:00"
+      content="2023-12-26T00:00:00+00:00"
     />
     <meta name="twitter:card" content="summary" />
-    <meta property="twitter:title" content="PyCon Australia" />
+    <meta property="twitter:title" content="PyCon Somalia" />
     <meta name="twitter:site" content="@jesperdramsch" />
     <meta name="twitter:creator" content="@jesperdramsch" />
     <script type="application/ld+json">
@@ -46,15 +46,15 @@
           "name": "Jesper Dramsch",
           "url": "https://dramsch.net"
         },
-        "dateModified": "2023-08-18T00:00:00+00:00",
-        "datePublished": "2023-08-18T00:00:00+00:00",
+        "dateModified": "2023-12-26T00:00:00+00:00",
+        "datePublished": "2023-12-26T00:00:00+00:00",
         "description": "Countdown for the Call for Participation of this conference including conference dates and details.",
-        "headline": "PyCon Australia",
+        "headline": "PyCon Somalia",
         "mainEntityOfPage": {
           "@type": "WebPage",
-          "@id": "https://pythondeadlin.es/conference/pycon-australia-2023/"
+          "@id": "https://pythondeadlin.es/conference/pycon-somalia-2023/"
         },
-        "url": "https://pythondeadlin.es/conference/pycon-australia-2023/"
+        "url": "https://pythondeadlin.es/conference/pycon-somalia-2023/"
       }
     </script>
     <!-- End Jekyll SEO tag -->
@@ -167,44 +167,15 @@
       src="/static/js/bootstrap-multiselect.min.js"
     ></script>
 
-    <link rel="stylesheet" type="text/css" href="/static/css/mastodon.css" />
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        fetch("https://fosstodon.org/@pyconau.rss")
-          .then(function (response) {
-            return response.text();
-          })
-          .then(function (xmlText) {
-            var parser = new DOMParser();
-            var xml = parser.parseFromString(xmlText, "text/xml");
-            var items = xml.querySelectorAll("item");
-            var feedContainer = document.getElementById("mastodon-feed");
-            var postLimit = 2; // Number of posts to display
+    <style>
+      #twitter-widget {
+        width: 100%;
+      }
 
-            for (var i = 0; i < postLimit && i < items.length; i++) {
-              var item = items[i];
-              var post = item.querySelector("description").textContent;
-              var link = item.querySelector("link").textContent;
-              var pubDate = item.querySelector("pubDate").textContent;
-
-              var feedItem = document.createElement("div");
-              feedItem.setAttribute("class", "timeline-item");
-              feedItem.innerHTML =
-                '<div class="timeline-content">' +
-                post +
-                '</div><a href="' +
-                link +
-                '">' +
-                pubDate +
-                " by PyCon Australia</a>";
-              feedContainer.appendChild(feedItem);
-            }
-          })
-          .catch(function (error) {
-            console.log("Error fetching Mastodon RSS feed:", error);
-          });
-      });
-    </script>
+      .twitter-timeline {
+        width: 100% !important;
+      }
+    </style>
 
     <script type="text/javascript">
       /* global google */
@@ -445,16 +416,14 @@
         <div class="row">
           <div class="col-sm-12">
             <h1>
-              <span
-                id="conf-title-href"
-                href="/conference/pycon-australia-2023/"
-                >PyCon Australia 2023</span
+              <span id="conf-title-href" href="/conference/pycon-somalia-2023/"
+                >PyCon Somalia 2023</span
               >
               <span id="twitter-box"
                 ><a
                   href="https://twitter.com/share"
                   class="twitter-share-button"
-                  data-text="Countdown to the #PyCon Australia2023 deadline!"
+                  data-text="Countdown to the #PyCon Somalia2023 deadline!"
                   data-show-count="false"
                   style="font-size: 13px"
                   >Tweet</a
@@ -480,7 +449,7 @@
       </div>
       <div id="page-content">
         <div id="conf-deadline-timer" class="row">
-          <div id="cfp-timer" class="col-12 conf-timer"></div>
+          <div id="cfp-timer" class="col-12 conf-timer">TBA</div>
         </div>
         <div id="conf-key-facts" class="row">
           <div class="col-12 col-md-6">
@@ -492,7 +461,7 @@
                 width="16"
                 height="16"
               />
-              <span id="conf-date">August 18 - 22, 2023</span>
+              <span id="conf-date">December 26 - 27, 2023</span>
             </div>
             <div>
               <img
@@ -505,8 +474,8 @@
               <a
                 id="conf-place"
                 target="_blank"
-                href="https://maps.google.com/?q=Tarndanya (Adelaide), Australia"
-                >Tarndanya (Adelaide), Australia</a
+                href="https://maps.google.com/?q=Mogadishu, Somalia"
+                >Mogadishu, Somalia</a
               >
             </div>
             <div>
@@ -517,43 +486,8 @@
                 width="16"
                 height="16"
               />
-              <a
-                id="conf-website"
-                target="_blank"
-                href="https://2023.pycon.org.au/"
-                >https://2023.pycon.org.au/</a
-              >
-            </div>
-
-            <div>
-              <img
-                src="/static/img/035-file-text.svg"
-                class="badge-link"
-                alt="Document Icon for CfP link"
-                width="16"
-                height="16"
-              />
-              <a
-                id="conf-cfp_link"
-                target="_blank"
-                href="https://2023.pycon.org.au/program"
-                >Call for Participation</a
-              >
-            </div>
-
-            <div>
-              <img
-                src="/static/img/060-coin-dollar.svg"
-                class="badge-link"
-                alt="Coin Dollar Icon for Sponsorship"
-                width="16"
-                height="16"
-              />
-              <a
-                id="conf-sponsor"
-                target="_blank"
-                href="https://2023.pycon.org.au/sponsor/#opportunities"
-                >Sponsorship Opportunity</a
+              <a id="conf-website" target="_blank" href="https://pycon.org.so/"
+                >https://pycon.org.so/</a
               >
             </div>
 
@@ -568,24 +502,8 @@
               <a
                 id="conf-twitter"
                 target="_blank"
-                href="https://twitter.com/PyConAU"
-                >@PyConAU</a
-              >
-            </div>
-
-            <div>
-              <img
-                src="/static/img/407-mastodon.svg"
-                class="badge-link"
-                alt="Mastodon icon"
-                width="16"
-                height="16"
-              />
-              <a
-                id="conf-mastodon"
-                target="_blank"
-                href="https://fosstodon.org/@pyconau"
-                >Mastodon</a
+                href="https://twitter.com/PyconSomalia"
+                >@PyconSomalia</a
               >
             </div>
 
@@ -607,30 +525,38 @@
           </div>
 
           <div class="col-12 col-md-6">
-            <!-- Mastodon timeline -->
-            <div class="meta">Mastodon Posts by PyCon Australia:</div>
-            <div id="mastodon-feed"></div>
-            <a href="https://fosstodon.org/@pyconau"
-              >See all Mastodon posts for PyCon Australia</a
-            >
+            <!-- Twitter timeline -->
+            <div id="twitter-widget">
+              <a
+                class="twitter-timeline"
+                href="https://twitter.com/PyconSomalia"
+                data-tweet-limit="2"
+                >Tweets by PyconSomalia</a
+              >
+              <script
+                async
+                src="https://platform.twitter.com/widgets.js"
+                charset="utf-8"
+              ></script>
+            </div>
           </div>
         </div>
         <div class="row">
           <div
-            id="fc225d45-7a1c-4af0-9949-8820bd49d69c"
+            id="f770e6b5-7f78-466d-9408-b83d5d246ec3"
             style="width: 100%; height: 400px"
             class="jekyll-map"
           ></div>
           <script type="text/javascript">
             jekyllMaps.register(
-              "fc225d45-7a1c-4af0-9949-8820bd49d69c",
+              "f770e6b5-7f78-466d-9408-b83d5d246ec3",
               [
                 {
-                  latitude: -34.9281805,
-                  longitude: 138.5999312,
-                  title: "PyCon Australia",
+                  latitude: 2.0349312,
+                  longitude: 45.3419183,
+                  title: "PyCon Somalia",
                   icon: null,
-                  url: "/conference/pycon-australia-2023/",
+                  url: "/conference/pycon-somalia-2023/",
                   url_text: null,
                   image: "",
                   popup_html: "",
@@ -763,48 +689,9 @@
 
         // other
 
-        // Use specified timezone for deadlines if available else use AoE timezone
-
-        var confDeadline = DateTime.fromSQL("2023-05-15 23:59:00", {
-          zone: "Australia/Adelaide",
-        });
-
-        // check if timezone is valid otherwise replace by system timezone
-        if (confDeadline.invalid) {
-          var confDeadline = DateTime.fromSQL("2023-05-15 23:59:00");
-          console.log("Invalid timezone. Using system timezone instead.");
-        }
-
-        // add calendar
-        var conferenceDeadlineCalendar = createCalendarFromObject({
-          id: "-",
-          title: "PyCon Australia 2023 deadline",
-          date: confDeadline.toJSDate(),
-          duration: 60,
-        });
-        document
-          .querySelector("#conference-deadline")
-          .appendChild(conferenceDeadlineCalendar);
-
-        // render countdown timer
-        $("#cfp-timer").countdown(confDeadline.toJSDate(), function (event) {
-          $(this).html(event.strftime("%D days %Hh %Mm %Ss"));
-        });
-
-        // render deadline conference time
-
-        $(".deadline-time").html(
-          confDeadline
-            .setZone("Australia/Adelaide")
-            .toLocaleString(DateTime.DATETIME_HUGE_WITH_SECONDS)
-        );
-
-        // render deadline in local timezone
-        $(".deadline-local-time").html(
-          confDeadline
-            .setZone("system")
-            .toLocaleString(DateTime.DATETIME_HUGE_WITH_SECONDS)
-        );
+        $("#cfp-timer").html("TBA");
+        $(".deadline-time").html("TBA");
+        $(".deadline-local-time").html("TBA");
       });
     </script>
     <script async defer>
