@@ -9,13 +9,22 @@
 		<title>Newsfeed for Python Events Calendar from Python Conference Deadlines</title>
 		<description>Countdowns to your favourite Python conferences with calls for participation and resources to submit awesome talks!</description>
 		<link>https://pythondeadlin.es/feed.xml</link>
-		<lastBuildDate>Thu, 16 Nov 2023 11:13:05 +0000</lastBuildDate>
+		<lastBuildDate>Sat, 18 Nov 2023 19:24:44 +0000</lastBuildDate>
 		
 			<item>
 				<title>PyTexas 2024 Conference Deadline</title>
 				<description><![CDATA[* name of the event: PyTexas 2024<br/>* type of event: Conference <br/>* focus on Python: Yes<br/>* approximate number of attendees: Unknown<br/>* location (incl. country): Austin, Texas, USA<br/>* dates/times/recurrence (incl. time zone): April 19 - 21, 2024<br/>* HTML link : <a href="https://pytexas.org/2024">PyTexas 2024</a>]]></description>
 				<pubDate>Fri, 19 Apr 2024 00:00:00 +0000</pubDate>
 				<link>https://pythondeadlin.es/conference/pytexas-2024/</link>
+				<guid isPermaLink="false"></guid>
+				<category>PY</category>
+			</item>
+		
+			<item>
+				<title>Python Pizza Prague 2024 Conference Deadline</title>
+				<description><![CDATA[* name of the event: Python Pizza Prague 2024<br/>* type of event: Conference <br/>* focus on Python: Yes<br/>* approximate number of attendees: Unknown<br/>* location (incl. country): Prague, Czechia<br/>* dates/times/recurrence (incl. time zone): February 24th, 2024<br/>* HTML link : <a href="https://prague.python.pizza/">Python Pizza Prague 2024</a>]]></description>
+				<pubDate>Sat, 24 Feb 2024 00:00:00 +0000</pubDate>
+				<link>https://pythondeadlin.es/conference/python-pizza-prague-2024/</link>
 				<guid isPermaLink="false"></guid>
 				<category>PY</category>
 			</item>
@@ -66,10 +75,10 @@
 			</item>
 		
 			<item>
-				<title>Python Pizza 2023 Conference Deadline</title>
-				<description><![CDATA[* name of the event: Python Pizza 2023<br/>* type of event: Conference <br/>* focus on Python: Yes<br/>* approximate number of attendees: Unknown<br/>* location (incl. country): Online<br/>* dates/times/recurrence (incl. time zone): November 17th, 2023<br/>* HTML link : <a href="https://hamburg.python.pizza/">Python Pizza 2023</a>]]></description>
+				<title>Python Pizza Hamburg 2023 Conference Deadline</title>
+				<description><![CDATA[* name of the event: Python Pizza Hamburg 2023<br/>* type of event: Conference <br/>* focus on Python: Yes<br/>* approximate number of attendees: Unknown<br/>* location (incl. country): Hamburg, Germany<br/>* dates/times/recurrence (incl. time zone): November 17th, 2023<br/>* HTML link : <a href="https://hamburg.python.pizza/">Python Pizza Hamburg 2023</a>]]></description>
 				<pubDate>Fri, 17 Nov 2023 00:00:00 +0000</pubDate>
-				<link>https://pythondeadlin.es/conference/python-pizza-2023/</link>
+				<link>https://pythondeadlin.es/conference/python-pizza-hamburg-2023/</link>
 				<guid isPermaLink="false"></guid>
 				<category>PY</category>
 			</item>
@@ -106,24 +115,6 @@
 				<description><![CDATA[* name of the event: PyCon Sweden 2023<br/>* type of event: Conference <br/>* focus on Python: Yes<br/>* approximate number of attendees: Unknown<br/>* location (incl. country): Stockholm, Sweden<br/>* dates/times/recurrence (incl. time zone): November 09 - 10, 2023<br/>* HTML link : <a href="https://pycon.se">PyCon Sweden 2023</a>]]></description>
 				<pubDate>Thu, 09 Nov 2023 00:00:00 +0000</pubDate>
 				<link>https://pythondeadlin.es/conference/pycon-sweden-2023/</link>
-				<guid isPermaLink="false"></guid>
-				<category>PY</category>
-			</item>
-		
-			<item>
-				<title>DjangoDay Copenhagen 2023 Conference Deadline</title>
-				<description><![CDATA[* name of the event: DjangoDay Copenhagen 2023<br/>* type of event: Conference <br/>* focus on Python: Yes<br/>* approximate number of attendees: Unknown<br/>* location (incl. country): Copenhagen, Denmark<br/>* dates/times/recurrence (incl. time zone): October 06, 2023<br/>* HTML link : <a href="https://2023.djangoday.dk/">DjangoDay Copenhagen 2023</a>]]></description>
-				<pubDate>Fri, 06 Oct 2023 00:00:00 +0000</pubDate>
-				<link>https://pythondeadlin.es/conference/djangoday-copenhagen-2023/</link>
-				<guid isPermaLink="false"></guid>
-				<category>WEB</category>
-			</item>
-		
-			<item>
-				<title>PyCon South Africa 2023 Conference Deadline</title>
-				<description><![CDATA[* name of the event: PyCon South Africa 2023<br/>* type of event: Conference <br/>* focus on Python: Yes<br/>* approximate number of attendees: Unknown<br/>* location (incl. country): Durban, South Africa<br/>* dates/times/recurrence (incl. time zone): October 5 - 6, 2023<br/>* HTML link : <a href="https://za.pycon.org/">PyCon South Africa 2023</a>]]></description>
-				<pubDate>Thu, 05 Oct 2023 00:00:00 +0000</pubDate>
-				<link>https://pythondeadlin.es/conference/pycon-south-africa-2023/</link>
 				<guid isPermaLink="false"></guid>
 				<category>PY</category>
 			</item>
@@ -183,15 +174,6 @@
 			</item>
 		
 			<item>
-				<title>PyCon España 2023 Conference Deadline</title>
-				<description><![CDATA[* name of the event: PyCon España 2023<br/>* type of event: Conference <br/>* focus on Python: Yes<br/>* approximate number of attendees: Unknown<br/>* location (incl. country): Tenerife, Spain<br/>* dates/times/recurrence (incl. time zone): October 06 - 08, 2023<br/>* HTML link : <a href="https://2023.es.pycon.org/">PyCon España 2023</a>]]></description>
-				<pubDate>Fri, 06 Oct 2023 00:00:00 +0000</pubDate>
-				<link>https://pythondeadlin.es/conference/pycon-españa-2023/</link>
-				<guid isPermaLink="false"></guid>
-				<category>PY</category>
-			</item>
-		
-			<item>
 				<title>PyCon Hong Kong 2023 Conference Deadline</title>
 				<description><![CDATA[* name of the event: PyCon Hong Kong 2023<br/>* type of event: Conference <br/>* focus on Python: Yes<br/>* approximate number of attendees: Unknown<br/>* location (incl. country): Hong Kong<br/>* dates/times/recurrence (incl. time zone): November 10 - 11, 2023 (tentative)<br/>* HTML link : <a href="https://pycon.hk/2023/">PyCon Hong Kong 2023</a>]]></description>
 				<pubDate>Fri, 10 Nov 2023 00:00:00 +0000</pubDate>
@@ -216,6 +198,24 @@
 				<link>https://pythondeadlin.es/conference/pycon-asia-pacific-2023/</link>
 				<guid isPermaLink="false"></guid>
 				<category>PY</category>
+			</item>
+		
+			<item>
+				<title>PyCon MEA @GlobalDevSlam 2023 Conference Deadline</title>
+				<description><![CDATA[* name of the event: PyCon MEA @GlobalDevSlam 2023<br/>* type of event: Conference <br/>* focus on Python: Yes<br/>* approximate number of attendees: Unknown<br/>* location (incl. country): Dubai, UAE<br/>* dates/times/recurrence (incl. time zone): October 16 - 20, 2023<br/>* HTML link : <a href="https://globaldevslam.com/">PyCon MEA @GlobalDevSlam 2023</a>]]></description>
+				<pubDate>Mon, 16 Oct 2023 00:00:00 +0000</pubDate>
+				<link>https://pythondeadlin.es/conference/pycon-mea-globaldevslam-2023/</link>
+				<guid isPermaLink="false"></guid>
+				<category>PY</category>
+			</item>
+		
+			<item>
+				<title>DjangoCon US 2023 Conference Deadline</title>
+				<description><![CDATA[* name of the event: DjangoCon US 2023<br/>* type of event: Conference <br/>* focus on Python: Yes<br/>* approximate number of attendees: Unknown<br/>* location (incl. country): North Carolina, USA<br/>* dates/times/recurrence (incl. time zone): October 15 - 20, 2023<br/>* HTML link : <a href="https://2023.djangocon.us">DjangoCon US 2023</a>]]></description>
+				<pubDate>Mon, 16 Oct 2023 00:00:00 +0000</pubDate>
+				<link>https://pythondeadlin.es/conference/djangocon-us-2023/</link>
+				<guid isPermaLink="false"></guid>
+				<category>WEB</category>
 			</item>
 		
 	</channel>
