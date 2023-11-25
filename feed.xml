@@ -9,7 +9,7 @@
 		<title>Python Conference Deadlines</title>
 		<description>Countdowns to your favourite Python conferences with calls for participation and resources to submit awesome talks!</description>
 		<link>https://pythondeadlin.es/feed.xml</link>
-		<lastBuildDate>Sat, 18 Nov 2023 19:24:44 +0000</lastBuildDate>
+		<lastBuildDate>Sat, 25 Nov 2023 14:10:59 +0000</lastBuildDate>
 		
 		
 			<item>
@@ -17,6 +17,28 @@
 				<description>Conference in Austin, Texas, USA on April 19 - 21, 2024. CfP: 2024-01-14 23:59:00 AoE. </description>
 				<pubDate>Sun, 14 Jan 2024 23:59:00 +0000</pubDate>
 				<link>https://pythondeadlin.es/conference/pytexas-2024/</link>
+				<guid isPermaLink="false"></guid>
+				<category>PY</category>
+			</item>
+		
+		
+		
+			<item>
+				<title>PyCon Lithuania 2024 Conference Deadline</title>
+				<description>Conference in Vilnius, Lithuania on April 2 - 6, 2024. CfP: 2024-01-10 23:59:59 AoE. </description>
+				<pubDate>Wed, 10 Jan 2024 23:59:59 +0000</pubDate>
+				<link>https://pythondeadlin.es/conference/pycon-lithuania-2024/</link>
+				<guid isPermaLink="false"></guid>
+				<category>PY</category>
+			</item>
+		
+		
+		
+			<item>
+				<title>PyCon Slovakia 2024 Conference Deadline</title>
+				<description>Conference in Bratislava, Slovakia on March 15 - 17, 2024. CfP: 2023-12-31 23:59:59 AoE.&lt;br /&gt;Find them here: @pyconsk </description>
+				<pubDate>Sun, 31 Dec 2023 23:59:59 +0000</pubDate>
+				<link>https://pythondeadlin.es/conference/pycon-slovakia-2024/</link>
 				<guid isPermaLink="false"></guid>
 				<category>PY</category>
 			</item>
@@ -107,17 +129,6 @@
 				<link>https://pythondeadlin.es/conference/pycon-chile-2023/</link>
 				<guid isPermaLink="false"></guid>
 				<category>PY</category>
-			</item>
-		
-		
-		
-			<item>
-				<title>PyHEP 2023 Conference Deadline</title>
-				<description>Conference in Online on October 09 - 12, 2023. CfP: 2023-09-06 23:59:00 AoE.&lt;br /&gt;Find them here: @PyHEPConf </description>
-				<pubDate>Wed, 06 Sep 2023 23:59:00 +0000</pubDate>
-				<link>https://pythondeadlin.es/conference/pyhep-2023/</link>
-				<guid isPermaLink="false"></guid>
-				<category>SCIPY</category>
 			</item>
 		
 		
@@ -250,17 +261,6 @@
 				<link>https://pythondeadlin.es/conference/pycon-mea-globaldevslam-2023/</link>
 				<guid isPermaLink="false"></guid>
 				<category>PY</category>
-			</item>
-		
-		
-		
-			<item>
-				<title>DjangoCon US 2023 Conference Deadline</title>
-				<description>Conference in North Carolina, USA on October 15 - 20, 2023. CfP: 2023-05-15 18:00:00 AoE.&lt;br /&gt;Find them here: @djangoCon </description>
-				<pubDate>Mon, 15 May 2023 18:00:00 +0000</pubDate>
-				<link>https://pythondeadlin.es/conference/djangocon-us-2023/</link>
-				<guid isPermaLink="false"></guid>
-				<category>WEB</category>
 			</item>
 		
 		

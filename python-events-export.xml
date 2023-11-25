@@ -9,13 +9,31 @@
 		<title>Newsfeed for Python Events Calendar from Python Conference Deadlines</title>
 		<description>Countdowns to your favourite Python conferences with calls for participation and resources to submit awesome talks!</description>
 		<link>https://pythondeadlin.es/feed.xml</link>
-		<lastBuildDate>Sat, 18 Nov 2023 19:24:44 +0000</lastBuildDate>
+		<lastBuildDate>Sat, 25 Nov 2023 14:10:59 +0000</lastBuildDate>
 		
 			<item>
 				<title>PyTexas 2024 Conference Deadline</title>
 				<description><![CDATA[* name of the event: PyTexas 2024<br/>* type of event: Conference <br/>* focus on Python: Yes<br/>* approximate number of attendees: Unknown<br/>* location (incl. country): Austin, Texas, USA<br/>* dates/times/recurrence (incl. time zone): April 19 - 21, 2024<br/>* HTML link : <a href="https://pytexas.org/2024">PyTexas 2024</a>]]></description>
 				<pubDate>Fri, 19 Apr 2024 00:00:00 +0000</pubDate>
 				<link>https://pythondeadlin.es/conference/pytexas-2024/</link>
+				<guid isPermaLink="false"></guid>
+				<category>PY</category>
+			</item>
+		
+			<item>
+				<title>PyCon Lithuania 2024 Conference Deadline</title>
+				<description><![CDATA[* name of the event: PyCon Lithuania 2024<br/>* type of event: Conference <br/>* focus on Python: Yes<br/>* approximate number of attendees: Unknown<br/>* location (incl. country): Vilnius, Lithuania<br/>* dates/times/recurrence (incl. time zone): April 2 - 6, 2024<br/>* HTML link : <a href="https://pycon.lt/2024">PyCon Lithuania 2024</a>]]></description>
+				<pubDate>Tue, 02 Apr 2024 00:00:00 +0000</pubDate>
+				<link>https://pythondeadlin.es/conference/pycon-lithuania-2024/</link>
+				<guid isPermaLink="false"></guid>
+				<category>PY</category>
+			</item>
+		
+			<item>
+				<title>PyCon Slovakia 2024 Conference Deadline</title>
+				<description><![CDATA[* name of the event: PyCon Slovakia 2024<br/>* type of event: Conference <br/>* focus on Python: Yes<br/>* approximate number of attendees: Unknown<br/>* location (incl. country): Bratislava, Slovakia<br/>* dates/times/recurrence (incl. time zone): March 15 - 17, 2024<br/>* HTML link : <a href="https://2024.pycon.sk/">PyCon Slovakia 2024</a>]]></description>
+				<pubDate>Fri, 15 Mar 2024 00:00:00 +0000</pubDate>
+				<link>https://pythondeadlin.es/conference/pycon-slovakia-2024/</link>
 				<guid isPermaLink="false"></guid>
 				<category>PY</category>
 			</item>
@@ -90,15 +108,6 @@
 				<link>https://pythondeadlin.es/conference/pycon-chile-2023/</link>
 				<guid isPermaLink="false"></guid>
 				<category>PY</category>
-			</item>
-		
-			<item>
-				<title>PyHEP 2023 Conference Deadline</title>
-				<description><![CDATA[* name of the event: PyHEP 2023<br/>* type of event: Conference <br/>* focus on Python: Yes<br/>* approximate number of attendees: Unknown<br/>* location (incl. country): Online<br/>* dates/times/recurrence (incl. time zone): October 09 - 12, 2023<br/>* HTML link : <a href="https://indico.cern.ch/e/PyHEP2023">PyHEP 2023</a>]]></description>
-				<pubDate>Mon, 09 Oct 2023 00:00:00 +0000</pubDate>
-				<link>https://pythondeadlin.es/conference/pyhep-2023/</link>
-				<guid isPermaLink="false"></guid>
-				<category>SCIPY</category>
 			</item>
 		
 			<item>
@@ -207,15 +216,6 @@
 				<link>https://pythondeadlin.es/conference/pycon-mea-globaldevslam-2023/</link>
 				<guid isPermaLink="false"></guid>
 				<category>PY</category>
-			</item>
-		
-			<item>
-				<title>DjangoCon US 2023 Conference Deadline</title>
-				<description><![CDATA[* name of the event: DjangoCon US 2023<br/>* type of event: Conference <br/>* focus on Python: Yes<br/>* approximate number of attendees: Unknown<br/>* location (incl. country): North Carolina, USA<br/>* dates/times/recurrence (incl. time zone): October 15 - 20, 2023<br/>* HTML link : <a href="https://2023.djangocon.us">DjangoCon US 2023</a>]]></description>
-				<pubDate>Mon, 16 Oct 2023 00:00:00 +0000</pubDate>
-				<link>https://pythondeadlin.es/conference/djangocon-us-2023/</link>
-				<guid isPermaLink="false"></guid>
-				<category>WEB</category>
 			</item>
 		
 	</channel>

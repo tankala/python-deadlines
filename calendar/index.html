@@ -56,7 +56,7 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/js-year-calendar.min.css?t=1700335484"
+      href="/static/css/js-year-calendar.min.css?t=1700921459"
       media="screen,projection"
     />
 
@@ -68,13 +68,13 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/deadlines.css?t=1700335484"
+      href="/static/css/deadlines.css?t=1700921459"
       media="screen,projection"
     />
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/calendar.css?t=1700335484"
+      href="/static/css/calendar.css?t=1700921459"
       media="screen,projection"
     />
 
@@ -685,6 +685,70 @@
 
         // add deadlines in red
         conf_list_all.push({
+          id: "pycon-lithuania-2024-deadline",
+          abbreviation: "pycon-lithuania-2024",
+          name: "PyCon Lithuania 2024 CfP",
+          color: "red",
+          location: "Vilnius, Lithuania",
+          date: "April 2 - 6, 2024",
+          subject: "PY",
+          startDate: Date.parse("2024-01-10 23:59:59"),
+          endDate: Date.parse("2024-01-10 23:59:59"),
+        });
+
+        // add Conferences in chosen color
+
+        var color = "black";
+        // use first sub to choose color
+
+        color = "#4B8BBE";
+
+        conf_list_all.push({
+          id: "pycon-lithuania-2024-conference",
+          abbreviation: "pycon-lithuania-2024",
+          name: "PyCon Lithuania 2024",
+          color: color,
+          location: "Vilnius, Lithuania",
+          date: "April 2 - 6, 2024",
+          subject: "PY",
+          startDate: Date.parse("2024-04-02"),
+          endDate: Date.parse("2024-04-06"),
+        });
+
+        // add deadlines in red
+        conf_list_all.push({
+          id: "pycon-slovakia-2024-deadline",
+          abbreviation: "pycon-slovakia-2024",
+          name: "PyCon Slovakia 2024 CfP",
+          color: "red",
+          location: "Bratislava, Slovakia",
+          date: "March 15 - 17, 2024",
+          subject: "PY",
+          startDate: Date.parse("2023-12-31 23:59:59"),
+          endDate: Date.parse("2023-12-31 23:59:59"),
+        });
+
+        // add Conferences in chosen color
+
+        var color = "black";
+        // use first sub to choose color
+
+        color = "#4B8BBE";
+
+        conf_list_all.push({
+          id: "pycon-slovakia-2024-conference",
+          abbreviation: "pycon-slovakia-2024",
+          name: "PyCon Slovakia 2024",
+          color: color,
+          location: "Bratislava, Slovakia",
+          date: "March 15 - 17, 2024",
+          subject: "PY",
+          startDate: Date.parse("2024-03-15"),
+          endDate: Date.parse("2024-03-17"),
+        });
+
+        // add deadlines in red
+        conf_list_all.push({
           id: "python-pizza-prague-2024-deadline",
           abbreviation: "python-pizza-prague-2024",
           name: "Python Pizza Prague 2024 CfP",
@@ -937,38 +1001,6 @@
           subject: "PY",
           startDate: Date.parse("2023-11-24"),
           endDate: Date.parse("2023-11-26"),
-        });
-
-        // add deadlines in red
-        conf_list_all.push({
-          id: "pyhep-2023-deadline",
-          abbreviation: "pyhep-2023",
-          name: "PyHEP 2023 CfP",
-          color: "red",
-          location: "Online",
-          date: "October 09 - 12, 2023",
-          subject: "SCIPY",
-          startDate: Date.parse("2023-09-06 23:59:00"),
-          endDate: Date.parse("2023-09-06 23:59:00"),
-        });
-
-        // add Conferences in chosen color
-
-        var color = "black";
-        // use first sub to choose color
-
-        color = "#70163C";
-
-        conf_list_all.push({
-          id: "pyhep-2023-conference",
-          abbreviation: "pyhep-2023",
-          name: "PyHEP 2023",
-          color: color,
-          location: "Online",
-          date: "October 09 - 12, 2023",
-          subject: "SCIPY",
-          startDate: Date.parse("2023-10-09"),
-          endDate: Date.parse("2023-10-12"),
         });
 
         // add deadlines in red
@@ -1569,70 +1601,6 @@
           subject: "PY",
           startDate: Date.parse("2024-05-22"),
           endDate: Date.parse("2024-05-25"),
-        });
-
-        // add deadlines in red
-        conf_list_all.push({
-          id: "pycon-lithuania-2024-deadline",
-          abbreviation: "pycon-lithuania-2024",
-          name: "PyCon Lithuania 2024 CfP",
-          color: "red",
-          location: "Vilnius, Lithuania",
-          date: "April 2 - 6, 2024",
-          subject: "PY",
-          startDate: Date.parse("TBA"),
-          endDate: Date.parse("TBA"),
-        });
-
-        // add Conferences in chosen color
-
-        var color = "black";
-        // use first sub to choose color
-
-        color = "#4B8BBE";
-
-        conf_list_all.push({
-          id: "pycon-lithuania-2024-conference",
-          abbreviation: "pycon-lithuania-2024",
-          name: "PyCon Lithuania 2024",
-          color: color,
-          location: "Vilnius, Lithuania",
-          date: "April 2 - 6, 2024",
-          subject: "PY",
-          startDate: Date.parse("2024-04-02"),
-          endDate: Date.parse("2024-04-06"),
-        });
-
-        // add deadlines in red
-        conf_list_all.push({
-          id: "pycon-slovakia-2024-deadline",
-          abbreviation: "pycon-slovakia-2024",
-          name: "PyCon Slovakia 2024 CfP",
-          color: "red",
-          location: "Bratislava, Slovakia",
-          date: "March 15 - 17, 2024",
-          subject: "PY",
-          startDate: Date.parse("TBA"),
-          endDate: Date.parse("TBA"),
-        });
-
-        // add Conferences in chosen color
-
-        var color = "black";
-        // use first sub to choose color
-
-        color = "#4B8BBE";
-
-        conf_list_all.push({
-          id: "pycon-slovakia-2024-conference",
-          abbreviation: "pycon-slovakia-2024",
-          name: "PyCon Slovakia 2024",
-          color: color,
-          location: "Bratislava, Slovakia",
-          date: "March 15 - 17, 2024",
-          subject: "PY",
-          startDate: Date.parse("2024-03-15"),
-          endDate: Date.parse("2024-03-17"),
         });
 
         // add deadlines in red
