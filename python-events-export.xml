@@ -9,7 +9,7 @@
 		<title>Newsfeed for Python Events Calendar from Python Conference Deadlines</title>
 		<description>Countdowns to your favourite Python conferences with calls for participation and resources to submit awesome talks!</description>
 		<link>https://pythondeadlin.es/feed.xml</link>
-		<lastBuildDate>Sat, 25 Nov 2023 14:10:59 +0000</lastBuildDate>
+		<lastBuildDate>Thu, 30 Nov 2023 01:31:16 +0000</lastBuildDate>
 		
 			<item>
 				<title>PyTexas 2024 Conference Deadline</title>
@@ -72,15 +72,6 @@
 				<link>https://pythondeadlin.es/conference/flaskcon-2023/</link>
 				<guid isPermaLink="false"></guid>
 				<category>WEB</category>
-			</item>
-		
-			<item>
-				<title>EduPy 2023 Conference Deadline</title>
-				<description><![CDATA[* name of the event: EduPy 2023<br/>* type of event: Conference <br/>* focus on Python: Yes<br/>* approximate number of attendees: Unknown<br/>* location (incl. country): Cali, Colombia<br/>* dates/times/recurrence (incl. time zone): October 21st, 2023<br/>* HTML link : <a href="https://slec.net/edupy/">EduPy 2023</a>]]></description>
-				<pubDate>Sat, 21 Oct 2023 00:00:00 +0000</pubDate>
-				<link>https://pythondeadlin.es/conference/edupy-2023/</link>
-				<guid isPermaLink="false"></guid>
-				<category>PY</category>
 			</item>
 		
 			<item>
@@ -210,10 +201,19 @@
 			</item>
 		
 			<item>
-				<title>PyCon MEA @GlobalDevSlam 2023 Conference Deadline</title>
-				<description><![CDATA[* name of the event: PyCon MEA @GlobalDevSlam 2023<br/>* type of event: Conference <br/>* focus on Python: Yes<br/>* approximate number of attendees: Unknown<br/>* location (incl. country): Dubai, UAE<br/>* dates/times/recurrence (incl. time zone): October 16 - 20, 2023<br/>* HTML link : <a href="https://globaldevslam.com/">PyCon MEA @GlobalDevSlam 2023</a>]]></description>
-				<pubDate>Mon, 16 Oct 2023 00:00:00 +0000</pubDate>
-				<link>https://pythondeadlin.es/conference/pycon-mea-globaldevslam-2023/</link>
+				<title>PyCon Somalia 2023 Conference Deadline</title>
+				<description><![CDATA[* name of the event: PyCon Somalia 2023<br/>* type of event: Conference <br/>* focus on Python: Yes<br/>* approximate number of attendees: Unknown<br/>* location (incl. country): Mogadishu, Somalia<br/>* dates/times/recurrence (incl. time zone): December 26 - 27, 2023<br/>* HTML link : <a href="https://pycon.org.so/">PyCon Somalia 2023</a>]]></description>
+				<pubDate>Tue, 26 Dec 2023 00:00:00 +0000</pubDate>
+				<link>https://pythondeadlin.es/conference/pycon-somalia-2023/</link>
+				<guid isPermaLink="false"></guid>
+				<category>PY</category>
+			</item>
+		
+			<item>
+				<title>Pyjamas Conf 2023 Conference Deadline</title>
+				<description><![CDATA[* name of the event: Pyjamas Conf 2023<br/>* type of event: Conference <br/>* focus on Python: Yes<br/>* approximate number of attendees: Unknown<br/>* location (incl. country): Online<br/>* dates/times/recurrence (incl. time zone): December 09 - 11, 2023<br/>* HTML link : <a href="https://pyjamas.live">Pyjamas Conf 2023</a>]]></description>
+				<pubDate>Sat, 09 Dec 2023 00:00:00 +0000</pubDate>
+				<link>https://pythondeadlin.es/conference/pyjamas-conf-2023/</link>
 				<guid isPermaLink="false"></guid>
 				<category>PY</category>
 			</item>

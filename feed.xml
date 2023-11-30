@@ -9,7 +9,7 @@
 		<title>Python Conference Deadlines</title>
 		<description>Countdowns to your favourite Python conferences with calls for participation and resources to submit awesome talks!</description>
 		<link>https://pythondeadlin.es/feed.xml</link>
-		<lastBuildDate>Sat, 25 Nov 2023 14:10:59 +0000</lastBuildDate>
+		<lastBuildDate>Thu, 30 Nov 2023 01:31:16 +0000</lastBuildDate>
 		
 		
 			<item>
@@ -85,17 +85,6 @@
 				<link>https://pythondeadlin.es/conference/flaskcon-2023/</link>
 				<guid isPermaLink="false"></guid>
 				<category>WEB</category>
-			</item>
-		
-		
-		
-			<item>
-				<title>EduPy 2023 Conference Deadline</title>
-				<description>Conference in Cali, Colombia on October 21st, 2023. CfP: 2023-10-14 23:59:00 AoE. </description>
-				<pubDate>Sat, 14 Oct 2023 23:59:00 +0000</pubDate>
-				<link>https://pythondeadlin.es/conference/edupy-2023/</link>
-				<guid isPermaLink="false"></guid>
-				<category>PY</category>
 			</item>
 		
 		
@@ -254,14 +243,7 @@
 		
 		
 		
-			<item>
-				<title>PyCon MEA @GlobalDevSlam 2023 Conference Deadline</title>
-				<description>Conference in Dubai, UAE on October 16 - 20, 2023. CfP: 2023-05-31 23:59:00 AoE.&lt;br /&gt;Find them here: @GlobalDevSlam </description>
-				<pubDate>Wed, 31 May 2023 23:59:00 +0000</pubDate>
-				<link>https://pythondeadlin.es/conference/pycon-mea-globaldevslam-2023/</link>
-				<guid isPermaLink="false"></guid>
-				<category>PY</category>
-			</item>
+		
 		
 		
 	</channel>
