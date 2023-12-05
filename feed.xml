@@ -9,7 +9,7 @@
 		<title>Python Conference Deadlines</title>
 		<description>Countdowns to your favourite Python conferences with calls for participation and resources to submit awesome talks!</description>
 		<link>https://pythondeadlin.es/feed.xml</link>
-		<lastBuildDate>Thu, 30 Nov 2023 01:31:16 +0000</lastBuildDate>
+		<lastBuildDate>Tue, 05 Dec 2023 23:02:46 +0000</lastBuildDate>
 		
 		
 			<item>
@@ -30,6 +30,17 @@
 				<link>https://pythondeadlin.es/conference/pycon-lithuania-2024/</link>
 				<guid isPermaLink="false"></guid>
 				<category>PY</category>
+			</item>
+		
+		
+		
+			<item>
+				<title>PyCascades 2024 Conference Deadline</title>
+				<description>Conference in Seattle, Washington, USA on April 05 - 08, 2024. CfP: 2024-01-04 23:59:00 AoE. </description>
+				<pubDate>Thu, 04 Jan 2024 23:59:00 +0000</pubDate>
+				<link>https://pythondeadlin.es/conference/pycascades-2024/</link>
+				<guid isPermaLink="false"></guid>
+				<category></category>
 			</item>
 		
 		
@@ -85,6 +96,17 @@
 				<link>https://pythondeadlin.es/conference/flaskcon-2023/</link>
 				<guid isPermaLink="false"></guid>
 				<category>WEB</category>
+			</item>
+		
+		
+		
+			<item>
+				<title>PyOhio 2023 Conference Deadline</title>
+				<description>Conference in Ohio, USA on December 16th, 2023. CfP: 2023-10-23 08:00:00 AoE. </description>
+				<pubDate>Mon, 23 Oct 2023 08:00:00 +0000</pubDate>
+				<link>https://pythondeadlin.es/conference/pyohio-2023/</link>
+				<guid isPermaLink="false"></guid>
+				<category></category>
 			</item>
 		
 		
@@ -149,17 +171,6 @@
 				<description>Conference in Bangkok, Thailand on December 14 - 16, 2023. CfP: 2023-08-16 23:59:00 AoE. </description>
 				<pubDate>Wed, 16 Aug 2023 23:59:00 +0000</pubDate>
 				<link>https://pythondeadlin.es/conference/pycon-thailand-2023/</link>
-				<guid isPermaLink="false"></guid>
-				<category>PY</category>
-			</item>
-		
-		
-		
-			<item>
-				<title>PackagingCon 2023 Conference Deadline</title>
-				<description>Conference in Berlin, Germany on October 26 - 28, 2023. CfP: 2023-08-06 23:59:59 AoE. </description>
-				<pubDate>Sun, 06 Aug 2023 23:59:59 +0000</pubDate>
-				<link>https://pythondeadlin.es/conference/packagingcon-2023/</link>
 				<guid isPermaLink="false"></guid>
 				<category>PY</category>
 			</item>
@@ -240,8 +251,6 @@
 				<guid isPermaLink="false"></guid>
 				<category>PY</category>
 			</item>
-		
-		
 		
 		
 		
