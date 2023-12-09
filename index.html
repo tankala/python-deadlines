@@ -63,7 +63,7 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/js-year-calendar.min.css?t=1702137545"
+      href="/static/css/js-year-calendar.min.css?t=1702137617"
       media="screen,projection"
     />
 
@@ -75,13 +75,13 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/deadlines.css?t=1702137545"
+      href="/static/css/deadlines.css?t=1702137617"
       media="screen,projection"
     />
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/calendar.css?t=1702137545"
+      href="/static/css/calendar.css?t=1702137617"
       media="screen,projection"
     />
 
@@ -939,7 +939,7 @@
           </div>
 
           <div
-            id="pycon-de-pydata-berlin-2024"
+            id="pycon-de-and-pydata-berlin-2024"
             class="ConfItem PY-conf PYDATA-conf"
           >
             <div class="row conf-row">
@@ -947,15 +947,15 @@
                 <span class="conf-title">
                   <a
                     title="Deadline Details"
-                    href="/conference/pycon-de-pydata-berlin-2024/"
-                    >PyCon DE & PyData Berlin 2024</a
+                    href="/conference/pycon-de-and-pydata-berlin-2024/"
+                    >PyCon DE and PyData Berlin 2024</a
                   >
                 </span>
                 <span class="conf-title-small">
                   <a
                     title="Deadline Details"
-                    href="/conference/pycon-de-pydata-berlin-2024/"
-                    >PyCon DE & PyData Berlin '24</a
+                    href="/conference/pycon-de-and-pydata-berlin-2024/"
+                    >PyCon DE and PyData Berlin '24</a
                   >
                 </span>
                 <span class="conf-title-icon">
@@ -975,13 +975,13 @@
 
                 <span class="conf-title-icon">
                   <a
-                    title="Call for Participation for PyCon DE & PyData Berlin"
+                    title="Call for Participation for PyCon DE and PyData Berlin"
                     href="https://pretalx.com/pyconde-pydata-2024/cfp"
                     target="_blank"
                     ><img
                       src="/static/img/035-file-text.svg"
                       class="badge-link"
-                      alt="Link to Call for Participation for PyCon DE & PyData Berlin"
+                      alt="Link to Call for Participation for PyCon DE and PyData Berlin"
                       width="16"
                       height="16"
                   /></a>
@@ -990,13 +990,13 @@
 
                 <span class="conf-title-icon">
                   <a
-                    title="Financial Aid from PyCon DE & PyData Berlin"
+                    title="Financial Aid from PyCon DE and PyData Berlin"
                     href="https://2024.pycon.de/financial-aid/"
                     target="_blank"
                     ><img
                       src="/static/img/066-lifebuoy.svg"
                       class="badge-link"
-                      alt="Link to Sponsorship page of PyCon DE & PyData Berlin"
+                      alt="Link to Sponsorship page of PyCon DE and PyData Berlin"
                       width="16"
                       height="16"
                   /></a>
@@ -1005,13 +1005,13 @@
 
                 <span class="conf-title-icon">
                   <a
-                    title="Sponsorship Opportunity for PyCon DE & PyData Berlin"
+                    title="Sponsorship Opportunity for PyCon DE and PyData Berlin"
                     href="https://2024.pycon.de/sponsors/"
                     target="_blank"
                     ><img
                       src="/static/img/060-coin-dollar.svg"
                       class="badge-link"
-                      alt="Link to Sponsorship page of PyCon DE & PyData Berlin"
+                      alt="Link to Sponsorship page of PyCon DE and PyData Berlin"
                       width="16"
                       height="16"
                   /></a>
@@ -1020,7 +1020,7 @@
 
                 <span class="conf-title-icon">
                   <a
-                    title="Twitter for PyCon DE & PyData Berlin"
+                    title="Twitter for PyCon DE and PyData Berlin"
                     href="https://twitter.com/PyConDE"
                     target="_blank"
                     ><img
@@ -3801,11 +3801,11 @@
           $("#python-pizza-prague-2024 .calendar").remove();
         }
 
-        $("#pycon-de-pydata-berlin-2024 .PY-tag").html(
+        $("#pycon-de-and-pydata-berlin-2024 .PY-tag").html(
           sub2name["PY"].toLocaleLowerCase()
         );
 
-        $("#pycon-de-pydata-berlin-2024 .PYDATA-tag").html(
+        $("#pycon-de-and-pydata-berlin-2024 .PYDATA-tag").html(
           sub2name["PYDATA"].toLocaleLowerCase()
         );
 
@@ -3823,12 +3823,12 @@
           var cfpDate = DateTime.fromSQL("2023-12-22 23:59:59");
           var confDate = DateTime.fromSQL("2024-04-22");
           console.log(
-            "Invalid timezone in pycon-de-pydata-berlin-2024. Using system timezone instead."
+            "Invalid timezone in pycon-de-and-pydata-berlin-2024. Using system timezone instead."
           );
         }
 
         // render countdown timer
-        $("#pycon-de-pydata-berlin-2024 .timer").countdown(
+        $("#pycon-de-and-pydata-berlin-2024 .timer").countdown(
           cfpDate.toJSDate(),
           function (event) {
             $(this).html(event.strftime("%D days %Hh %Mm %Ss"));
@@ -3836,7 +3836,7 @@
         );
 
         // render countdown timer small
-        $("#pycon-de-pydata-berlin-2024 .timer-small").countdown(
+        $("#pycon-de-and-pydata-berlin-2024 .timer-small").countdown(
           cfpDate.toJSDate(),
           function (event) {
             $(this).html(event.strftime("%Dd %H:%M:%S"));
@@ -3844,24 +3844,24 @@
         );
 
         // deadline in local timezone
-        $("#pycon-de-pydata-berlin-2024 .deadline-time").html(
+        $("#pycon-de-and-pydata-berlin-2024 .deadline-time").html(
           cfpDate.setZone("system").toLocaleString(DateTime.DATE_HUGE)
         );
 
         // add calendar button
         try {
           var myCalendar = createCalendarFromObject({
-            id: "pycon-de-pydata-berlin-2024",
-            title: "PyCon DE & PyData Berlin 2024 deadline",
+            id: "pycon-de-and-pydata-berlin-2024",
+            title: "PyCon DE and PyData Berlin 2024 deadline",
             date: cfpDate.toJSDate(),
             duration: 60,
           });
           document
-            .querySelector("#pycon-de-pydata-berlin-2024 .calendar")
+            .querySelector("#pycon-de-and-pydata-berlin-2024 .calendar")
             .appendChild(myCalendar);
         } catch (err) {
           document
-            .querySelector("#pycon-de-pydata-berlin-2024 .calendar")
+            .querySelector("#pycon-de-and-pydata-berlin-2024 .calendar")
             .appendChild("<p>Calendar not available.</p>");
           console.log("Error in cfp date.");
         }
@@ -3870,34 +3870,37 @@
         cfpDiff = today.diff(cfpDate);
         confDiff = today.diff(confDate);
 
-        $("#pycon-de-pydata-berlin-2024").attr("cfpDiff", cfpDiff.milliseconds);
-        $("#pycon-de-pydata-berlin-2024").attr(
+        $("#pycon-de-and-pydata-berlin-2024").attr(
+          "cfpDiff",
+          cfpDiff.milliseconds
+        );
+        $("#pycon-de-and-pydata-berlin-2024").attr(
           "confDiff",
           confDiff.milliseconds
         );
 
         if (cfpDiff > 0) {
-          $("#pycon-de-pydata-berlin-2024").addClass("pastcfp");
-          $("#pycon-de-pydata-berlin-2024").appendTo($("#past_cfps"));
-          $("#pycon-de-pydata-berlin-2024 .timer").replaceWith(
-            $("#pycon-de-pydata-berlin-2024 .deadline")
+          $("#pycon-de-and-pydata-berlin-2024").addClass("pastcfp");
+          $("#pycon-de-and-pydata-berlin-2024").appendTo($("#past_cfps"));
+          $("#pycon-de-and-pydata-berlin-2024 .timer").replaceWith(
+            $("#pycon-de-and-pydata-berlin-2024 .deadline")
           );
-          $("#pycon-de-pydata-berlin-2024 .timer-small").replaceWith(
-            $("#pycon-de-pydata-berlin-2024 .deadline")
+          $("#pycon-de-and-pydata-berlin-2024 .timer-small").replaceWith(
+            $("#pycon-de-and-pydata-berlin-2024 .deadline")
           );
-          $("#pycon-de-pydata-berlin-2024 .calendar").remove();
+          $("#pycon-de-and-pydata-berlin-2024 .calendar").remove();
         }
 
         if (confDiff > 0) {
-          $("#pycon-de-pydata-berlin-2024").addClass("pastconf");
-          $("#pycon-de-pydata-berlin-2024").appendTo($("#past_confs"));
-          $("#pycon-de-pydata-berlin-2024 .timer").replaceWith(
-            $("#pycon-de-pydata-berlin-2024 .deadline")
+          $("#pycon-de-and-pydata-berlin-2024").addClass("pastconf");
+          $("#pycon-de-and-pydata-berlin-2024").appendTo($("#past_confs"));
+          $("#pycon-de-and-pydata-berlin-2024 .timer").replaceWith(
+            $("#pycon-de-and-pydata-berlin-2024 .deadline")
           );
-          $("#pycon-de-pydata-berlin-2024 .timer-small").replaceWith(
-            $("#pycon-de-pydata-berlin-2024 .deadline")
+          $("#pycon-de-and-pydata-berlin-2024 .timer-small").replaceWith(
+            $("#pycon-de-and-pydata-berlin-2024 .deadline")
           );
-          $("#pycon-de-pydata-berlin-2024 .calendar").remove();
+          $("#pycon-de-and-pydata-berlin-2024 .calendar").remove();
         }
 
         $("#pycon-us-2024 .PY-tag").html(sub2name["PY"].toLocaleLowerCase());

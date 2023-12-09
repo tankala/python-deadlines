@@ -9,7 +9,7 @@
 		<title>Newsfeed for Python Events Calendar from Python Conference Deadlines</title>
 		<description>Countdowns to your favourite Python conferences with calls for participation and resources to submit awesome talks!</description>
 		<link>https://pythondeadlin.es/feed.xml</link>
-		<lastBuildDate>Sat, 09 Dec 2023 15:59:05 +0000</lastBuildDate>
+		<lastBuildDate>Sat, 09 Dec 2023 16:00:17 +0000</lastBuildDate>
 		
 			<item>
 				<title>PyTexas 2024 Conference Deadline</title>
@@ -66,10 +66,10 @@
 			</item>
 		
 			<item>
-				<title>PyCon DE &amp; PyData Berlin 2024 Conference Deadline</title>
-				<description><![CDATA[* name of the event: PyCon DE &amp; PyData Berlin 2024<br/>* type of event: Conference <br/>* focus on Python: Yes<br/>* approximate number of attendees: Unknown<br/>* location (incl. country): Berlin, Germany<br/>* dates/times/recurrence (incl. time zone): April 22 - 24, 2024<br/>* HTML link : <a href="https://pycon.de/">PyCon DE &amp; PyData Berlin 2024</a>]]></description>
+				<title>PyCon DE and PyData Berlin 2024 Conference Deadline</title>
+				<description><![CDATA[* name of the event: PyCon DE and PyData Berlin 2024<br/>* type of event: Conference <br/>* focus on Python: Yes<br/>* approximate number of attendees: Unknown<br/>* location (incl. country): Berlin, Germany<br/>* dates/times/recurrence (incl. time zone): April 22 - 24, 2024<br/>* HTML link : <a href="https://pycon.de/">PyCon DE and PyData Berlin 2024</a>]]></description>
 				<pubDate>Mon, 22 Apr 2024 00:00:00 +0000</pubDate>
-				<link>https://pythondeadlin.es/conference/pycon-de-pydata-berlin-2024/</link>
+				<link>https://pythondeadlin.es/conference/pycon-de-and-pydata-berlin-2024/</link>
 				<guid isPermaLink="false"></guid>
 				<category>PY,PYDATA</category>
 			</item>
