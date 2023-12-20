@@ -9,7 +9,7 @@
 		<title>Newsfeed for Python Events Calendar from Python Conference Deadlines</title>
 		<description>Countdowns to your favourite Python conferences with calls for participation and resources to submit awesome talks!</description>
 		<link>https://pythondeadlin.es/feed.xml</link>
-		<lastBuildDate>Wed, 20 Dec 2023 01:57:17 +0000</lastBuildDate>
+		<lastBuildDate>Wed, 20 Dec 2023 12:11:10 +0000</lastBuildDate>
 		
 			<item>
 				<title>DjangoCon Europe 2024 Conference Deadline</title>
@@ -84,21 +84,21 @@
 			</item>
 		
 			<item>
-				<title>Python Pizza Prague 2024 Conference Deadline</title>
-				<description><![CDATA[* name of the event: Python Pizza Prague 2024<br/>* type of event: Conference <br/>* focus on Python: Yes<br/>* approximate number of attendees: Unknown<br/>* location (incl. country): Prague, Czechia<br/>* dates/times/recurrence (incl. time zone): February 24th, 2024<br/>* HTML link : <a href="https://prague.python.pizza/">Python Pizza Prague 2024</a>]]></description>
-				<pubDate>Sat, 24 Feb 2024 00:00:00 +0000</pubDate>
-				<link>https://pythondeadlin.es/conference/python-pizza-prague-2024/</link>
-				<guid isPermaLink="false"></guid>
-				<category>PY</category>
-			</item>
-		
-			<item>
 				<title>PyCon DE and PyData Berlin 2024 Conference Deadline</title>
 				<description><![CDATA[* name of the event: PyCon DE and PyData Berlin 2024<br/>* type of event: Conference <br/>* focus on Python: Yes<br/>* approximate number of attendees: Unknown<br/>* location (incl. country): Berlin, Germany<br/>* dates/times/recurrence (incl. time zone): April 22 - 24, 2024<br/>* HTML link : <a href="https://pycon.de/">PyCon DE and PyData Berlin 2024</a>]]></description>
 				<pubDate>Mon, 22 Apr 2024 00:00:00 +0000</pubDate>
 				<link>https://pythondeadlin.es/conference/pycon-de-and-pydata-berlin-2024/</link>
 				<guid isPermaLink="false"></guid>
 				<category>PY,PYDATA</category>
+			</item>
+		
+			<item>
+				<title>Python Pizza Prague 2024 Conference Deadline</title>
+				<description><![CDATA[* name of the event: Python Pizza Prague 2024<br/>* type of event: Conference <br/>* focus on Python: Yes<br/>* approximate number of attendees: Unknown<br/>* location (incl. country): Prague, Czechia<br/>* dates/times/recurrence (incl. time zone): February 24th, 2024<br/>* HTML link : <a href="https://prague.python.pizza/">Python Pizza Prague 2024</a>]]></description>
+				<pubDate>Sat, 24 Feb 2024 00:00:00 +0000</pubDate>
+				<link>https://pythondeadlin.es/conference/python-pizza-prague-2024/</link>
+				<guid isPermaLink="false"></guid>
+				<category>PY</category>
 			</item>
 		
 			<item>
