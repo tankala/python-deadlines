@@ -63,7 +63,7 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/js-year-calendar.min.css?t=1703076730"
+      href="/static/css/js-year-calendar.min.css?t=1703077151"
       media="screen,projection"
     />
 
@@ -75,13 +75,13 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/deadlines.css?t=1703076730"
+      href="/static/css/deadlines.css?t=1703077151"
       media="screen,projection"
     />
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/calendar.css?t=1703076730"
+      href="/static/css/calendar.css?t=1703077151"
       media="screen,projection"
     />
 
@@ -4780,7 +4780,7 @@
 
         $("#pycon-somalia-2023 .timer").html("TBA");
         $("#pycon-somalia-2023 .deadline-time").html("TBA");
-        $("#pycon-somalia-2023").attr("cfpDiff", -Infinity);
+        $("#pycon-somalia-2023").attr("cfpDiff", Infinity);
 
         $("#pydata-london-2024 .PYDATA-tag").html(
           sub2name["PYDATA"].toLocaleLowerCase()
@@ -4788,13 +4788,14 @@
 
         $("#pydata-london-2024 .timer").html("TBA");
         $("#pydata-london-2024 .deadline-time").html("TBA");
-        $("#pydata-london-2024").attr("cfpDiff", -Infinity);
+        $("#pydata-london-2024").attr("cfpDiff", Infinity);
 
         // Sort coming_confs and past_confs
         $("#coming_confs .ConfItem")
           .sort(function (a, b) {
-            return $(a).attr("cfpDiff") - $(b).attr("cfpDiff");
+            return $(b).attr("cfpDiff") - $(a).attr("cfpDiff");
           })
+          .reverse()
           .appendTo($("#coming_confs"));
 
         // Get subjects from URL/Cache
