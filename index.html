@@ -63,7 +63,7 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/js-year-calendar.min.css?t=1703077151"
+      href="/static/css/js-year-calendar.min.css?t=1703079445"
       media="screen,projection"
     />
 
@@ -75,13 +75,13 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/deadlines.css?t=1703077151"
+      href="/static/css/deadlines.css?t=1703079445"
       media="screen,projection"
     />
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/calendar.css?t=1703077151"
+      href="/static/css/calendar.css?t=1703079445"
       media="screen,projection"
     />
 
@@ -4793,9 +4793,8 @@
         // Sort coming_confs and past_confs
         $("#coming_confs .ConfItem")
           .sort(function (a, b) {
-            return $(b).attr("cfpDiff") - $(a).attr("cfpDiff");
+            return $(a).attr("cfpDiff") - $(b).attr("cfpDiff");
           })
-          .reverse()
           .appendTo($("#coming_confs"));
 
         // Get subjects from URL/Cache
