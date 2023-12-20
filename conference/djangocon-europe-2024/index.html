@@ -69,7 +69,7 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/js-year-calendar.min.css?t=1702137617"
+      href="/static/css/js-year-calendar.min.css?t=1703037437"
       media="screen,projection"
     />
 
@@ -81,13 +81,13 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/deadlines.css?t=1702137617"
+      href="/static/css/deadlines.css?t=1703037437"
       media="screen,projection"
     />
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/calendar.css?t=1702137617"
+      href="/static/css/calendar.css?t=1703037437"
       media="screen,projection"
     />
 
@@ -451,7 +451,7 @@
       </div>
       <div id="page-content">
         <div id="conf-deadline-timer" class="row">
-          <div id="cfp-timer" class="col-12 conf-timer">TBA</div>
+          <div id="cfp-timer" class="col-12 conf-timer"></div>
         </div>
         <div id="conf-key-facts" class="row">
           <div class="col-12 col-md-6">
@@ -514,6 +514,38 @@
 
             <div>
               <img
+                src="/static/img/066-lifebuoy.svg"
+                class="badge-link"
+                alt="Life Buoy for Financial Aid"
+                width="16"
+                height="16"
+              />
+              <a
+                id="conf-finaid"
+                target="_blank"
+                href="https://2024.djangocon.eu/information/grants/"
+                >Financial Aid</a
+              >
+            </div>
+
+            <div>
+              <img
+                src="/static/img/060-coin-dollar.svg"
+                class="badge-link"
+                alt="Coin Dollar Icon for Sponsorship"
+                width="16"
+                height="16"
+              />
+              <a
+                id="conf-sponsor"
+                target="_blank"
+                href="https://2024.djangocon.eu/sponsors/sponsorship/"
+                >Sponsorship Opportunity</a
+              >
+            </div>
+
+            <div>
+              <img
                 src="/static/img/407-twitter.svg"
                 class="badge-link"
                 alt="Twitter icon"
@@ -564,13 +596,13 @@
         </div>
         <div class="row">
           <div
-            id="0d5f5709-45d7-4d1a-b472-6868ba0fb2bb"
+            id="723315c6-81be-4a85-b21a-4637ef9d5fed"
             style="width: 100%; height: 400px"
             class="jekyll-map"
           ></div>
           <script type="text/javascript">
             jekyllMaps.register(
-              "0d5f5709-45d7-4d1a-b472-6868ba0fb2bb",
+              "723315c6-81be-4a85-b21a-4637ef9d5fed",
               [
                 {
                   latitude: 42.240599,
@@ -710,9 +742,48 @@
 
         // other
 
-        $("#cfp-timer").html("TBA");
-        $(".deadline-time").html("TBA");
-        $(".deadline-local-time").html("TBA");
+        // Use specified timezone for deadlines if available else use AoE timezone
+
+        var confDeadline = DateTime.fromSQL("2024-02-29 23:59:00", {
+          zone: "UTC-12",
+        });
+
+        // check if timezone is valid otherwise replace by system timezone
+        if (confDeadline.invalid) {
+          var confDeadline = DateTime.fromSQL("2024-02-29 23:59:00");
+          console.log("Invalid timezone. Using system timezone instead.");
+        }
+
+        // add calendar
+        var conferenceDeadlineCalendar = createCalendarFromObject({
+          id: "-",
+          title: "DjangoCon Europe 2024 deadline",
+          date: confDeadline.toJSDate(),
+          duration: 60,
+        });
+        document
+          .querySelector("#conference-deadline")
+          .appendChild(conferenceDeadlineCalendar);
+
+        // render countdown timer
+        $("#cfp-timer").countdown(confDeadline.toJSDate(), function (event) {
+          $(this).html(event.strftime("%D days %Hh %Mm %Ss"));
+        });
+
+        // render deadline conference time
+
+        $(".deadline-time").html(
+          confDeadline
+            .setZone("UTC-12")
+            .toLocaleString(DateTime.DATETIME_HUGE_WITH_SECONDS)
+        );
+
+        // render deadline in local timezone
+        $(".deadline-local-time").html(
+          confDeadline
+            .setZone("system")
+            .toLocaleString(DateTime.DATETIME_HUGE_WITH_SECONDS)
+        );
       });
     </script>
     <script async defer>
