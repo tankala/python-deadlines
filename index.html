@@ -63,7 +63,7 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/js-year-calendar.min.css?t=1703074270"
+      href="/static/css/js-year-calendar.min.css?t=1703075982"
       media="screen,projection"
     />
 
@@ -75,13 +75,13 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/deadlines.css?t=1703074270"
+      href="/static/css/deadlines.css?t=1703075982"
       media="screen,projection"
     />
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/calendar.css?t=1703074270"
+      href="/static/css/calendar.css?t=1703075982"
       media="screen,projection"
     />
 
@@ -2970,7 +2970,7 @@
         $("#djangocon-europe-2024").attr("cfpDiff", cfpDiff.toMillis());
         $("#djangocon-europe-2024").attr("confDiff", confDiff.toMillis());
 
-        if (cfpDiff > 0 && confDiff < 0) {
+        if (cfpDiff < 0) {
           $("#djangocon-europe-2024").addClass("pastcfp");
           $("#djangocon-europe-2024").appendTo($("#past_cfps"));
           $("#djangocon-europe-2024 .timer").replaceWith(
@@ -2982,7 +2982,7 @@
           $("#djangocon-europe-2024 .calendar").remove();
         }
 
-        if (confDiff > 0) {
+        if (confDiff < 0) {
           $("#djangocon-europe-2024").addClass("pastconf");
           $("#djangocon-europe-2024").appendTo($("#past_confs"));
           $("#djangocon-europe-2024 .timer").replaceWith(
@@ -3061,7 +3061,7 @@
         $("#pycon-namibia-2024").attr("cfpDiff", cfpDiff.toMillis());
         $("#pycon-namibia-2024").attr("confDiff", confDiff.toMillis());
 
-        if (cfpDiff > 0 && confDiff < 0) {
+        if (cfpDiff < 0) {
           $("#pycon-namibia-2024").addClass("pastcfp");
           $("#pycon-namibia-2024").appendTo($("#past_cfps"));
           $("#pycon-namibia-2024 .timer").replaceWith(
@@ -3073,7 +3073,7 @@
           $("#pycon-namibia-2024 .calendar").remove();
         }
 
-        if (confDiff > 0) {
+        if (confDiff < 0) {
           $("#pycon-namibia-2024").addClass("pastconf");
           $("#pycon-namibia-2024").appendTo($("#past_confs"));
           $("#pycon-namibia-2024 .timer").replaceWith(
@@ -3149,7 +3149,7 @@
         $("#pytexas-2024").attr("cfpDiff", cfpDiff.toMillis());
         $("#pytexas-2024").attr("confDiff", confDiff.toMillis());
 
-        if (cfpDiff > 0 && confDiff < 0) {
+        if (cfpDiff < 0) {
           $("#pytexas-2024").addClass("pastcfp");
           $("#pytexas-2024").appendTo($("#past_cfps"));
           $("#pytexas-2024 .timer").replaceWith($("#pytexas-2024 .deadline"));
@@ -3159,7 +3159,7 @@
           $("#pytexas-2024 .calendar").remove();
         }
 
-        if (confDiff > 0) {
+        if (confDiff < 0) {
           $("#pytexas-2024").addClass("pastconf");
           $("#pytexas-2024").appendTo($("#past_confs"));
           $("#pytexas-2024 .timer").replaceWith($("#pytexas-2024 .deadline"));
@@ -3237,7 +3237,7 @@
         $("#pycon-lithuania-2024").attr("cfpDiff", cfpDiff.toMillis());
         $("#pycon-lithuania-2024").attr("confDiff", confDiff.toMillis());
 
-        if (cfpDiff > 0 && confDiff < 0) {
+        if (cfpDiff < 0) {
           $("#pycon-lithuania-2024").addClass("pastcfp");
           $("#pycon-lithuania-2024").appendTo($("#past_cfps"));
           $("#pycon-lithuania-2024 .timer").replaceWith(
@@ -3249,7 +3249,7 @@
           $("#pycon-lithuania-2024 .calendar").remove();
         }
 
-        if (confDiff > 0) {
+        if (confDiff < 0) {
           $("#pycon-lithuania-2024").addClass("pastconf");
           $("#pycon-lithuania-2024").appendTo($("#past_confs"));
           $("#pycon-lithuania-2024 .timer").replaceWith(
@@ -3326,7 +3326,7 @@
         $("#pycon-italia-2024").attr("cfpDiff", cfpDiff.toMillis());
         $("#pycon-italia-2024").attr("confDiff", confDiff.toMillis());
 
-        if (cfpDiff > 0 && confDiff < 0) {
+        if (cfpDiff < 0) {
           $("#pycon-italia-2024").addClass("pastcfp");
           $("#pycon-italia-2024").appendTo($("#past_cfps"));
           $("#pycon-italia-2024 .timer").replaceWith(
@@ -3338,7 +3338,7 @@
           $("#pycon-italia-2024 .calendar").remove();
         }
 
-        if (confDiff > 0) {
+        if (confDiff < 0) {
           $("#pycon-italia-2024").addClass("pastconf");
           $("#pycon-italia-2024").appendTo($("#past_confs"));
           $("#pycon-italia-2024 .timer").replaceWith(
@@ -3413,7 +3413,7 @@
         $("#pycascades-2024").attr("cfpDiff", cfpDiff.toMillis());
         $("#pycascades-2024").attr("confDiff", confDiff.toMillis());
 
-        if (cfpDiff > 0 && confDiff < 0) {
+        if (cfpDiff < 0) {
           $("#pycascades-2024").addClass("pastcfp");
           $("#pycascades-2024").appendTo($("#past_cfps"));
           $("#pycascades-2024 .timer").replaceWith(
@@ -3425,7 +3425,7 @@
           $("#pycascades-2024 .calendar").remove();
         }
 
-        if (confDiff > 0) {
+        if (confDiff < 0) {
           $("#pycascades-2024").addClass("pastconf");
           $("#pycascades-2024").appendTo($("#past_confs"));
           $("#pycascades-2024 .timer").replaceWith(
@@ -3498,7 +3498,7 @@
         $("#pycascades-2024").attr("cfpDiff", cfpDiff.toMillis());
         $("#pycascades-2024").attr("confDiff", confDiff.toMillis());
 
-        if (cfpDiff > 0 && confDiff < 0) {
+        if (cfpDiff < 0) {
           $("#pycascades-2024").addClass("pastcfp");
           $("#pycascades-2024").appendTo($("#past_cfps"));
           $("#pycascades-2024 .timer").replaceWith(
@@ -3510,7 +3510,7 @@
           $("#pycascades-2024 .calendar").remove();
         }
 
-        if (confDiff > 0) {
+        if (confDiff < 0) {
           $("#pycascades-2024").addClass("pastconf");
           $("#pycascades-2024").appendTo($("#past_confs"));
           $("#pycascades-2024 .timer").replaceWith(
@@ -3590,7 +3590,7 @@
         $("#pycon-slovakia-2024").attr("cfpDiff", cfpDiff.toMillis());
         $("#pycon-slovakia-2024").attr("confDiff", confDiff.toMillis());
 
-        if (cfpDiff > 0 && confDiff < 0) {
+        if (cfpDiff < 0) {
           $("#pycon-slovakia-2024").addClass("pastcfp");
           $("#pycon-slovakia-2024").appendTo($("#past_cfps"));
           $("#pycon-slovakia-2024 .timer").replaceWith(
@@ -3602,7 +3602,7 @@
           $("#pycon-slovakia-2024 .calendar").remove();
         }
 
-        if (confDiff > 0) {
+        if (confDiff < 0) {
           $("#pycon-slovakia-2024").addClass("pastconf");
           $("#pycon-slovakia-2024").appendTo($("#past_confs"));
           $("#pycon-slovakia-2024 .timer").replaceWith(
@@ -3692,7 +3692,7 @@
           confDiff.toMillis()
         );
 
-        if (cfpDiff > 0 && confDiff < 0) {
+        if (cfpDiff < 0) {
           $("#pycon-de-and-pydata-berlin-2024").addClass("pastcfp");
           $("#pycon-de-and-pydata-berlin-2024").appendTo($("#past_cfps"));
           $("#pycon-de-and-pydata-berlin-2024 .timer").replaceWith(
@@ -3704,7 +3704,7 @@
           $("#pycon-de-and-pydata-berlin-2024 .calendar").remove();
         }
 
-        if (confDiff > 0) {
+        if (confDiff < 0) {
           $("#pycon-de-and-pydata-berlin-2024").addClass("pastconf");
           $("#pycon-de-and-pydata-berlin-2024").appendTo($("#past_confs"));
           $("#pycon-de-and-pydata-berlin-2024 .timer").replaceWith(
@@ -3784,7 +3784,7 @@
         $("#python-pizza-prague-2024").attr("cfpDiff", cfpDiff.toMillis());
         $("#python-pizza-prague-2024").attr("confDiff", confDiff.toMillis());
 
-        if (cfpDiff > 0 && confDiff < 0) {
+        if (cfpDiff < 0) {
           $("#python-pizza-prague-2024").addClass("pastcfp");
           $("#python-pizza-prague-2024").appendTo($("#past_cfps"));
           $("#python-pizza-prague-2024 .timer").replaceWith(
@@ -3796,7 +3796,7 @@
           $("#python-pizza-prague-2024 .calendar").remove();
         }
 
-        if (confDiff > 0) {
+        if (confDiff < 0) {
           $("#python-pizza-prague-2024").addClass("pastconf");
           $("#python-pizza-prague-2024").appendTo($("#past_confs"));
           $("#python-pizza-prague-2024 .timer").replaceWith(
@@ -3873,7 +3873,7 @@
         $("#pycon-us-2024").attr("cfpDiff", cfpDiff.toMillis());
         $("#pycon-us-2024").attr("confDiff", confDiff.toMillis());
 
-        if (cfpDiff > 0 && confDiff < 0) {
+        if (cfpDiff < 0) {
           $("#pycon-us-2024").addClass("pastcfp");
           $("#pycon-us-2024").appendTo($("#past_cfps"));
           $("#pycon-us-2024 .timer").replaceWith($("#pycon-us-2024 .deadline"));
@@ -3883,7 +3883,7 @@
           $("#pycon-us-2024 .calendar").remove();
         }
 
-        if (confDiff > 0) {
+        if (confDiff < 0) {
           $("#pycon-us-2024").addClass("pastconf");
           $("#pycon-us-2024").appendTo($("#past_confs"));
           $("#pycon-us-2024 .timer").replaceWith($("#pycon-us-2024 .deadline"));
@@ -3958,7 +3958,7 @@
         $("#xtremepython-2023").attr("cfpDiff", cfpDiff.toMillis());
         $("#xtremepython-2023").attr("confDiff", confDiff.toMillis());
 
-        if (cfpDiff > 0 && confDiff < 0) {
+        if (cfpDiff < 0) {
           $("#xtremepython-2023").addClass("pastcfp");
           $("#xtremepython-2023").appendTo($("#past_cfps"));
           $("#xtremepython-2023 .timer").replaceWith(
@@ -3970,7 +3970,7 @@
           $("#xtremepython-2023 .calendar").remove();
         }
 
-        if (confDiff > 0) {
+        if (confDiff < 0) {
           $("#xtremepython-2023").addClass("pastconf");
           $("#xtremepython-2023").appendTo($("#past_confs"));
           $("#xtremepython-2023 .timer").replaceWith(
@@ -4045,7 +4045,7 @@
         $("#flaskcon-2023").attr("cfpDiff", cfpDiff.toMillis());
         $("#flaskcon-2023").attr("confDiff", confDiff.toMillis());
 
-        if (cfpDiff > 0 && confDiff < 0) {
+        if (cfpDiff < 0) {
           $("#flaskcon-2023").addClass("pastcfp");
           $("#flaskcon-2023").appendTo($("#past_cfps"));
           $("#flaskcon-2023 .timer").replaceWith($("#flaskcon-2023 .deadline"));
@@ -4055,7 +4055,7 @@
           $("#flaskcon-2023 .calendar").remove();
         }
 
-        if (confDiff > 0) {
+        if (confDiff < 0) {
           $("#flaskcon-2023").addClass("pastconf");
           $("#flaskcon-2023").appendTo($("#past_confs"));
           $("#flaskcon-2023 .timer").replaceWith($("#flaskcon-2023 .deadline"));
@@ -4127,7 +4127,7 @@
         $("#pyohio-2023").attr("cfpDiff", cfpDiff.toMillis());
         $("#pyohio-2023").attr("confDiff", confDiff.toMillis());
 
-        if (cfpDiff > 0 && confDiff < 0) {
+        if (cfpDiff < 0) {
           $("#pyohio-2023").addClass("pastcfp");
           $("#pyohio-2023").appendTo($("#past_cfps"));
           $("#pyohio-2023 .timer").replaceWith($("#pyohio-2023 .deadline"));
@@ -4137,7 +4137,7 @@
           $("#pyohio-2023 .calendar").remove();
         }
 
-        if (confDiff > 0) {
+        if (confDiff < 0) {
           $("#pyohio-2023").addClass("pastconf");
           $("#pyohio-2023").appendTo($("#past_confs"));
           $("#pyohio-2023 .timer").replaceWith($("#pyohio-2023 .deadline"));
@@ -4212,7 +4212,7 @@
         $("#pydata-global-2023").attr("cfpDiff", cfpDiff.toMillis());
         $("#pydata-global-2023").attr("confDiff", confDiff.toMillis());
 
-        if (cfpDiff > 0 && confDiff < 0) {
+        if (cfpDiff < 0) {
           $("#pydata-global-2023").addClass("pastcfp");
           $("#pydata-global-2023").appendTo($("#past_cfps"));
           $("#pydata-global-2023 .timer").replaceWith(
@@ -4224,7 +4224,7 @@
           $("#pydata-global-2023 .calendar").remove();
         }
 
-        if (confDiff > 0) {
+        if (confDiff < 0) {
           $("#pydata-global-2023").addClass("pastconf");
           $("#pydata-global-2023").appendTo($("#past_confs"));
           $("#pydata-global-2023 .timer").replaceWith(
@@ -4304,7 +4304,7 @@
         $("#python-pizza-hamburg-2023").attr("cfpDiff", cfpDiff.toMillis());
         $("#python-pizza-hamburg-2023").attr("confDiff", confDiff.toMillis());
 
-        if (cfpDiff > 0 && confDiff < 0) {
+        if (cfpDiff < 0) {
           $("#python-pizza-hamburg-2023").addClass("pastcfp");
           $("#python-pizza-hamburg-2023").appendTo($("#past_cfps"));
           $("#python-pizza-hamburg-2023 .timer").replaceWith(
@@ -4316,7 +4316,7 @@
           $("#python-pizza-hamburg-2023 .calendar").remove();
         }
 
-        if (confDiff > 0) {
+        if (confDiff < 0) {
           $("#python-pizza-hamburg-2023").addClass("pastconf");
           $("#python-pizza-hamburg-2023").appendTo($("#past_confs"));
           $("#python-pizza-hamburg-2023 .timer").replaceWith(
@@ -4393,7 +4393,7 @@
         $("#pycon-chile-2023").attr("cfpDiff", cfpDiff.toMillis());
         $("#pycon-chile-2023").attr("confDiff", confDiff.toMillis());
 
-        if (cfpDiff > 0 && confDiff < 0) {
+        if (cfpDiff < 0) {
           $("#pycon-chile-2023").addClass("pastcfp");
           $("#pycon-chile-2023").appendTo($("#past_cfps"));
           $("#pycon-chile-2023 .timer").replaceWith(
@@ -4405,7 +4405,7 @@
           $("#pycon-chile-2023 .calendar").remove();
         }
 
-        if (confDiff > 0) {
+        if (confDiff < 0) {
           $("#pycon-chile-2023").addClass("pastconf");
           $("#pycon-chile-2023").appendTo($("#past_confs"));
           $("#pycon-chile-2023 .timer").replaceWith(
@@ -4480,7 +4480,7 @@
         $("#pyladiescon-2023").attr("cfpDiff", cfpDiff.toMillis());
         $("#pyladiescon-2023").attr("confDiff", confDiff.toMillis());
 
-        if (cfpDiff > 0 && confDiff < 0) {
+        if (cfpDiff < 0) {
           $("#pyladiescon-2023").addClass("pastcfp");
           $("#pyladiescon-2023").appendTo($("#past_cfps"));
           $("#pyladiescon-2023 .timer").replaceWith(
@@ -4492,7 +4492,7 @@
           $("#pyladiescon-2023 .calendar").remove();
         }
 
-        if (confDiff > 0) {
+        if (confDiff < 0) {
           $("#pyladiescon-2023").addClass("pastconf");
           $("#pyladiescon-2023").appendTo($("#past_confs"));
           $("#pyladiescon-2023 .timer").replaceWith(
@@ -4568,7 +4568,7 @@
         $("#pycon-thailand-2023").attr("cfpDiff", cfpDiff.toMillis());
         $("#pycon-thailand-2023").attr("confDiff", confDiff.toMillis());
 
-        if (cfpDiff > 0 && confDiff < 0) {
+        if (cfpDiff < 0) {
           $("#pycon-thailand-2023").addClass("pastcfp");
           $("#pycon-thailand-2023").appendTo($("#past_cfps"));
           $("#pycon-thailand-2023 .timer").replaceWith(
@@ -4580,7 +4580,7 @@
           $("#pycon-thailand-2023 .calendar").remove();
         }
 
-        if (confDiff > 0) {
+        if (confDiff < 0) {
           $("#pycon-thailand-2023").addClass("pastconf");
           $("#pycon-thailand-2023").appendTo($("#past_confs"));
           $("#pycon-thailand-2023 .timer").replaceWith(
@@ -4658,7 +4658,7 @@
         $("#pycon-indonesia-2023").attr("cfpDiff", cfpDiff.toMillis());
         $("#pycon-indonesia-2023").attr("confDiff", confDiff.toMillis());
 
-        if (cfpDiff > 0 && confDiff < 0) {
+        if (cfpDiff < 0) {
           $("#pycon-indonesia-2023").addClass("pastcfp");
           $("#pycon-indonesia-2023").appendTo($("#past_cfps"));
           $("#pycon-indonesia-2023 .timer").replaceWith(
@@ -4670,7 +4670,7 @@
           $("#pycon-indonesia-2023 .calendar").remove();
         }
 
-        if (confDiff > 0) {
+        if (confDiff < 0) {
           $("#pycon-indonesia-2023").addClass("pastconf");
           $("#pycon-indonesia-2023").appendTo($("#past_confs"));
           $("#pycon-indonesia-2023 .timer").replaceWith(
@@ -4750,7 +4750,7 @@
         $("#pydata-tel-aviv-2023").attr("cfpDiff", cfpDiff.toMillis());
         $("#pydata-tel-aviv-2023").attr("confDiff", confDiff.toMillis());
 
-        if (cfpDiff > 0 && confDiff < 0) {
+        if (cfpDiff < 0) {
           $("#pydata-tel-aviv-2023").addClass("pastcfp");
           $("#pydata-tel-aviv-2023").appendTo($("#past_cfps"));
           $("#pydata-tel-aviv-2023 .timer").replaceWith(
@@ -4762,7 +4762,7 @@
           $("#pydata-tel-aviv-2023 .calendar").remove();
         }
 
-        if (confDiff > 0) {
+        if (confDiff < 0) {
           $("#pydata-tel-aviv-2023").addClass("pastconf");
           $("#pydata-tel-aviv-2023").appendTo($("#past_confs"));
           $("#pydata-tel-aviv-2023 .timer").replaceWith(
