@@ -56,7 +56,7 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/js-year-calendar.min.css?t=1703080662"
+      href="/static/css/js-year-calendar.min.css?t=1703447892"
       media="screen,projection"
     />
 
@@ -68,13 +68,13 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/deadlines.css?t=1703080662"
+      href="/static/css/deadlines.css?t=1703447892"
       media="screen,projection"
     />
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/calendar.css?t=1703080662"
+      href="/static/css/calendar.css?t=1703447892"
       media="screen,projection"
     />
 
@@ -650,6 +650,38 @@
       function load_conference_list() {
         // Gather data
         var conf_list_all = [];
+
+        // add deadlines in red
+        conf_list_all.push({
+          id: "pydata-london-2024-deadline",
+          abbreviation: "pydata-london-2024",
+          name: "PyData London 2024 CfP",
+          color: "red",
+          location: "London, UK",
+          date: "June 14 - 16, 2024",
+          subject: "PYDATA",
+          startDate: Date.parse("2024-03-04 23:59:00"),
+          endDate: Date.parse("2024-03-04 23:59:00"),
+        });
+
+        // add Conferences in chosen color
+
+        var color = "black";
+        // use first sub to choose color
+
+        color = "#849324";
+
+        conf_list_all.push({
+          id: "pydata-london-2024-conference",
+          abbreviation: "pydata-london-2024",
+          name: "PyData London 2024",
+          color: color,
+          location: "London, UK",
+          date: "June 14 - 16, 2024",
+          subject: "PYDATA",
+          startDate: Date.parse("2024-06-14"),
+          endDate: Date.parse("2024-06-16"),
+        });
 
         // add deadlines in red
         conf_list_all.push({
@@ -1313,38 +1345,6 @@
 
         // add deadlines in red
         conf_list_all.push({
-          id: "pydata-tel-aviv-2023-deadline",
-          abbreviation: "pydata-tel-aviv-2023",
-          name: "PyData Tel Aviv 2023 CfP",
-          color: "red",
-          location: "Tel Aviv, Israel",
-          date: "November 14th, 2023",
-          subject: "PYDATA",
-          startDate: Date.parse("2023-07-14 23:59:00"),
-          endDate: Date.parse("2023-07-14 23:59:00"),
-        });
-
-        // add Conferences in chosen color
-
-        var color = "black";
-        // use first sub to choose color
-
-        color = "#849324";
-
-        conf_list_all.push({
-          id: "pydata-tel-aviv-2023-conference",
-          abbreviation: "pydata-tel-aviv-2023",
-          name: "PyData Tel Aviv 2023",
-          color: color,
-          location: "Tel Aviv, Israel",
-          date: "November 14th, 2023",
-          subject: "PYDATA",
-          startDate: Date.parse("2023-11-14"),
-          endDate: Date.parse("2023-11-14"),
-        });
-
-        // add deadlines in red
-        conf_list_all.push({
           id: "pycon-somalia-2023-deadline",
           abbreviation: "pycon-somalia-2023",
           name: "PyCon Somalia 2023 CfP",
@@ -1373,38 +1373,6 @@
           subject: "PY",
           startDate: Date.parse("2023-12-26"),
           endDate: Date.parse("2023-12-27"),
-        });
-
-        // add deadlines in red
-        conf_list_all.push({
-          id: "pydata-london-2024-deadline",
-          abbreviation: "pydata-london-2024",
-          name: "PyData London 2024 CfP",
-          color: "red",
-          location: "London, UK",
-          date: "June 14 - 16, 2024",
-          subject: "PYDATA",
-          startDate: Date.parse("TBA"),
-          endDate: Date.parse("TBA"),
-        });
-
-        // add Conferences in chosen color
-
-        var color = "black";
-        // use first sub to choose color
-
-        color = "#849324";
-
-        conf_list_all.push({
-          id: "pydata-london-2024-conference",
-          abbreviation: "pydata-london-2024",
-          name: "PyData London 2024",
-          color: color,
-          location: "London, UK",
-          date: "June 14 - 16, 2024",
-          subject: "PYDATA",
-          startDate: Date.parse("2024-06-14"),
-          endDate: Date.parse("2024-06-16"),
         });
 
         return conf_list_all;

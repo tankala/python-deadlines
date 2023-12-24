@@ -9,7 +9,18 @@
 		<title>Python Conference Deadlines</title>
 		<description>Countdowns to your favourite Python conferences with calls for participation and resources to submit awesome talks!</description>
 		<link>https://pythondeadlin.es/feed.xml</link>
-		<lastBuildDate>Wed, 20 Dec 2023 13:57:42 +0000</lastBuildDate>
+		<lastBuildDate>Sun, 24 Dec 2023 19:58:12 +0000</lastBuildDate>
+		
+		
+			<item>
+				<title>PyData London 2024 Conference Deadline</title>
+				<description>Conference in London, UK on June 14 - 16, 2024. CfP: 2024-03-04 23:59:00 AoE.&lt;br /&gt;Find them here: @PyDataLondon </description>
+				<pubDate>Mon, 04 Mar 2024 23:59:00 +0000</pubDate>
+				<link>https://pythondeadlin.es/conference/pydata-london-2024/</link>
+				<guid isPermaLink="false"></guid>
+				<category>PYDATA</category>
+			</item>
+		
 		
 		
 			<item>
@@ -229,19 +240,6 @@
 				<guid isPermaLink="false"></guid>
 				<category>PY</category>
 			</item>
-		
-		
-		
-			<item>
-				<title>PyData Tel Aviv 2023 Conference Deadline</title>
-				<description>Conference in Tel Aviv, Israel on November 14th, 2023. CfP: 2023-07-14 23:59:00 AoE.&lt;br /&gt;Find them here: @PyDataTLV </description>
-				<pubDate>Fri, 14 Jul 2023 23:59:00 +0000</pubDate>
-				<link>https://pythondeadlin.es/conference/pydata-tel-aviv-2023/</link>
-				<guid isPermaLink="false"></guid>
-				<category>PYDATA</category>
-			</item>
-		
-		
 		
 		
 		
