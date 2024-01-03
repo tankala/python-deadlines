@@ -9,7 +9,7 @@
 		<title>Python Conference Deadlines</title>
 		<description>Countdowns to your favourite Python conferences with calls for participation and resources to submit awesome talks!</description>
 		<link>https://pythondeadlin.es/feed.xml</link>
-		<lastBuildDate>Sun, 24 Dec 2023 19:58:12 +0000</lastBuildDate>
+		<lastBuildDate>Wed, 03 Jan 2024 14:48:59 +0000</lastBuildDate>
 		
 		
 			<item>
@@ -189,28 +189,6 @@
 		
 		
 			<item>
-				<title>Python Pizza Hamburg 2023 Conference Deadline</title>
-				<description>Conference in Hamburg, Germany on November 17th, 2023. CfP: 2023-09-30 23:59:00 AoE.&lt;br /&gt;Find them here: @PythonPizzaConf </description>
-				<pubDate>Sat, 30 Sep 2023 23:59:00 +0000</pubDate>
-				<link>https://pythondeadlin.es/conference/python-pizza-hamburg-2023/</link>
-				<guid isPermaLink="false"></guid>
-				<category>PY</category>
-			</item>
-		
-		
-		
-			<item>
-				<title>PyCon Chile 2023 Conference Deadline</title>
-				<description>Conference in Valparaiso, Chile &amp; Online on November 24 - 26, 2023. CfP: 2023-09-15 23:59:59 AoE.&lt;br /&gt;Find them here: @PythonChileDev </description>
-				<pubDate>Fri, 15 Sep 2023 23:59:59 +0000</pubDate>
-				<link>https://pythondeadlin.es/conference/pycon-chile-2023/</link>
-				<guid isPermaLink="false"></guid>
-				<category>PY</category>
-			</item>
-		
-		
-		
-			<item>
 				<title>PyLadiesCon 2023 Conference Deadline</title>
 				<description>Conference in Online on December 02 - 03, 2023. CfP: 2023-09-04 23:59:00 AoE. </description>
 				<pubDate>Mon, 04 Sep 2023 23:59:00 +0000</pubDate>
@@ -231,15 +209,6 @@
 			</item>
 		
 		
-		
-			<item>
-				<title>PyCon Indonesia 2023 Conference Deadline</title>
-				<description>Conference in Badung City, Indonesia on November 18 - 19, 2023. CfP: 2023-07-15 16:59:59 AoE.&lt;br /&gt;Find them here: @id_pycon </description>
-				<pubDate>Sat, 15 Jul 2023 16:59:59 +0000</pubDate>
-				<link>https://pythondeadlin.es/conference/pycon-indonesia-2023/</link>
-				<guid isPermaLink="false"></guid>
-				<category>PY</category>
-			</item>
 		
 		
 		
