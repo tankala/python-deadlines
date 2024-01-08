@@ -69,7 +69,7 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/js-year-calendar.min.css?t=1704671512"
+      href="/static/css/js-year-calendar.min.css?t=1704672037"
       media="screen,projection"
     />
 
@@ -81,13 +81,13 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/deadlines.css?t=1704671512"
+      href="/static/css/deadlines.css?t=1704672037"
       media="screen,projection"
     />
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/calendar.css?t=1704671512"
+      href="/static/css/calendar.css?t=1704672037"
       media="screen,projection"
     />
 
@@ -479,15 +479,15 @@
 
         // other
 
-        var cfp_string = "";
-
         // Use specified timezone for deadlines if available else use AoE timezone
 
-        var confDeadline = DateTime.fromSQL(cfp_string, { zone: "UTC-12" });
+        var confDeadline = DateTime.fromSQL("2023-11-01 23:59:00", {
+          zone: "UTC-12",
+        });
 
         // check if timezone is valid otherwise replace by system timezone
         if (confDeadline.invalid) {
-          var confDeadline = DateTime.fromSQL(cfp_string);
+          var confDeadline = DateTime.fromSQL("2023-11-01 23:59:00");
           console.log("Invalid timezone. Using system timezone instead.");
         }
 

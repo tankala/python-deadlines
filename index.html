@@ -63,7 +63,7 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/js-year-calendar.min.css?t=1704671512"
+      href="/static/css/js-year-calendar.min.css?t=1704672037"
       media="screen,projection"
     />
 
@@ -75,13 +75,13 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/deadlines.css?t=1704671512"
+      href="/static/css/deadlines.css?t=1704672037"
       media="screen,projection"
     />
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/calendar.css?t=1704671512"
+      href="/static/css/calendar.css?t=1704672037"
       media="screen,projection"
     />
 
@@ -2458,16 +2458,16 @@
 
         // Use specified timezone for deadlines if available else use AoE timezone
 
-        var cfp_string = "";
-
-        var cfpDate = DateTime.fromSQL(cfp_string, { zone: "Europe/London" });
+        var cfpDate = DateTime.fromSQL("2024-03-04 23:59:00", {
+          zone: "Europe/London",
+        });
         var confDate = DateTime.fromSQL("2024-06-14", {
           zone: "Europe/London",
         });
 
         // check if timezone is valid otherwise replace by system timezone
         if (cfpDate.invalid || confDate.invalid) {
-          var cfpDate = DateTime.fromSQL(cfp_string);
+          var cfpDate = DateTime.fromSQL("2024-03-04 23:59:00");
           var confDate = DateTime.fromSQL("2024-06-14");
           console.log(
             "Invalid timezone in pydata-london-2024. Using system timezone instead."
@@ -2549,14 +2549,14 @@
 
         // Use specified timezone for deadlines if available else use AoE timezone
 
-        var cfp_string = "";
-
-        var cfpDate = DateTime.fromSQL(cfp_string, { zone: "UTC-12" });
+        var cfpDate = DateTime.fromSQL("2024-02-29 23:59:00", {
+          zone: "UTC-12",
+        });
         var confDate = DateTime.fromSQL("2024-06-12", { zone: "UTC-12" });
 
         // check if timezone is valid otherwise replace by system timezone
         if (cfpDate.invalid || confDate.invalid) {
-          var cfpDate = DateTime.fromSQL(cfp_string);
+          var cfpDate = DateTime.fromSQL("2024-02-29 23:59:00");
           var confDate = DateTime.fromSQL("2024-06-12");
           console.log(
             "Invalid timezone in djangocon-europe-2024. Using system timezone instead."
@@ -2639,16 +2639,16 @@
 
         // Use specified timezone for deadlines if available else use AoE timezone
 
-        var cfp_string = "";
-
-        var cfpDate = DateTime.fromSQL(cfp_string, { zone: "Africa/Windhoek" });
+        var cfpDate = DateTime.fromSQL("2024-01-21 23:59:00", {
+          zone: "Africa/Windhoek",
+        });
         var confDate = DateTime.fromSQL("2024-03-04", {
           zone: "Africa/Windhoek",
         });
 
         // check if timezone is valid otherwise replace by system timezone
         if (cfpDate.invalid || confDate.invalid) {
-          var cfpDate = DateTime.fromSQL(cfp_string);
+          var cfpDate = DateTime.fromSQL("2024-01-21 23:59:00");
           var confDate = DateTime.fromSQL("2024-03-04");
           console.log(
             "Invalid timezone in pycon-namibia-2024. Using system timezone instead."
@@ -2728,16 +2728,16 @@
 
         // Use specified timezone for deadlines if available else use AoE timezone
 
-        var cfp_string = "";
-
-        var cfpDate = DateTime.fromSQL(cfp_string, { zone: "America/Chicago" });
+        var cfpDate = DateTime.fromSQL("2024-01-14 23:59:00", {
+          zone: "America/Chicago",
+        });
         var confDate = DateTime.fromSQL("2024-04-20", {
           zone: "America/Chicago",
         });
 
         // check if timezone is valid otherwise replace by system timezone
         if (cfpDate.invalid || confDate.invalid) {
-          var cfpDate = DateTime.fromSQL(cfp_string);
+          var cfpDate = DateTime.fromSQL("2024-01-14 23:59:00");
           var confDate = DateTime.fromSQL("2024-04-20");
           console.log(
             "Invalid timezone in pytexas-2024. Using system timezone instead."
@@ -2814,16 +2814,16 @@
 
         // Use specified timezone for deadlines if available else use AoE timezone
 
-        var cfp_string = "";
-
-        var cfpDate = DateTime.fromSQL(cfp_string, { zone: "Europe/Vilnius" });
+        var cfpDate = DateTime.fromSQL("2024-01-10 23:59:59", {
+          zone: "Europe/Vilnius",
+        });
         var confDate = DateTime.fromSQL("2024-04-02", {
           zone: "Europe/Vilnius",
         });
 
         // check if timezone is valid otherwise replace by system timezone
         if (cfpDate.invalid || confDate.invalid) {
-          var cfpDate = DateTime.fromSQL(cfp_string);
+          var cfpDate = DateTime.fromSQL("2024-01-10 23:59:59");
           var confDate = DateTime.fromSQL("2024-04-02");
           console.log(
             "Invalid timezone in pycon-lithuania-2024. Using system timezone instead."
@@ -2906,14 +2906,14 @@
 
         // Use specified timezone for deadlines if available else use AoE timezone
 
-        var cfp_string = "";
-
-        var cfpDate = DateTime.fromSQL(cfp_string, { zone: "UTC-12" });
+        var cfpDate = DateTime.fromSQL("2024-01-06 23:59:00", {
+          zone: "UTC-12",
+        });
         var confDate = DateTime.fromSQL("2024-05-22", { zone: "UTC-12" });
 
         // check if timezone is valid otherwise replace by system timezone
         if (cfpDate.invalid || confDate.invalid) {
-          var cfpDate = DateTime.fromSQL(cfp_string);
+          var cfpDate = DateTime.fromSQL("2024-01-06 23:59:00");
           var confDate = DateTime.fromSQL("2024-05-22");
           console.log(
             "Invalid timezone in pycon-italia-2024. Using system timezone instead."
@@ -2993,14 +2993,14 @@
 
         // Use specified timezone for deadlines if available else use AoE timezone
 
-        var cfp_string = "";
-
-        var cfpDate = DateTime.fromSQL(cfp_string, { zone: "UTC-12" });
+        var cfpDate = DateTime.fromSQL("2024-01-04 23:59:59", {
+          zone: "UTC-12",
+        });
         var confDate = DateTime.fromSQL("2024-04-05", { zone: "UTC-12" });
 
         // check if timezone is valid otherwise replace by system timezone
         if (cfpDate.invalid || confDate.invalid) {
-          var cfpDate = DateTime.fromSQL(cfp_string);
+          var cfpDate = DateTime.fromSQL("2024-01-04 23:59:59");
           var confDate = DateTime.fromSQL("2024-04-05");
           console.log(
             "Invalid timezone in pycascades-2024. Using system timezone instead."
@@ -3082,9 +3082,7 @@
 
         // Use specified timezone for deadlines if available else use AoE timezone
 
-        var cfp_string = "";
-
-        var cfpDate = DateTime.fromSQL(cfp_string, {
+        var cfpDate = DateTime.fromSQL("2023-12-31 23:59:59", {
           zone: "Europe/Bratislava",
         });
         var confDate = DateTime.fromSQL("2024-03-15", {
@@ -3093,7 +3091,7 @@
 
         // check if timezone is valid otherwise replace by system timezone
         if (cfpDate.invalid || confDate.invalid) {
-          var cfpDate = DateTime.fromSQL(cfp_string);
+          var cfpDate = DateTime.fromSQL("2023-12-31 23:59:59");
           var confDate = DateTime.fromSQL("2024-03-15");
           console.log(
             "Invalid timezone in pycon-slovakia-2024. Using system timezone instead."
@@ -3180,16 +3178,16 @@
 
         // Use specified timezone for deadlines if available else use AoE timezone
 
-        var cfp_string = "";
-
-        var cfpDate = DateTime.fromSQL(cfp_string, { zone: "Europe/Berlin" });
+        var cfpDate = DateTime.fromSQL("2023-12-22 23:59:59", {
+          zone: "Europe/Berlin",
+        });
         var confDate = DateTime.fromSQL("2024-04-22", {
           zone: "Europe/Berlin",
         });
 
         // check if timezone is valid otherwise replace by system timezone
         if (cfpDate.invalid || confDate.invalid) {
-          var cfpDate = DateTime.fromSQL(cfp_string);
+          var cfpDate = DateTime.fromSQL("2023-12-22 23:59:59");
           var confDate = DateTime.fromSQL("2024-04-22");
           console.log(
             "Invalid timezone in pycon-de-and-pydata-berlin-2024. Using system timezone instead."
@@ -3278,16 +3276,16 @@
 
         // Use specified timezone for deadlines if available else use AoE timezone
 
-        var cfp_string = "";
-
-        var cfpDate = DateTime.fromSQL(cfp_string, { zone: "Europe/Prague" });
+        var cfpDate = DateTime.fromSQL("2023-12-20 23:59:00", {
+          zone: "Europe/Prague",
+        });
         var confDate = DateTime.fromSQL("2024-02-24", {
           zone: "Europe/Prague",
         });
 
         // check if timezone is valid otherwise replace by system timezone
         if (cfpDate.invalid || confDate.invalid) {
-          var cfpDate = DateTime.fromSQL(cfp_string);
+          var cfpDate = DateTime.fromSQL("2023-12-20 23:59:00");
           var confDate = DateTime.fromSQL("2024-02-24");
           console.log(
             "Invalid timezone in python-pizza-prague-2024. Using system timezone instead."
@@ -3368,9 +3366,7 @@
 
         // Use specified timezone for deadlines if available else use AoE timezone
 
-        var cfp_string = "";
-
-        var cfpDate = DateTime.fromSQL(cfp_string, {
+        var cfpDate = DateTime.fromSQL("2023-12-18 23:59:00", {
           zone: "America/New_York",
         });
         var confDate = DateTime.fromSQL("2024-05-15", {
@@ -3379,7 +3375,7 @@
 
         // check if timezone is valid otherwise replace by system timezone
         if (cfpDate.invalid || confDate.invalid) {
-          var cfpDate = DateTime.fromSQL(cfp_string);
+          var cfpDate = DateTime.fromSQL("2023-12-18 23:59:00");
           var confDate = DateTime.fromSQL("2024-05-15");
           console.log(
             "Invalid timezone in pycon-us-2024. Using system timezone instead."
@@ -3457,14 +3453,14 @@
 
         // Use specified timezone for deadlines if available else use AoE timezone
 
-        var cfp_string = "";
-
-        var cfpDate = DateTime.fromSQL(cfp_string, { zone: "UTC-12" });
+        var cfpDate = DateTime.fromSQL("2023-11-01 23:59:00", {
+          zone: "UTC-12",
+        });
         var confDate = DateTime.fromSQL("2023-12-05", { zone: "UTC-12" });
 
         // check if timezone is valid otherwise replace by system timezone
         if (cfpDate.invalid || confDate.invalid) {
-          var cfpDate = DateTime.fromSQL(cfp_string);
+          var cfpDate = DateTime.fromSQL("2023-11-01 23:59:00");
           var confDate = DateTime.fromSQL("2023-12-05");
           console.log(
             "Invalid timezone in xtremepython-2023. Using system timezone instead."
@@ -3544,14 +3540,14 @@
 
         // Use specified timezone for deadlines if available else use AoE timezone
 
-        var cfp_string = "";
-
-        var cfpDate = DateTime.fromSQL(cfp_string, { zone: "UTC-12" });
+        var cfpDate = DateTime.fromSQL("2023-10-31 23:59:00", {
+          zone: "UTC-12",
+        });
         var confDate = DateTime.fromSQL("2023-12-16", { zone: "UTC-12" });
 
         // check if timezone is valid otherwise replace by system timezone
         if (cfpDate.invalid || confDate.invalid) {
-          var cfpDate = DateTime.fromSQL(cfp_string);
+          var cfpDate = DateTime.fromSQL("2023-10-31 23:59:00");
           var confDate = DateTime.fromSQL("2023-12-16");
           console.log(
             "Invalid timezone in flaskcon-2023. Using system timezone instead."
@@ -3625,9 +3621,7 @@
 
         // Use specified timezone for deadlines if available else use AoE timezone
 
-        var cfp_string = "";
-
-        var cfpDate = DateTime.fromSQL(cfp_string, {
+        var cfpDate = DateTime.fromSQL("2023-10-23 08:00:00", {
           zone: "America/New_York",
         });
         var confDate = DateTime.fromSQL("2023-12-16", {
@@ -3636,7 +3630,7 @@
 
         // check if timezone is valid otherwise replace by system timezone
         if (cfpDate.invalid || confDate.invalid) {
-          var cfpDate = DateTime.fromSQL(cfp_string);
+          var cfpDate = DateTime.fromSQL("2023-10-23 08:00:00");
           var confDate = DateTime.fromSQL("2023-12-16");
           console.log(
             "Invalid timezone in pyohio-2023. Using system timezone instead."
@@ -3713,14 +3707,14 @@
 
         // Use specified timezone for deadlines if available else use AoE timezone
 
-        var cfp_string = "";
-
-        var cfpDate = DateTime.fromSQL(cfp_string, { zone: "UTC-12" });
+        var cfpDate = DateTime.fromSQL("2023-10-01 23:59:00", {
+          zone: "UTC-12",
+        });
         var confDate = DateTime.fromSQL("2023-12-06", { zone: "UTC-12" });
 
         // check if timezone is valid otherwise replace by system timezone
         if (cfpDate.invalid || confDate.invalid) {
-          var cfpDate = DateTime.fromSQL(cfp_string);
+          var cfpDate = DateTime.fromSQL("2023-10-01 23:59:00");
           var confDate = DateTime.fromSQL("2023-12-06");
           console.log(
             "Invalid timezone in pydata-global-2023. Using system timezone instead."
@@ -3800,14 +3794,14 @@
 
         // Use specified timezone for deadlines if available else use AoE timezone
 
-        var cfp_string = "";
-
-        var cfpDate = DateTime.fromSQL(cfp_string, { zone: "UTC-12" });
+        var cfpDate = DateTime.fromSQL("2023-09-04 23:59:00", {
+          zone: "UTC-12",
+        });
         var confDate = DateTime.fromSQL("2023-12-02", { zone: "UTC-12" });
 
         // check if timezone is valid otherwise replace by system timezone
         if (cfpDate.invalid || confDate.invalid) {
-          var cfpDate = DateTime.fromSQL(cfp_string);
+          var cfpDate = DateTime.fromSQL("2023-09-04 23:59:00");
           var confDate = DateTime.fromSQL("2023-12-02");
           console.log(
             "Invalid timezone in pyladiescon-2023. Using system timezone instead."
@@ -3889,14 +3883,12 @@
 
         // Use specified timezone for deadlines if available else use AoE timezone
 
-        var cfp_string = "";
-
-        var cfpDate = DateTime.fromSQL(cfp_string, { zone: "UTC" });
+        var cfpDate = DateTime.fromSQL("2023-08-16 23:59:00", { zone: "UTC" });
         var confDate = DateTime.fromSQL("2023-12-14", { zone: "UTC" });
 
         // check if timezone is valid otherwise replace by system timezone
         if (cfpDate.invalid || confDate.invalid) {
-          var cfpDate = DateTime.fromSQL(cfp_string);
+          var cfpDate = DateTime.fromSQL("2023-08-16 23:59:00");
           var confDate = DateTime.fromSQL("2023-12-14");
           console.log(
             "Invalid timezone in pycon-thailand-2023. Using system timezone instead."

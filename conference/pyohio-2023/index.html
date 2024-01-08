@@ -69,7 +69,7 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/js-year-calendar.min.css?t=1704671512"
+      href="/static/css/js-year-calendar.min.css?t=1704672037"
       media="screen,projection"
     />
 
@@ -81,13 +81,13 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/deadlines.css?t=1704671512"
+      href="/static/css/deadlines.css?t=1704672037"
       media="screen,projection"
     />
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/calendar.css?t=1704671512"
+      href="/static/css/calendar.css?t=1704672037"
       media="screen,projection"
     />
 
@@ -501,13 +501,13 @@
         </div>
         <div class="row">
           <div
-            id="756ed961-895b-4d0b-82f3-944047de0829"
+            id="43868b41-c863-449c-b15f-e720405ba309"
             style="width: 100%; height: 400px"
             class="jekyll-map"
           ></div>
           <script type="text/javascript">
             jekyllMaps.register(
-              "756ed961-895b-4d0b-82f3-944047de0829",
+              "43868b41-c863-449c-b15f-e720405ba309",
               [
                 {
                   latitude: 40.2253569,
@@ -647,17 +647,15 @@
 
         // other
 
-        var cfp_string = "";
-
         // Use specified timezone for deadlines if available else use AoE timezone
 
-        var confDeadline = DateTime.fromSQL(cfp_string, {
+        var confDeadline = DateTime.fromSQL("2023-10-23 08:00:00", {
           zone: "America/New_York",
         });
 
         // check if timezone is valid otherwise replace by system timezone
         if (confDeadline.invalid) {
-          var confDeadline = DateTime.fromSQL(cfp_string);
+          var confDeadline = DateTime.fromSQL("2023-10-23 08:00:00");
           console.log("Invalid timezone. Using system timezone instead.");
         }
 
