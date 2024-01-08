@@ -9,7 +9,16 @@
 		<title>Newsfeed for Python Events Calendar from Python Conference Deadlines</title>
 		<description>Countdowns to your favourite Python conferences with calls for participation and resources to submit awesome talks!</description>
 		<link>https://pythondeadlin.es/feed.xml</link>
-		<lastBuildDate>Mon, 08 Jan 2024 00:00:37 +0000</lastBuildDate>
+		<lastBuildDate>Mon, 08 Jan 2024 18:27:47 +0000</lastBuildDate>
+		
+			<item>
+				<title>PyCon Estonia 2024 Conference Deadline</title>
+				<description><![CDATA[* name of the event: PyCon Estonia 2024<br/>* type of event: Conference <br/>* focus on Python: Yes<br/>* approximate number of attendees: Unknown<br/>* location (incl. country): Tallinn, Estonia<br/>* dates/times/recurrence (incl. time zone): September 05 - 06, 2024<br/>* HTML link : <a href="https://pycon.ee/">PyCon Estonia 2024</a>]]></description>
+				<pubDate>Thu, 05 Sep 2024 00:00:00 +0000</pubDate>
+				<link>https://pythondeadlin.es/conference/pycon-estonia-2024/</link>
+				<guid isPermaLink="false"></guid>
+				<category>PY</category>
+			</item>
 		
 			<item>
 				<title>PyData London 2024 Conference Deadline</title>

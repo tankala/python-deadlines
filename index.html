@@ -63,7 +63,7 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/js-year-calendar.min.css?t=1704672037"
+      href="/static/css/js-year-calendar.min.css?t=1704738467"
       media="screen,projection"
     />
 
@@ -75,13 +75,13 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/deadlines.css?t=1704672037"
+      href="/static/css/deadlines.css?t=1704738467"
       media="screen,projection"
     />
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/calendar.css?t=1704672037"
+      href="/static/css/calendar.css?t=1704738467"
       media="screen,projection"
     />
 
@@ -306,6 +306,108 @@
       </div>
       <div id="confs">
         <div id="coming_confs">
+          <div id="pycon-estonia-2024" class="ConfItem PY-conf">
+            <div class="row conf-row">
+              <div class="col-6">
+                <span class="conf-title">
+                  <a
+                    title="Deadline Details"
+                    href="/conference/pycon-estonia-2024/"
+                    >PyCon Estonia 2024</a
+                  >
+                </span>
+                <span class="conf-title-small">
+                  <a
+                    title="Deadline Details"
+                    href="/conference/pycon-estonia-2024/"
+                    >PyCon Estonia '24</a
+                  >
+                </span>
+                <span class="conf-title-icon">
+                  <a
+                    title="Conference Website"
+                    href="https://pycon.ee/"
+                    target="_blank"
+                    ><img
+                      src="/static/img/203-earth.svg"
+                      class="badge-link"
+                      alt="Link to Conference Website"
+                      width="16"
+                      height="16"
+                  /></a>
+                  &ZeroWidthSpace;
+                </span>
+
+                <span class="conf-title-icon">
+                  <a
+                    title="Call for Participation for PyCon Estonia"
+                    href="https://docs.google.com/forms/d/e/1FAIpQLSe-OUSgBSYweCMPCAv-1pYXscGK9T7npoP77Dk17LtvQsynwQ"
+                    target="_blank"
+                    ><img
+                      src="/static/img/035-file-text.svg"
+                      class="badge-link"
+                      alt="Link to Call for Participation for PyCon Estonia"
+                      width="16"
+                      height="16"
+                  /></a>
+                  &ZeroWidthSpace;
+                </span>
+
+                <span class="conf-title-icon">
+                  <a
+                    title="Twitter for PyCon Estonia"
+                    href="https://twitter.com/PyConEstonia"
+                    target="_blank"
+                    ><img
+                      src="/static/img/407-twitter.svg"
+                      class="badge-link"
+                      alt="Link to Conference Twitter"
+                      width="16"
+                      height="16"
+                  /></a>
+                  &ZeroWidthSpace;
+                </span>
+              </div>
+              <div class="col-6">
+                <span class="timer"></span>
+                <span class="timer-small"></span>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12 col-sm-6">
+                <div class="meta">
+                  <span class="conf-date">September 05 - 06, 2024.</span>
+                  <span class="conf-place">
+                    <a href="http://maps.google.com/?q=Tallinn, Estonia"
+                      >Tallinn, Estonia</a
+                    >.
+                  </span>
+                </div>
+              </div>
+              <div class="col-12 col-sm-6">
+                <div class="deadline">
+                  <div>
+                    Deadline:
+                    <span class="deadline-time"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-6">
+                <span
+                  title="Click to only show PY conferences"
+                  data-sub="PY"
+                  class="badge badge-light conf-sub PY-tag"
+                ></span>
+              </div>
+              <div class="col-6">
+                <div class="calendar"></div>
+              </div>
+            </div>
+            <hr />
+          </div>
+
           <div id="pydata-london-2024" class="ConfItem PYDATA-conf">
             <div class="row conf-row">
               <div class="col-6">
@@ -2451,6 +2553,97 @@
 
         // Set time zone to local timezone on web copy
         $(".local-timezone").text(today.toFormat("z"));
+
+        $("#pycon-estonia-2024 .PY-tag").html(
+          sub2name["PY"].toLocaleLowerCase()
+        );
+
+        // Use specified timezone for deadlines if available else use AoE timezone
+
+        var cfpDate = DateTime.fromSQL("2024-04-15 23:59:00", {
+          zone: "Europe/Tallinn",
+        });
+        var confDate = DateTime.fromSQL("2024-09-05", {
+          zone: "Europe/Tallinn",
+        });
+
+        // check if timezone is valid otherwise replace by system timezone
+        if (cfpDate.invalid || confDate.invalid) {
+          var cfpDate = DateTime.fromSQL("2024-04-15 23:59:00");
+          var confDate = DateTime.fromSQL("2024-09-05");
+          console.log(
+            "Invalid timezone in pycon-estonia-2024. Using system timezone instead."
+          );
+        }
+
+        // render countdown timer
+        $("#pycon-estonia-2024 .timer").countdown(cfpDate.toJSDate(), function (
+          event
+        ) {
+          $(this).html(event.strftime("%D days %Hh %Mm %Ss"));
+        });
+
+        // render countdown timer small
+        $("#pycon-estonia-2024 .timer-small").countdown(
+          cfpDate.toJSDate(),
+          function (event) {
+            $(this).html(event.strftime("%Dd %H:%M:%S"));
+          }
+        );
+
+        // deadline in local timezone
+        $("#pycon-estonia-2024 .deadline-time").html(
+          cfpDate.setZone("system").toLocaleString(DateTime.DATE_HUGE)
+        );
+
+        // add calendar button
+        try {
+          var myCalendar = createCalendarFromObject({
+            id: "pycon-estonia-2024",
+            title: "PyCon Estonia 2024 deadline",
+            date: cfpDate.toJSDate(),
+            duration: 60,
+          });
+          document
+            .querySelector("#pycon-estonia-2024 .calendar")
+            .appendChild(myCalendar);
+        } catch (err) {
+          document
+            .querySelector("#pycon-estonia-2024 .calendar")
+            .appendChild("<p>Calendar not available.</p>");
+          console.log("Error in cfp date.");
+        }
+
+        // check if date has passed, add 'past' class to it
+        cfpDiff = cfpDate.diffNow("seconds");
+        confDiff = confDate.diffNow("seconds");
+
+        $("#pycon-estonia-2024").attr("cfpDiff", cfpDiff.toMillis());
+        $("#pycon-estonia-2024").attr("confDiff", confDiff.toMillis());
+
+        if (cfpDiff < 0) {
+          $("#pycon-estonia-2024").addClass("pastcfp");
+          $("#pycon-estonia-2024").appendTo($("#past_cfps"));
+          $("#pycon-estonia-2024 .timer").replaceWith(
+            $("#pycon-estonia-2024 .deadline")
+          );
+          $("#pycon-estonia-2024 .timer-small").replaceWith(
+            $("#pycon-estonia-2024 .deadline")
+          );
+          $("#pycon-estonia-2024 .calendar").remove();
+        }
+
+        if (confDiff < 0) {
+          $("#pycon-estonia-2024").addClass("pastconf");
+          $("#pycon-estonia-2024").appendTo($("#past_confs"));
+          $("#pycon-estonia-2024 .timer").replaceWith(
+            $("#pycon-estonia-2024 .deadline")
+          );
+          $("#pycon-estonia-2024 .timer-small").replaceWith(
+            $("#pycon-estonia-2024 .deadline")
+          );
+          $("#pycon-estonia-2024 .calendar").remove();
+        }
 
         $("#pydata-london-2024 .PYDATA-tag").html(
           sub2name["PYDATA"].toLocaleLowerCase()
