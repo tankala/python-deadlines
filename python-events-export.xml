@@ -9,7 +9,7 @@
 		<title>Newsfeed for Python Events Calendar from Python Conference Deadlines</title>
 		<description>Countdowns to your favourite Python conferences with calls for participation and resources to submit awesome talks!</description>
 		<link>https://pythondeadlin.es/feed.xml</link>
-		<lastBuildDate>Mon, 08 Jan 2024 18:27:47 +0000</lastBuildDate>
+		<lastBuildDate>Mon, 08 Jan 2024 18:39:05 +0000</lastBuildDate>
 		
 			<item>
 				<title>PyCon Estonia 2024 Conference Deadline</title>
@@ -93,6 +93,15 @@
 			</item>
 		
 			<item>
+				<title>PyCon Somalia 2023 Conference Deadline</title>
+				<description><![CDATA[* name of the event: PyCon Somalia 2023<br/>* type of event: Conference <br/>* focus on Python: Yes<br/>* approximate number of attendees: Unknown<br/>* location (incl. country): Mogadishu, Somalia<br/>* dates/times/recurrence (incl. time zone): December 26 - 27, 2023<br/>* HTML link : <a href="https://pycon.org.so/">PyCon Somalia 2023</a>]]></description>
+				<pubDate>Tue, 26 Dec 2023 00:00:00 +0000</pubDate>
+				<link>https://pythondeadlin.es/conference/pycon-somalia-2023/</link>
+				<guid isPermaLink="false"></guid>
+				<category>PY</category>
+			</item>
+		
+			<item>
 				<title>PyCon DE and PyData Berlin 2024 Conference Deadline</title>
 				<description><![CDATA[* name of the event: PyCon DE and PyData Berlin 2024<br/>* type of event: Conference <br/>* focus on Python: Yes<br/>* approximate number of attendees: Unknown<br/>* location (incl. country): Berlin, Germany<br/>* dates/times/recurrence (incl. time zone): April 22 - 24, 2024<br/>* HTML link : <a href="https://pycon.de/">PyCon DE and PyData Berlin 2024</a>]]></description>
 				<pubDate>Mon, 22 Apr 2024 00:00:00 +0000</pubDate>
@@ -169,15 +178,6 @@
 				<description><![CDATA[* name of the event: PyCon Thailand 2023<br/>* type of event: Conference <br/>* focus on Python: Yes<br/>* approximate number of attendees: Unknown<br/>* location (incl. country): Bangkok, Thailand<br/>* dates/times/recurrence (incl. time zone): December 14 - 16, 2023<br/>* HTML link : <a href="https://th.pycon.org">PyCon Thailand 2023</a>]]></description>
 				<pubDate>Thu, 14 Dec 2023 00:00:00 +0000</pubDate>
 				<link>https://pythondeadlin.es/conference/pycon-thailand-2023/</link>
-				<guid isPermaLink="false"></guid>
-				<category>PY</category>
-			</item>
-		
-			<item>
-				<title>PyCon Somalia 2023 Conference Deadline</title>
-				<description><![CDATA[* name of the event: PyCon Somalia 2023<br/>* type of event: Conference <br/>* focus on Python: Yes<br/>* approximate number of attendees: Unknown<br/>* location (incl. country): Mogadishu, Somalia<br/>* dates/times/recurrence (incl. time zone): December 26 - 27, 2023<br/>* HTML link : <a href="https://pycon.org.so/">PyCon Somalia 2023</a>]]></description>
-				<pubDate>Tue, 26 Dec 2023 00:00:00 +0000</pubDate>
-				<link>https://pythondeadlin.es/conference/pycon-somalia-2023/</link>
 				<guid isPermaLink="false"></guid>
 				<category>PY</category>
 			</item>
