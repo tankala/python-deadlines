@@ -9,7 +9,7 @@
 		<title>Newsfeed for Python Events Calendar from Python Conference Deadlines</title>
 		<description>Countdowns to your favourite Python conferences with calls for participation and resources to submit awesome talks!</description>
 		<link>https://pythondeadlin.es/feed.xml</link>
-		<lastBuildDate>Fri, 12 Jan 2024 22:16:45 +0000</lastBuildDate>
+		<lastBuildDate>Mon, 15 Jan 2024 22:09:40 +0000</lastBuildDate>
 		
 			<item>
 				<title>PyCon Estonia 2024 Conference Deadline</title>
@@ -43,6 +43,15 @@
 				<description><![CDATA[* name of the event: PyCon Namibia 2024<br/>* type of event: Conference <br/>* focus on Python: Yes<br/>* approximate number of attendees: Unknown<br/>* location (incl. country): Windhoek, Namibia<br/>* dates/times/recurrence (incl. time zone): March 04 - 08, 2024<br/>* HTML link : <a href="https://na.pycon.org">PyCon Namibia 2024</a>]]></description>
 				<pubDate>Mon, 04 Mar 2024 00:00:00 +0000</pubDate>
 				<link>https://pythondeadlin.es/conference/pycon-namibia-2024/</link>
+				<guid isPermaLink="false"></guid>
+				<category>PY</category>
+			</item>
+		
+			<item>
+				<title>PyCon Pakistan 2024 Conference Deadline</title>
+				<description><![CDATA[* name of the event: PyCon Pakistan 2024<br/>* type of event: Conference <br/>* focus on Python: Yes<br/>* approximate number of attendees: Unknown<br/>* location (incl. country): Lahore, Pakistan<br/>* dates/times/recurrence (incl. time zone): March 09, 2024<br/>* HTML link : <a href="https://pycon.pk">PyCon Pakistan 2024</a>]]></description>
+				<pubDate>Sat, 09 Mar 2024 00:00:00 +0000</pubDate>
+				<link>https://pythondeadlin.es/conference/pycon-pakistan-2024/</link>
 				<guid isPermaLink="false"></guid>
 				<category>PY</category>
 			</item>
@@ -129,15 +138,6 @@
 			</item>
 		
 			<item>
-				<title>XtremePython 2023 Conference Deadline</title>
-				<description><![CDATA[* name of the event: XtremePython 2023<br/>* type of event: Conference <br/>* focus on Python: Yes<br/>* approximate number of attendees: Unknown<br/>* location (incl. country): Online<br/>* dates/times/recurrence (incl. time zone): December 5th, 2023<br/>* HTML link : <a href="https://xtremepython.dev/2023/">XtremePython 2023</a>]]></description>
-				<pubDate>Tue, 05 Dec 2023 00:00:00 +0000</pubDate>
-				<link>https://pythondeadlin.es/conference/xtremepython-2023/</link>
-				<guid isPermaLink="false"></guid>
-				<category>PY</category>
-			</item>
-		
-			<item>
 				<title>FlaskCon 2023 Conference Deadline</title>
 				<description><![CDATA[* name of the event: FlaskCon 2023<br/>* type of event: Conference <br/>* focus on Python: Yes<br/>* approximate number of attendees: Unknown<br/>* location (incl. country): Online<br/>* dates/times/recurrence (incl. time zone): December 16 - 17, 2023<br/>* HTML link : <a href="https://flaskcon.com/2023/">FlaskCon 2023</a>]]></description>
 				<pubDate>Sat, 16 Dec 2023 00:00:00 +0000</pubDate>
@@ -153,24 +153,6 @@
 				<link>https://pythondeadlin.es/conference/pyohio-2023/</link>
 				<guid isPermaLink="false"></guid>
 				<category></category>
-			</item>
-		
-			<item>
-				<title>Pydata Global 2023 Conference Deadline</title>
-				<description><![CDATA[* name of the event: Pydata Global 2023<br/>* type of event: Conference <br/>* focus on Python: Yes<br/>* approximate number of attendees: Unknown<br/>* location (incl. country): Online<br/>* dates/times/recurrence (incl. time zone): December 06 - 08, 2023<br/>* HTML link : <a href="https://pydata.org/global2023/">Pydata Global 2023</a>]]></description>
-				<pubDate>Wed, 06 Dec 2023 00:00:00 +0000</pubDate>
-				<link>https://pythondeadlin.es/conference/pydata-global-2023/</link>
-				<guid isPermaLink="false"></guid>
-				<category>PYDATA</category>
-			</item>
-		
-			<item>
-				<title>PyLadiesCon 2023 Conference Deadline</title>
-				<description><![CDATA[* name of the event: PyLadiesCon 2023<br/>* type of event: Conference <br/>* focus on Python: Yes<br/>* approximate number of attendees: Unknown<br/>* location (incl. country): Online<br/>* dates/times/recurrence (incl. time zone): December 02 - 03, 2023<br/>* HTML link : <a href="https://conference.pyladies.com">PyLadiesCon 2023</a>]]></description>
-				<pubDate>Sat, 02 Dec 2023 00:00:00 +0000</pubDate>
-				<link>https://pythondeadlin.es/conference/pyladiescon-2023/</link>
-				<guid isPermaLink="false"></guid>
-				<category>PY</category>
 			</item>
 		
 			<item>

@@ -56,7 +56,7 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/js-year-calendar.min.css?t=1705097805"
+      href="/static/css/js-year-calendar.min.css?t=1705356580"
       media="screen,projection"
     />
 
@@ -68,13 +68,13 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/deadlines.css?t=1705097805"
+      href="/static/css/deadlines.css?t=1705356580"
       media="screen,projection"
     />
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/calendar.css?t=1705097805"
+      href="/static/css/calendar.css?t=1705356580"
       media="screen,projection"
     />
 
@@ -782,6 +782,38 @@
 
         // add deadlines in red
         conf_list_all.push({
+          id: "pycon-pakistan-2024-deadline",
+          abbreviation: "pycon-pakistan-2024",
+          name: "PyCon Pakistan 2024 CfP",
+          color: "red",
+          location: "Lahore, Pakistan",
+          date: "March 09, 2024",
+          subject: "PY",
+          startDate: Date.parse("2024-01-15 23:59:00"),
+          endDate: Date.parse("2024-01-15 23:59:00"),
+        });
+
+        // add Conferences in chosen color
+
+        var color = "black";
+        // use first sub to choose color
+
+        color = "#4B8BBE";
+
+        conf_list_all.push({
+          id: "pycon-pakistan-2024-conference",
+          abbreviation: "pycon-pakistan-2024",
+          name: "PyCon Pakistan 2024",
+          color: color,
+          location: "Lahore, Pakistan",
+          date: "March 09, 2024",
+          subject: "PY",
+          startDate: Date.parse("2024-03-09"),
+          endDate: Date.parse("2024-03-09"),
+        });
+
+        // add deadlines in red
+        conf_list_all.push({
           id: "pytexas-2024-deadline",
           abbreviation: "pytexas-2024",
           name: "PyTexas 2024 CfP",
@@ -1070,38 +1102,6 @@
 
         // add deadlines in red
         conf_list_all.push({
-          id: "xtremepython-2023-deadline",
-          abbreviation: "xtremepython-2023",
-          name: "XtremePython 2023 CfP",
-          color: "red",
-          location: "Online",
-          date: "December 5th, 2023",
-          subject: "PY",
-          startDate: Date.parse("2023-11-01 23:59:00"),
-          endDate: Date.parse("2023-11-01 23:59:00"),
-        });
-
-        // add Conferences in chosen color
-
-        var color = "black";
-        // use first sub to choose color
-
-        color = "#4B8BBE";
-
-        conf_list_all.push({
-          id: "xtremepython-2023-conference",
-          abbreviation: "xtremepython-2023",
-          name: "XtremePython 2023",
-          color: color,
-          location: "Online",
-          date: "December 5th, 2023",
-          subject: "PY",
-          startDate: Date.parse("2023-12-05"),
-          endDate: Date.parse("2023-12-05"),
-        });
-
-        // add deadlines in red
-        conf_list_all.push({
           id: "flaskcon-2023-deadline",
           abbreviation: "flaskcon-2023",
           name: "FlaskCon 2023 CfP",
@@ -1160,70 +1160,6 @@
           subject: "",
           startDate: Date.parse("2023-12-16"),
           endDate: Date.parse("2023-12-16"),
-        });
-
-        // add deadlines in red
-        conf_list_all.push({
-          id: "pydata-global-2023-deadline",
-          abbreviation: "pydata-global-2023",
-          name: "Pydata Global 2023 CfP",
-          color: "red",
-          location: "Online",
-          date: "December 06 - 08, 2023",
-          subject: "PYDATA",
-          startDate: Date.parse("2023-10-01 23:59:00"),
-          endDate: Date.parse("2023-10-01 23:59:00"),
-        });
-
-        // add Conferences in chosen color
-
-        var color = "black";
-        // use first sub to choose color
-
-        color = "#849324";
-
-        conf_list_all.push({
-          id: "pydata-global-2023-conference",
-          abbreviation: "pydata-global-2023",
-          name: "Pydata Global 2023",
-          color: color,
-          location: "Online",
-          date: "December 06 - 08, 2023",
-          subject: "PYDATA",
-          startDate: Date.parse("2023-12-06"),
-          endDate: Date.parse("2023-12-08"),
-        });
-
-        // add deadlines in red
-        conf_list_all.push({
-          id: "pyladiescon-2023-deadline",
-          abbreviation: "pyladiescon-2023",
-          name: "PyLadiesCon 2023 CfP",
-          color: "red",
-          location: "Online",
-          date: "December 02 - 03, 2023",
-          subject: "PY",
-          startDate: Date.parse("2023-09-04 23:59:00"),
-          endDate: Date.parse("2023-09-04 23:59:00"),
-        });
-
-        // add Conferences in chosen color
-
-        var color = "black";
-        // use first sub to choose color
-
-        color = "#4B8BBE";
-
-        conf_list_all.push({
-          id: "pyladiescon-2023-conference",
-          abbreviation: "pyladiescon-2023",
-          name: "PyLadiesCon 2023",
-          color: color,
-          location: "Online",
-          date: "December 02 - 03, 2023",
-          subject: "PY",
-          startDate: Date.parse("2023-12-02"),
-          endDate: Date.parse("2023-12-03"),
         });
 
         // add deadlines in red
