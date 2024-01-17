@@ -9,7 +9,7 @@
 		<title>Python Conference Deadlines</title>
 		<description>Countdowns to your favourite Python conferences with calls for participation and resources to submit awesome talks!</description>
 		<link>https://pythondeadlin.es/feed.xml</link>
-		<lastBuildDate>Mon, 15 Jan 2024 22:09:40 +0000</lastBuildDate>
+		<lastBuildDate>Wed, 17 Jan 2024 00:55:12 +0000</lastBuildDate>
 		
 		
 			<item>
@@ -41,6 +41,17 @@
 				<link>https://pythondeadlin.es/conference/djangocon-europe-2024/</link>
 				<guid isPermaLink="false"></guid>
 				<category>WEB</category>
+			</item>
+		
+		
+		
+			<item>
+				<title>GeoPython 2024 Conference Deadline</title>
+				<description>Conference in Basel, Switzerland on May 27 - 29, 2024. CfP: 2024-01-23 00:59:00 AoE. </description>
+				<pubDate>Tue, 23 Jan 2024 00:59:00 +0000</pubDate>
+				<link>https://pythondeadlin.es/conference/geopython-2024/</link>
+				<guid isPermaLink="false"></guid>
+				<category>PY</category>
 			</item>
 		
 		
@@ -196,6 +207,12 @@
 				<guid isPermaLink="false"></guid>
 				<category>PY</category>
 			</item>
+		
+		
+		
+		
+		
+		
 		
 		
 		

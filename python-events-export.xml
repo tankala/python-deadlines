@@ -9,7 +9,7 @@
 		<title>Newsfeed for Python Events Calendar from Python Conference Deadlines</title>
 		<description>Countdowns to your favourite Python conferences with calls for participation and resources to submit awesome talks!</description>
 		<link>https://pythondeadlin.es/feed.xml</link>
-		<lastBuildDate>Mon, 15 Jan 2024 22:09:40 +0000</lastBuildDate>
+		<lastBuildDate>Wed, 17 Jan 2024 00:55:12 +0000</lastBuildDate>
 		
 			<item>
 				<title>PyCon Estonia 2024 Conference Deadline</title>
@@ -36,6 +36,15 @@
 				<link>https://pythondeadlin.es/conference/djangocon-europe-2024/</link>
 				<guid isPermaLink="false"></guid>
 				<category>WEB</category>
+			</item>
+		
+			<item>
+				<title>GeoPython 2024 Conference Deadline</title>
+				<description><![CDATA[* name of the event: GeoPython 2024<br/>* type of event: Conference <br/>* focus on Python: Yes<br/>* approximate number of attendees: Unknown<br/>* location (incl. country): Basel, Switzerland<br/>* dates/times/recurrence (incl. time zone): May 27 - 29, 2024<br/>* HTML link : <a href="https://2024.geopython.net/">GeoPython 2024</a>]]></description>
+				<pubDate>Mon, 27 May 2024 00:00:00 +0000</pubDate>
+				<link>https://pythondeadlin.es/conference/geopython-2024/</link>
+				<guid isPermaLink="false"></guid>
+				<category>PY</category>
 			</item>
 		
 			<item>
@@ -169,6 +178,33 @@
 				<description><![CDATA[* name of the event: PyCon Philippines 2024<br/>* type of event: Conference <br/>* focus on Python: Yes<br/>* approximate number of attendees: Unknown<br/>* location (incl. country): Manila, Philippines<br/>* dates/times/recurrence (incl. time zone): February 25 - 26, 2024<br/>* HTML link : <a href="https://pycon-2024.python.ph">PyCon Philippines 2024</a>]]></description>
 				<pubDate>Sun, 25 Feb 2024 00:00:00 +0000</pubDate>
 				<link>https://pythondeadlin.es/conference/pycon-philippines-2024/</link>
+				<guid isPermaLink="false"></guid>
+				<category>PY</category>
+			</item>
+		
+			<item>
+				<title>Kiwi PyCon XIII 2024 Conference Deadline</title>
+				<description><![CDATA[* name of the event: Kiwi PyCon XIII 2024<br/>* type of event: Conference <br/>* focus on Python: Yes<br/>* approximate number of attendees: Unknown<br/>* location (incl. country): Te Whanganui-a-Tara Wellington, New Zealand<br/>* dates/times/recurrence (incl. time zone): August 23 - 25, 2024<br/>* HTML link : <a href="https://kiwipycon.nz/">Kiwi PyCon XIII 2024</a>]]></description>
+				<pubDate>Fri, 23 Aug 2024 00:00:00 +0000</pubDate>
+				<link>https://pythondeadlin.es/conference/kiwi-pycon-xiii-2024/</link>
+				<guid isPermaLink="false"></guid>
+				<category>PY</category>
+			</item>
+		
+			<item>
+				<title>EuroPython 2024 Conference Deadline</title>
+				<description><![CDATA[* name of the event: EuroPython 2024<br/>* type of event: Conference <br/>* focus on Python: Yes<br/>* approximate number of attendees: Unknown<br/>* location (incl. country): Prague, Czechia<br/>* dates/times/recurrence (incl. time zone): July 08 - 14, 2024<br/>* HTML link : <a href="https://ep2024.europython.eu/">EuroPython 2024</a>]]></description>
+				<pubDate>Mon, 08 Jul 2024 00:00:00 +0000</pubDate>
+				<link>https://pythondeadlin.es/conference/europython-2024/</link>
+				<guid isPermaLink="false"></guid>
+				<category>PY</category>
+			</item>
+		
+			<item>
+				<title>Swiss Python Summit 2024 Conference Deadline</title>
+				<description><![CDATA[* name of the event: Swiss Python Summit 2024<br/>* type of event: Conference <br/>* focus on Python: Yes<br/>* approximate number of attendees: Unknown<br/>* location (incl. country): Rapperswil, Switzerland<br/>* dates/times/recurrence (incl. time zone): October 17 - 18, 2024<br/>* HTML link : <a href="https://python-summit.ch">Swiss Python Summit 2024</a>]]></description>
+				<pubDate>Thu, 17 Oct 2024 00:00:00 +0000</pubDate>
+				<link>https://pythondeadlin.es/conference/swiss-python-summit-2024/</link>
 				<guid isPermaLink="false"></guid>
 				<category>PY</category>
 			</item>
