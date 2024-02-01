@@ -9,7 +9,7 @@
 		<title>Python Conference Deadlines</title>
 		<description>Countdowns to your favourite Python conferences with calls for participation and resources to submit awesome talks!</description>
 		<link>https://pythondeadlin.es/feed.xml</link>
-		<lastBuildDate>Wed, 17 Jan 2024 00:55:12 +0000</lastBuildDate>
+		<lastBuildDate>Thu, 01 Feb 2024 00:25:54 +0000</lastBuildDate>
 		
 		
 			<item>
@@ -41,6 +41,17 @@
 				<link>https://pythondeadlin.es/conference/djangocon-europe-2024/</link>
 				<guid isPermaLink="false"></guid>
 				<category>WEB</category>
+			</item>
+		
+		
+		
+			<item>
+				<title>SciPy 2024 Conference Deadline</title>
+				<description>Conference in Tacoma, Washington, USA on July 08 - 14, 2024. CfP: 2024-02-27 23:59:00 AoE.&lt;br /&gt;Find them here: @SciPyConf </description>
+				<pubDate>Tue, 27 Feb 2024 23:59:00 +0000</pubDate>
+				<link>https://pythondeadlin.es/conference/scipy-2024/</link>
+				<guid isPermaLink="false"></guid>
+				<category>SCIPY</category>
 			</item>
 		
 		
@@ -134,34 +145,23 @@
 		
 		
 			<item>
-				<title>PyCon Somalia 2023 Conference Deadline</title>
-				<description>Conference in Mogadishu, Somalia on December 26 - 27, 2023. CfP: 2023-12-25 23:59:00 AoE.&lt;br /&gt;Find them here: @PyconSomalia </description>
-				<pubDate>Mon, 25 Dec 2023 23:59:00 +0000</pubDate>
-				<link>https://pythondeadlin.es/conference/pycon-somalia-2023/</link>
-				<guid isPermaLink="false"></guid>
-				<category>PY</category>
-			</item>
-		
-		
-		
-			<item>
-				<title>PyCon DE and PyData Berlin 2024 Conference Deadline</title>
-				<description>Conference in Berlin, Germany on April 22 - 24, 2024. CfP: 2023-12-22 23:59:59 AoE.&lt;br /&gt;Find them here: @PyConDE </description>
-				<pubDate>Fri, 22 Dec 2023 23:59:59 +0000</pubDate>
-				<link>https://pythondeadlin.es/conference/pycon-de-and-pydata-berlin-2024/</link>
-				<guid isPermaLink="false"></guid>
-				<category>PY,PYDATA</category>
-			</item>
-		
-		
-		
-			<item>
 				<title>Python Pizza Prague 2024 Conference Deadline</title>
-				<description>Conference in Prague, Czechia on February 24th, 2024. CfP: 2023-12-20 23:59:00 AoE.&lt;br /&gt;Find them here: @PythonPizzaConf </description>
-				<pubDate>Wed, 20 Dec 2023 23:59:00 +0000</pubDate>
+				<description>Conference in Prague, Czechia on February 24th, 2024. CfP: 2023-12-31 23:59:00 AoE.&lt;br /&gt;Find them here: @PythonPizzaConf </description>
+				<pubDate>Sun, 31 Dec 2023 23:59:00 +0000</pubDate>
 				<link>https://pythondeadlin.es/conference/python-pizza-prague-2024/</link>
 				<guid isPermaLink="false"></guid>
 				<category>PY</category>
+			</item>
+		
+		
+		
+			<item>
+				<title>PyCon DE &amp; PyData Berlin 2024 Conference Deadline</title>
+				<description>Conference in Berlin, Germany on April 22 - 24, 2024. CfP: 2023-12-22 23:59:59 AoE.&lt;br /&gt;Find them here: @PyConDE </description>
+				<pubDate>Fri, 22 Dec 2023 23:59:59 +0000</pubDate>
+				<link>https://pythondeadlin.es/conference/pycon-de-pydata-berlin-2024/</link>
+				<guid isPermaLink="false"></guid>
+				<category>PY,PYDATA</category>
 			</item>
 		
 		
@@ -171,39 +171,6 @@
 				<description>Conference in Pittsburgh, PA, USA on May 15 - 23, 2024. CfP: 2023-12-18 23:59:00 AoE.&lt;br /&gt;Find them here: @pycon </description>
 				<pubDate>Mon, 18 Dec 2023 23:59:00 +0000</pubDate>
 				<link>https://pythondeadlin.es/conference/pycon-us-2024/</link>
-				<guid isPermaLink="false"></guid>
-				<category>PY</category>
-			</item>
-		
-		
-		
-			<item>
-				<title>FlaskCon 2023 Conference Deadline</title>
-				<description>Conference in Online on December 16 - 17, 2023. CfP: 2023-10-31 23:59:00 AoE.&lt;br /&gt;Find them here: @FlaskCon </description>
-				<pubDate>Tue, 31 Oct 2023 23:59:00 +0000</pubDate>
-				<link>https://pythondeadlin.es/conference/flaskcon-2023/</link>
-				<guid isPermaLink="false"></guid>
-				<category>WEB</category>
-			</item>
-		
-		
-		
-			<item>
-				<title>PyOhio 2023 Conference Deadline</title>
-				<description>Conference in Ohio, USA on December 16th, 2023. CfP: 2023-10-23 08:00:00 AoE. </description>
-				<pubDate>Mon, 23 Oct 2023 08:00:00 +0000</pubDate>
-				<link>https://pythondeadlin.es/conference/pyohio-2023/</link>
-				<guid isPermaLink="false"></guid>
-				<category></category>
-			</item>
-		
-		
-		
-			<item>
-				<title>PyCon Thailand 2023 Conference Deadline</title>
-				<description>Conference in Bangkok, Thailand on December 14 - 16, 2023. CfP: 2023-08-16 23:59:00 AoE. </description>
-				<pubDate>Wed, 16 Aug 2023 23:59:00 +0000</pubDate>
-				<link>https://pythondeadlin.es/conference/pycon-thailand-2023/</link>
 				<guid isPermaLink="false"></guid>
 				<category>PY</category>
 			</item>

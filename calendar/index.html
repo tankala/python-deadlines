@@ -56,7 +56,7 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/js-year-calendar.min.css?t=1705452912"
+      href="/static/css/js-year-calendar.min.css?t=1706747154"
       media="screen,projection"
     />
 
@@ -68,13 +68,13 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/deadlines.css?t=1705452912"
+      href="/static/css/deadlines.css?t=1706747154"
       media="screen,projection"
     />
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/calendar.css?t=1705452912"
+      href="/static/css/calendar.css?t=1706747154"
       media="screen,projection"
     />
 
@@ -750,6 +750,38 @@
 
         // add deadlines in red
         conf_list_all.push({
+          id: "scipy-2024-deadline",
+          abbreviation: "scipy-2024",
+          name: "SciPy 2024 CfP",
+          color: "red",
+          location: "Tacoma, Washington, USA",
+          date: "July 08 - 14, 2024",
+          subject: "SCIPY",
+          startDate: Date.parse("2024-02-27 23:59:00"),
+          endDate: Date.parse("2024-02-27 23:59:00"),
+        });
+
+        // add Conferences in chosen color
+
+        var color = "black";
+        // use first sub to choose color
+
+        color = "#70163C";
+
+        conf_list_all.push({
+          id: "scipy-2024-conference",
+          abbreviation: "scipy-2024",
+          name: "SciPy 2024",
+          color: color,
+          location: "Tacoma, Washington, USA",
+          date: "July 08 - 14, 2024",
+          subject: "SCIPY",
+          startDate: Date.parse("2024-07-08"),
+          endDate: Date.parse("2024-07-14"),
+        });
+
+        // add deadlines in red
+        conf_list_all.push({
           id: "geopython-2024-deadline",
           abbreviation: "geopython-2024",
           name: "GeoPython 2024 CfP",
@@ -1006,70 +1038,6 @@
 
         // add deadlines in red
         conf_list_all.push({
-          id: "pycon-somalia-2023-deadline",
-          abbreviation: "pycon-somalia-2023",
-          name: "PyCon Somalia 2023 CfP",
-          color: "red",
-          location: "Mogadishu, Somalia",
-          date: "December 26 - 27, 2023",
-          subject: "PY",
-          startDate: Date.parse("2023-12-25 23:59:00"),
-          endDate: Date.parse("2023-12-25 23:59:00"),
-        });
-
-        // add Conferences in chosen color
-
-        var color = "black";
-        // use first sub to choose color
-
-        color = "#4B8BBE";
-
-        conf_list_all.push({
-          id: "pycon-somalia-2023-conference",
-          abbreviation: "pycon-somalia-2023",
-          name: "PyCon Somalia 2023",
-          color: color,
-          location: "Mogadishu, Somalia",
-          date: "December 26 - 27, 2023",
-          subject: "PY",
-          startDate: Date.parse("2023-12-26"),
-          endDate: Date.parse("2023-12-27"),
-        });
-
-        // add deadlines in red
-        conf_list_all.push({
-          id: "pycon-de-and-pydata-berlin-2024-deadline",
-          abbreviation: "pycon-de-and-pydata-berlin-2024",
-          name: "PyCon DE and PyData Berlin 2024 CfP",
-          color: "red",
-          location: "Berlin, Germany",
-          date: "April 22 - 24, 2024",
-          subject: "PY,PYDATA",
-          startDate: Date.parse("2023-12-22 23:59:59"),
-          endDate: Date.parse("2023-12-22 23:59:59"),
-        });
-
-        // add Conferences in chosen color
-
-        var color = "black";
-        // use first sub to choose color
-
-        color = "#4B8BBE";
-
-        conf_list_all.push({
-          id: "pycon-de-and-pydata-berlin-2024-conference",
-          abbreviation: "pycon-de-and-pydata-berlin-2024",
-          name: "PyCon DE and PyData Berlin 2024",
-          color: color,
-          location: "Berlin, Germany",
-          date: "April 22 - 24, 2024",
-          subject: "PY,PYDATA",
-          startDate: Date.parse("2024-04-22"),
-          endDate: Date.parse("2024-04-24"),
-        });
-
-        // add deadlines in red
-        conf_list_all.push({
           id: "python-pizza-prague-2024-deadline",
           abbreviation: "python-pizza-prague-2024",
           name: "Python Pizza Prague 2024 CfP",
@@ -1077,8 +1045,8 @@
           location: "Prague, Czechia",
           date: "February 24th, 2024",
           subject: "PY",
-          startDate: Date.parse("2023-12-20 23:59:00"),
-          endDate: Date.parse("2023-12-20 23:59:00"),
+          startDate: Date.parse("2023-12-31 23:59:00"),
+          endDate: Date.parse("2023-12-31 23:59:00"),
         });
 
         // add Conferences in chosen color
@@ -1098,6 +1066,38 @@
           subject: "PY",
           startDate: Date.parse("2024-02-24"),
           endDate: Date.parse("2024-02-24"),
+        });
+
+        // add deadlines in red
+        conf_list_all.push({
+          id: "pycon-de-pydata-berlin-2024-deadline",
+          abbreviation: "pycon-de-pydata-berlin-2024",
+          name: "PyCon DE & PyData Berlin 2024 CfP",
+          color: "red",
+          location: "Berlin, Germany",
+          date: "April 22 - 24, 2024",
+          subject: "PY,PYDATA",
+          startDate: Date.parse("2023-12-22 23:59:59"),
+          endDate: Date.parse("2023-12-22 23:59:59"),
+        });
+
+        // add Conferences in chosen color
+
+        var color = "black";
+        // use first sub to choose color
+
+        color = "#4B8BBE";
+
+        conf_list_all.push({
+          id: "pycon-de-pydata-berlin-2024-conference",
+          abbreviation: "pycon-de-pydata-berlin-2024",
+          name: "PyCon DE & PyData Berlin 2024",
+          color: color,
+          location: "Berlin, Germany",
+          date: "April 22 - 24, 2024",
+          subject: "PY,PYDATA",
+          startDate: Date.parse("2024-04-22"),
+          endDate: Date.parse("2024-04-24"),
         });
 
         // add deadlines in red
@@ -1134,130 +1134,12 @@
 
         // add deadlines in red
         conf_list_all.push({
-          id: "flaskcon-2023-deadline",
-          abbreviation: "flaskcon-2023",
-          name: "FlaskCon 2023 CfP",
+          id: "europython-2024-deadline",
+          abbreviation: "europython-2024",
+          name: "EuroPython 2024 CfP",
           color: "red",
-          location: "Online",
-          date: "December 16 - 17, 2023",
-          subject: "WEB",
-          startDate: Date.parse("2023-10-31 23:59:00"),
-          endDate: Date.parse("2023-10-31 23:59:00"),
-        });
-
-        // add Conferences in chosen color
-
-        var color = "black";
-        // use first sub to choose color
-
-        color = "#0D0A0B";
-
-        conf_list_all.push({
-          id: "flaskcon-2023-conference",
-          abbreviation: "flaskcon-2023",
-          name: "FlaskCon 2023",
-          color: color,
-          location: "Online",
-          date: "December 16 - 17, 2023",
-          subject: "WEB",
-          startDate: Date.parse("2023-12-16"),
-          endDate: Date.parse("2023-12-17"),
-        });
-
-        // add deadlines in red
-        conf_list_all.push({
-          id: "pyohio-2023-deadline",
-          abbreviation: "pyohio-2023",
-          name: "PyOhio 2023 CfP",
-          color: "red",
-          location: "Ohio, USA",
-          date: "December 16th, 2023",
-          subject: "",
-          startDate: Date.parse("2023-10-23 08:00:00"),
-          endDate: Date.parse("2023-10-23 08:00:00"),
-        });
-
-        // add Conferences in chosen color
-
-        var color = "black";
-        // use first sub to choose color
-
-        conf_list_all.push({
-          id: "pyohio-2023-conference",
-          abbreviation: "pyohio-2023",
-          name: "PyOhio 2023",
-          color: color,
-          location: "Ohio, USA",
-          date: "December 16th, 2023",
-          subject: "",
-          startDate: Date.parse("2023-12-16"),
-          endDate: Date.parse("2023-12-16"),
-        });
-
-        // add deadlines in red
-        conf_list_all.push({
-          id: "pycon-thailand-2023-deadline",
-          abbreviation: "pycon-thailand-2023",
-          name: "PyCon Thailand 2023 CfP",
-          color: "red",
-          location: "Bangkok, Thailand",
-          date: "December 14 - 16, 2023",
-          subject: "PY",
-          startDate: Date.parse("2023-08-16 23:59:00"),
-          endDate: Date.parse("2023-08-16 23:59:00"),
-        });
-
-        conf_list_all.push({
-          id: "pycon-thailand-2023-deadline",
-          abbreviation: "pycon-thailand-2023",
-          name: "PyCon Thailand 2023 Workshop Deadline",
-          color: "red",
-          location: "Bangkok, Thailand",
-          date: "December 14 - 16, 2023",
-          subject: "PY",
-          startDate: Date.parse("2023-08-16 23:59:00"),
-          endDate: Date.parse("2023-08-16 23:59:00"),
-        });
-
-        conf_list_all.push({
-          id: "pycon-thailand-2023-deadline",
-          abbreviation: "pycon-thailand-2023",
-          name: "PyCon Thailand 2023 Tutorial Deadline",
-          color: "red",
-          location: "Bangkok, Thailand",
-          date: "December 14 - 16, 2023",
-          subject: "PY",
-          startDate: Date.parse("2023-08-16 23:59:00"),
-          endDate: Date.parse("2023-08-16 23:59:00"),
-        });
-
-        // add Conferences in chosen color
-
-        var color = "black";
-        // use first sub to choose color
-
-        color = "#4B8BBE";
-
-        conf_list_all.push({
-          id: "pycon-thailand-2023-conference",
-          abbreviation: "pycon-thailand-2023",
-          name: "PyCon Thailand 2023",
-          color: color,
-          location: "Bangkok, Thailand",
-          date: "December 14 - 16, 2023",
-          subject: "PY",
-          startDate: Date.parse("2023-12-14"),
-          endDate: Date.parse("2023-12-16"),
-        });
-
-        // add deadlines in red
-        conf_list_all.push({
-          id: "pycon-philippines-2024-deadline",
-          abbreviation: "pycon-philippines-2024",
-          name: "PyCon Philippines 2024 CfP",
-          color: "red",
-          location: "Manila, Philippines",
-          date: "February 25 - 26, 2024",
+          location: "Prague, Czechia",
+          date: "July 08 - 14, 2024",
           subject: "PY",
           startDate: Date.parse("TBA"),
           endDate: Date.parse("TBA"),
@@ -1271,15 +1153,15 @@
         color = "#4B8BBE";
 
         conf_list_all.push({
-          id: "pycon-philippines-2024-conference",
-          abbreviation: "pycon-philippines-2024",
-          name: "PyCon Philippines 2024",
+          id: "europython-2024-conference",
+          abbreviation: "europython-2024",
+          name: "EuroPython 2024",
           color: color,
-          location: "Manila, Philippines",
-          date: "February 25 - 26, 2024",
+          location: "Prague, Czechia",
+          date: "July 08 - 14, 2024",
           subject: "PY",
-          startDate: Date.parse("2024-02-25"),
-          endDate: Date.parse("2024-02-26"),
+          startDate: Date.parse("2024-07-08"),
+          endDate: Date.parse("2024-07-14"),
         });
 
         // add deadlines in red
@@ -1316,12 +1198,12 @@
 
         // add deadlines in red
         conf_list_all.push({
-          id: "europython-2024-deadline",
-          abbreviation: "europython-2024",
-          name: "EuroPython 2024 CfP",
+          id: "pycon-philippines-2024-deadline",
+          abbreviation: "pycon-philippines-2024",
+          name: "PyCon Philippines 2024 CfP",
           color: "red",
-          location: "Prague, Czechia",
-          date: "July 08 - 14, 2024",
+          location: "Manila, Philippines",
+          date: "February 25 - 26, 2024",
           subject: "PY",
           startDate: Date.parse("TBA"),
           endDate: Date.parse("TBA"),
@@ -1335,15 +1217,15 @@
         color = "#4B8BBE";
 
         conf_list_all.push({
-          id: "europython-2024-conference",
-          abbreviation: "europython-2024",
-          name: "EuroPython 2024",
+          id: "pycon-philippines-2024-conference",
+          abbreviation: "pycon-philippines-2024",
+          name: "PyCon Philippines 2024",
           color: color,
-          location: "Prague, Czechia",
-          date: "July 08 - 14, 2024",
+          location: "Manila, Philippines",
+          date: "February 25 - 26, 2024",
           subject: "PY",
-          startDate: Date.parse("2024-07-08"),
-          endDate: Date.parse("2024-07-14"),
+          startDate: Date.parse("2024-02-25"),
+          endDate: Date.parse("2024-02-26"),
         });
 
         // add deadlines in red
