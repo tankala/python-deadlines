@@ -9,7 +9,7 @@
 		<title>Python Conference Deadlines</title>
 		<description>Countdowns to your favourite Python conferences with calls for participation and resources to submit awesome talks!</description>
 		<link>https://pythondeadlin.es/feed.xml</link>
-		<lastBuildDate>Fri, 09 Feb 2024 18:48:26 +0000</lastBuildDate>
+		<lastBuildDate>Fri, 09 Feb 2024 18:52:33 +0000</lastBuildDate>
 		
 		
 			<item>
@@ -17,6 +17,17 @@
 				<description>Conference in Tallinn, Estonia on September 05 - 06, 2024. CfP: 2024-04-15 23:59:00 AoE.&lt;br /&gt;Find them here: @PyConEstonia </description>
 				<pubDate>Mon, 15 Apr 2024 23:59:00 +0000</pubDate>
 				<link>https://pythondeadlin.es/conference/pycon-estonia-2024/</link>
+				<guid isPermaLink="false"></guid>
+				<category>PY</category>
+			</item>
+		
+		
+		
+			<item>
+				<title>PyCon Colombia 2024 Conference Deadline</title>
+				<description>Conference in Medellin, Colombia on June 07 - 09, 2024. CfP: 2024-03-11 23:59:59 AoE.&lt;br /&gt;Find them here: @PyConColombia </description>
+				<pubDate>Mon, 11 Mar 2024 23:59:59 +0000</pubDate>
+				<link>https://pythondeadlin.es/conference/pycon-colombia-2024/</link>
 				<guid isPermaLink="false"></guid>
 				<category>PY</category>
 			</item>
@@ -182,17 +193,6 @@
 				<description>Conference in Pittsburgh, PA, USA on May 15 - 23, 2024. CfP: 2023-12-18 23:59:00 AoE.&lt;br /&gt;Find them here: @pycon </description>
 				<pubDate>Mon, 18 Dec 2023 23:59:00 +0000</pubDate>
 				<link>https://pythondeadlin.es/conference/pycon-us-2024/</link>
-				<guid isPermaLink="false"></guid>
-				<category>PY</category>
-			</item>
-		
-		
-		
-			<item>
-				<title>PyCon Colombia 2024 Conference Deadline</title>
-				<description>Conference in Medellin, Colombia on June 07 - 09, 2024. CfP: 2023-03-11 23:59:59 AoE.&lt;br /&gt;Find them here: @PyConColombia </description>
-				<pubDate>Sat, 11 Mar 2023 23:59:59 +0000</pubDate>
-				<link>https://pythondeadlin.es/conference/pycon-colombia-2024/</link>
 				<guid isPermaLink="false"></guid>
 				<category>PY</category>
 			</item>

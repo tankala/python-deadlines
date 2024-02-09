@@ -9,13 +9,22 @@
 		<title>Newsfeed for Python Events Calendar from Python Conference Deadlines</title>
 		<description>Countdowns to your favourite Python conferences with calls for participation and resources to submit awesome talks!</description>
 		<link>https://pythondeadlin.es/feed.xml</link>
-		<lastBuildDate>Fri, 09 Feb 2024 18:48:26 +0000</lastBuildDate>
+		<lastBuildDate>Fri, 09 Feb 2024 18:52:33 +0000</lastBuildDate>
 		
 			<item>
 				<title>PyCon Estonia 2024 Conference Deadline</title>
 				<description><![CDATA[* name of the event: PyCon Estonia 2024<br/>* type of event: Conference <br/>* focus on Python: Yes<br/>* approximate number of attendees: Unknown<br/>* location (incl. country): Tallinn, Estonia<br/>* dates/times/recurrence (incl. time zone): September 05 - 06, 2024<br/>* HTML link : <a href="https://pycon.ee/">PyCon Estonia 2024</a>]]></description>
 				<pubDate>Thu, 05 Sep 2024 00:00:00 +0000</pubDate>
 				<link>https://pythondeadlin.es/conference/pycon-estonia-2024/</link>
+				<guid isPermaLink="false"></guid>
+				<category>PY</category>
+			</item>
+		
+			<item>
+				<title>PyCon Colombia 2024 Conference Deadline</title>
+				<description><![CDATA[* name of the event: PyCon Colombia 2024<br/>* type of event: Conference <br/>* focus on Python: Yes<br/>* approximate number of attendees: Unknown<br/>* location (incl. country): Medellin, Colombia<br/>* dates/times/recurrence (incl. time zone): June 07 - 09, 2024<br/>* HTML link : <a href="https://2024.pycon.co/">PyCon Colombia 2024</a>]]></description>
+				<pubDate>Fri, 07 Jun 2024 00:00:00 +0000</pubDate>
+				<link>https://pythondeadlin.es/conference/pycon-colombia-2024/</link>
 				<guid isPermaLink="false"></guid>
 				<category>PY</category>
 			</item>
@@ -151,15 +160,6 @@
 				<description><![CDATA[* name of the event: PyCon US 2024<br/>* type of event: Conference <br/>* focus on Python: Yes<br/>* approximate number of attendees: Unknown<br/>* location (incl. country): Pittsburgh, PA, USA<br/>* dates/times/recurrence (incl. time zone): May 15 - 23, 2024<br/>* HTML link : <a href="https://us.pycon.org/2024/">PyCon US 2024</a>]]></description>
 				<pubDate>Wed, 15 May 2024 00:00:00 +0000</pubDate>
 				<link>https://pythondeadlin.es/conference/pycon-us-2024/</link>
-				<guid isPermaLink="false"></guid>
-				<category>PY</category>
-			</item>
-		
-			<item>
-				<title>PyCon Colombia 2024 Conference Deadline</title>
-				<description><![CDATA[* name of the event: PyCon Colombia 2024<br/>* type of event: Conference <br/>* focus on Python: Yes<br/>* approximate number of attendees: Unknown<br/>* location (incl. country): Medellin, Colombia<br/>* dates/times/recurrence (incl. time zone): June 07 - 09, 2024<br/>* HTML link : <a href="https://2024.pycon.co/">PyCon Colombia 2024</a>]]></description>
-				<pubDate>Fri, 07 Jun 2024 00:00:00 +0000</pubDate>
-				<link>https://pythondeadlin.es/conference/pycon-colombia-2024/</link>
 				<guid isPermaLink="false"></guid>
 				<category>PY</category>
 			</item>
