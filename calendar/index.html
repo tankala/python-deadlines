@@ -56,7 +56,7 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/js-year-calendar.min.css?t=1706747154"
+      href="/static/css/js-year-calendar.min.css?t=1707504257"
       media="screen,projection"
     />
 
@@ -68,13 +68,13 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/deadlines.css?t=1706747154"
+      href="/static/css/deadlines.css?t=1707504257"
       media="screen,projection"
     />
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/calendar.css?t=1706747154"
+      href="/static/css/calendar.css?t=1707504257"
       media="screen,projection"
     />
 
@@ -1130,6 +1130,38 @@
           subject: "PY",
           startDate: Date.parse("2024-05-15"),
           endDate: Date.parse("2024-05-23"),
+        });
+
+        // add deadlines in red
+        conf_list_all.push({
+          id: "pycon-colombia-2024-deadline",
+          abbreviation: "pycon-colombia-2024",
+          name: "PyCon Colombia 2024 CfP",
+          color: "red",
+          location: "Medellin, Colombia",
+          date: "June 07 - 09, 2024",
+          subject: "PY",
+          startDate: Date.parse("2023-03-11 23:59:59"),
+          endDate: Date.parse("2023-03-11 23:59:59"),
+        });
+
+        // add Conferences in chosen color
+
+        var color = "black";
+        // use first sub to choose color
+
+        color = "#4B8BBE";
+
+        conf_list_all.push({
+          id: "pycon-colombia-2024-conference",
+          abbreviation: "pycon-colombia-2024",
+          name: "PyCon Colombia 2024",
+          color: color,
+          location: "Medellin, Colombia",
+          date: "June 07 - 09, 2024",
+          subject: "PY",
+          startDate: Date.parse("2024-06-07"),
+          endDate: Date.parse("2024-06-09"),
         });
 
         // add deadlines in red
