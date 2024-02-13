@@ -56,7 +56,7 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/js-year-calendar.min.css?t=1707504753"
+      href="/static/css/js-year-calendar.min.css?t=1707825283"
       media="screen,projection"
     />
 
@@ -68,13 +68,13 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/deadlines.css?t=1707504753"
+      href="/static/css/deadlines.css?t=1707825283"
       media="screen,projection"
     />
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/calendar.css?t=1707504753"
+      href="/static/css/calendar.css?t=1707825283"
       media="screen,projection"
     />
 
@@ -1290,6 +1290,38 @@
           subject: "PY",
           startDate: Date.parse("2024-10-17"),
           endDate: Date.parse("2024-10-18"),
+        });
+
+        // add deadlines in red
+        conf_list_all.push({
+          id: "earl-2024-deadline",
+          abbreviation: "earl-2024",
+          name: "EARL 2024 CfP",
+          color: "red",
+          location: "Brighton, United Kingdom",
+          date: "4th – 5th September, 2024",
+          subject: "PY",
+          startDate: Date.parse("2024-03-31 23:59:00"),
+          endDate: Date.parse("2024-03-31 23:59:00"),
+        });
+
+        // add Conferences in chosen color
+
+        var color = "black";
+        // use first sub to choose color
+
+        color = "#4B8BBE";
+
+        conf_list_all.push({
+          id: "earl-2024-conference",
+          abbreviation: "earl-2024",
+          name: "EARL 2024",
+          color: color,
+          location: "Brighton, United Kingdom",
+          date: "4th – 5th September, 2024",
+          subject: "PY",
+          startDate: Date.parse("2024-09-04"),
+          endDate: Date.parse("2024-09-05"),
         });
 
         return conf_list_all;
