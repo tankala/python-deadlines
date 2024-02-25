@@ -9,7 +9,16 @@
 		<title>Newsfeed for Python Events Calendar from Python Conference Deadlines</title>
 		<description>Countdowns to your favourite Python conferences with calls for participation and resources to submit awesome talks!</description>
 		<link>https://pythondeadlin.es/feed.xml</link>
-		<lastBuildDate>Tue, 13 Feb 2024 11:54:43 +0000</lastBuildDate>
+		<lastBuildDate>Sun, 25 Feb 2024 01:40:08 +0000</lastBuildDate>
+		
+			<item>
+				<title>Kiwi PyCon XIII 2024 Conference Deadline</title>
+				<description><![CDATA[* name of the event: Kiwi PyCon XIII 2024<br/>* type of event: Conference <br/>* focus on Python: Yes<br/>* approximate number of attendees: Unknown<br/>* location (incl. country): Te Whanganui-a-Tara Wellington, New Zealand<br/>* dates/times/recurrence (incl. time zone): August 23 - 25, 2024<br/>* HTML link : <a href="https://kiwipycon.nz/">Kiwi PyCon XIII 2024</a>]]></description>
+				<pubDate>Fri, 23 Aug 2024 00:00:00 +0000</pubDate>
+				<link>https://pythondeadlin.es/conference/kiwi-pycon-xiii-2024/</link>
+				<guid isPermaLink="false"></guid>
+				<category>PY</category>
+			</item>
 		
 			<item>
 				<title>PyCon Estonia 2024 Conference Deadline</title>
@@ -21,10 +30,37 @@
 			</item>
 		
 			<item>
+				<title>PyCon Taiwan 2024 Conference Deadline</title>
+				<description><![CDATA[* name of the event: PyCon Taiwan 2024<br/>* type of event: Conference <br/>* focus on Python: Yes<br/>* approximate number of attendees: Unknown<br/>* location (incl. country): TBD<br/>* dates/times/recurrence (incl. time zone): September 21 - 22, 2024<br/>* HTML link : <a href="https://tw.pycon.org/2024/en-us">PyCon Taiwan 2024</a>]]></description>
+				<pubDate>Sat, 21 Sep 2024 00:00:00 +0000</pubDate>
+				<link>https://pythondeadlin.es/conference/pycon-taiwan-2024/</link>
+				<guid isPermaLink="false"></guid>
+				<category></category>
+			</item>
+		
+			<item>
+				<title>EARL 2024 Conference Deadline</title>
+				<description><![CDATA[* name of the event: EARL 2024<br/>* type of event: Conference <br/>* focus on Python: Yes<br/>* approximate number of attendees: Unknown<br/>* location (incl. country): Brighton, UK<br/>* dates/times/recurrence (incl. time zone): September 04 - 05, 2024<br/>* HTML link : <a href="https://datacove.co.uk/earl-2024-tech-conference/">EARL 2024</a>]]></description>
+				<pubDate>Wed, 04 Sep 2024 00:00:00 +0000</pubDate>
+				<link>https://pythondeadlin.es/conference/earl-2024/</link>
+				<guid isPermaLink="false"></guid>
+				<category>PY</category>
+			</item>
+		
+			<item>
 				<title>PyCon Colombia 2024 Conference Deadline</title>
 				<description><![CDATA[* name of the event: PyCon Colombia 2024<br/>* type of event: Conference <br/>* focus on Python: Yes<br/>* approximate number of attendees: Unknown<br/>* location (incl. country): Medellin, Colombia<br/>* dates/times/recurrence (incl. time zone): June 07 - 09, 2024<br/>* HTML link : <a href="https://2024.pycon.co/">PyCon Colombia 2024</a>]]></description>
 				<pubDate>Fri, 07 Jun 2024 00:00:00 +0000</pubDate>
 				<link>https://pythondeadlin.es/conference/pycon-colombia-2024/</link>
+				<guid isPermaLink="false"></guid>
+				<category>PY</category>
+			</item>
+		
+			<item>
+				<title>EuroPython 2024 Conference Deadline</title>
+				<description><![CDATA[* name of the event: EuroPython 2024<br/>* type of event: Conference <br/>* focus on Python: Yes<br/>* approximate number of attendees: Unknown<br/>* location (incl. country): Prague, Czechia<br/>* dates/times/recurrence (incl. time zone): July 08 - 14, 2024<br/>* HTML link : <a href="https://ep2024.europython.eu/">EuroPython 2024</a>]]></description>
+				<pubDate>Mon, 08 Jul 2024 00:00:00 +0000</pubDate>
+				<link>https://pythondeadlin.es/conference/europython-2024/</link>
 				<guid isPermaLink="false"></guid>
 				<category>PY</category>
 			</item>
@@ -76,7 +112,7 @@
 		
 			<item>
 				<title>PyCon Pakistan 2024 Conference Deadline</title>
-				<description><![CDATA[* name of the event: PyCon Pakistan 2024<br/>* type of event: Conference <br/>* focus on Python: Yes<br/>* approximate number of attendees: Unknown<br/>* location (incl. country): Lahore, Pakistan<br/>* dates/times/recurrence (incl. time zone): March 09, 2024<br/>* HTML link : <a href="https://pycon.pk">PyCon Pakistan 2024</a>]]></description>
+				<description><![CDATA[* name of the event: PyCon Pakistan 2024<br/>* type of event: Conference <br/>* focus on Python: Yes<br/>* approximate number of attendees: Unknown<br/>* location (incl. country): Lahore, Pakistan<br/>* dates/times/recurrence (incl. time zone): March 09, 2024<br/>* HTML link : <a href="https://pycon.pk/">PyCon Pakistan 2024</a>]]></description>
 				<pubDate>Sat, 09 Mar 2024 00:00:00 +0000</pubDate>
 				<link>https://pythondeadlin.es/conference/pycon-pakistan-2024/</link>
 				<guid isPermaLink="false"></guid>
@@ -121,7 +157,7 @@
 		
 			<item>
 				<title>PyCon Philippines 2024 Conference Deadline</title>
-				<description><![CDATA[* name of the event: PyCon Philippines 2024<br/>* type of event: Conference <br/>* focus on Python: Yes<br/>* approximate number of attendees: Unknown<br/>* location (incl. country): Manila, Philippines<br/>* dates/times/recurrence (incl. time zone): February 25 - 26, 2024<br/>* HTML link : <a href="https://pycon-2024.python.ph">PyCon Philippines 2024</a>]]></description>
+				<description><![CDATA[* name of the event: PyCon Philippines 2024<br/>* type of event: Conference <br/>* focus on Python: Yes<br/>* approximate number of attendees: Unknown<br/>* location (incl. country): Manila, Philippines<br/>* dates/times/recurrence (incl. time zone): February 25 - 26, 2024<br/>* HTML link : <a href="https://pycon-2024.python.ph/">PyCon Philippines 2024</a>]]></description>
 				<pubDate>Sun, 25 Feb 2024 00:00:00 +0000</pubDate>
 				<link>https://pythondeadlin.es/conference/pycon-philippines-2024/</link>
 				<guid isPermaLink="false"></guid>
@@ -165,37 +201,10 @@
 			</item>
 		
 			<item>
-				<title>EuroPython 2024 Conference Deadline</title>
-				<description><![CDATA[* name of the event: EuroPython 2024<br/>* type of event: Conference <br/>* focus on Python: Yes<br/>* approximate number of attendees: Unknown<br/>* location (incl. country): Prague, Czechia<br/>* dates/times/recurrence (incl. time zone): July 08 - 14, 2024<br/>* HTML link : <a href="https://ep2024.europython.eu/">EuroPython 2024</a>]]></description>
-				<pubDate>Mon, 08 Jul 2024 00:00:00 +0000</pubDate>
-				<link>https://pythondeadlin.es/conference/europython-2024/</link>
-				<guid isPermaLink="false"></guid>
-				<category>PY</category>
-			</item>
-		
-			<item>
-				<title>Kiwi PyCon XIII 2024 Conference Deadline</title>
-				<description><![CDATA[* name of the event: Kiwi PyCon XIII 2024<br/>* type of event: Conference <br/>* focus on Python: Yes<br/>* approximate number of attendees: Unknown<br/>* location (incl. country): Te Whanganui-a-Tara Wellington, New Zealand<br/>* dates/times/recurrence (incl. time zone): August 23 - 25, 2024<br/>* HTML link : <a href="https://kiwipycon.nz/">Kiwi PyCon XIII 2024</a>]]></description>
-				<pubDate>Fri, 23 Aug 2024 00:00:00 +0000</pubDate>
-				<link>https://pythondeadlin.es/conference/kiwi-pycon-xiii-2024/</link>
-				<guid isPermaLink="false"></guid>
-				<category>PY</category>
-			</item>
-		
-			<item>
 				<title>Swiss Python Summit 2024 Conference Deadline</title>
 				<description><![CDATA[* name of the event: Swiss Python Summit 2024<br/>* type of event: Conference <br/>* focus on Python: Yes<br/>* approximate number of attendees: Unknown<br/>* location (incl. country): Rapperswil, Switzerland<br/>* dates/times/recurrence (incl. time zone): October 17 - 18, 2024<br/>* HTML link : <a href="https://python-summit.ch">Swiss Python Summit 2024</a>]]></description>
 				<pubDate>Thu, 17 Oct 2024 00:00:00 +0000</pubDate>
 				<link>https://pythondeadlin.es/conference/swiss-python-summit-2024/</link>
-				<guid isPermaLink="false"></guid>
-				<category>PY</category>
-			</item>
-		
-			<item>
-				<title>EARL 2024 Conference Deadline</title>
-				<description><![CDATA[* name of the event: EARL 2024<br/>* type of event: Conference <br/>* focus on Python: Yes<br/>* approximate number of attendees: Unknown<br/>* location (incl. country): Brighton, United Kingdom<br/>* dates/times/recurrence (incl. time zone): 4th – 5th September, 2024<br/>* HTML link : <a href="https://datacove.co.uk/earl-2024-tech-conference/">EARL 2024</a>]]></description>
-				<pubDate>Wed, 04 Sep 2024 00:00:00 +0000</pubDate>
-				<link>https://pythondeadlin.es/conference/earl-2024/</link>
 				<guid isPermaLink="false"></guid>
 				<category>PY</category>
 			</item>

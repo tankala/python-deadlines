@@ -9,7 +9,18 @@
 		<title>Python Conference Deadlines</title>
 		<description>Countdowns to your favourite Python conferences with calls for participation and resources to submit awesome talks!</description>
 		<link>https://pythondeadlin.es/feed.xml</link>
-		<lastBuildDate>Tue, 13 Feb 2024 11:54:43 +0000</lastBuildDate>
+		<lastBuildDate>Sun, 25 Feb 2024 01:40:08 +0000</lastBuildDate>
+		
+		
+			<item>
+				<title>Kiwi PyCon XIII 2024 Conference Deadline</title>
+				<description>Conference in Te Whanganui-a-Tara Wellington, New Zealand on August 23 - 25, 2024. CfP: 2024-05-03 23:59:00 AoE.&lt;br /&gt;Find them here: @kiwipycon </description>
+				<pubDate>Fri, 03 May 2024 23:59:00 +0000</pubDate>
+				<link>https://pythondeadlin.es/conference/kiwi-pycon-xiii-2024/</link>
+				<guid isPermaLink="false"></guid>
+				<category>PY</category>
+			</item>
+		
 		
 		
 			<item>
@@ -24,10 +35,43 @@
 		
 		
 			<item>
+				<title>PyCon Taiwan 2024 Conference Deadline</title>
+				<description>Conference in TBD on September 21 - 22, 2024. CfP: 2024-04-08 23:59:00 AoE. </description>
+				<pubDate>Mon, 08 Apr 2024 23:59:00 +0000</pubDate>
+				<link>https://pythondeadlin.es/conference/pycon-taiwan-2024/</link>
+				<guid isPermaLink="false"></guid>
+				<category></category>
+			</item>
+		
+		
+		
+			<item>
+				<title>EARL 2024 Conference Deadline</title>
+				<description>Conference in Brighton, UK on September 04 - 05, 2024. CfP: 2024-03-31 23:59:00 AoE. </description>
+				<pubDate>Sun, 31 Mar 2024 23:59:00 +0000</pubDate>
+				<link>https://pythondeadlin.es/conference/earl-2024/</link>
+				<guid isPermaLink="false"></guid>
+				<category>PY</category>
+			</item>
+		
+		
+		
+			<item>
 				<title>PyCon Colombia 2024 Conference Deadline</title>
 				<description>Conference in Medellin, Colombia on June 07 - 09, 2024. CfP: 2024-03-11 23:59:59 AoE.&lt;br /&gt;Find them here: @PyConColombia </description>
 				<pubDate>Mon, 11 Mar 2024 23:59:59 +0000</pubDate>
 				<link>https://pythondeadlin.es/conference/pycon-colombia-2024/</link>
+				<guid isPermaLink="false"></guid>
+				<category>PY</category>
+			</item>
+		
+		
+		
+			<item>
+				<title>EuroPython 2024 Conference Deadline</title>
+				<description>Conference in Prague, Czechia on July 08 - 14, 2024. CfP: 2024-03-06 23:59:00 AoE.&lt;br /&gt;Find them here: @EuroPython </description>
+				<pubDate>Wed, 06 Mar 2024 23:59:00 +0000</pubDate>
+				<link>https://pythondeadlin.es/conference/europython-2024/</link>
 				<guid isPermaLink="false"></guid>
 				<category>PY</category>
 			</item>
@@ -198,21 +242,6 @@
 			</item>
 		
 		
-		
-		
-		
-		
-		
-		
-		
-			<item>
-				<title>EARL 2024 Conference Deadline</title>
-				<description>Conference in Brighton, United Kingdom on 4th – 5th September, 2024. CfP: 2024-03-31 23:59:00 AoE. </description>
-				<pubDate>Sun, 31 Mar 2024 23:59:00 +0000</pubDate>
-				<link>https://pythondeadlin.es/conference/earl-2024/</link>
-				<guid isPermaLink="false"></guid>
-				<category>PY</category>
-			</item>
 		
 		
 	</channel>
