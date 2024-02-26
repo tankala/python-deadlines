@@ -9,7 +9,7 @@
 		<title>Newsfeed for Python Events Calendar from Python Conference Deadlines</title>
 		<description>Countdowns to your favourite Python conferences with calls for participation and resources to submit awesome talks!</description>
 		<link>https://pythondeadlin.es/feed.xml</link>
-		<lastBuildDate>Mon, 26 Feb 2024 21:25:11 +0000</lastBuildDate>
+		<lastBuildDate>Mon, 26 Feb 2024 21:34:50 +0000</lastBuildDate>
 		
 			<item>
 				<title>Kiwi PyCon 2024 Conference Deadline</title>
@@ -157,7 +157,7 @@
 		
 			<item>
 				<title>PyCon Philippines 2024 Conference Deadline</title>
-				<description><![CDATA[* name of the event: PyCon Philippines 2024<br/>* type of event: Conference <br/>* focus on Python: Yes<br/>* approximate number of attendees: Unknown<br/>* location (incl. country): Makati City, Manila, Philippines<br/>* dates/times/recurrence (incl. time zone): February 25 - 26, 2024<br/>* HTML link : <a href="https://pycon-2024.python.ph/">PyCon Philippines 2024</a>]]></description>
+				<description><![CDATA[* name of the event: PyCon Philippines 2024<br/>* type of event: Conference <br/>* focus on Python: Yes<br/>* approximate number of attendees: Unknown<br/>* location (incl. country): Manila, Philippines<br/>* dates/times/recurrence (incl. time zone): February 25 - 26, 2024<br/>* HTML link : <a href="https://pycon-2024.python.ph/">PyCon Philippines 2024</a>]]></description>
 				<pubDate>Sun, 25 Feb 2024 00:00:00 +0000</pubDate>
 				<link>https://pythondeadlin.es/conference/pycon-philippines-2024/</link>
 				<guid isPermaLink="false"></guid>
