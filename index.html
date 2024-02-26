@@ -63,7 +63,7 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/js-year-calendar.min.css?t=1708960862"
+      href="/static/css/js-year-calendar.min.css?t=1708967369"
       media="screen,projection"
     />
 
@@ -75,13 +75,13 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/deadlines.css?t=1708960862"
+      href="/static/css/deadlines.css?t=1708967369"
       media="screen,projection"
     />
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/calendar.css?t=1708960862"
+      href="/static/css/calendar.css?t=1708967369"
       media="screen,projection"
     />
 
@@ -1170,17 +1170,17 @@
             <hr />
           </div>
 
-          <div id="scipy-2024" class="ConfItem SCIPY-conf">
+          <div id="scipy-us-2024" class="ConfItem SCIPY-conf">
             <div class="row conf-row">
               <div class="col-6">
                 <span class="conf-title">
-                  <a title="Deadline Details" href="/conference/scipy-2024/"
-                    >SciPy 2024</a
+                  <a title="Deadline Details" href="/conference/scipy-us-2024/"
+                    >SciPy US 2024</a
                   >
                 </span>
                 <span class="conf-title-small">
-                  <a title="Deadline Details" href="/conference/scipy-2024/"
-                    >SciPy '24</a
+                  <a title="Deadline Details" href="/conference/scipy-us-2024/"
+                    >SciPy US '24</a
                   >
                 </span>
                 <span class="conf-title-icon">
@@ -1200,13 +1200,13 @@
 
                 <span class="conf-title-icon">
                   <a
-                    title="Call for Participation for SciPy"
+                    title="Call for Participation for SciPy US"
                     href="https://cfp.scipy.org/2024/cfp"
                     target="_blank"
                     ><img
                       src="/static/img/035-file-text.svg"
                       class="badge-link"
-                      alt="Link to Call for Participation for SciPy"
+                      alt="Link to Call for Participation for SciPy US"
                       width="16"
                       height="16"
                   /></a>
@@ -1215,7 +1215,7 @@
 
                 <span class="conf-title-icon">
                   <a
-                    title="Twitter for SciPy"
+                    title="Twitter for SciPy US"
                     href="https://twitter.com/SciPyConf"
                     target="_blank"
                     ><img
@@ -3539,7 +3539,9 @@
           $("#djangocon-europe-2024 .calendar").remove();
         }
 
-        $("#scipy-2024 .SCIPY-tag").html(sub2name["SCIPY"].toLocaleLowerCase());
+        $("#scipy-us-2024 .SCIPY-tag").html(
+          sub2name["SCIPY"].toLocaleLowerCase()
+        );
 
         // Use specified timezone for deadlines if available else use AoE timezone
 
@@ -3555,41 +3557,44 @@
           var cfpDate = DateTime.fromSQL("2024-02-27 23:59:00");
           var confDate = DateTime.fromSQL("2024-07-08");
           console.log(
-            "Invalid timezone in scipy-2024. Using system timezone instead."
+            "Invalid timezone in scipy-us-2024. Using system timezone instead."
           );
         }
 
         // render countdown timer
-        $("#scipy-2024 .timer").countdown(cfpDate.toJSDate(), function (event) {
+        $("#scipy-us-2024 .timer").countdown(cfpDate.toJSDate(), function (
+          event
+        ) {
           $(this).html(event.strftime("%D days %Hh %Mm %Ss"));
         });
 
         // render countdown timer small
-        $("#scipy-2024 .timer-small").countdown(cfpDate.toJSDate(), function (
-          event
-        ) {
-          $(this).html(event.strftime("%Dd %H:%M:%S"));
-        });
+        $("#scipy-us-2024 .timer-small").countdown(
+          cfpDate.toJSDate(),
+          function (event) {
+            $(this).html(event.strftime("%Dd %H:%M:%S"));
+          }
+        );
 
         // deadline in local timezone
-        $("#scipy-2024 .deadline-time").html(
+        $("#scipy-us-2024 .deadline-time").html(
           cfpDate.setZone("system").toLocaleString(DateTime.DATE_HUGE)
         );
 
         // add calendar button
         try {
           var myCalendar = createCalendarFromObject({
-            id: "scipy-2024",
-            title: "SciPy 2024 deadline",
+            id: "scipy-us-2024",
+            title: "SciPy US 2024 deadline",
             date: cfpDate.toJSDate(),
             duration: 60,
           });
           document
-            .querySelector("#scipy-2024 .calendar")
+            .querySelector("#scipy-us-2024 .calendar")
             .appendChild(myCalendar);
         } catch (err) {
           document
-            .querySelector("#scipy-2024 .calendar")
+            .querySelector("#scipy-us-2024 .calendar")
             .appendChild("<p>Calendar not available.</p>");
           console.log("Error in cfp date.");
         }
@@ -3598,23 +3603,27 @@
         cfpDiff = cfpDate.diffNow("seconds");
         confDiff = confDate.diffNow("seconds");
 
-        $("#scipy-2024").attr("cfpDiff", cfpDiff.toMillis());
-        $("#scipy-2024").attr("confDiff", confDiff.toMillis());
+        $("#scipy-us-2024").attr("cfpDiff", cfpDiff.toMillis());
+        $("#scipy-us-2024").attr("confDiff", confDiff.toMillis());
 
         if (cfpDiff < 0) {
-          $("#scipy-2024").addClass("pastcfp");
-          $("#scipy-2024").appendTo($("#past_cfps"));
-          $("#scipy-2024 .timer").replaceWith($("#scipy-2024 .deadline"));
-          $("#scipy-2024 .timer-small").replaceWith($("#scipy-2024 .deadline"));
-          $("#scipy-2024 .calendar").remove();
+          $("#scipy-us-2024").addClass("pastcfp");
+          $("#scipy-us-2024").appendTo($("#past_cfps"));
+          $("#scipy-us-2024 .timer").replaceWith($("#scipy-us-2024 .deadline"));
+          $("#scipy-us-2024 .timer-small").replaceWith(
+            $("#scipy-us-2024 .deadline")
+          );
+          $("#scipy-us-2024 .calendar").remove();
         }
 
         if (confDiff < 0) {
-          $("#scipy-2024").addClass("pastconf");
-          $("#scipy-2024").appendTo($("#past_confs"));
-          $("#scipy-2024 .timer").replaceWith($("#scipy-2024 .deadline"));
-          $("#scipy-2024 .timer-small").replaceWith($("#scipy-2024 .deadline"));
-          $("#scipy-2024 .calendar").remove();
+          $("#scipy-us-2024").addClass("pastconf");
+          $("#scipy-us-2024").appendTo($("#past_confs"));
+          $("#scipy-us-2024 .timer").replaceWith($("#scipy-us-2024 .deadline"));
+          $("#scipy-us-2024 .timer-small").replaceWith(
+            $("#scipy-us-2024 .deadline")
+          );
+          $("#scipy-us-2024 .calendar").remove();
         }
 
         $("#geopython-2024 .PY-tag").html(sub2name["PY"].toLocaleLowerCase());

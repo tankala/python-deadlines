@@ -4,11 +4,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
-    <title>DjangoDay Copenhagen</title>
+    <title>SciPy US</title>
     <!-- Begin Jekyll SEO tag v2.8.0 -->
-    <title>DjangoDay Copenhagen | Python Conference Deadlines</title>
+    <title>SciPy US | Python Conference Deadlines</title>
     <meta name="generator" content="Jekyll v3.9.3" />
-    <meta property="og:title" content="DjangoDay Copenhagen" />
+    <meta property="og:title" content="SciPy US" />
     <meta name="author" content="Jesper Dramsch" />
     <meta property="og:locale" content="en_US" />
     <meta
@@ -21,20 +21,20 @@
     />
     <link
       rel="canonical"
-      href="https://pythondeadlin.es/conference/djangoday-copenhagen-2023/"
+      href="https://pythondeadlin.es/conference/scipy-us-2024/"
     />
     <meta
       property="og:url"
-      content="https://pythondeadlin.es/conference/djangoday-copenhagen-2023/"
+      content="https://pythondeadlin.es/conference/scipy-us-2024/"
     />
     <meta property="og:site_name" content="Python Conference Deadlines" />
     <meta property="og:type" content="article" />
     <meta
       property="article:published_time"
-      content="2023-10-06T00:00:00+00:00"
+      content="2024-07-08T00:00:00+00:00"
     />
     <meta name="twitter:card" content="summary" />
-    <meta property="twitter:title" content="DjangoDay Copenhagen" />
+    <meta property="twitter:title" content="SciPy US" />
     <meta name="twitter:site" content="@jesperdramsch" />
     <meta name="twitter:creator" content="@jesperdramsch" />
     <script type="application/ld+json">
@@ -46,15 +46,15 @@
           "name": "Jesper Dramsch",
           "url": "https://dramsch.net"
         },
-        "dateModified": "2023-10-06T00:00:00+00:00",
-        "datePublished": "2023-10-06T00:00:00+00:00",
+        "dateModified": "2024-07-08T00:00:00+00:00",
+        "datePublished": "2024-07-08T00:00:00+00:00",
         "description": "Countdown for the Call for Participation of this conference including conference dates and details.",
-        "headline": "DjangoDay Copenhagen",
+        "headline": "SciPy US",
         "mainEntityOfPage": {
           "@type": "WebPage",
-          "@id": "https://pythondeadlin.es/conference/djangoday-copenhagen-2023/"
+          "@id": "https://pythondeadlin.es/conference/scipy-us-2024/"
         },
-        "url": "https://pythondeadlin.es/conference/djangoday-copenhagen-2023/"
+        "url": "https://pythondeadlin.es/conference/scipy-us-2024/"
       }
     </script>
     <!-- End Jekyll SEO tag -->
@@ -167,44 +167,15 @@
       src="/static/js/bootstrap-multiselect.min.js"
     ></script>
 
-    <link rel="stylesheet" type="text/css" href="/static/css/mastodon.css" />
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        fetch("https://fosstodon.org/@djangodenmark.rss")
-          .then(function (response) {
-            return response.text();
-          })
-          .then(function (xmlText) {
-            var parser = new DOMParser();
-            var xml = parser.parseFromString(xmlText, "text/xml");
-            var items = xml.querySelectorAll("item");
-            var feedContainer = document.getElementById("mastodon-feed");
-            var postLimit = 2; // Number of posts to display
+    <style>
+      #twitter-widget {
+        width: 100%;
+      }
 
-            for (var i = 0; i < postLimit && i < items.length; i++) {
-              var item = items[i];
-              var post = item.querySelector("description").textContent;
-              var link = item.querySelector("link").textContent;
-              var pubDate = item.querySelector("pubDate").textContent;
-
-              var feedItem = document.createElement("div");
-              feedItem.setAttribute("class", "timeline-item");
-              feedItem.innerHTML =
-                '<div class="timeline-content">' +
-                post +
-                '</div><a href="' +
-                link +
-                '">' +
-                pubDate +
-                " by DjangoDay Copenhagen</a>";
-              feedContainer.appendChild(feedItem);
-            }
-          })
-          .catch(function (error) {
-            console.log("Error fetching Mastodon RSS feed:", error);
-          });
-      });
-    </script>
+      .twitter-timeline {
+        width: 100% !important;
+      }
+    </style>
 
     <script type="text/javascript">
       /* global google */
@@ -445,16 +416,14 @@
         <div class="row">
           <div class="col-sm-12">
             <h1>
-              <span
-                id="conf-title-href"
-                href="/conference/djangoday-copenhagen-2023/"
-                >DjangoDay Copenhagen 2023</span
+              <span id="conf-title-href" href="/conference/scipy-us-2024/"
+                >SciPy US 2024</span
               >
               <span id="twitter-box"
                 ><a
                   href="https://twitter.com/share"
                   class="twitter-share-button"
-                  data-text="Countdown to the #DjangoDay Copenhagen2023 deadline!"
+                  data-text="Countdown to the #SciPy US2024 deadline!"
                   data-show-count="false"
                   style="font-size: 13px"
                   >Tweet</a
@@ -471,8 +440,8 @@
         <div class="row">
           <div class="col-sm-12" id="conf-subs">
             <span id="conf-subs" title="Conference subjects">
-              <span class="WEB-tag badge badge-light conf-sub conf-WEB">
-                Python for Web
+              <span class="SCIPY-tag badge badge-light conf-sub conf-SCIPY">
+                Scientific Python
               </span>
             </span>
           </div>
@@ -492,7 +461,7 @@
                 width="16"
                 height="16"
               />
-              <span id="conf-date">October 06, 2023</span>
+              <span id="conf-date">July 08 - 14, 2024</span>
             </div>
             <div>
               <img
@@ -505,8 +474,8 @@
               <a
                 id="conf-place"
                 target="_blank"
-                href="https://maps.google.com/?q=Copenhagen, Denmark"
-                >Copenhagen, Denmark</a
+                href="https://maps.google.com/?q=Tacoma, Washington, USA"
+                >Tacoma, Washington, USA</a
               >
             </div>
             <div>
@@ -520,8 +489,8 @@
               <a
                 id="conf-website"
                 target="_blank"
-                href="https://2023.djangoday.dk/"
-                >https://2023.djangoday.dk/</a
+                href="https://scipy2024.scipy.org"
+                >https://scipy2024.scipy.org</a
               >
             </div>
 
@@ -536,7 +505,7 @@
               <a
                 id="conf-cfp_link"
                 target="_blank"
-                href="https://2023.djangoday.dk/cfp/"
+                href="https://cfp.scipy.org/2024/cfp"
                 >Call for Participation</a
               >
             </div>
@@ -549,11 +518,8 @@
                 width="16"
                 height="16"
               />
-              <a
-                id="conf-series"
-                target="_blank"
-                href="/series/DjangoDay Copenhagen"
-                >All DjangoDay Copenhagen conferences</a
+              <a id="conf-series" target="_blank" href="/series/SciPy US"
+                >All SciPy US conferences</a
               >
             </div>
 
@@ -568,24 +534,8 @@
               <a
                 id="conf-twitter"
                 target="_blank"
-                href="https://twitter.com/djangodenmark"
-                >@djangodenmark</a
-              >
-            </div>
-
-            <div>
-              <img
-                src="/static/img/407-mastodon.svg"
-                class="badge-link"
-                alt="Mastodon icon"
-                width="16"
-                height="16"
-              />
-              <a
-                id="conf-mastodon"
-                target="_blank"
-                href="https://fosstodon.org/@djangodenmark"
-                >Mastodon</a
+                href="https://twitter.com/SciPyConf"
+                >@SciPyConf</a
               >
             </div>
 
@@ -607,30 +557,38 @@
           </div>
 
           <div class="col-12 col-md-6">
-            <!-- Mastodon timeline -->
-            <div class="meta">Mastodon Posts by DjangoDay Copenhagen:</div>
-            <div id="mastodon-feed"></div>
-            <a href="https://fosstodon.org/@djangodenmark"
-              >See all Mastodon posts for DjangoDay Copenhagen</a
-            >
+            <!-- Twitter timeline -->
+            <div id="twitter-widget">
+              <a
+                class="twitter-timeline"
+                href="https://twitter.com/SciPyConf"
+                data-tweet-limit="2"
+                >Tweets by SciPyConf</a
+              >
+              <script
+                async
+                src="https://platform.twitter.com/widgets.js"
+                charset="utf-8"
+              ></script>
+            </div>
           </div>
         </div>
         <div class="row">
           <div
-            id="9e4705e8-c33c-491f-8ac4-9cdffea629af"
+            id="55b29da8-ec92-4073-a0ee-c105106474d3"
             style="width: 100%; height: 400px"
             class="jekyll-map"
           ></div>
           <script type="text/javascript">
             jekyllMaps.register(
-              "9e4705e8-c33c-491f-8ac4-9cdffea629af",
+              "55b29da8-ec92-4073-a0ee-c105106474d3",
               [
                 {
-                  latitude: 55.6867243,
-                  longitude: 12.5700724,
-                  title: "DjangoDay Copenhagen",
+                  latitude: 47.2455013,
+                  longitude: -122.438329,
+                  title: "SciPy US",
                   icon: null,
-                  url: "/conference/djangoday-copenhagen-2023/",
+                  url: "/conference/scipy-us-2024/",
                   url_text: null,
                   image: "",
                   popup_html: "",
@@ -766,20 +724,20 @@
 
         // Use specified timezone for deadlines if available else use AoE timezone
 
-        var confDeadline = DateTime.fromSQL("2023-08-31 23:59:59", {
-          zone: "Europe/Copenhagen",
+        var confDeadline = DateTime.fromSQL("2024-02-27 23:59:00", {
+          zone: "America/Los_Angeles",
         });
 
         // check if timezone is valid otherwise replace by system timezone
         if (confDeadline.invalid) {
-          var confDeadline = DateTime.fromSQL("2023-08-31 23:59:59");
+          var confDeadline = DateTime.fromSQL("2024-02-27 23:59:00");
           console.log("Invalid timezone. Using system timezone instead.");
         }
 
         // add calendar
         var conferenceDeadlineCalendar = createCalendarFromObject({
           id: "-",
-          title: "DjangoDay Copenhagen 2023 deadline",
+          title: "SciPy US 2024 deadline",
           date: confDeadline.toJSDate(),
           duration: 60,
         });
@@ -796,7 +754,7 @@
 
         $(".deadline-time").html(
           confDeadline
-            .setZone("Europe/Copenhagen")
+            .setZone("America/Los_Angeles")
             .toLocaleString(DateTime.DATETIME_HUGE_WITH_SECONDS)
         );
 

@@ -9,7 +9,7 @@
 		<title>Python Conference Deadlines</title>
 		<description>Countdowns to your favourite Python conferences with calls for participation and resources to submit awesome talks!</description>
 		<link>https://pythondeadlin.es/feed.xml</link>
-		<lastBuildDate>Mon, 26 Feb 2024 15:21:02 +0000</lastBuildDate>
+		<lastBuildDate>Mon, 26 Feb 2024 17:09:29 +0000</lastBuildDate>
 		
 		
 			<item>
@@ -101,10 +101,10 @@
 		
 		
 			<item>
-				<title>SciPy 2024 Conference Deadline</title>
+				<title>SciPy US 2024 Conference Deadline</title>
 				<description>Conference in Tacoma, Washington, USA on July 08 - 14, 2024. CfP: 2024-02-27 23:59:00 AoE.&lt;br /&gt;Find them here: @SciPyConf </description>
 				<pubDate>Tue, 27 Feb 2024 23:59:00 +0000</pubDate>
-				<link>https://pythondeadlin.es/conference/scipy-2024/</link>
+				<link>https://pythondeadlin.es/conference/scipy-us-2024/</link>
 				<guid isPermaLink="false"></guid>
 				<category>SCIPY</category>
 			</item>
