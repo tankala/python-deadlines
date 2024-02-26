@@ -70,7 +70,7 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/js-year-calendar.min.css?t=1708986070"
+      href="/static/css/js-year-calendar.min.css?t=1708987024"
       media="screen,projection"
     />
 
@@ -82,13 +82,13 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/deadlines.css?t=1708986070"
+      href="/static/css/deadlines.css?t=1708987024"
       media="screen,projection"
     />
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/calendar.css?t=1708986070"
+      href="/static/css/calendar.css?t=1708987024"
       media="screen,projection"
     />
 
@@ -392,6 +392,11 @@
             <li>
               <a href="/map" class="nav-link" style="border-bottom: none"
                 >Map</a
+              >
+            </li>
+            <li>
+              <a href="/series" class="nav-link" style="border-bottom: none"
+                >Series</a
               >
             </li>
             <li>
@@ -703,13 +708,13 @@
 
         <div class="row">
           <div
-            id="0b9368fa-c847-46a3-8f58-bc6abff142a0"
+            id="f61ff4b5-f4ff-4b60-9728-6b98366e178a"
             style="width: 100%; height: 400px"
             class="jekyll-map"
           ></div>
           <script type="text/javascript">
             jekyllMaps.register(
-              "0b9368fa-c847-46a3-8f58-bc6abff142a0",
+              "f61ff4b5-f4ff-4b60-9728-6b98366e178a",
               [
                 {
                   latitude: 14.5948914,
@@ -773,347 +778,267 @@
       <br /><br />
     </div>
     <script type="text/javascript" charset="utf-8">
-      $(function () {
-        var DateTime = luxon.DateTime;
-        var today = DateTime.now();
+          $(function () {
 
-        // Make sure this is >= no. of subs
-        // Currently not used
-        var colors = [
-          "#341f97",
-          "#ee5253",
-          "#2e86de",
-          "#ff9f43",
-          "#10ac84",
-          "#222f3e",
-        ];
+            var DateTime = luxon.DateTime;
+            var today = DateTime.now();
 
-        var subs = [];
-        var _all_subs = [];
-        // Get all subs
-        var conf_type_data = [
-          { name: "General Python", sub: "PY", color: "#4B8BBE" },
-          { name: "Scientific Python", sub: "SCIPY", color: "#70163C" },
-          { name: "Python for Data", sub: "PYDATA", color: "#849324" },
-          { name: "Python for Web", sub: "WEB", color: "#0D0A0B" },
-        ];
-        var sub2name = {};
-        var name2sub = {};
-        for (var i = 0; i < conf_type_data.length; i++) {
-          _all_subs[i] = conf_type_data[i]["sub"];
-          sub2name[conf_type_data[i]["sub"]] = conf_type_data[i]["name"];
-          name2sub[conf_type_data[i]["name"]] = conf_type_data[i]["sub"];
-        }
-        const all_subs = _all_subs;
+            // Make sure this is >= no. of subs
+            // Currently not used
+            var colors = ['#341f97', '#ee5253', '#2e86de',
+              '#ff9f43', '#10ac84', '#222f3e']
 
-        function update_filtering(data) {
-          var page_url = window.location.pathname;
-          store.set("pythondeadlin.es-subs", data.subs);
 
-          $(".confItem").hide();
 
-          // Loop through selected values in data.subs
-          for (const s of data.subs) {
-            // Show elements with class .s-conf (where s is the selected value)
-            $("." + s + "-conf").show();
-          }
+      var subs = [];
+      var _all_subs = [];
+      // Get all subs
+      var conf_type_data = [{"name":"General Python","sub":"PY","color":"#4B8BBE"},{"name":"Scientific Python","sub":"SCIPY","color":"#70163C"},{"name":"Python for Data","sub":"PYDATA","color":"#849324"},{"name":"Python for Web","sub":"WEB","color":"#0D0A0B"}];
+      var sub2name = {}; var name2sub = {};
+      for (var i = 0; i < conf_type_data.length; i++) {
+          _all_subs[i] = conf_type_data[i]['sub'];
+          sub2name[conf_type_data[i]['sub']] = conf_type_data[i]['name'];
+          name2sub[conf_type_data[i]['name']] = conf_type_data[i]['sub'];
+      }
+      const all_subs = _all_subs;
 
-          if (
-            data.subs.length === 0 ||
-            data.subs.length == data.all_subs.length
-          ) {
-            window.history.pushState("", "", page_url);
-          } else {
-            // Join the selected values into a query parameter
-            window.history.pushState(
-              "",
-              "",
-              page_url + "?sub=" + data.subs.join()
-            );
-          }
-        }
 
-        function createCalendarFromObject(data) {
-          return createCalendar({
-            options: {
-              class: "calendar-obj",
+            function update_filtering(data) {
+      	var page_url = window.location.pathname;
+      	store.set('pythondeadlin.es-subs', data.subs);
 
-              // You can pass an ID. If you don't, one will be generated for you
-              id: data.id,
-            },
-            data: {
-              // Event title
-              title: data.title,
+      	$('.confItem').hide();
 
-              // Event start date
-              start: data.date,
+      	// Loop through selected values in data.subs
+      	for (const s of data.subs) {
+      		// Show elements with class .s-conf (where s is the selected value)
+      		$('.' + s + '-conf').show();
+      	}
 
-              // Event duration
-              duration: 60,
-            },
-          });
-        }
-
-        // Multi-select handler
-        $("#subject-select").multiselect({
-          includeSelectAllOption: true,
-          numberDisplayed: 5,
-          onChange: function (option, checked, select) {
-            var csub = $(option).val();
-            if (checked == true) {
-              if (subs.indexOf(csub) < 0) subs.push(csub);
-            } else {
-              var idx = subs.indexOf(csub);
-              if (idx >= 0) subs.splice(idx, 1);
-              // In case a conf with multiple types (including this type) is wrongly hid, show all confs with at least one checked type.
-              for (var i = 0; i < subs.length; i++) {
-                // $('.' + subs[i] + '-conf').show();
-              }
-            }
-            update_filtering({ subs: subs, all_subs: all_subs });
-          },
-          onSelectAll: function (options) {
-            subs = all_subs;
-            update_filtering({ subs: subs, all_subs: all_subs });
-          },
-          onDeselectAll: function (options) {
-            subs = [];
-            update_filtering({ subs: subs, all_subs: all_subs });
-          },
-          buttonText: function (options, select) {
-            if (options.length === 0) {
-              return "None selected";
-            } else {
-              var labels = [];
-              options.each(function () {
-                if ($(this).attr("value") !== undefined) {
-                  labels.push($(this).attr("value"));
-                } else {
-                  labels.push($(this).html());
-                }
-              });
-              return labels.join(", ") + "";
-            }
-          },
-          buttonTitle: function (options, select) {
-            return "";
-          },
-          optionClass: function (element) {
-            return $(element).val() + "-select";
-          },
-        });
-
-        // Set time zone to local timezone on web copy
-        $(".local-timezone").text(today.toFormat("z"));
-
-        $("#pycon-philippines-2024 .PY-tag").html(
-          sub2name["PY"].toLocaleLowerCase()
-        );
-
-        // Use specified timezone for deadlines if available else use AoE timezone
-
-        var cfpDate = DateTime.fromSQL("2023-12-31 23:59:00", {
-          zone: "Asia/Manila",
-        });
-        var confDate = DateTime.fromSQL("2024-02-25", { zone: "Asia/Manila" });
-
-        // check if timezone is valid otherwise replace by system timezone
-        if (cfpDate.invalid || confDate.invalid) {
-          var cfpDate = DateTime.fromSQL("2023-12-31 23:59:00");
-          var confDate = DateTime.fromSQL("2024-02-25");
-          console.log(
-            "Invalid timezone in pycon-philippines-2024. Using system timezone instead."
-          );
-        }
-
-        // render countdown timer
-        $("#pycon-philippines-2024 .timer").countdown(
-          cfpDate.toJSDate(),
-          function (event) {
-            $(this).html(event.strftime("%D days %Hh %Mm %Ss"));
-          }
-        );
-
-        // render countdown timer small
-        $("#pycon-philippines-2024 .timer-small").countdown(
-          cfpDate.toJSDate(),
-          function (event) {
-            $(this).html(event.strftime("%Dd %H:%M:%S"));
-          }
-        );
-
-        // deadline in local timezone
-        $("#pycon-philippines-2024 .deadline-time").html(
-          cfpDate.setZone("system").toLocaleString(DateTime.DATE_HUGE)
-        );
-
-        // add calendar button
-        try {
-          var myCalendar = createCalendarFromObject({
-            id: "pycon-philippines-2024",
-            title: "PyCon Philippines 2024 deadline",
-            date: cfpDate.toJSDate(),
-            duration: 60,
-          });
-          document
-            .querySelector("#pycon-philippines-2024 .calendar")
-            .appendChild(myCalendar);
-        } catch (err) {
-          document
-            .querySelector("#pycon-philippines-2024 .calendar")
-            .appendChild("<p>Calendar not available.</p>");
-          console.log("Error in cfp date.");
-        }
-
-        // check if date has passed, add 'past' class to it
-        cfpDiff = cfpDate.diffNow("seconds");
-        confDiff = confDate.diffNow("seconds");
-
-        $("#pycon-philippines-2024").attr("cfpDiff", cfpDiff.toMillis());
-        $("#pycon-philippines-2024").attr("confDiff", confDiff.toMillis());
-
-        if (cfpDiff < 0) {
-          $("#pycon-philippines-2024").addClass("pastcfp");
-          $("#pycon-philippines-2024 .timer").replaceWith(
-            $("#pycon-philippines-2024 .deadline")
-          );
-          $("#pycon-philippines-2024 .timer-small").replaceWith(
-            $("#pycon-philippines-2024 .deadline")
-          );
-          $("#pycon-philippines-2024 .calendar").remove();
-        }
-
-        if (confDiff < 0) {
-          $("#pycon-philippines-2024").addClass("pastconf");
-          $("#pycon-philippines-2024 .timer").replaceWith(
-            $("#pycon-philippines-2024 .deadline")
-          );
-          $("#pycon-philippines-2024 .timer-small").replaceWith(
-            $("#pycon-philippines-2024 .deadline")
-          );
-          $("#pycon-philippines-2024 .calendar").remove();
-        }
-
-        $("#pycon-philippines-2023 .PY-tag").html(
-          sub2name["PY"].toLocaleLowerCase()
-        );
-
-        // Use specified timezone for deadlines if available else use AoE timezone
-
-        var cfpDate = DateTime.fromSQL("2022-12-23 23:59:00", {
-          zone: "Asia/Manila",
-        });
-        var confDate = DateTime.fromSQL("2023-02-25", { zone: "Asia/Manila" });
-
-        // check if timezone is valid otherwise replace by system timezone
-        if (cfpDate.invalid || confDate.invalid) {
-          var cfpDate = DateTime.fromSQL("2022-12-23 23:59:00");
-          var confDate = DateTime.fromSQL("2023-02-25");
-          console.log(
-            "Invalid timezone in pycon-philippines-2023. Using system timezone instead."
-          );
-        }
-
-        // render countdown timer
-        $("#pycon-philippines-2023 .timer").countdown(
-          cfpDate.toJSDate(),
-          function (event) {
-            $(this).html(event.strftime("%D days %Hh %Mm %Ss"));
-          }
-        );
-
-        // render countdown timer small
-        $("#pycon-philippines-2023 .timer-small").countdown(
-          cfpDate.toJSDate(),
-          function (event) {
-            $(this).html(event.strftime("%Dd %H:%M:%S"));
-          }
-        );
-
-        // deadline in local timezone
-        $("#pycon-philippines-2023 .deadline-time").html(
-          cfpDate.setZone("system").toLocaleString(DateTime.DATE_HUGE)
-        );
-
-        // add calendar button
-        try {
-          var myCalendar = createCalendarFromObject({
-            id: "pycon-philippines-2023",
-            title: "PyCon Philippines 2023 deadline",
-            date: cfpDate.toJSDate(),
-            duration: 60,
-          });
-          document
-            .querySelector("#pycon-philippines-2023 .calendar")
-            .appendChild(myCalendar);
-        } catch (err) {
-          document
-            .querySelector("#pycon-philippines-2023 .calendar")
-            .appendChild("<p>Calendar not available.</p>");
-          console.log("Error in cfp date.");
-        }
-
-        // check if date has passed, add 'past' class to it
-        cfpDiff = cfpDate.diffNow("seconds");
-        confDiff = confDate.diffNow("seconds");
-
-        $("#pycon-philippines-2023").attr("cfpDiff", cfpDiff.toMillis());
-        $("#pycon-philippines-2023").attr("confDiff", confDiff.toMillis());
-
-        if (cfpDiff < 0) {
-          $("#pycon-philippines-2023").addClass("pastcfp");
-          $("#pycon-philippines-2023 .timer").replaceWith(
-            $("#pycon-philippines-2023 .deadline")
-          );
-          $("#pycon-philippines-2023 .timer-small").replaceWith(
-            $("#pycon-philippines-2023 .deadline")
-          );
-          $("#pycon-philippines-2023 .calendar").remove();
-        }
-
-        if (confDiff < 0) {
-          $("#pycon-philippines-2023").addClass("pastconf");
-          $("#pycon-philippines-2023 .timer").replaceWith(
-            $("#pycon-philippines-2023 .deadline")
-          );
-          $("#pycon-philippines-2023 .timer-small").replaceWith(
-            $("#pycon-philippines-2023 .deadline")
-          );
-          $("#pycon-philippines-2023 .calendar").remove();
-        }
-
-        // Sort coming_confs and past_confs
-        $("#all_confs .ConfItem")
-          .sort(function (a, b) {
-            return $(a).attr("cfpDiff") - $(b).attr("cfpDiff");
-          })
-          .appendTo($("#coming_confs"));
-
-        // Get subjects from URL/Cache
-        var url = new URL(window.location);
-        subs = url.searchParams.get("sub");
-        if (subs == undefined) {
-          subs = store.get("pythondeadlin.es-subs");
+        if (data.subs.length === 0 || data.subs.length == data.all_subs.length) {
+      		window.history.pushState('', '', page_url);
         } else {
-          subs = subs.toUpperCase().split(",");
+      		// Join the selected values into a query parameter
+      		window.history.pushState('', '', page_url + '?sub=' + data.subs.join());
         }
+      }
 
-        // Apply selections
-        if (subs == undefined) {
-          subs = all_subs;
-        }
-        $("#subject-select").multiselect("select", subs);
-        update_filtering({ subs: subs, all_subs: all_subs });
+      function createCalendarFromObject(data) {
+        return createCalendar({
+          options: {
+            class: "calendar-obj",
 
-        // Event handler on sub badge click
-        $(".conf-sub").click(function (e) {
-          var csub = $(this).data("sub");
-          subs = [csub];
-          $("#subject-select").multiselect("deselect", all_subs);
-          $("#subject-select").multiselect("select", subs);
-          update_filtering({ subs: subs, all_subs: all_subs });
+            // You can pass an ID. If you don't, one will be generated for you
+            id: data.id,
+          },
+          data: {
+            // Event title
+            title: data.title,
+
+            // Event start date
+            start: data.date,
+
+            // Event duration
+            duration: 60,
+          },
         });
+      }
+
+            // Multi-select handler
+      $("#subject-select").multiselect({
+        includeSelectAllOption: true,
+        numberDisplayed: 5,
+        onChange: function (option, checked, select) {
+          var csub = $(option).val();
+          if (checked == true) {
+            if (subs.indexOf(csub) < 0) subs.push(csub);
+          } else {
+            var idx = subs.indexOf(csub);
+            if (idx >= 0) subs.splice(idx, 1);
+            // In case a conf with multiple types (including this type) is wrongly hid, show all confs with at least one checked type.
+            for (var i = 0; i < subs.length; i++) {
+              // $('.' + subs[i] + '-conf').show();
+            }
+          }
+          update_filtering({ subs: subs, all_subs: all_subs });
+        },
+        onSelectAll: function (options) {
+          subs = all_subs;
+          update_filtering({ subs: subs, all_subs: all_subs });
+        },
+        onDeselectAll: function (options) {
+          subs = [];
+          update_filtering({ subs: subs, all_subs: all_subs });
+        },
+        buttonText: function (options, select) {
+          if (options.length === 0) {
+            return "None selected";
+          } else {
+            var labels = [];
+            options.each(function () {
+              if ($(this).attr("value") !== undefined) {
+                labels.push($(this).attr("value"));
+              } else {
+                labels.push($(this).html());
+              }
+            });
+            return labels.join(", ") + "";
+          }
+        },
+        buttonTitle: function (options, select) {
+          return "";
+        },
+        optionClass: function(element) {
+          return $(element).val() + '-select';
+        },
       });
+
+
+            // Set time zone to local timezone on web copy
+            $('.local-timezone').text(today.toFormat('z'));
+
+
+
+
+                $('#pycon-philippines-2024 .PY-tag').html(sub2name["PY"].toLocaleLowerCase());
+
+
+
+                // Use specified timezone for deadlines if available else use AoE timezone
+
+                  var cfpDate = DateTime.fromSQL("2023-12-31 23:59:00", { zone: "Asia/Manila" });
+                  var confDate = DateTime.fromSQL("2024-02-25", { zone: "Asia/Manila" });
+
+
+                // check if timezone is valid otherwise replace by system timezone
+                if (cfpDate.invalid || confDate.invalid) {
+                  var cfpDate = DateTime.fromSQL("2023-12-31 23:59:00");
+                  var confDate = DateTime.fromSQL("2024-02-25");
+                  console.log("Invalid timezone in pycon-philippines-2024. Using system timezone instead.");
+                }
+
+                // render countdown timer
+                $('#pycon-philippines-2024 .timer').countdown(cfpDate.toJSDate(), function (event) {
+                  $(this).html(event.strftime('%D days %Hh %Mm %Ss'));
+                });
+
+                // render countdown timer small
+                $('#pycon-philippines-2024 .timer-small').countdown(cfpDate.toJSDate(), function (event) {
+                  $(this).html(event.strftime('%Dd %H:%M:%S'));
+                });
+
+                // deadline in local timezone
+                $('#pycon-philippines-2024 .deadline-time').html(cfpDate.setZone('system').toLocaleString(DateTime.DATE_HUGE));
+
+                // add calendar button
+                try {
+                  var myCalendar = createCalendarFromObject({
+                    id: 'pycon-philippines-2024',
+                    title: 'PyCon Philippines 2024 deadline',
+                    date: cfpDate.toJSDate(),
+                    duration: 60,
+                  });
+                  document.querySelector('#pycon-philippines-2024 .calendar').appendChild(myCalendar);
+                } catch (err) {
+                  document.querySelector('#pycon-philippines-2024 .calendar').appendChild("<p>Calendar not available.</p>");
+                  console.log("Error in cfp date.");
+                }
+
+                // check if date has passed, add 'past' class to it
+                cfpDiff = cfpDate.diffNow("seconds");
+                confDiff = confDate.diffNow("seconds");
+
+                $('#pycon-philippines-2024').attr("cfpDiff", cfpDiff.toMillis());
+                $('#pycon-philippines-2024').attr("confDiff", confDiff.toMillis());
+
+                if (cfpDiff < 0) {
+                  $('#pycon-philippines-2024').addClass('pastcfp');
+                  $('#pycon-philippines-2024 .timer').replaceWith($('#pycon-philippines-2024 .deadline'));
+                  $('#pycon-philippines-2024 .timer-small').replaceWith($('#pycon-philippines-2024 .deadline'));
+                  $('#pycon-philippines-2024 .calendar').remove();
+                }
+
+                if (confDiff < 0) {
+                  $('#pycon-philippines-2024').addClass('pastconf');
+                  $('#pycon-philippines-2024 .timer').replaceWith($('#pycon-philippines-2024 .deadline'));
+                  $('#pycon-philippines-2024 .timer-small').replaceWith($('#pycon-philippines-2024 .deadline'));
+                  $('#pycon-philippines-2024 .calendar').remove();
+                }
+
+
+
+
+                $('#pycon-philippines-2023 .PY-tag').html(sub2name["PY"].toLocaleLowerCase());
+
+
+
+                // Use specified timezone for deadlines if available else use AoE timezone
+
+                  var cfpDate = DateTime.fromSQL("2022-12-23 23:59:00", { zone: "Asia/Manila" });
+                  var confDate = DateTime.fromSQL("2023-02-25", { zone: "Asia/Manila" });
+
+
+                // check if timezone is valid otherwise replace by system timezone
+                if (cfpDate.invalid || confDate.invalid) {
+                  var cfpDate = DateTime.fromSQL("2022-12-23 23:59:00");
+                  var confDate = DateTime.fromSQL("2023-02-25");
+                  console.log("Invalid timezone in pycon-philippines-2023. Using system timezone instead.");
+                }
+
+                // render countdown timer
+                $('#pycon-philippines-2023 .timer').countdown(cfpDate.toJSDate(), function (event) {
+                  $(this).html(event.strftime('%D days %Hh %Mm %Ss'));
+                });
+
+                // render countdown timer small
+                $('#pycon-philippines-2023 .timer-small').countdown(cfpDate.toJSDate(), function (event) {
+                  $(this).html(event.strftime('%Dd %H:%M:%S'));
+                });
+
+                // deadline in local timezone
+                $('#pycon-philippines-2023 .deadline-time').html(cfpDate.setZone('system').toLocaleString(DateTime.DATE_HUGE));
+
+                // add calendar button
+                try {
+                  var myCalendar = createCalendarFromObject({
+                    id: 'pycon-philippines-2023',
+                    title: 'PyCon Philippines 2023 deadline',
+                    date: cfpDate.toJSDate(),
+                    duration: 60,
+                  });
+                  document.querySelector('#pycon-philippines-2023 .calendar').appendChild(myCalendar);
+                } catch (err) {
+                  document.querySelector('#pycon-philippines-2023 .calendar').appendChild("<p>Calendar not available.</p>");
+                  console.log("Error in cfp date.");
+                }
+
+                // check if date has passed, add 'past' class to it
+                cfpDiff = cfpDate.diffNow("seconds");
+                confDiff = confDate.diffNow("seconds");
+
+                $('#pycon-philippines-2023').attr("cfpDiff", cfpDiff.toMillis());
+                $('#pycon-philippines-2023').attr("confDiff", confDiff.toMillis());
+
+                if (cfpDiff < 0) {
+                  $('#pycon-philippines-2023').addClass('pastcfp');
+                  $('#pycon-philippines-2023 .timer').replaceWith($('#pycon-philippines-2023 .deadline'));
+                  $('#pycon-philippines-2023 .timer-small').replaceWith($('#pycon-philippines-2023 .deadline'));
+                  $('#pycon-philippines-2023 .calendar').remove();
+                }
+
+                if (confDiff < 0) {
+                  $('#pycon-philippines-2023').addClass('pastconf');
+                  $('#pycon-philippines-2023 .timer').replaceWith($('#pycon-philippines-2023 .deadline'));
+                  $('#pycon-philippines-2023 .timer-small').replaceWith($('#pycon-philippines-2023 .deadline'));
+                  $('#pycon-philippines-2023 .calendar').remove();
+                }
+
+
+
+            // Sort coming_confs and past_confs
+            $("#all_confs .ConfItem").sort(function (a, b) {
+              return $(a).attr('cfpDiff') - $(b).attr('cfpDiff');
+            }).appendTo($("#coming_confs"));
     </script>
     <script async defer>
       // Load maps only when DOM is loaded
