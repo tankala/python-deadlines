@@ -56,7 +56,7 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/js-year-calendar.min.css?t=1708977413"
+      href="/static/css/js-year-calendar.min.css?t=1708977599"
       media="screen,projection"
     />
 
@@ -68,13 +68,13 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/deadlines.css?t=1708977413"
+      href="/static/css/deadlines.css?t=1708977599"
       media="screen,projection"
     />
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/calendar.css?t=1708977413"
+      href="/static/css/calendar.css?t=1708977599"
       media="screen,projection"
     />
 
@@ -5033,16 +5033,16 @@
             <hr />
           </div>
 
-          <div id="scipy-2023" class="ConfItem SCIPY-conf">
+          <div id="scipy-us-2023" class="ConfItem SCIPY-conf">
             <div class="row conf-row">
               <div class="col-6">
                 <span class="conf-title">
-                  <a title="Deadline Details" href="/conference/scipy-2023/"
-                    >SciPy 2023</a
+                  <a title="Deadline Details" href="/conference/scipy-us-2023/"
+                    >SciPy US 2023</a
                   >
                 </span>
                 <span class="conf-title-small">
-                  <a title="Deadline Details" href="#">SciPy '23</a>
+                  <a title="Deadline Details" href="#">SciPy US '23</a>
                 </span>
                 <span class="conf-title-icon">
                   <a
@@ -10729,7 +10729,9 @@
           cfpDate.setZone("system").toLocaleString(DateTime.DATE_HUGE)
         );
 
-        $("#scipy-2023 .SCIPY-tag").html(sub2name["SCIPY"].toLocaleLowerCase());
+        $("#scipy-us-2023 .SCIPY-tag").html(
+          sub2name["SCIPY"].toLocaleLowerCase()
+        );
 
         // Use specified timezone for deadlines if available else use AoE timezone
 
@@ -10745,12 +10747,12 @@
           var cfpDate = DateTime.fromSQL("2023-03-01 23:59:00");
           var confDate = DateTime.fromSQL("2023-07-10");
           console.log(
-            "Invalid timezone in scipy-2023. Using system timezone instead."
+            "Invalid timezone in scipy-us-2023. Using system timezone instead."
           );
         }
 
         // deadline in local timezone
-        $("#scipy-2023 .deadline-time").html(
+        $("#scipy-us-2023 .deadline-time").html(
           cfpDate.setZone("system").toLocaleString(DateTime.DATE_HUGE)
         );
 
