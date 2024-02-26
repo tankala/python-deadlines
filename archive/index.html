@@ -56,7 +56,7 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/js-year-calendar.min.css?t=1708967369"
+      href="/static/css/js-year-calendar.min.css?t=1708971255"
       media="screen,projection"
     />
 
@@ -68,13 +68,13 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/deadlines.css?t=1708967369"
+      href="/static/css/deadlines.css?t=1708971255"
       media="screen,projection"
     />
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/calendar.css?t=1708967369"
+      href="/static/css/calendar.css?t=1708971255"
       media="screen,projection"
     />
 
@@ -7686,11 +7686,11 @@
               <div class="col-6">
                 <span class="conf-title">
                   <a title="Deadline Details" href="/conference/euroscipy-2022/"
-                    >euroSciPy 2022</a
+                    >EuroSciPy 2022</a
                   >
                 </span>
                 <span class="conf-title-small">
-                  <a title="Deadline Details" href="#">euroSciPy '22</a>
+                  <a title="Deadline Details" href="#">EuroSciPy '22</a>
                 </span>
                 <span class="conf-title-icon">
                   <a
@@ -8966,18 +8966,18 @@
             <hr />
           </div>
 
-          <div id="kiwi-pycon-xi-2022" class="ConfItem PY-conf">
+          <div id="kiwi-pycon-2022" class="ConfItem PY-conf">
             <div class="row conf-row">
               <div class="col-6">
                 <span class="conf-title">
                   <a
                     title="Deadline Details"
-                    href="/conference/kiwi-pycon-xi-2022/"
-                    >Kiwi PyCon XI 2022</a
+                    href="/conference/kiwi-pycon-2022/"
+                    >Kiwi PyCon 2022</a
                   >
                 </span>
                 <span class="conf-title-small">
-                  <a title="Deadline Details" href="#">Kiwi PyCon XI '22</a>
+                  <a title="Deadline Details" href="#">Kiwi PyCon '22</a>
                 </span>
                 <span class="conf-title-icon">
                   <a
@@ -9168,11 +9168,11 @@
               <div class="col-6">
                 <span class="conf-title">
                   <a title="Deadline Details" href="/conference/euroscipy-2019/"
-                    >euroSciPy 2019</a
+                    >EuroSciPy 2019</a
                   >
                 </span>
                 <span class="conf-title-small">
-                  <a title="Deadline Details" href="#">euroSciPy '19</a>
+                  <a title="Deadline Details" href="#">EuroSciPy '19</a>
                 </span>
                 <span class="conf-title-icon">
                   <a
@@ -12076,9 +12076,7 @@
           cfpDate.setZone("system").toLocaleString(DateTime.DATE_HUGE)
         );
 
-        $("#kiwi-pycon-xi-2022 .PY-tag").html(
-          sub2name["PY"].toLocaleLowerCase()
-        );
+        $("#kiwi-pycon-2022 .PY-tag").html(sub2name["PY"].toLocaleLowerCase());
 
         // Use specified timezone for deadlines if available else use AoE timezone
 
@@ -12094,12 +12092,12 @@
           var cfpDate = DateTime.fromSQL("2021-11-30 23:59:00");
           var confDate = DateTime.fromSQL("2022-08-19");
           console.log(
-            "Invalid timezone in kiwi-pycon-xi-2022. Using system timezone instead."
+            "Invalid timezone in kiwi-pycon-2022. Using system timezone instead."
           );
         }
 
         // deadline in local timezone
-        $("#kiwi-pycon-xi-2022 .deadline-time").html(
+        $("#kiwi-pycon-2022 .deadline-time").html(
           cfpDate.setZone("system").toLocaleString(DateTime.DATE_HUGE)
         );
 

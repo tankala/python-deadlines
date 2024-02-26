@@ -9,13 +9,13 @@
 		<title>Newsfeed for Python Events Calendar from Python Conference Deadlines</title>
 		<description>Countdowns to your favourite Python conferences with calls for participation and resources to submit awesome talks!</description>
 		<link>https://pythondeadlin.es/feed.xml</link>
-		<lastBuildDate>Mon, 26 Feb 2024 17:09:29 +0000</lastBuildDate>
+		<lastBuildDate>Mon, 26 Feb 2024 18:14:15 +0000</lastBuildDate>
 		
 			<item>
-				<title>Kiwi PyCon XIII 2024 Conference Deadline</title>
-				<description><![CDATA[* name of the event: Kiwi PyCon XIII 2024<br/>* type of event: Conference <br/>* focus on Python: Yes<br/>* approximate number of attendees: Unknown<br/>* location (incl. country): Te Whanganui-a-Tara Wellington, New Zealand<br/>* dates/times/recurrence (incl. time zone): August 23 - 25, 2024<br/>* HTML link : <a href="https://kiwipycon.nz/">Kiwi PyCon XIII 2024</a>]]></description>
+				<title>Kiwi PyCon 2024 Conference Deadline</title>
+				<description><![CDATA[* name of the event: Kiwi PyCon 2024<br/>* type of event: Conference <br/>* focus on Python: Yes<br/>* approximate number of attendees: Unknown<br/>* location (incl. country): Te Whanganui-a-Tara Wellington, New Zealand<br/>* dates/times/recurrence (incl. time zone): August 23 - 25, 2024<br/>* HTML link : <a href="https://kiwipycon.nz/">Kiwi PyCon 2024</a>]]></description>
 				<pubDate>Fri, 23 Aug 2024 00:00:00 +0000</pubDate>
-				<link>https://pythondeadlin.es/conference/kiwi-pycon-xiii-2024/</link>
+				<link>https://pythondeadlin.es/conference/kiwi-pycon-2024/</link>
 				<guid isPermaLink="false"></guid>
 				<category>PY</category>
 			</item>

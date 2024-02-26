@@ -63,7 +63,7 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/js-year-calendar.min.css?t=1708967369"
+      href="/static/css/js-year-calendar.min.css?t=1708971255"
       media="screen,projection"
     />
 
@@ -75,13 +75,13 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/deadlines.css?t=1708967369"
+      href="/static/css/deadlines.css?t=1708971255"
       media="screen,projection"
     />
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/calendar.css?t=1708967369"
+      href="/static/css/calendar.css?t=1708971255"
       media="screen,projection"
     />
 
@@ -306,21 +306,21 @@
       </div>
       <div id="confs">
         <div id="coming_confs">
-          <div id="kiwi-pycon-xiii-2024" class="ConfItem PY-conf">
+          <div id="kiwi-pycon-2024" class="ConfItem PY-conf">
             <div class="row conf-row">
               <div class="col-6">
                 <span class="conf-title">
                   <a
                     title="Deadline Details"
-                    href="/conference/kiwi-pycon-xiii-2024/"
-                    >Kiwi PyCon XIII 2024</a
+                    href="/conference/kiwi-pycon-2024/"
+                    >Kiwi PyCon 2024</a
                   >
                 </span>
                 <span class="conf-title-small">
                   <a
                     title="Deadline Details"
-                    href="/conference/kiwi-pycon-xiii-2024/"
-                    >Kiwi PyCon XIII '24</a
+                    href="/conference/kiwi-pycon-2024/"
+                    >Kiwi PyCon '24</a
                   >
                 </span>
                 <span class="conf-title-icon">
@@ -340,13 +340,13 @@
 
                 <span class="conf-title-icon">
                   <a
-                    title="Call for Participation for Kiwi PyCon XIII"
+                    title="Call for Participation for Kiwi PyCon"
                     href="https://kiwipycon.nz/present/submitting-a-talk"
                     target="_blank"
                     ><img
                       src="/static/img/035-file-text.svg"
                       class="badge-link"
-                      alt="Link to Call for Participation for Kiwi PyCon XIII"
+                      alt="Link to Call for Participation for Kiwi PyCon"
                       width="16"
                       height="16"
                   /></a>
@@ -355,13 +355,13 @@
 
                 <span class="conf-title-icon">
                   <a
-                    title="Financial Aid from Kiwi PyCon XIII"
+                    title="Financial Aid from Kiwi PyCon"
                     href="https://kiwipycon.nz/attend/financial-aid"
                     target="_blank"
                     ><img
                       src="/static/img/066-lifebuoy.svg"
                       class="badge-link"
-                      alt="Link to Sponsorship page of Kiwi PyCon XIII"
+                      alt="Link to Sponsorship page of Kiwi PyCon"
                       width="16"
                       height="16"
                   /></a>
@@ -370,7 +370,7 @@
 
                 <span class="conf-title-icon">
                   <a
-                    title="Mastodon for Kiwi PyCon XIII"
+                    title="Mastodon for Kiwi PyCon"
                     href="https://mastodon.social/@kiwipycon"
                     target="_blank"
                     ><img
@@ -2833,9 +2833,7 @@
         // Set time zone to local timezone on web copy
         $(".local-timezone").text(today.toFormat("z"));
 
-        $("#kiwi-pycon-xiii-2024 .PY-tag").html(
-          sub2name["PY"].toLocaleLowerCase()
-        );
+        $("#kiwi-pycon-2024 .PY-tag").html(sub2name["PY"].toLocaleLowerCase());
 
         // Use specified timezone for deadlines if available else use AoE timezone
 
@@ -2851,20 +2849,19 @@
           var cfpDate = DateTime.fromSQL("2024-05-23 23:59:00");
           var confDate = DateTime.fromSQL("2024-08-23");
           console.log(
-            "Invalid timezone in kiwi-pycon-xiii-2024. Using system timezone instead."
+            "Invalid timezone in kiwi-pycon-2024. Using system timezone instead."
           );
         }
 
         // render countdown timer
-        $("#kiwi-pycon-xiii-2024 .timer").countdown(
-          cfpDate.toJSDate(),
-          function (event) {
-            $(this).html(event.strftime("%D days %Hh %Mm %Ss"));
-          }
-        );
+        $("#kiwi-pycon-2024 .timer").countdown(cfpDate.toJSDate(), function (
+          event
+        ) {
+          $(this).html(event.strftime("%D days %Hh %Mm %Ss"));
+        });
 
         // render countdown timer small
-        $("#kiwi-pycon-xiii-2024 .timer-small").countdown(
+        $("#kiwi-pycon-2024 .timer-small").countdown(
           cfpDate.toJSDate(),
           function (event) {
             $(this).html(event.strftime("%Dd %H:%M:%S"));
@@ -2872,24 +2869,24 @@
         );
 
         // deadline in local timezone
-        $("#kiwi-pycon-xiii-2024 .deadline-time").html(
+        $("#kiwi-pycon-2024 .deadline-time").html(
           cfpDate.setZone("system").toLocaleString(DateTime.DATE_HUGE)
         );
 
         // add calendar button
         try {
           var myCalendar = createCalendarFromObject({
-            id: "kiwi-pycon-xiii-2024",
-            title: "Kiwi PyCon XIII 2024 deadline",
+            id: "kiwi-pycon-2024",
+            title: "Kiwi PyCon 2024 deadline",
             date: cfpDate.toJSDate(),
             duration: 60,
           });
           document
-            .querySelector("#kiwi-pycon-xiii-2024 .calendar")
+            .querySelector("#kiwi-pycon-2024 .calendar")
             .appendChild(myCalendar);
         } catch (err) {
           document
-            .querySelector("#kiwi-pycon-xiii-2024 .calendar")
+            .querySelector("#kiwi-pycon-2024 .calendar")
             .appendChild("<p>Calendar not available.</p>");
           console.log("Error in cfp date.");
         }
@@ -2898,31 +2895,31 @@
         cfpDiff = cfpDate.diffNow("seconds");
         confDiff = confDate.diffNow("seconds");
 
-        $("#kiwi-pycon-xiii-2024").attr("cfpDiff", cfpDiff.toMillis());
-        $("#kiwi-pycon-xiii-2024").attr("confDiff", confDiff.toMillis());
+        $("#kiwi-pycon-2024").attr("cfpDiff", cfpDiff.toMillis());
+        $("#kiwi-pycon-2024").attr("confDiff", confDiff.toMillis());
 
         if (cfpDiff < 0) {
-          $("#kiwi-pycon-xiii-2024").addClass("pastcfp");
-          $("#kiwi-pycon-xiii-2024").appendTo($("#past_cfps"));
-          $("#kiwi-pycon-xiii-2024 .timer").replaceWith(
-            $("#kiwi-pycon-xiii-2024 .deadline")
+          $("#kiwi-pycon-2024").addClass("pastcfp");
+          $("#kiwi-pycon-2024").appendTo($("#past_cfps"));
+          $("#kiwi-pycon-2024 .timer").replaceWith(
+            $("#kiwi-pycon-2024 .deadline")
           );
-          $("#kiwi-pycon-xiii-2024 .timer-small").replaceWith(
-            $("#kiwi-pycon-xiii-2024 .deadline")
+          $("#kiwi-pycon-2024 .timer-small").replaceWith(
+            $("#kiwi-pycon-2024 .deadline")
           );
-          $("#kiwi-pycon-xiii-2024 .calendar").remove();
+          $("#kiwi-pycon-2024 .calendar").remove();
         }
 
         if (confDiff < 0) {
-          $("#kiwi-pycon-xiii-2024").addClass("pastconf");
-          $("#kiwi-pycon-xiii-2024").appendTo($("#past_confs"));
-          $("#kiwi-pycon-xiii-2024 .timer").replaceWith(
-            $("#kiwi-pycon-xiii-2024 .deadline")
+          $("#kiwi-pycon-2024").addClass("pastconf");
+          $("#kiwi-pycon-2024").appendTo($("#past_confs"));
+          $("#kiwi-pycon-2024 .timer").replaceWith(
+            $("#kiwi-pycon-2024 .deadline")
           );
-          $("#kiwi-pycon-xiii-2024 .timer-small").replaceWith(
-            $("#kiwi-pycon-xiii-2024 .deadline")
+          $("#kiwi-pycon-2024 .timer-small").replaceWith(
+            $("#kiwi-pycon-2024 .deadline")
           );
-          $("#kiwi-pycon-xiii-2024 .calendar").remove();
+          $("#kiwi-pycon-2024 .calendar").remove();
         }
 
         $("#pycon-estonia-2024 .PY-tag").html(
