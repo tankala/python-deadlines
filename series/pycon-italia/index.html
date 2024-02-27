@@ -70,7 +70,7 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/js-year-calendar.min.css?t=1708992980"
+      href="/static/css/js-year-calendar.min.css?t=1708994606"
       media="screen,projection"
     />
 
@@ -82,13 +82,13 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/deadlines.css?t=1708992980"
+      href="/static/css/deadlines.css?t=1708994606"
       media="screen,projection"
     />
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/calendar.css?t=1708992980"
+      href="/static/css/calendar.css?t=1708994606"
       media="screen,projection"
     />
 
@@ -802,13 +802,13 @@
 
         <div class="row">
           <div
-            id="c27e3a55-0efe-402c-9bad-0902ba0d47b5"
+            id="a9536fd2-e6a1-48ec-850a-32ae076d39cf"
             style="width: 100%; height: 400px"
             class="jekyll-map"
           ></div>
           <script type="text/javascript">
             jekyllMaps.register(
-              "c27e3a55-0efe-402c-9bad-0902ba0d47b5",
+              "a9536fd2-e6a1-48ec-850a-32ae076d39cf",
               [
                 {
                   latitude: 43.7698712,
@@ -994,19 +994,20 @@
 
 
 
+
                 $('#pycon-italia-2024 .PY-tag').html(sub2name["PY"].toLocaleLowerCase());
 
 
 
                 // Use specified timezone for deadlines if available else use AoE timezone
 
-                  var cfpDate = DateTime.fromSQL("2024-01-06 23:59:00", { zone: "UTC-12" });
+                  var cfpDate = DateTime.fromSQL("2024-01-15 23:59:00", { zone: "UTC-12" });
                   var confDate = DateTime.fromSQL("2024-05-22", { zone: "UTC-12" });
 
 
                 // check if timezone is valid otherwise replace by system timezone
                 if (cfpDate.invalid || confDate.invalid) {
-                  var cfpDate = DateTime.fromSQL("2024-01-06 23:59:00");
+                  var cfpDate = DateTime.fromSQL("2024-01-15 23:59:00");
                   var confDate = DateTime.fromSQL("2024-05-22");
                   console.log("Invalid timezone in pycon-italia-2024. Using system timezone instead.");
                 }
@@ -1058,6 +1059,7 @@
                   $('#pycon-italia-2024 .timer-small').replaceWith($('#pycon-italia-2024 .deadline'));
                   $('#pycon-italia-2024 .calendar').remove();
                 }
+
 
 
 
