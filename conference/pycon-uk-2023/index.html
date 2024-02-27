@@ -74,7 +74,7 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/js-year-calendar.min.css?t=1708992005"
+      href="/static/css/js-year-calendar.min.css?t=1708992980"
       media="screen,projection"
     />
 
@@ -86,13 +86,13 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/deadlines.css?t=1708992005"
+      href="/static/css/deadlines.css?t=1708992980"
       media="screen,projection"
     />
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/calendar.css?t=1708992005"
+      href="/static/css/calendar.css?t=1708992980"
       media="screen,projection"
     />
 
@@ -201,7 +201,7 @@
                 link +
                 '">' +
                 pubDate +
-                " by PyCon UK 2023 Conference Deadlines</a>";
+                " by PyCon UK</a>";
               feedContainer.appendChild(feedItem);
             }
           })
@@ -464,16 +464,14 @@
             </div>
 
             <h1>
-              <span
-                id="conf-title-href"
-                href="/conference/pycon-uk-2023-conference-deadlines-2023/"
-                >PyCon UK 2023 Conference Deadlines 2023</span
+              <span id="conf-title-href" href="/conference/pycon-uk-2023/"
+                >PyCon UK 2023</span
               >
               <span id="twitter-box"
                 ><a
                   href="https://twitter.com/share"
                   class="twitter-share-button"
-                  data-text="Countdown to the #PyCon UK 2023 Conference Deadlines2023 deadline!"
+                  data-text="Countdown to the #PyCon UK 2023 deadline!"
                   data-show-count="false"
                   style="font-size: 13px"
                   >Tweet</a
@@ -568,10 +566,8 @@
                 width="16"
                 height="16"
               />
-              <a
-                id="conf-series"
-                href="/series/pycon-uk-2023-conference-deadlines"
-                >All PyCon UK 2023 Conference Deadlines conferences</a
+              <a id="conf-series" href="/series/pycon-uk"
+                >All PyCon UK conferences</a
               >
             </div>
 
@@ -658,24 +654,22 @@
 
           <div class="col-12 col-md-6">
             <!-- Mastodon timeline -->
-            <div class="meta">
-              Mastodon Posts by PyCon UK 2023 Conference Deadlines:
-            </div>
+            <div class="meta">Mastodon Posts by PyCon UK:</div>
             <div id="mastodon-feed"></div>
             <a href="https://fosstodon.org/@PyConUK"
-              >See all Mastodon posts for PyCon UK 2023 Conference Deadlines</a
+              >See all Mastodon posts for PyCon UK</a
             >
           </div>
         </div>
         <div class="row">
           <div
-            id="5b15b219-bdd8-4d99-8f12-8d925a697f25"
+            id="c7a5ecf0-3401-4585-ab36-846fd4c14b3c"
             style="width: 100%; height: 400px"
             class="jekyll-map"
           ></div>
           <script type="text/javascript">
             jekyllMaps.register(
-              "5b15b219-bdd8-4d99-8f12-8d925a697f25",
+              "c7a5ecf0-3401-4585-ab36-846fd4c14b3c",
               [
                 {
                   latitude: 51.4816546,
@@ -830,8 +824,8 @@
 
         // add calendar
         var conferenceDeadlineCalendar = createCalendarFromObject({
-          id: "-",
-          title: "PyCon UK 2023 Conference Deadlines 2023 deadline",
+          id: "pycon-uk-2023",
+          title: "PyCon UK 2023 Conference Deadlines",
           date: confDeadline.toJSDate(),
           duration: 60,
         });

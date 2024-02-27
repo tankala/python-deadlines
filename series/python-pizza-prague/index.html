@@ -78,7 +78,7 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/js-year-calendar.min.css?t=1708992005"
+      href="/static/css/js-year-calendar.min.css?t=1708992980"
       media="screen,projection"
     />
 
@@ -90,13 +90,13 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/deadlines.css?t=1708992005"
+      href="/static/css/deadlines.css?t=1708992980"
       media="screen,projection"
     />
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/calendar.css?t=1708992005"
+      href="/static/css/calendar.css?t=1708992980"
       media="screen,projection"
     />
 
@@ -205,7 +205,7 @@
                 link +
                 '">' +
                 pubDate +
-                " by Python Pizza Prague Conference Summary</a>";
+                " by Python Pizza Prague</a>";
               feedContainer.appendChild(feedItem);
             }
           })
@@ -301,16 +301,14 @@
             </div>
 
             <h1>
-              <span
-                id="conf-title-href"
-                href="/summary/python-pizza-prague-conference-summary/"
+              <span id="conf-title-href" href="/summary/python-pizza-prague/"
                 >Python Pizza Prague Conference Summary</span
               >
               <span id="twitter-box"
                 ><a
                   href="https://twitter.com/share"
                   class="twitter-share-button"
-                  data-text="Conference instances for the #Python Pizza Prague Conference Summary conference!"
+                  data-text="Conference instances for the #Python Pizza Prague conference!"
                   data-show-count="false"
                   style="font-size: 13px"
                   >Tweet</a
@@ -345,13 +343,159 @@
                 width="16"
                 height="16"
               />
-              <a id="conf-website" target="_blank" href=""></a>
+              <a
+                id="conf-website"
+                target="_blank"
+                href="https://prague.python.pizza/"
+                >https://prague.python.pizza/</a
+              >
+            </div>
+
+            <div>
+              <img
+                src="/static/img/407-twitter.svg"
+                class="badge-link"
+                alt="Twitter icon"
+                width="16"
+                height="16"
+              />
+              <a
+                id="conf-twitter"
+                target="_blank"
+                href="https://twitter.com/PythonPizzaConf"
+                >@PythonPizzaConf</a
+              >
+            </div>
+
+            <div>
+              <img
+                src="/static/img/407-mastodon.svg"
+                class="badge-link"
+                alt="Mastodon icon"
+                width="16"
+                height="16"
+              />
+              <a
+                id="conf-mastodon"
+                target="_blank"
+                href="https://fosstodon.org/@pythonpizza/"
+                >Mastodon</a
+              >
             </div>
           </div>
-          <div class="col-12 col-md-6"></div>
+          <div class="col-12 col-md-6">
+            <!-- Mastodon timeline -->
+            <div class="meta">Mastodon Posts by Python Pizza Prague:</div>
+            <div id="mastodon-feed"></div>
+            <a href="https://fosstodon.org/@pythonpizza/"
+              >See all Mastodon posts for Python Pizza Prague</a
+            >
+          </div>
         </div>
         <hr />
-        <div id="all_confs"></div>
+        <div id="all_confs">
+          <div id="python-pizza-prague-2024" class="ConfItem PY-conf">
+            <div class="row conf-row">
+              <div class="col-6">
+                <span class="conf-title">
+                  <a
+                    title="Deadline Details"
+                    href="/conference/python-pizza-prague-2024/"
+                    >Python Pizza Prague 2024</a
+                  >
+                </span>
+                <span class="conf-title-small">
+                  <a
+                    title="Deadline Details"
+                    href="/conference/python-pizza-prague-2024/"
+                    >Python Pizza Prague '24</a
+                  >
+                </span>
+                <span class="conf-title-icon">
+                  <a
+                    title="Conference Website"
+                    href="https://prague.python.pizza/"
+                    target="_blank"
+                    ><img
+                      src="/static/img/203-earth.svg"
+                      class="badge-link"
+                      alt="Link to Conference Website"
+                      width="16"
+                      height="16"
+                  /></a>
+                  &ZeroWidthSpace;
+                </span>
+
+                <span class="conf-title-icon">
+                  <a
+                    title="Call for Participation for Python Pizza Prague"
+                    href="https://docs.google.com/forms/d/e/1FAIpQLSfaDox_HZ2il0KOoohtYQJxVbhuTlwMFpmbz8bp-WOoLVQlNQ/viewform?usp=sf_link"
+                    target="_blank"
+                    ><img
+                      src="/static/img/035-file-text.svg"
+                      class="badge-link"
+                      alt="Link to Call for Participation for Python Pizza Prague"
+                      width="16"
+                      height="16"
+                  /></a>
+                  &ZeroWidthSpace;
+                </span>
+
+                <span class="conf-title-icon">
+                  <a
+                    title="Mastodon for Python Pizza Prague"
+                    href="https://fosstodon.org/@pythonpizza/"
+                    target="_blank"
+                    ><img
+                      src="/static/img/407-mastodon.svg"
+                      class="badge-link"
+                      alt="Link to Conference Mastodon"
+                      width="16"
+                      height="16"
+                  /></a>
+                  &ZeroWidthSpace;
+                </span>
+              </div>
+              <div class="col-6">
+                <span class="timer"></span>
+                <span class="timer-small"></span>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12 col-sm-6">
+                <div class="meta">
+                  <span class="conf-date">February 24th, 2024.</span>
+                  <span class="conf-place">
+                    <a href="http://maps.google.com/?q=Prague, Czechia"
+                      >Prague, Czechia</a
+                    >
+                  </span>
+                </div>
+              </div>
+              <div class="col-12 col-sm-6">
+                <div class="deadline">
+                  <div>
+                    Deadline:
+                    <span class="deadline-time"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-6">
+                <span
+                  title="Click to only show PY conferences"
+                  data-sub="PY"
+                  class="badge badge-light conf-sub PY-tag"
+                ></span>
+              </div>
+              <div class="col-6">
+                <div class="calendar"></div>
+              </div>
+            </div>
+            <hr />
+          </div>
+        </div>
       </div>
       <footer>
         <hr />
@@ -509,6 +653,74 @@
 
             // Set time zone to local timezone on web copy
             $('.local-timezone').text(today.toFormat('z'));
+
+
+
+
+                $('#python-pizza-prague-2024 .PY-tag').html(sub2name["PY"].toLocaleLowerCase());
+
+
+
+                // Use specified timezone for deadlines if available else use AoE timezone
+
+                  var cfpDate = DateTime.fromSQL("2023-12-31 23:59:00", { zone: "Europe/Prague" });
+                  var confDate = DateTime.fromSQL("2024-02-24", { zone: "Europe/Prague" });
+
+
+                // check if timezone is valid otherwise replace by system timezone
+                if (cfpDate.invalid || confDate.invalid) {
+                  var cfpDate = DateTime.fromSQL("2023-12-31 23:59:00");
+                  var confDate = DateTime.fromSQL("2024-02-24");
+                  console.log("Invalid timezone in python-pizza-prague-2024. Using system timezone instead.");
+                }
+
+                // render countdown timer
+                $('#python-pizza-prague-2024 .timer').countdown(cfpDate.toJSDate(), function (event) {
+                  $(this).html(event.strftime('%D days %Hh %Mm %Ss'));
+                });
+
+                // render countdown timer small
+                $('#python-pizza-prague-2024 .timer-small').countdown(cfpDate.toJSDate(), function (event) {
+                  $(this).html(event.strftime('%Dd %H:%M:%S'));
+                });
+
+                // deadline in local timezone
+                $('#python-pizza-prague-2024 .deadline-time').html(cfpDate.setZone('system').toLocaleString(DateTime.DATE_HUGE));
+
+                // add calendar button
+                try {
+                  var myCalendar = createCalendarFromObject({
+                    id: 'python-pizza-prague-2024',
+                    title: 'Python Pizza Prague 2024 deadline',
+                    date: cfpDate.toJSDate(),
+                    duration: 60,
+                  });
+                  document.querySelector('#python-pizza-prague-2024 .calendar').appendChild(myCalendar);
+                } catch (err) {
+                  document.querySelector('#python-pizza-prague-2024 .calendar').appendChild("<p>Calendar not available.</p>");
+                  console.log("Error in cfp date.");
+                }
+
+                // check if date has passed, add 'past' class to it
+                cfpDiff = cfpDate.diffNow("seconds");
+                confDiff = confDate.diffNow("seconds");
+
+                $('#python-pizza-prague-2024').attr("cfpDiff", cfpDiff.toMillis());
+                $('#python-pizza-prague-2024').attr("confDiff", confDiff.toMillis());
+
+                if (cfpDiff < 0) {
+                  $('#python-pizza-prague-2024').addClass('pastcfp');
+                  $('#python-pizza-prague-2024 .timer').replaceWith($('#python-pizza-prague-2024 .deadline'));
+                  $('#python-pizza-prague-2024 .timer-small').replaceWith($('#python-pizza-prague-2024 .deadline'));
+                  $('#python-pizza-prague-2024 .calendar').remove();
+                }
+
+                if (confDiff < 0) {
+                  $('#python-pizza-prague-2024').addClass('pastconf');
+                  $('#python-pizza-prague-2024 .timer').replaceWith($('#python-pizza-prague-2024 .deadline'));
+                  $('#python-pizza-prague-2024 .timer-small').replaceWith($('#python-pizza-prague-2024 .deadline'));
+                  $('#python-pizza-prague-2024 .calendar').remove();
+                }
 
 
 

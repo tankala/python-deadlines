@@ -74,7 +74,7 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/js-year-calendar.min.css?t=1708992005"
+      href="/static/css/js-year-calendar.min.css?t=1708992980"
       media="screen,projection"
     />
 
@@ -86,13 +86,13 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/deadlines.css?t=1708992005"
+      href="/static/css/deadlines.css?t=1708992980"
       media="screen,projection"
     />
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/calendar.css?t=1708992005"
+      href="/static/css/calendar.css?t=1708992980"
       media="screen,projection"
     />
 
@@ -258,16 +258,14 @@
             </div>
 
             <h1>
-              <span
-                id="conf-title-href"
-                href="/conference/scipy-india-2021-conference-deadlines-2021/"
-                >Scipy India 2021 Conference Deadlines 2021</span
+              <span id="conf-title-href" href="/conference/scipy-india-2021/"
+                >Scipy India 2021</span
               >
               <span id="twitter-box"
                 ><a
                   href="https://twitter.com/share"
                   class="twitter-share-button"
-                  data-text="Countdown to the #Scipy India 2021 Conference Deadlines2021 deadline!"
+                  data-text="Countdown to the #Scipy India 2021 deadline!"
                   data-show-count="false"
                   style="font-size: 13px"
                   >Tweet</a
@@ -338,10 +336,8 @@
                 width="16"
                 height="16"
               />
-              <a
-                id="conf-series"
-                href="/series/scipy-india-2021-conference-deadlines"
-                >All Scipy India 2021 Conference Deadlines conferences</a
+              <a id="conf-series" href="/series/scipy-india"
+                >All Scipy India conferences</a
               >
             </div>
 
@@ -495,8 +491,8 @@
 
         // add calendar
         var conferenceDeadlineCalendar = createCalendarFromObject({
-          id: "-",
-          title: "Scipy India 2021 Conference Deadlines 2021 deadline",
+          id: "scipy-india-2021",
+          title: "Scipy India 2021 Conference Deadlines",
           date: confDeadline.toJSDate(),
           duration: 60,
         });

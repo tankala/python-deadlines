@@ -75,7 +75,7 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/js-year-calendar.min.css?t=1708992005"
+      href="/static/css/js-year-calendar.min.css?t=1708992980"
       media="screen,projection"
     />
 
@@ -87,13 +87,13 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/deadlines.css?t=1708992005"
+      href="/static/css/deadlines.css?t=1708992980"
       media="screen,projection"
     />
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/calendar.css?t=1708992005"
+      href="/static/css/calendar.css?t=1708992980"
       media="screen,projection"
     />
 
@@ -269,16 +269,14 @@
             </div>
 
             <h1>
-              <span
-                id="conf-title-href"
-                href="/summary/pydata-seattle-conference-summary/"
+              <span id="conf-title-href" href="/summary/pydata-seattle/"
                 >PyData Seattle Conference Summary</span
               >
               <span id="twitter-box"
                 ><a
                   href="https://twitter.com/share"
                   class="twitter-share-button"
-                  data-text="Conference instances for the #PyData Seattle Conference Summary conference!"
+                  data-text="Conference instances for the #PyData Seattle conference!"
                   data-show-count="false"
                   style="font-size: 13px"
                   >Tweet</a
@@ -313,13 +311,166 @@
                 width="16"
                 height="16"
               />
-              <a id="conf-website" target="_blank" href=""></a>
+              <a
+                id="conf-website"
+                target="_blank"
+                href="https://pydata.org/seattle2023/"
+                >https://pydata.org/seattle2023/</a
+              >
+            </div>
+
+            <div>
+              <img
+                src="/static/img/407-twitter.svg"
+                class="badge-link"
+                alt="Twitter icon"
+                width="16"
+                height="16"
+              />
+              <a
+                id="conf-twitter"
+                target="_blank"
+                href="https://twitter.com/PyDataSeattle"
+                >@PyDataSeattle</a
+              >
             </div>
           </div>
-          <div class="col-12 col-md-6"></div>
+          <div class="col-12 col-md-6">
+            <!-- Twitter timeline -->
+            <div id="twitter-widget">
+              <a
+                class="twitter-timeline"
+                href="https://twitter.com/PyDataSeattle"
+                data-tweet-limit="2"
+                >Tweets by PyDataSeattle</a
+              >
+              <script
+                async
+                src="https://platform.twitter.com/widgets.js"
+                charset="utf-8"
+              ></script>
+            </div>
+          </div>
         </div>
         <hr />
-        <div id="all_confs"></div>
+        <div id="all_confs">
+          <div id="pydata-seattle-2023" class="ConfItem PYDATA-conf">
+            <div class="row conf-row">
+              <div class="col-6">
+                <span class="conf-title">
+                  <a
+                    title="Deadline Details"
+                    href="/conference/pydata-seattle-2023/"
+                    >PyData Seattle 2023</a
+                  >
+                </span>
+                <span class="conf-title-small">
+                  <a
+                    title="Deadline Details"
+                    href="/conference/pydata-seattle-2023/"
+                    >PyData Seattle '23</a
+                  >
+                </span>
+                <span class="conf-title-icon">
+                  <a
+                    title="Conference Website"
+                    href="https://pydata.org/seattle2023/"
+                    target="_blank"
+                    ><img
+                      src="/static/img/203-earth.svg"
+                      class="badge-link"
+                      alt="Link to Conference Website"
+                      width="16"
+                      height="16"
+                  /></a>
+                  &ZeroWidthSpace;
+                </span>
+
+                <span class="conf-title-icon">
+                  <a
+                    title="Financial Aid from PyData Seattle"
+                    href="https://pydata.org/seattle2023/#diversity-scholars"
+                    target="_blank"
+                    ><img
+                      src="/static/img/066-lifebuoy.svg"
+                      class="badge-link"
+                      alt="Link to Sponsorship page of PyData Seattle"
+                      width="16"
+                      height="16"
+                  /></a>
+                  &ZeroWidthSpace;
+                </span>
+
+                <span class="conf-title-icon">
+                  <a
+                    title="Sponsorship Opportunity for PyData Seattle"
+                    href="https://pydata.org/seattle2023/wp-content/uploads/2022/12/PyData-2023-Sponsorship-Prospectus.pdf"
+                    target="_blank"
+                    ><img
+                      src="/static/img/060-coin-dollar.svg"
+                      class="badge-link"
+                      alt="Link to Sponsorship page of PyData Seattle"
+                      width="16"
+                      height="16"
+                  /></a>
+                  &ZeroWidthSpace;
+                </span>
+
+                <span class="conf-title-icon">
+                  <a
+                    title="Twitter for PyData Seattle"
+                    href="https://twitter.com/PyDataSeattle"
+                    target="_blank"
+                    ><img
+                      src="/static/img/407-twitter.svg"
+                      class="badge-link"
+                      alt="Link to Conference Twitter"
+                      width="16"
+                      height="16"
+                  /></a>
+                  &ZeroWidthSpace;
+                </span>
+              </div>
+              <div class="col-6">
+                <span class="timer"></span>
+                <span class="timer-small"></span>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12 col-sm-6">
+                <div class="meta">
+                  <span class="conf-date">April 26 - 28, 2023.</span>
+                  <span class="conf-place">
+                    <a href="http://maps.google.com/?q=Seattle, USA"
+                      >Seattle, USA</a
+                    >
+                  </span>
+                </div>
+              </div>
+              <div class="col-12 col-sm-6">
+                <div class="deadline">
+                  <div>
+                    Deadline:
+                    <span class="deadline-time"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-6">
+                <span
+                  title="Click to only show PYDATA conferences"
+                  data-sub="PYDATA"
+                  class="badge badge-light conf-sub PYDATA-tag"
+                ></span>
+              </div>
+              <div class="col-6">
+                <div class="calendar"></div>
+              </div>
+            </div>
+            <hr />
+          </div>
+        </div>
       </div>
       <footer>
         <hr />
@@ -477,6 +628,74 @@
 
             // Set time zone to local timezone on web copy
             $('.local-timezone').text(today.toFormat('z'));
+
+
+
+
+                $('#pydata-seattle-2023 .PYDATA-tag').html(sub2name["PYDATA"].toLocaleLowerCase());
+
+
+
+                // Use specified timezone for deadlines if available else use AoE timezone
+
+                  var cfpDate = DateTime.fromSQL("2023-02-06 23:59:00", { zone: "America/Los_Angeles" });
+                  var confDate = DateTime.fromSQL("2023-04-26", { zone: "America/Los_Angeles" });
+
+
+                // check if timezone is valid otherwise replace by system timezone
+                if (cfpDate.invalid || confDate.invalid) {
+                  var cfpDate = DateTime.fromSQL("2023-02-06 23:59:00");
+                  var confDate = DateTime.fromSQL("2023-04-26");
+                  console.log("Invalid timezone in pydata-seattle-2023. Using system timezone instead.");
+                }
+
+                // render countdown timer
+                $('#pydata-seattle-2023 .timer').countdown(cfpDate.toJSDate(), function (event) {
+                  $(this).html(event.strftime('%D days %Hh %Mm %Ss'));
+                });
+
+                // render countdown timer small
+                $('#pydata-seattle-2023 .timer-small').countdown(cfpDate.toJSDate(), function (event) {
+                  $(this).html(event.strftime('%Dd %H:%M:%S'));
+                });
+
+                // deadline in local timezone
+                $('#pydata-seattle-2023 .deadline-time').html(cfpDate.setZone('system').toLocaleString(DateTime.DATE_HUGE));
+
+                // add calendar button
+                try {
+                  var myCalendar = createCalendarFromObject({
+                    id: 'pydata-seattle-2023',
+                    title: 'PyData Seattle 2023 deadline',
+                    date: cfpDate.toJSDate(),
+                    duration: 60,
+                  });
+                  document.querySelector('#pydata-seattle-2023 .calendar').appendChild(myCalendar);
+                } catch (err) {
+                  document.querySelector('#pydata-seattle-2023 .calendar').appendChild("<p>Calendar not available.</p>");
+                  console.log("Error in cfp date.");
+                }
+
+                // check if date has passed, add 'past' class to it
+                cfpDiff = cfpDate.diffNow("seconds");
+                confDiff = confDate.diffNow("seconds");
+
+                $('#pydata-seattle-2023').attr("cfpDiff", cfpDiff.toMillis());
+                $('#pydata-seattle-2023').attr("confDiff", confDiff.toMillis());
+
+                if (cfpDiff < 0) {
+                  $('#pydata-seattle-2023').addClass('pastcfp');
+                  $('#pydata-seattle-2023 .timer').replaceWith($('#pydata-seattle-2023 .deadline'));
+                  $('#pydata-seattle-2023 .timer-small').replaceWith($('#pydata-seattle-2023 .deadline'));
+                  $('#pydata-seattle-2023 .calendar').remove();
+                }
+
+                if (confDiff < 0) {
+                  $('#pydata-seattle-2023').addClass('pastconf');
+                  $('#pydata-seattle-2023 .timer').replaceWith($('#pydata-seattle-2023 .deadline'));
+                  $('#pydata-seattle-2023 .timer-small').replaceWith($('#pydata-seattle-2023 .deadline'));
+                  $('#pydata-seattle-2023 .calendar').remove();
+                }
 
 
 

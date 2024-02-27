@@ -70,7 +70,7 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/js-year-calendar.min.css?t=1708992005"
+      href="/static/css/js-year-calendar.min.css?t=1708992980"
       media="screen,projection"
     />
 
@@ -82,13 +82,13 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/deadlines.css?t=1708992005"
+      href="/static/css/deadlines.css?t=1708992980"
       media="screen,projection"
     />
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/calendar.css?t=1708992005"
+      href="/static/css/calendar.css?t=1708992980"
       media="screen,projection"
     />
 
@@ -254,16 +254,14 @@
             </div>
 
             <h1>
-              <span
-                id="conf-title-href"
-                href="/summary/pycon-israel-conference-summary/"
+              <span id="conf-title-href" href="/summary/pycon-israel/"
                 >PyCon Israel Conference Summary</span
               >
               <span id="twitter-box"
                 ><a
                   href="https://twitter.com/share"
                   class="twitter-share-button"
-                  data-text="Conference instances for the #PyCon Israel Conference Summary conference!"
+                  data-text="Conference instances for the #PyCon Israel conference!"
                   data-show-count="false"
                   style="font-size: 13px"
                   >Tweet</a
@@ -298,13 +296,236 @@
                 width="16"
                 height="16"
               />
-              <a id="conf-website" target="_blank" href=""></a>
+              <a
+                id="conf-website"
+                target="_blank"
+                href="https://2023.pycon.org.il/"
+                >https://2023.pycon.org.il/</a
+              >
+            </div>
+
+            <div>
+              <img
+                src="/static/img/407-twitter.svg"
+                class="badge-link"
+                alt="Twitter icon"
+                width="16"
+                height="16"
+              />
+              <a
+                id="conf-twitter"
+                target="_blank"
+                href="https://twitter.com/PyConIL"
+                >@PyConIL</a
+              >
             </div>
           </div>
-          <div class="col-12 col-md-6"></div>
+          <div class="col-12 col-md-6">
+            <!-- Twitter timeline -->
+            <div id="twitter-widget">
+              <a
+                class="twitter-timeline"
+                href="https://twitter.com/"
+                data-tweet-limit="2"
+                >Tweets by PyConIL</a
+              >
+              <script
+                async
+                src="https://platform.twitter.com/widgets.js"
+                charset="utf-8"
+              ></script>
+            </div>
+          </div>
         </div>
         <hr />
-        <div id="all_confs"></div>
+        <div id="all_confs">
+          <div id="pycon-israel-2023" class="ConfItem PY-conf">
+            <div class="row conf-row">
+              <div class="col-6">
+                <span class="conf-title">
+                  <a
+                    title="Deadline Details"
+                    href="/conference/pycon-israel-2023/"
+                    >PyCon Israel 2023</a
+                  >
+                </span>
+                <span class="conf-title-small">
+                  <a
+                    title="Deadline Details"
+                    href="/conference/pycon-israel-2023/"
+                    >PyCon Israel '23</a
+                  >
+                </span>
+                <span class="conf-title-icon">
+                  <a
+                    title="Conference Website"
+                    href="https://2023.pycon.org.il/"
+                    target="_blank"
+                    ><img
+                      src="/static/img/203-earth.svg"
+                      class="badge-link"
+                      alt="Link to Conference Website"
+                      width="16"
+                      height="16"
+                  /></a>
+                  &ZeroWidthSpace;
+                </span>
+
+                <span class="conf-title-icon">
+                  <a
+                    title="Call for Participation for PyCon Israel"
+                    href="https://cfp.pycon.org.il/conference2023/cfp"
+                    target="_blank"
+                    ><img
+                      src="/static/img/035-file-text.svg"
+                      class="badge-link"
+                      alt="Link to Call for Participation for PyCon Israel"
+                      width="16"
+                      height="16"
+                  /></a>
+                  &ZeroWidthSpace;
+                </span>
+
+                <span class="conf-title-icon">
+                  <a
+                    title="Sponsorship Opportunity for PyCon Israel"
+                    href="https://2023.pycon.org.il/#sponsorship"
+                    target="_blank"
+                    ><img
+                      src="/static/img/060-coin-dollar.svg"
+                      class="badge-link"
+                      alt="Link to Sponsorship page of PyCon Israel"
+                      width="16"
+                      height="16"
+                  /></a>
+                  &ZeroWidthSpace;
+                </span>
+
+                <span class="conf-title-icon">
+                  <a
+                    title="Twitter for PyCon Israel"
+                    href="https://twitter.com/PyConIL"
+                    target="_blank"
+                    ><img
+                      src="/static/img/407-twitter.svg"
+                      class="badge-link"
+                      alt="Link to Conference Twitter"
+                      width="16"
+                      height="16"
+                  /></a>
+                  &ZeroWidthSpace;
+                </span>
+              </div>
+              <div class="col-6">
+                <span class="timer"></span>
+                <span class="timer-small"></span>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12 col-sm-6">
+                <div class="meta">
+                  <span class="conf-date">July 04 - 05, 2023.</span>
+                  <span class="conf-place">
+                    <a href="http://maps.google.com/?q=Israel">Israel</a>
+                  </span>
+                </div>
+              </div>
+              <div class="col-12 col-sm-6">
+                <div class="deadline">
+                  <div>
+                    Deadline:
+                    <span class="deadline-time"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-6">
+                <span
+                  title="Click to only show PY conferences"
+                  data-sub="PY"
+                  class="badge badge-light conf-sub PY-tag"
+                ></span>
+              </div>
+              <div class="col-6">
+                <div class="calendar"></div>
+              </div>
+            </div>
+            <hr />
+          </div>
+
+          <div id="pycon-israel-2022" class="ConfItem PY-conf">
+            <div class="row conf-row">
+              <div class="col-6">
+                <span class="conf-title">
+                  <a
+                    title="Deadline Details"
+                    href="/conference/pycon-israel-2022/"
+                    >PyCon Israel 2022</a
+                  >
+                </span>
+                <span class="conf-title-small">
+                  <a
+                    title="Deadline Details"
+                    href="/conference/pycon-israel-2022/"
+                    >PyCon Israel '22</a
+                  >
+                </span>
+                <span class="conf-title-icon">
+                  <a
+                    title="Conference Website"
+                    href="https://pycon.org.il/2022/"
+                    target="_blank"
+                    ><img
+                      src="/static/img/203-earth.svg"
+                      class="badge-link"
+                      alt="Link to Conference Website"
+                      width="16"
+                      height="16"
+                  /></a>
+                  &ZeroWidthSpace;
+                </span>
+              </div>
+              <div class="col-6">
+                <span class="timer"></span>
+                <span class="timer-small"></span>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12 col-sm-6">
+                <div class="meta">
+                  <span class="conf-date">June 28 - 30, 2022.</span>
+                  <span class="conf-place">
+                    <a href="http://maps.google.com/?q=Ramat-Gan, Israel"
+                      >Ramat-Gan, Israel</a
+                    >
+                  </span>
+                </div>
+              </div>
+              <div class="col-12 col-sm-6">
+                <div class="deadline">
+                  <div>
+                    Deadline:
+                    <span class="deadline-time"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-6">
+                <span
+                  title="Click to only show PY conferences"
+                  data-sub="PY"
+                  class="badge badge-light conf-sub PY-tag"
+                ></span>
+              </div>
+              <div class="col-6">
+                <div class="calendar"></div>
+              </div>
+            </div>
+            <hr />
+          </div>
+        </div>
       </div>
       <footer>
         <hr />
@@ -462,6 +683,142 @@
 
             // Set time zone to local timezone on web copy
             $('.local-timezone').text(today.toFormat('z'));
+
+
+
+
+                $('#pycon-israel-2023 .PY-tag').html(sub2name["PY"].toLocaleLowerCase());
+
+
+
+                // Use specified timezone for deadlines if available else use AoE timezone
+
+                  var cfpDate = DateTime.fromSQL("2023-04-02 22:59:00", { zone: "Africa/Cairo" });
+                  var confDate = DateTime.fromSQL("2023-07-04", { zone: "Africa/Cairo" });
+
+
+                // check if timezone is valid otherwise replace by system timezone
+                if (cfpDate.invalid || confDate.invalid) {
+                  var cfpDate = DateTime.fromSQL("2023-04-02 22:59:00");
+                  var confDate = DateTime.fromSQL("2023-07-04");
+                  console.log("Invalid timezone in pycon-israel-2023. Using system timezone instead.");
+                }
+
+                // render countdown timer
+                $('#pycon-israel-2023 .timer').countdown(cfpDate.toJSDate(), function (event) {
+                  $(this).html(event.strftime('%D days %Hh %Mm %Ss'));
+                });
+
+                // render countdown timer small
+                $('#pycon-israel-2023 .timer-small').countdown(cfpDate.toJSDate(), function (event) {
+                  $(this).html(event.strftime('%Dd %H:%M:%S'));
+                });
+
+                // deadline in local timezone
+                $('#pycon-israel-2023 .deadline-time').html(cfpDate.setZone('system').toLocaleString(DateTime.DATE_HUGE));
+
+                // add calendar button
+                try {
+                  var myCalendar = createCalendarFromObject({
+                    id: 'pycon-israel-2023',
+                    title: 'PyCon Israel 2023 deadline',
+                    date: cfpDate.toJSDate(),
+                    duration: 60,
+                  });
+                  document.querySelector('#pycon-israel-2023 .calendar').appendChild(myCalendar);
+                } catch (err) {
+                  document.querySelector('#pycon-israel-2023 .calendar').appendChild("<p>Calendar not available.</p>");
+                  console.log("Error in cfp date.");
+                }
+
+                // check if date has passed, add 'past' class to it
+                cfpDiff = cfpDate.diffNow("seconds");
+                confDiff = confDate.diffNow("seconds");
+
+                $('#pycon-israel-2023').attr("cfpDiff", cfpDiff.toMillis());
+                $('#pycon-israel-2023').attr("confDiff", confDiff.toMillis());
+
+                if (cfpDiff < 0) {
+                  $('#pycon-israel-2023').addClass('pastcfp');
+                  $('#pycon-israel-2023 .timer').replaceWith($('#pycon-israel-2023 .deadline'));
+                  $('#pycon-israel-2023 .timer-small').replaceWith($('#pycon-israel-2023 .deadline'));
+                  $('#pycon-israel-2023 .calendar').remove();
+                }
+
+                if (confDiff < 0) {
+                  $('#pycon-israel-2023').addClass('pastconf');
+                  $('#pycon-israel-2023 .timer').replaceWith($('#pycon-israel-2023 .deadline'));
+                  $('#pycon-israel-2023 .timer-small').replaceWith($('#pycon-israel-2023 .deadline'));
+                  $('#pycon-israel-2023 .calendar').remove();
+                }
+
+
+
+
+                $('#pycon-israel-2022 .PY-tag').html(sub2name["PY"].toLocaleLowerCase());
+
+
+
+                // Use specified timezone for deadlines if available else use AoE timezone
+
+                  var cfpDate = DateTime.fromSQL("2022-04-30 23:59:59", { zone: "Asia/Jerusalem" });
+                  var confDate = DateTime.fromSQL("2022-06-28", { zone: "Asia/Jerusalem" });
+
+
+                // check if timezone is valid otherwise replace by system timezone
+                if (cfpDate.invalid || confDate.invalid) {
+                  var cfpDate = DateTime.fromSQL("2022-04-30 23:59:59");
+                  var confDate = DateTime.fromSQL("2022-06-28");
+                  console.log("Invalid timezone in pycon-israel-2022. Using system timezone instead.");
+                }
+
+                // render countdown timer
+                $('#pycon-israel-2022 .timer').countdown(cfpDate.toJSDate(), function (event) {
+                  $(this).html(event.strftime('%D days %Hh %Mm %Ss'));
+                });
+
+                // render countdown timer small
+                $('#pycon-israel-2022 .timer-small').countdown(cfpDate.toJSDate(), function (event) {
+                  $(this).html(event.strftime('%Dd %H:%M:%S'));
+                });
+
+                // deadline in local timezone
+                $('#pycon-israel-2022 .deadline-time').html(cfpDate.setZone('system').toLocaleString(DateTime.DATE_HUGE));
+
+                // add calendar button
+                try {
+                  var myCalendar = createCalendarFromObject({
+                    id: 'pycon-israel-2022',
+                    title: 'PyCon Israel 2022 deadline',
+                    date: cfpDate.toJSDate(),
+                    duration: 60,
+                  });
+                  document.querySelector('#pycon-israel-2022 .calendar').appendChild(myCalendar);
+                } catch (err) {
+                  document.querySelector('#pycon-israel-2022 .calendar').appendChild("<p>Calendar not available.</p>");
+                  console.log("Error in cfp date.");
+                }
+
+                // check if date has passed, add 'past' class to it
+                cfpDiff = cfpDate.diffNow("seconds");
+                confDiff = confDate.diffNow("seconds");
+
+                $('#pycon-israel-2022').attr("cfpDiff", cfpDiff.toMillis());
+                $('#pycon-israel-2022').attr("confDiff", confDiff.toMillis());
+
+                if (cfpDiff < 0) {
+                  $('#pycon-israel-2022').addClass('pastcfp');
+                  $('#pycon-israel-2022 .timer').replaceWith($('#pycon-israel-2022 .deadline'));
+                  $('#pycon-israel-2022 .timer-small').replaceWith($('#pycon-israel-2022 .deadline'));
+                  $('#pycon-israel-2022 .calendar').remove();
+                }
+
+                if (confDiff < 0) {
+                  $('#pycon-israel-2022').addClass('pastconf');
+                  $('#pycon-israel-2022 .timer').replaceWith($('#pycon-israel-2022 .deadline'));
+                  $('#pycon-israel-2022 .timer-small').replaceWith($('#pycon-israel-2022 .deadline'));
+                  $('#pycon-israel-2022 .calendar').remove();
+                }
 
 
 

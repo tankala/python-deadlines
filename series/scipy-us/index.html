@@ -67,7 +67,7 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/js-year-calendar.min.css?t=1708992005"
+      href="/static/css/js-year-calendar.min.css?t=1708992980"
       media="screen,projection"
     />
 
@@ -79,13 +79,13 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/deadlines.css?t=1708992005"
+      href="/static/css/deadlines.css?t=1708992980"
       media="screen,projection"
     />
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/calendar.css?t=1708992005"
+      href="/static/css/calendar.css?t=1708992980"
       media="screen,projection"
     />
 
@@ -261,16 +261,14 @@
             </div>
 
             <h1>
-              <span
-                id="conf-title-href"
-                href="/summary/scipy-us-conference-summary/"
+              <span id="conf-title-href" href="/summary/scipy-us/"
                 >SciPy US Conference Summary</span
               >
               <span id="twitter-box"
                 ><a
                   href="https://twitter.com/share"
                   class="twitter-share-button"
-                  data-text="Conference instances for the #SciPy US Conference Summary conference!"
+                  data-text="Conference instances for the #SciPy US conference!"
                   data-show-count="false"
                   style="font-size: 13px"
                   >Tweet</a
@@ -305,13 +303,344 @@
                 width="16"
                 height="16"
               />
-              <a id="conf-website" target="_blank" href=""></a>
+              <a
+                id="conf-website"
+                target="_blank"
+                href="https://scipy2024.scipy.org"
+                >https://scipy2024.scipy.org</a
+              >
+            </div>
+
+            <div>
+              <img
+                src="/static/img/407-twitter.svg"
+                class="badge-link"
+                alt="Twitter icon"
+                width="16"
+                height="16"
+              />
+              <a
+                id="conf-twitter"
+                target="_blank"
+                href="https://twitter.com/SciPyConf"
+                >@SciPyConf</a
+              >
             </div>
           </div>
-          <div class="col-12 col-md-6"></div>
+          <div class="col-12 col-md-6">
+            <!-- Twitter timeline -->
+            <div id="twitter-widget">
+              <a
+                class="twitter-timeline"
+                href="https://twitter.com/SciPyConf"
+                data-tweet-limit="2"
+                >Tweets by SciPyConf</a
+              >
+              <script
+                async
+                src="https://platform.twitter.com/widgets.js"
+                charset="utf-8"
+              ></script>
+            </div>
+          </div>
         </div>
         <hr />
-        <div id="all_confs"></div>
+        <div id="all_confs">
+          <div id="scipy-us-2024" class="ConfItem SCIPY-conf">
+            <div class="row conf-row">
+              <div class="col-6">
+                <span class="conf-title">
+                  <a title="Deadline Details" href="/conference/scipy-us-2024/"
+                    >SciPy US 2024</a
+                  >
+                </span>
+                <span class="conf-title-small">
+                  <a title="Deadline Details" href="/conference/scipy-us-2024/"
+                    >SciPy US '24</a
+                  >
+                </span>
+                <span class="conf-title-icon">
+                  <a
+                    title="Conference Website"
+                    href="https://scipy2024.scipy.org"
+                    target="_blank"
+                    ><img
+                      src="/static/img/203-earth.svg"
+                      class="badge-link"
+                      alt="Link to Conference Website"
+                      width="16"
+                      height="16"
+                  /></a>
+                  &ZeroWidthSpace;
+                </span>
+
+                <span class="conf-title-icon">
+                  <a
+                    title="Call for Participation for SciPy US"
+                    href="https://cfp.scipy.org/2024/cfp"
+                    target="_blank"
+                    ><img
+                      src="/static/img/035-file-text.svg"
+                      class="badge-link"
+                      alt="Link to Call for Participation for SciPy US"
+                      width="16"
+                      height="16"
+                  /></a>
+                  &ZeroWidthSpace;
+                </span>
+
+                <span class="conf-title-icon">
+                  <a
+                    title="Twitter for SciPy US"
+                    href="https://twitter.com/SciPyConf"
+                    target="_blank"
+                    ><img
+                      src="/static/img/407-twitter.svg"
+                      class="badge-link"
+                      alt="Link to Conference Twitter"
+                      width="16"
+                      height="16"
+                  /></a>
+                  &ZeroWidthSpace;
+                </span>
+              </div>
+              <div class="col-6">
+                <span class="timer"></span>
+                <span class="timer-small"></span>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12 col-sm-6">
+                <div class="meta">
+                  <span class="conf-date">July 08 - 14, 2024.</span>
+                  <span class="conf-place">
+                    <a href="http://maps.google.com/?q=Tacoma, Washington, USA"
+                      >Tacoma, Washington, USA</a
+                    >
+                  </span>
+                </div>
+              </div>
+              <div class="col-12 col-sm-6">
+                <div class="deadline">
+                  <div>
+                    Deadline:
+                    <span class="deadline-time"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-6">
+                <span
+                  title="Click to only show SCIPY conferences"
+                  data-sub="SCIPY"
+                  class="badge badge-light conf-sub SCIPY-tag"
+                ></span>
+              </div>
+              <div class="col-6">
+                <div class="calendar"></div>
+              </div>
+            </div>
+            <hr />
+          </div>
+
+          <div id="scipy-us-2023" class="ConfItem SCIPY-conf">
+            <div class="row conf-row">
+              <div class="col-6">
+                <span class="conf-title">
+                  <a title="Deadline Details" href="/conference/scipy-us-2023/"
+                    >SciPy US 2023</a
+                  >
+                </span>
+                <span class="conf-title-small">
+                  <a title="Deadline Details" href="/conference/scipy-us-2023/"
+                    >SciPy US '23</a
+                  >
+                </span>
+                <span class="conf-title-icon">
+                  <a
+                    title="Conference Website"
+                    href="https://scipy2023.scipy.org"
+                    target="_blank"
+                    ><img
+                      src="/static/img/203-earth.svg"
+                      class="badge-link"
+                      alt="Link to Conference Website"
+                      width="16"
+                      height="16"
+                  /></a>
+                  &ZeroWidthSpace;
+                </span>
+
+                <span class="conf-title-icon">
+                  <a
+                    title="Call for Participation for SciPy US"
+                    href="https://scipy2023.scipy.org/present"
+                    target="_blank"
+                    ><img
+                      src="/static/img/035-file-text.svg"
+                      class="badge-link"
+                      alt="Link to Call for Participation for SciPy US"
+                      width="16"
+                      height="16"
+                  /></a>
+                  &ZeroWidthSpace;
+                </span>
+
+                <span class="conf-title-icon">
+                  <a
+                    title="Financial Aid from SciPy US"
+                    href="https://www.scipy2023.scipy.org/financial-aid"
+                    target="_blank"
+                    ><img
+                      src="/static/img/066-lifebuoy.svg"
+                      class="badge-link"
+                      alt="Link to Sponsorship page of SciPy US"
+                      width="16"
+                      height="16"
+                  /></a>
+                  &ZeroWidthSpace;
+                </span>
+
+                <span class="conf-title-icon">
+                  <a
+                    title="Sponsorship Opportunity for SciPy US"
+                    href="https://pydata.org/wp-content/uploads/2023/02/SciPy-2023-Prospectus.pdf"
+                    target="_blank"
+                    ><img
+                      src="/static/img/060-coin-dollar.svg"
+                      class="badge-link"
+                      alt="Link to Sponsorship page of SciPy US"
+                      width="16"
+                      height="16"
+                  /></a>
+                  &ZeroWidthSpace;
+                </span>
+
+                <span class="conf-title-icon">
+                  <a
+                    title="Twitter for SciPy US"
+                    href="https://twitter.com/SciPyConf"
+                    target="_blank"
+                    ><img
+                      src="/static/img/407-twitter.svg"
+                      class="badge-link"
+                      alt="Link to Conference Twitter"
+                      width="16"
+                      height="16"
+                  /></a>
+                  &ZeroWidthSpace;
+                </span>
+              </div>
+              <div class="col-6">
+                <span class="timer"></span>
+                <span class="timer-small"></span>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12 col-sm-6">
+                <div class="meta">
+                  <span class="conf-date">July 10 - 16, 2023.</span>
+                  <span class="conf-place">
+                    <a href="http://maps.google.com/?q=Austin, Texas, USA"
+                      >Austin, Texas, USA</a
+                    >
+                  </span>
+                </div>
+              </div>
+              <div class="col-12 col-sm-6">
+                <div class="deadline">
+                  <div>
+                    Deadline:
+                    <span class="deadline-time"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-6">
+                <span
+                  title="Click to only show SCIPY conferences"
+                  data-sub="SCIPY"
+                  class="badge badge-light conf-sub SCIPY-tag"
+                ></span>
+              </div>
+              <div class="col-6">
+                <div class="calendar"></div>
+              </div>
+            </div>
+            <hr />
+          </div>
+
+          <div id="scipy-us-2022" class="ConfItem SCIPY-conf">
+            <div class="row conf-row">
+              <div class="col-6">
+                <span class="conf-title">
+                  <a title="Deadline Details" href="/conference/scipy-us-2022/"
+                    >SciPy US 2022</a
+                  >
+                </span>
+                <span class="conf-title-small">
+                  <a title="Deadline Details" href="/conference/scipy-us-2022/"
+                    >SciPy US '22</a
+                  >
+                </span>
+                <span class="conf-title-icon">
+                  <a
+                    title="Conference Website"
+                    href="https://conference.scipy.org/"
+                    target="_blank"
+                    ><img
+                      src="/static/img/203-earth.svg"
+                      class="badge-link"
+                      alt="Link to Conference Website"
+                      width="16"
+                      height="16"
+                  /></a>
+                  &ZeroWidthSpace;
+                </span>
+              </div>
+              <div class="col-6">
+                <span class="timer"></span>
+                <span class="timer-small"></span>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12 col-sm-6">
+                <div class="meta">
+                  <span class="conf-date">July 11 - 17, 2022.</span>
+                  <span class="conf-place">
+                    <a
+                      href="http://maps.google.com/?q=Austin, Texas, United States"
+                      >Austin, Texas, United States</a
+                    >
+                  </span>
+                </div>
+              </div>
+              <div class="col-12 col-sm-6">
+                <div class="deadline">
+                  <div>
+                    Deadline:
+                    <span class="deadline-time"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-6">
+                <span
+                  title="Click to only show SCIPY conferences"
+                  data-sub="SCIPY"
+                  class="badge badge-light conf-sub SCIPY-tag"
+                ></span>
+              </div>
+              <div class="col-6">
+                <div class="calendar"></div>
+              </div>
+            </div>
+            <hr />
+          </div>
+        </div>
       </div>
       <footer>
         <hr />
@@ -469,6 +798,210 @@
 
             // Set time zone to local timezone on web copy
             $('.local-timezone').text(today.toFormat('z'));
+
+
+
+
+                $('#scipy-us-2024 .SCIPY-tag').html(sub2name["SCIPY"].toLocaleLowerCase());
+
+
+
+                // Use specified timezone for deadlines if available else use AoE timezone
+
+                  var cfpDate = DateTime.fromSQL("2024-02-27 23:59:00", { zone: "America/Los_Angeles" });
+                  var confDate = DateTime.fromSQL("2024-07-08", { zone: "America/Los_Angeles" });
+
+
+                // check if timezone is valid otherwise replace by system timezone
+                if (cfpDate.invalid || confDate.invalid) {
+                  var cfpDate = DateTime.fromSQL("2024-02-27 23:59:00");
+                  var confDate = DateTime.fromSQL("2024-07-08");
+                  console.log("Invalid timezone in scipy-us-2024. Using system timezone instead.");
+                }
+
+                // render countdown timer
+                $('#scipy-us-2024 .timer').countdown(cfpDate.toJSDate(), function (event) {
+                  $(this).html(event.strftime('%D days %Hh %Mm %Ss'));
+                });
+
+                // render countdown timer small
+                $('#scipy-us-2024 .timer-small').countdown(cfpDate.toJSDate(), function (event) {
+                  $(this).html(event.strftime('%Dd %H:%M:%S'));
+                });
+
+                // deadline in local timezone
+                $('#scipy-us-2024 .deadline-time').html(cfpDate.setZone('system').toLocaleString(DateTime.DATE_HUGE));
+
+                // add calendar button
+                try {
+                  var myCalendar = createCalendarFromObject({
+                    id: 'scipy-us-2024',
+                    title: 'SciPy US 2024 deadline',
+                    date: cfpDate.toJSDate(),
+                    duration: 60,
+                  });
+                  document.querySelector('#scipy-us-2024 .calendar').appendChild(myCalendar);
+                } catch (err) {
+                  document.querySelector('#scipy-us-2024 .calendar').appendChild("<p>Calendar not available.</p>");
+                  console.log("Error in cfp date.");
+                }
+
+                // check if date has passed, add 'past' class to it
+                cfpDiff = cfpDate.diffNow("seconds");
+                confDiff = confDate.diffNow("seconds");
+
+                $('#scipy-us-2024').attr("cfpDiff", cfpDiff.toMillis());
+                $('#scipy-us-2024').attr("confDiff", confDiff.toMillis());
+
+                if (cfpDiff < 0) {
+                  $('#scipy-us-2024').addClass('pastcfp');
+                  $('#scipy-us-2024 .timer').replaceWith($('#scipy-us-2024 .deadline'));
+                  $('#scipy-us-2024 .timer-small').replaceWith($('#scipy-us-2024 .deadline'));
+                  $('#scipy-us-2024 .calendar').remove();
+                }
+
+                if (confDiff < 0) {
+                  $('#scipy-us-2024').addClass('pastconf');
+                  $('#scipy-us-2024 .timer').replaceWith($('#scipy-us-2024 .deadline'));
+                  $('#scipy-us-2024 .timer-small').replaceWith($('#scipy-us-2024 .deadline'));
+                  $('#scipy-us-2024 .calendar').remove();
+                }
+
+
+
+
+                $('#scipy-us-2023 .SCIPY-tag').html(sub2name["SCIPY"].toLocaleLowerCase());
+
+
+
+                // Use specified timezone for deadlines if available else use AoE timezone
+
+                  var cfpDate = DateTime.fromSQL("2023-03-01 23:59:00", { zone: "America/Chicago" });
+                  var confDate = DateTime.fromSQL("2023-07-10", { zone: "America/Chicago" });
+
+
+                // check if timezone is valid otherwise replace by system timezone
+                if (cfpDate.invalid || confDate.invalid) {
+                  var cfpDate = DateTime.fromSQL("2023-03-01 23:59:00");
+                  var confDate = DateTime.fromSQL("2023-07-10");
+                  console.log("Invalid timezone in scipy-us-2023. Using system timezone instead.");
+                }
+
+                // render countdown timer
+                $('#scipy-us-2023 .timer').countdown(cfpDate.toJSDate(), function (event) {
+                  $(this).html(event.strftime('%D days %Hh %Mm %Ss'));
+                });
+
+                // render countdown timer small
+                $('#scipy-us-2023 .timer-small').countdown(cfpDate.toJSDate(), function (event) {
+                  $(this).html(event.strftime('%Dd %H:%M:%S'));
+                });
+
+                // deadline in local timezone
+                $('#scipy-us-2023 .deadline-time').html(cfpDate.setZone('system').toLocaleString(DateTime.DATE_HUGE));
+
+                // add calendar button
+                try {
+                  var myCalendar = createCalendarFromObject({
+                    id: 'scipy-us-2023',
+                    title: 'SciPy US 2023 deadline',
+                    date: cfpDate.toJSDate(),
+                    duration: 60,
+                  });
+                  document.querySelector('#scipy-us-2023 .calendar').appendChild(myCalendar);
+                } catch (err) {
+                  document.querySelector('#scipy-us-2023 .calendar').appendChild("<p>Calendar not available.</p>");
+                  console.log("Error in cfp date.");
+                }
+
+                // check if date has passed, add 'past' class to it
+                cfpDiff = cfpDate.diffNow("seconds");
+                confDiff = confDate.diffNow("seconds");
+
+                $('#scipy-us-2023').attr("cfpDiff", cfpDiff.toMillis());
+                $('#scipy-us-2023').attr("confDiff", confDiff.toMillis());
+
+                if (cfpDiff < 0) {
+                  $('#scipy-us-2023').addClass('pastcfp');
+                  $('#scipy-us-2023 .timer').replaceWith($('#scipy-us-2023 .deadline'));
+                  $('#scipy-us-2023 .timer-small').replaceWith($('#scipy-us-2023 .deadline'));
+                  $('#scipy-us-2023 .calendar').remove();
+                }
+
+                if (confDiff < 0) {
+                  $('#scipy-us-2023').addClass('pastconf');
+                  $('#scipy-us-2023 .timer').replaceWith($('#scipy-us-2023 .deadline'));
+                  $('#scipy-us-2023 .timer-small').replaceWith($('#scipy-us-2023 .deadline'));
+                  $('#scipy-us-2023 .calendar').remove();
+                }
+
+
+
+
+                $('#scipy-us-2022 .SCIPY-tag').html(sub2name["SCIPY"].toLocaleLowerCase());
+
+
+
+                // Use specified timezone for deadlines if available else use AoE timezone
+
+                  var cfpDate = DateTime.fromSQL("2022-02-22 23:59:00", { zone: "America/Chicago" });
+                  var confDate = DateTime.fromSQL("2022-07-11", { zone: "America/Chicago" });
+
+
+                // check if timezone is valid otherwise replace by system timezone
+                if (cfpDate.invalid || confDate.invalid) {
+                  var cfpDate = DateTime.fromSQL("2022-02-22 23:59:00");
+                  var confDate = DateTime.fromSQL("2022-07-11");
+                  console.log("Invalid timezone in scipy-us-2022. Using system timezone instead.");
+                }
+
+                // render countdown timer
+                $('#scipy-us-2022 .timer').countdown(cfpDate.toJSDate(), function (event) {
+                  $(this).html(event.strftime('%D days %Hh %Mm %Ss'));
+                });
+
+                // render countdown timer small
+                $('#scipy-us-2022 .timer-small').countdown(cfpDate.toJSDate(), function (event) {
+                  $(this).html(event.strftime('%Dd %H:%M:%S'));
+                });
+
+                // deadline in local timezone
+                $('#scipy-us-2022 .deadline-time').html(cfpDate.setZone('system').toLocaleString(DateTime.DATE_HUGE));
+
+                // add calendar button
+                try {
+                  var myCalendar = createCalendarFromObject({
+                    id: 'scipy-us-2022',
+                    title: 'SciPy US 2022 deadline',
+                    date: cfpDate.toJSDate(),
+                    duration: 60,
+                  });
+                  document.querySelector('#scipy-us-2022 .calendar').appendChild(myCalendar);
+                } catch (err) {
+                  document.querySelector('#scipy-us-2022 .calendar').appendChild("<p>Calendar not available.</p>");
+                  console.log("Error in cfp date.");
+                }
+
+                // check if date has passed, add 'past' class to it
+                cfpDiff = cfpDate.diffNow("seconds");
+                confDiff = confDate.diffNow("seconds");
+
+                $('#scipy-us-2022').attr("cfpDiff", cfpDiff.toMillis());
+                $('#scipy-us-2022').attr("confDiff", confDiff.toMillis());
+
+                if (cfpDiff < 0) {
+                  $('#scipy-us-2022').addClass('pastcfp');
+                  $('#scipy-us-2022 .timer').replaceWith($('#scipy-us-2022 .deadline'));
+                  $('#scipy-us-2022 .timer-small').replaceWith($('#scipy-us-2022 .deadline'));
+                  $('#scipy-us-2022 .calendar').remove();
+                }
+
+                if (confDiff < 0) {
+                  $('#scipy-us-2022').addClass('pastconf');
+                  $('#scipy-us-2022 .timer').replaceWith($('#scipy-us-2022 .deadline'));
+                  $('#scipy-us-2022 .timer-small').replaceWith($('#scipy-us-2022 .deadline'));
+                  $('#scipy-us-2022 .calendar').remove();
+                }
 
 
 

@@ -74,7 +74,7 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/js-year-calendar.min.css?t=1708992005"
+      href="/static/css/js-year-calendar.min.css?t=1708992980"
       media="screen,projection"
     />
 
@@ -86,13 +86,13 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/deadlines.css?t=1708992005"
+      href="/static/css/deadlines.css?t=1708992980"
       media="screen,projection"
     />
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/calendar.css?t=1708992005"
+      href="/static/css/calendar.css?t=1708992980"
       media="screen,projection"
     />
 
@@ -201,7 +201,7 @@
                 link +
                 '">' +
                 pubDate +
-                " by PyCascades 2024 Conference Deadlines</a>";
+                " by PyCascades</a>";
               feedContainer.appendChild(feedItem);
             }
           })
@@ -464,16 +464,14 @@
             </div>
 
             <h1>
-              <span
-                id="conf-title-href"
-                href="/conference/pycascades-2024-conference-deadlines-2024/"
-                >PyCascades 2024 Conference Deadlines 2024</span
+              <span id="conf-title-href" href="/conference/pycascades-2024/"
+                >PyCascades 2024</span
               >
               <span id="twitter-box"
                 ><a
                   href="https://twitter.com/share"
                   class="twitter-share-button"
-                  data-text="Countdown to the #PyCascades 2024 Conference Deadlines2024 deadline!"
+                  data-text="Countdown to the #PyCascades 2024 deadline!"
                   data-show-count="false"
                   style="font-size: 13px"
                   >Tweet</a
@@ -568,10 +566,8 @@
                 width="16"
                 height="16"
               />
-              <a
-                id="conf-series"
-                href="/series/pycascades-2024-conference-deadlines"
-                >All PyCascades 2024 Conference Deadlines conferences</a
+              <a id="conf-series" href="/series/pycascades"
+                >All PyCascades conferences</a
               >
             </div>
 
@@ -642,25 +638,22 @@
 
           <div class="col-12 col-md-6">
             <!-- Mastodon timeline -->
-            <div class="meta">
-              Mastodon Posts by PyCascades 2024 Conference Deadlines:
-            </div>
+            <div class="meta">Mastodon Posts by PyCascades:</div>
             <div id="mastodon-feed"></div>
             <a href="https://fosstodon.org/@pycascades"
-              >See all Mastodon posts for PyCascades 2024 Conference
-              Deadlines</a
+              >See all Mastodon posts for PyCascades</a
             >
           </div>
         </div>
         <div class="row">
           <div
-            id="5efff953-15e0-4571-8abd-282ce669bba6"
+            id="c3f7331a-fddb-44cf-9b99-67b16e65a374"
             style="width: 100%; height: 400px"
             class="jekyll-map"
           ></div>
           <script type="text/javascript">
             jekyllMaps.register(
-              "5efff953-15e0-4571-8abd-282ce669bba6",
+              "c3f7331a-fddb-44cf-9b99-67b16e65a374",
               [
                 {
                   latitude: 47.6038321,
@@ -815,8 +808,8 @@
 
         // add calendar
         var conferenceDeadlineCalendar = createCalendarFromObject({
-          id: "-",
-          title: "PyCascades 2024 Conference Deadlines 2024 deadline",
+          id: "pycascades-2024",
+          title: "PyCascades 2024 Conference Deadlines",
           date: confDeadline.toJSDate(),
           duration: 60,
         });
