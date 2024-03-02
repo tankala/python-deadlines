@@ -36,7 +36,7 @@
     <meta property="og:type" content="article" />
     <meta
       property="article:published_time"
-      content="2024-06-12T00:00:00+00:00"
+      content="2024-06-05T00:00:00+00:00"
     />
     <meta name="twitter:card" content="summary" />
     <meta
@@ -54,8 +54,8 @@
           "name": "Jesper Dramsch",
           "url": "https://dramsch.net"
         },
-        "dateModified": "2024-06-12T00:00:00+00:00",
-        "datePublished": "2024-06-12T00:00:00+00:00",
+        "dateModified": "2024-06-05T00:00:00+00:00",
+        "datePublished": "2024-06-05T00:00:00+00:00",
         "description": "Countdown for the Call for Participation of this conference including conference dates and details.",
         "headline": "DjangoCon Europe 2024 Conference Deadlines",
         "mainEntityOfPage": {
@@ -77,7 +77,7 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/js-year-calendar.min.css?t=1709296586"
+      href="/static/css/js-year-calendar.min.css?t=1709339066"
       media="screen,projection"
     />
 
@@ -89,13 +89,13 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/deadlines.css?t=1709296586"
+      href="/static/css/deadlines.css?t=1709339066"
       media="screen,projection"
     />
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/calendar.css?t=1709296586"
+      href="/static/css/calendar.css?t=1709339066"
       media="screen,projection"
     />
 
@@ -175,15 +175,44 @@
       src="/static/js/bootstrap-multiselect.min.js"
     ></script>
 
-    <style>
-      #twitter-widget {
-        width: 100%;
-      }
+    <link rel="stylesheet" type="text/css" href="/static/css/mastodon.css" />
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        fetch("https://fosstodon.org/@djangoconeurope.rss")
+          .then(function (response) {
+            return response.text();
+          })
+          .then(function (xmlText) {
+            var parser = new DOMParser();
+            var xml = parser.parseFromString(xmlText, "text/xml");
+            var items = xml.querySelectorAll("item");
+            var feedContainer = document.getElementById("mastodon-feed");
+            var postLimit = 2; // Number of posts to display
 
-      .twitter-timeline {
-        width: 100% !important;
-      }
-    </style>
+            for (var i = 0; i < postLimit && i < items.length; i++) {
+              var item = items[i];
+              var post = item.querySelector("description").textContent;
+              var link = item.querySelector("link").textContent;
+              var pubDate = item.querySelector("pubDate").textContent;
+
+              var feedItem = document.createElement("div");
+              feedItem.setAttribute("class", "timeline-item");
+              feedItem.innerHTML =
+                '<div class="timeline-content">' +
+                post +
+                '</div><a href="' +
+                link +
+                '">' +
+                pubDate +
+                " by DjangoCon Europe</a>";
+              feedContainer.appendChild(feedItem);
+            }
+          })
+          .catch(function (error) {
+            console.log("Error fetching Mastodon RSS feed:", error);
+          });
+      });
+    </script>
 
     <script type="text/javascript">
       /* global google */
@@ -485,7 +514,7 @@
                 width="16"
                 height="16"
               />
-              <span id="conf-date">June 12 - 16, 2024</span>
+              <span id="conf-date">June 5 - 9, 2024</span>
             </div>
             <div>
               <img
@@ -529,7 +558,7 @@
               <a
                 id="conf-cfp_link"
                 target="_blank"
-                href="https://2024.djangocon.eu/call-for-proposals"
+                href="https://2024.djangocon.eu/talks/cfp/"
                 >Call for Participation</a
               >
             </div>
@@ -595,6 +624,22 @@
               >
             </div>
 
+            <div>
+              <img
+                src="/static/img/407-mastodon.svg"
+                class="badge-link"
+                alt="Mastodon icon"
+                width="16"
+                height="16"
+              />
+              <a
+                id="conf-mastodon"
+                target="_blank"
+                href="https://fosstodon.org/@djangoconeurope"
+                >Mastodon</a
+              >
+            </div>
+
             <div class="meta deadline">Download Conference deadline:</div>
             <div id="conference-deadline" class="calendar meta"></div>
             <div class="meta deadline">
@@ -613,31 +658,23 @@
           </div>
 
           <div class="col-12 col-md-6">
-            <!-- Twitter timeline -->
-            <div id="twitter-widget">
-              <a
-                class="twitter-timeline"
-                href="https://twitter.com/DjangoConEurope"
-                data-tweet-limit="2"
-                >Tweets by DjangoConEurope</a
-              >
-              <script
-                async
-                src="https://platform.twitter.com/widgets.js"
-                charset="utf-8"
-              ></script>
-            </div>
+            <!-- Mastodon timeline -->
+            <div class="meta">Mastodon Posts by DjangoCon Europe:</div>
+            <div id="mastodon-feed"></div>
+            <a href="https://fosstodon.org/@djangoconeurope"
+              >See all Mastodon posts for DjangoCon Europe</a
+            >
           </div>
         </div>
         <div class="row">
           <div
-            id="0a655579-50f8-440f-b7c7-0d15770a0083"
+            id="40c5fb63-df7f-4f34-afcd-ba557b3c3d17"
             style="width: 100%; height: 400px"
             class="jekyll-map"
           ></div>
           <script type="text/javascript">
             jekyllMaps.register(
-              "0a655579-50f8-440f-b7c7-0d15770a0083",
+              "40c5fb63-df7f-4f34-afcd-ba557b3c3d17",
               [
                 {
                   latitude: 42.240599,
@@ -781,7 +818,7 @@
         // Use specified timezone for deadlines if available else use AoE timezone
 
         var confDeadline = DateTime.fromSQL("2024-02-29 23:59:00", {
-          zone: "UTC-12",
+          zone: "Europe/Madrid",
         });
 
         // check if timezone is valid otherwise replace by system timezone
@@ -810,7 +847,7 @@
 
         $(".deadline-time").html(
           confDeadline
-            .setZone("UTC-12")
+            .setZone("Europe/Madrid")
             .toLocaleString(DateTime.DATETIME_HUGE_WITH_SECONDS)
         );
 
