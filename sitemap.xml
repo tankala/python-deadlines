@@ -129,6 +129,12 @@
 <loc>https://pythondeadlin.es/conference/swiss-python-summit-2024/</loc>
 </url>
 <url>
+<loc>https://pythondeadlin.es/conference/wagtail-space-nl-2024/</loc>
+</url>
+<url>
+<loc>https://pythondeadlin.es/conference/wagtail-space-us-2024/</loc>
+</url>
+<url>
 <loc>https://pythondeadlin.es/conference/xtremepython-2023/</loc>
 </url>
 <url>
@@ -850,5 +856,11 @@
 </url>
 <url>
 <loc>https://pythondeadlin.es/series/swiss-python-summit/</loc>
+</url>
+<url>
+<loc>https://pythondeadlin.es/series/wagtail-space-nl/</loc>
+</url>
+<url>
+<loc>https://pythondeadlin.es/series/wagtail-space-us/</loc>
 </url>
 </urlset>
