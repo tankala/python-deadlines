@@ -32,7 +32,7 @@
     <meta property="og:type" content="article" />
     <meta
       property="article:published_time"
-      content="2024-10-16T00:00:00+00:00"
+      content="2024-09-22T00:00:00+00:00"
     />
     <meta name="twitter:card" content="summary" />
     <meta property="twitter:title" content="DjangoCon US Conference Summary" />
@@ -47,8 +47,8 @@
           "name": "Jesper Dramsch",
           "url": "https://dramsch.net"
         },
-        "dateModified": "2024-10-16T00:00:00+00:00",
-        "datePublished": "2024-10-16T00:00:00+00:00",
+        "dateModified": "2024-09-22T00:00:00+00:00",
+        "datePublished": "2024-09-22T00:00:00+00:00",
         "description": "Summary of the conference and its instances throughout the years.",
         "headline": "DjangoCon US Conference Summary",
         "mainEntityOfPage": {
@@ -70,7 +70,7 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/js-year-calendar.min.css?t=1709339066"
+      href="/static/css/js-year-calendar.min.css?t=1709339345"
       media="screen,projection"
     />
 
@@ -82,13 +82,13 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/deadlines.css?t=1709339066"
+      href="/static/css/deadlines.css?t=1709339345"
       media="screen,projection"
     />
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/calendar.css?t=1709339066"
+      href="/static/css/calendar.css?t=1709339345"
       media="screen,projection"
     />
 
@@ -167,6 +167,45 @@
       type="text/javascript"
       src="/static/js/bootstrap-multiselect.min.js"
     ></script>
+
+    <link rel="stylesheet" type="text/css" href="/static/css/mastodon.css" />
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        fetch("https://fosstodon.org/@djangocon.rss")
+          .then(function (response) {
+            return response.text();
+          })
+          .then(function (xmlText) {
+            var parser = new DOMParser();
+            var xml = parser.parseFromString(xmlText, "text/xml");
+            var items = xml.querySelectorAll("item");
+            var feedContainer = document.getElementById("mastodon-feed");
+            var postLimit = 2; // Number of posts to display
+
+            for (var i = 0; i < postLimit && i < items.length; i++) {
+              var item = items[i];
+              var post = item.querySelector("description").textContent;
+              var link = item.querySelector("link").textContent;
+              var pubDate = item.querySelector("pubDate").textContent;
+
+              var feedItem = document.createElement("div");
+              feedItem.setAttribute("class", "timeline-item");
+              feedItem.innerHTML =
+                '<div class="timeline-content">' +
+                post +
+                '</div><a href="' +
+                link +
+                '">' +
+                pubDate +
+                " by DjangoCon US</a>";
+              feedContainer.appendChild(feedItem);
+            }
+          })
+          .catch(function (error) {
+            console.log("Error fetching Mastodon RSS feed:", error);
+          });
+      });
+    </script>
   </head>
 
   <body>
@@ -299,8 +338,8 @@
               <a
                 id="conf-website"
                 target="_blank"
-                href="https://2023.djangocon.us"
-                >https://2023.djangocon.us</a
+                href="https://2024.djangocon.us/"
+                >https://2024.djangocon.us/</a
               >
             </div>
 
@@ -315,30 +354,156 @@
               <a
                 id="conf-twitter"
                 target="_blank"
-                href="https://twitter.com/djangoCon"
-                >@djangoCon</a
+                href="https://twitter.com/DjangoCon"
+                >@DjangoCon</a
+              >
+            </div>
+
+            <div>
+              <img
+                src="/static/img/407-mastodon.svg"
+                class="badge-link"
+                alt="Mastodon icon"
+                width="16"
+                height="16"
+              />
+              <a
+                id="conf-mastodon"
+                target="_blank"
+                href="https://fosstodon.org/@djangocon"
+                >Mastodon</a
               >
             </div>
           </div>
           <div class="col-12 col-md-6">
-            <!-- Twitter timeline -->
-            <div id="twitter-widget">
-              <a
-                class="twitter-timeline"
-                href="https://twitter.com/"
-                data-tweet-limit="2"
-                >Tweets by djangoCon</a
-              >
-              <script
-                async
-                src="https://platform.twitter.com/widgets.js"
-                charset="utf-8"
-              ></script>
-            </div>
+            <!-- Mastodon timeline -->
+            <div class="meta">Mastodon Posts by DjangoCon US:</div>
+            <div id="mastodon-feed"></div>
+            <a href="https://fosstodon.org/@djangocon"
+              >See all Mastodon posts for DjangoCon US</a
+            >
           </div>
         </div>
         <hr />
         <div id="all_confs">
+          <div id="djangocon-us-2024" class="ConfItem WEB-conf">
+            <div class="row conf-row">
+              <div class="col-6">
+                <span class="conf-title">
+                  <a
+                    title="Deadline Details"
+                    href="/conference/djangocon-us-2024/"
+                    >DjangoCon US 2024</a
+                  >
+                </span>
+                <span class="conf-title-small">
+                  <a
+                    title="Deadline Details"
+                    href="/conference/djangocon-us-2024/"
+                    >DjangoCon US '24</a
+                  >
+                </span>
+                <span class="conf-title-icon">
+                  <a
+                    title="Conference Website"
+                    href="https://2024.djangocon.us/"
+                    target="_blank"
+                    ><img
+                      src="/static/img/203-earth.svg"
+                      class="badge-link"
+                      alt="Link to Conference Website"
+                      width="16"
+                      height="16"
+                  /></a>
+                  &ZeroWidthSpace;
+                </span>
+
+                <span class="conf-title-icon">
+                  <a
+                    title="Call for Participation for DjangoCon US"
+                    href="https://2024.djangocon.us/speaking/"
+                    target="_blank"
+                    ><img
+                      src="/static/img/035-file-text.svg"
+                      class="badge-link"
+                      alt="Link to Call for Participation for DjangoCon US"
+                      width="16"
+                      height="16"
+                  /></a>
+                  &ZeroWidthSpace;
+                </span>
+
+                <span class="conf-title-icon">
+                  <a
+                    title="Financial Aid from DjangoCon US"
+                    href="https://2024.djangocon.us/opportunity-grants/"
+                    target="_blank"
+                    ><img
+                      src="/static/img/066-lifebuoy.svg"
+                      class="badge-link"
+                      alt="Link to Sponsorship page of DjangoCon US"
+                      width="16"
+                      height="16"
+                  /></a>
+                  &ZeroWidthSpace;
+                </span>
+
+                <span class="conf-title-icon">
+                  <a
+                    title="Mastodon for DjangoCon US"
+                    href="https://fosstodon.org/@djangocon"
+                    target="_blank"
+                    ><img
+                      src="/static/img/407-mastodon.svg"
+                      class="badge-link"
+                      alt="Link to Conference Mastodon"
+                      width="16"
+                      height="16"
+                  /></a>
+                  &ZeroWidthSpace;
+                </span>
+              </div>
+              <div class="col-6">
+                <span class="timer"></span>
+                <span class="timer-small"></span>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12 col-sm-6">
+                <div class="meta">
+                  <span class="conf-date">September 22 - 27, 2024.</span>
+                  <span class="conf-place">
+                    <a
+                      href="http://maps.google.com/?q=Durham, North Carolina, USA"
+                      >Durham, North Carolina, USA</a
+                    >
+                  </span>
+                </div>
+              </div>
+              <div class="col-12 col-sm-6">
+                <div class="deadline">
+                  <div>
+                    Deadline:
+                    <span class="deadline-time">Wednesday, 24 April 2024</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-6">
+                <span
+                  title="Click to only show WEB conferences"
+                  data-sub="WEB"
+                  class="badge badge-light conf-sub WEB-tag"
+                ></span>
+              </div>
+              <div class="col-6">
+                <div class="calendar"></div>
+              </div>
+            </div>
+            <hr />
+          </div>
+
           <div id="djangocon-us-2023" class="ConfItem WEB-conf">
             <div class="row conf-row">
               <div class="col-6">
@@ -700,6 +865,75 @@
 
             // Set time zone to local timezone on web copy
             $('.local-timezone').text(today.toFormat('z'));
+
+
+
+
+
+                $('#djangocon-us-2024 .WEB-tag').html(sub2name["WEB"].toLocaleLowerCase());
+
+
+
+                // Use specified timezone for deadlines if available else use AoE timezone
+
+                  var cfpDate = DateTime.fromSQL("2024-04-24 12:00:00", { zone: "America/New_York" });
+                  var confDate = DateTime.fromSQL("2024-09-22", { zone: "America/New_York" });
+
+
+                // check if timezone is valid otherwise replace by system timezone
+                if (cfpDate.invalid || confDate.invalid) {
+                  var cfpDate = DateTime.fromSQL("2024-04-24 12:00:00");
+                  var confDate = DateTime.fromSQL("2024-09-22");
+                  console.log("Invalid timezone in djangocon-us-2024. Using system timezone instead.");
+                }
+
+                // render countdown timer
+                $('#djangocon-us-2024 .timer').countdown(cfpDate.toJSDate(), function (event) {
+                  $(this).html(event.strftime('%D days %Hh %Mm %Ss'));
+                });
+
+                // render countdown timer small
+                $('#djangocon-us-2024 .timer-small').countdown(cfpDate.toJSDate(), function (event) {
+                  $(this).html(event.strftime('%Dd %H:%M:%S'));
+                });
+
+                // deadline in local timezone
+                $('#djangocon-us-2024 .deadline-time').html(cfpDate.setZone('system').toLocaleString(DateTime.DATE_HUGE));
+
+                // add calendar button
+                try {
+                  var myCalendar = createCalendarFromObject({
+                    id: 'djangocon-us-2024',
+                    title: 'DjangoCon US 2024 deadline',
+                    date: cfpDate.toJSDate(),
+                    duration: 60,
+                  });
+                  document.querySelector('#djangocon-us-2024 .calendar').appendChild(myCalendar);
+                } catch (err) {
+                  document.querySelector('#djangocon-us-2024 .calendar').appendChild("<p>Calendar not available.</p>");
+                  console.log("Error in cfp date.");
+                }
+
+                // check if date has passed, add 'past' class to it
+                cfpDiff = cfpDate.diffNow("seconds");
+                confDiff = confDate.diffNow("seconds");
+
+                $('#djangocon-us-2024').attr("cfpDiff", cfpDiff.toMillis());
+                $('#djangocon-us-2024').attr("confDiff", confDiff.toMillis());
+
+                if (cfpDiff < 0) {
+                  $('#djangocon-us-2024').addClass('pastcfp');
+                  $('#djangocon-us-2024 .timer').replaceWith($('#djangocon-us-2024 .deadline'));
+                  $('#djangocon-us-2024 .timer-small').replaceWith($('#djangocon-us-2024 .deadline'));
+                  $('#djangocon-us-2024 .calendar').remove();
+                }
+
+                if (confDiff < 0) {
+                  $('#djangocon-us-2024').addClass('pastconf');
+                  $('#djangocon-us-2024 .timer').replaceWith($('#djangocon-us-2024 .deadline'));
+                  $('#djangocon-us-2024 .timer-small').replaceWith($('#djangocon-us-2024 .deadline'));
+                  $('#djangocon-us-2024 .calendar').remove();
+                }
 
 
 

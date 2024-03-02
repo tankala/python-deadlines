@@ -84,6 +84,9 @@
 <loc>https://pythondeadlin.es/conference/djangocon-europe-2024/</loc>
 </url>
 <url>
+<loc>https://pythondeadlin.es/conference/djangocon-us-2024/</loc>
+</url>
+<url>
 <loc>https://pythondeadlin.es/conference/scipy-us-2024/</loc>
 </url>
 <url>
@@ -802,6 +805,9 @@
 </url>
 <url>
 <loc>https://pythondeadlin.es/series/djangocon-europe/</loc>
+</url>
+<url>
+<loc>https://pythondeadlin.es/series/djangocon-us/</loc>
 </url>
 <url>
 <loc>https://pythondeadlin.es/series/scipy-us/</loc>

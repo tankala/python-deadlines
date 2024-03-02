@@ -9,7 +9,7 @@
 		<title>Python Conference Deadlines</title>
 		<description>Countdowns to your favourite Python conferences with calls for participation and resources to submit awesome talks!</description>
 		<link>https://pythondeadlin.es/feed.xml</link>
-		<lastBuildDate>Sat, 02 Mar 2024 00:24:26 +0000</lastBuildDate>
+		<lastBuildDate>Sat, 02 Mar 2024 00:29:05 +0000</lastBuildDate>
 		
 		
 		
@@ -102,6 +102,18 @@
 				<description>Conference in Vigo, Spain on June 5 - 9, 2024. CfP: 2024-02-29 23:59:00 AoE.&lt;br /&gt;Find them here: @DjangoConEurope </description>
 				<pubDate>Thu, 29 Feb 2024 23:59:00 +0000</pubDate>
 				<link>https://pythondeadlin.es/conference/djangocon-europe-2024/</link>
+				<guid isPermaLink="false"></guid>
+				<category>WEB</category>
+			</item>
+		
+		
+		
+		
+			<item>
+				<title>DjangoCon US 2024 Conference Deadline</title>
+				<description>Conference in Durham, North Carolina, USA on September 22 - 27, 2024. CfP: 2024-04-24 12:00:00 AoE.&lt;br /&gt;Find them here: @DjangoCon </description>
+				<pubDate>Wed, 24 Apr 2024 12:00:00 +0000</pubDate>
+				<link>https://pythondeadlin.es/conference/djangocon-us-2024/</link>
 				<guid isPermaLink="false"></guid>
 				<category>WEB</category>
 			</item>

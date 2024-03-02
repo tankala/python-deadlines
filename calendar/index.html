@@ -62,7 +62,7 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/js-year-calendar.min.css?t=1709339066"
+      href="/static/css/js-year-calendar.min.css?t=1709339345"
       media="screen,projection"
     />
 
@@ -74,13 +74,13 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/deadlines.css?t=1709339066"
+      href="/static/css/deadlines.css?t=1709339345"
       media="screen,projection"
     />
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/calendar.css?t=1709339066"
+      href="/static/css/calendar.css?t=1709339345"
       media="screen,projection"
     />
 
@@ -937,6 +937,38 @@
           subject: "WEB",
           startDate: Date.parse("2024-06-05"),
           endDate: Date.parse("2024-06-09"),
+        });
+
+        // add deadlines in red
+        conf_list_all.push({
+          id: "djangocon-us-2024-deadline",
+          abbreviation: "djangocon-us-2024",
+          name: "DjangoCon US 2024 CfP ",
+          color: "red",
+          location: "Durham, North Carolina, USA",
+          date: "September 22 - 27, 2024",
+          subject: "WEB",
+          startDate: Date.parse("2024-04-24 12:00:00"),
+          endDate: Date.parse("2024-04-24 12:00:00"),
+        });
+
+        // add Conferences in chosen color
+
+        var color = "black";
+        // use first sub to choose color
+
+        color = "#0D0A0B";
+
+        conf_list_all.push({
+          id: "djangocon-us-2024-conference",
+          abbreviation: "djangocon-us-2024",
+          name: "DjangoCon US 2024",
+          color: color,
+          location: "Durham, North Carolina, USA",
+          date: "September 22 - 27, 2024",
+          subject: "WEB",
+          startDate: Date.parse("2024-09-22"),
+          endDate: Date.parse("2024-09-27"),
         });
 
         // add deadlines in red

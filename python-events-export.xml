@@ -9,7 +9,7 @@
 		<title>Newsfeed for Python Events Calendar from Python Conference Deadlines</title>
 		<description>Countdowns to your favourite Python conferences with calls for participation and resources to submit awesome talks!</description>
 		<link>https://pythondeadlin.es/feed.xml</link>
-		<lastBuildDate>Sat, 02 Mar 2024 00:24:26 +0000</lastBuildDate>
+		<lastBuildDate>Sat, 02 Mar 2024 00:29:05 +0000</lastBuildDate>
 		
 			<item>
 				<title>Kiwi PyCon 2024 Conference Deadline</title>
@@ -79,6 +79,15 @@
 				<description><![CDATA[* name of the event: DjangoCon Europe 2024<br/>* type of event: Conference <br/>* focus on Python: Yes<br/>* approximate number of attendees: Unknown<br/>* location (incl. country): Vigo, Spain<br/>* dates/times/recurrence (incl. time zone): June 5 - 9, 2024<br/>* HTML link : <a href="https://2024.djangocon.eu/">DjangoCon Europe 2024</a>]]></description>
 				<pubDate>Wed, 05 Jun 2024 00:00:00 +0000</pubDate>
 				<link>https://pythondeadlin.es/conference/djangocon-europe-2024/</link>
+				<guid isPermaLink="false"></guid>
+				<category>WEB</category>
+			</item>
+		
+			<item>
+				<title>DjangoCon US 2024 Conference Deadline</title>
+				<description><![CDATA[* name of the event: DjangoCon US 2024<br/>* type of event: Conference <br/>* focus on Python: Yes<br/>* approximate number of attendees: Unknown<br/>* location (incl. country): Durham, North Carolina, USA<br/>* dates/times/recurrence (incl. time zone): September 22 - 27, 2024<br/>* HTML link : <a href="https://2024.djangocon.us/">DjangoCon US 2024</a>]]></description>
+				<pubDate>Sun, 22 Sep 2024 00:00:00 +0000</pubDate>
+				<link>https://pythondeadlin.es/conference/djangocon-us-2024/</link>
 				<guid isPermaLink="false"></guid>
 				<category>WEB</category>
 			</item>

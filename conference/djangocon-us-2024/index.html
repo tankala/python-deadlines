@@ -4,16 +4,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
-    <title>PyCon DE & PyData Berlin 2022 Conference Deadlines</title>
+    <title>DjangoCon US 2024 Conference Deadlines</title>
     <!-- Begin Jekyll SEO tag v2.8.0 -->
     <title>
-      PyCon DE &amp; PyData Berlin 2022 Conference Deadlines | Python Conference
-      Deadlines
+      DjangoCon US 2024 Conference Deadlines | Python Conference Deadlines
     </title>
     <meta name="generator" content="Jekyll v3.9.3" />
     <meta
       property="og:title"
-      content="PyCon DE &amp; PyData Berlin 2022 Conference Deadlines"
+      content="DjangoCon US 2024 Conference Deadlines"
     />
     <meta name="author" content="Jesper Dramsch" />
     <meta property="og:locale" content="en_US" />
@@ -27,22 +26,22 @@
     />
     <link
       rel="canonical"
-      href="https://pythondeadlin.es/conference/pycon-de--pydata-berlin-2022/"
+      href="https://pythondeadlin.es/conference/djangocon-us-2024/"
     />
     <meta
       property="og:url"
-      content="https://pythondeadlin.es/conference/pycon-de--pydata-berlin-2022/"
+      content="https://pythondeadlin.es/conference/djangocon-us-2024/"
     />
     <meta property="og:site_name" content="Python Conference Deadlines" />
     <meta property="og:type" content="article" />
     <meta
       property="article:published_time"
-      content="2024-04-11T00:00:00+00:00"
+      content="2024-09-22T00:00:00+00:00"
     />
     <meta name="twitter:card" content="summary" />
     <meta
       property="twitter:title"
-      content="PyCon DE &amp; PyData Berlin 2022 Conference Deadlines"
+      content="DjangoCon US 2024 Conference Deadlines"
     />
     <meta name="twitter:site" content="@jesperdramsch" />
     <meta name="twitter:creator" content="@jesperdramsch" />
@@ -55,15 +54,15 @@
           "name": "Jesper Dramsch",
           "url": "https://dramsch.net"
         },
-        "dateModified": "2024-04-11T00:00:00+00:00",
-        "datePublished": "2024-04-11T00:00:00+00:00",
+        "dateModified": "2024-09-22T00:00:00+00:00",
+        "datePublished": "2024-09-22T00:00:00+00:00",
         "description": "Countdown for the Call for Participation of this conference including conference dates and details.",
-        "headline": "PyCon DE &amp; PyData Berlin 2022 Conference Deadlines",
+        "headline": "DjangoCon US 2024 Conference Deadlines",
         "mainEntityOfPage": {
           "@type": "WebPage",
-          "@id": "https://pythondeadlin.es/conference/pycon-de--pydata-berlin-2022/"
+          "@id": "https://pythondeadlin.es/conference/djangocon-us-2024/"
         },
-        "url": "https://pythondeadlin.es/conference/pycon-de--pydata-berlin-2022/"
+        "url": "https://pythondeadlin.es/conference/djangocon-us-2024/"
       }
     </script>
     <!-- End Jekyll SEO tag -->
@@ -175,6 +174,45 @@
       type="text/javascript"
       src="/static/js/bootstrap-multiselect.min.js"
     ></script>
+
+    <link rel="stylesheet" type="text/css" href="/static/css/mastodon.css" />
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        fetch("https://fosstodon.org/@djangocon.rss")
+          .then(function (response) {
+            return response.text();
+          })
+          .then(function (xmlText) {
+            var parser = new DOMParser();
+            var xml = parser.parseFromString(xmlText, "text/xml");
+            var items = xml.querySelectorAll("item");
+            var feedContainer = document.getElementById("mastodon-feed");
+            var postLimit = 2; // Number of posts to display
+
+            for (var i = 0; i < postLimit && i < items.length; i++) {
+              var item = items[i];
+              var post = item.querySelector("description").textContent;
+              var link = item.querySelector("link").textContent;
+              var pubDate = item.querySelector("pubDate").textContent;
+
+              var feedItem = document.createElement("div");
+              feedItem.setAttribute("class", "timeline-item");
+              feedItem.innerHTML =
+                '<div class="timeline-content">' +
+                post +
+                '</div><a href="' +
+                link +
+                '">' +
+                pubDate +
+                " by DjangoCon US</a>";
+              feedContainer.appendChild(feedItem);
+            }
+          })
+          .catch(function (error) {
+            console.log("Error fetching Mastodon RSS feed:", error);
+          });
+      });
+    </script>
 
     <script type="text/javascript">
       /* global google */
@@ -425,21 +463,18 @@
 
               / <a href="/conference/">Conference</a>
 
-              /
-              <a href="#">PyCon DE & PyData Berlin 2022 Conference Deadlines</a>
+              / <a href="#">DjangoCon US 2024 Conference Deadlines</a>
             </div>
 
             <h1>
-              <span
-                id="conf-title-href"
-                href="/conference/pycon-de-pydata-berlin-2022/"
-                >PyCon DE & PyData Berlin 2022</span
+              <span id="conf-title-href" href="/conference/djangocon-us-2024/"
+                >DjangoCon US 2024</span
               >
               <span id="twitter-box"
                 ><a
                   href="https://twitter.com/share"
                   class="twitter-share-button"
-                  data-text="Countdown to the #PyCon DE & PyData Berlin 2022 deadline!"
+                  data-text="Countdown to the #DjangoCon US 2024 deadline!"
                   data-show-count="false"
                   style="font-size: 13px"
                   >Tweet</a
@@ -456,12 +491,8 @@
         <div class="row">
           <div class="col-sm-12" id="conf-subs">
             <span id="conf-subs" title="Conference subjects">
-              <span class="PY-tag badge badge-light conf-sub conf-PY">
-                General Python
-              </span>
-
-              <span class="PYDATA-tag badge badge-light conf-sub conf-PYDATA">
-                Python for Data
+              <span class="WEB-tag badge badge-light conf-sub conf-WEB">
+                Python for Web
               </span>
             </span>
           </div>
@@ -481,7 +512,7 @@
                 width="16"
                 height="16"
               />
-              <span id="conf-date">April 11 - 14, 2022</span>
+              <span id="conf-date">September 22 - 27, 2024</span>
             </div>
             <div>
               <img
@@ -494,8 +525,8 @@
               <a
                 id="conf-place"
                 target="_blank"
-                href="https://maps.google.com/?q=Berlin, Germany"
-                >Berlin, Germany</a
+                href="https://maps.google.com/?q=Durham, North Carolina, USA"
+                >Durham, North Carolina, USA</a
               >
             </div>
             <div>
@@ -506,8 +537,27 @@
                 width="16"
                 height="16"
               />
-              <a id="conf-website" target="_blank" href="https://2022.pycon.de/"
-                >https://2022.pycon.de/</a
+              <a
+                id="conf-website"
+                target="_blank"
+                href="https://2024.djangocon.us/"
+                >https://2024.djangocon.us/</a
+              >
+            </div>
+
+            <div>
+              <img
+                src="/static/img/035-file-text.svg"
+                class="badge-link"
+                alt="Document Icon for CfP link"
+                width="16"
+                height="16"
+              />
+              <a
+                id="conf-cfp_link"
+                target="_blank"
+                href="https://2024.djangocon.us/speaking/"
+                >Call for Participation</a
               >
             </div>
 
@@ -519,8 +569,56 @@
                 width="16"
                 height="16"
               />
-              <a id="conf-series" href="/series/pycon-de-pydata-berlin"
-                >All PyCon DE & PyData Berlin conferences</a
+              <a id="conf-series" href="/series/djangocon-us"
+                >All DjangoCon US conferences</a
+              >
+            </div>
+
+            <div>
+              <img
+                src="/static/img/066-lifebuoy.svg"
+                class="badge-link"
+                alt="Life Buoy for Financial Aid"
+                width="16"
+                height="16"
+              />
+              <a
+                id="conf-finaid"
+                target="_blank"
+                href="https://2024.djangocon.us/opportunity-grants/"
+                >Financial Aid</a
+              >
+            </div>
+
+            <div>
+              <img
+                src="/static/img/407-twitter.svg"
+                class="badge-link"
+                alt="Twitter icon"
+                width="16"
+                height="16"
+              />
+              <a
+                id="conf-twitter"
+                target="_blank"
+                href="https://twitter.com/DjangoCon"
+                >@DjangoCon</a
+              >
+            </div>
+
+            <div>
+              <img
+                src="/static/img/407-mastodon.svg"
+                class="badge-link"
+                alt="Mastodon icon"
+                width="16"
+                height="16"
+              />
+              <a
+                id="conf-mastodon"
+                target="_blank"
+                href="https://fosstodon.org/@djangocon"
+                >Mastodon</a
               >
             </div>
 
@@ -541,24 +639,31 @@
             </div>
           </div>
 
-          <div class="col-12 col-md-6"></div>
+          <div class="col-12 col-md-6">
+            <!-- Mastodon timeline -->
+            <div class="meta">Mastodon Posts by DjangoCon US:</div>
+            <div id="mastodon-feed"></div>
+            <a href="https://fosstodon.org/@djangocon"
+              >See all Mastodon posts for DjangoCon US</a
+            >
+          </div>
         </div>
         <div class="row">
           <div
-            id="abdba2af-74c4-46c4-a6e0-859ac5cb9cdf"
+            id="532cc282-759c-424a-9fdc-46150785af41"
             style="width: 100%; height: 400px"
             class="jekyll-map"
           ></div>
           <script type="text/javascript">
             jekyllMaps.register(
-              "abdba2af-74c4-46c4-a6e0-859ac5cb9cdf",
+              "532cc282-759c-424a-9fdc-46150785af41",
               [
                 {
-                  latitude: 52.5170365,
-                  longitude: 13.3888599,
-                  title: "PyCon DE & PyData Berlin 2022 Conference Deadlines",
+                  latitude: 42.240599,
+                  longitude: -8.720727,
+                  title: "DjangoCon US 2024 Conference Deadlines",
                   icon: null,
-                  url: "/conference/pycon-de--pydata-berlin-2022/",
+                  url: "/conference/djangocon-us-2024/",
                   url_text: null,
                   image: "",
                   popup_html: "",
@@ -694,20 +799,20 @@
 
         // Use specified timezone for deadlines if available else use AoE timezone
 
-        var confDeadline = DateTime.fromSQL("2022-01-16 23:59:59", {
-          zone: "Europe/Berlin",
+        var confDeadline = DateTime.fromSQL("2024-04-24 12:00:00", {
+          zone: "America/New_York",
         });
 
         // check if timezone is valid otherwise replace by system timezone
         if (confDeadline.invalid) {
-          var confDeadline = DateTime.fromSQL("2022-01-16 23:59:59");
+          var confDeadline = DateTime.fromSQL("2024-04-24 12:00:00");
           console.log("Invalid timezone. Using system timezone instead.");
         }
 
         // add calendar
         var conferenceDeadlineCalendar = createCalendarFromObject({
-          id: "pycon-de-pydata-berlin-2022",
-          title: "PyCon DE & PyData Berlin 2022 Conference Deadlines",
+          id: "djangocon-us-2024",
+          title: "DjangoCon US 2024 Conference Deadlines",
           date: confDeadline.toJSDate(),
           duration: 60,
         });
@@ -724,7 +829,7 @@
 
         $(".deadline-time").html(
           confDeadline
-            .setZone("Europe/Berlin")
+            .setZone("America/New_York")
             .toLocaleString(DateTime.DATETIME_HUGE_WITH_SECONDS)
         );
 
