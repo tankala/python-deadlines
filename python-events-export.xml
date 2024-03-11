@@ -9,7 +9,7 @@
 		<title>Newsfeed for Python Events Calendar from Python Conference Deadlines</title>
 		<description>Countdowns to your favourite Python conferences with calls for participation and resources to submit awesome talks!</description>
 		<link>https://pythondeadlin.es/feed.xml</link>
-		<lastBuildDate>Sat, 02 Mar 2024 01:27:41 +0000</lastBuildDate>
+		<lastBuildDate>Mon, 11 Mar 2024 12:43:09 +0000</lastBuildDate>
 		
 			<item>
 				<title>Kiwi PyCon 2024 Conference Deadline</title>
@@ -27,6 +27,15 @@
 				<link>https://pythondeadlin.es/conference/pycon-estonia-2024/</link>
 				<guid isPermaLink="false"></guid>
 				<category>PY</category>
+			</item>
+		
+			<item>
+				<title>PyData Paris 2024 Conference Deadline</title>
+				<description><![CDATA[* name of the event: PyData Paris 2024<br/>* type of event: Conference <br/>* focus on Python: Yes<br/>* approximate number of attendees: Unknown<br/>* location (incl. country): Paris, France<br/>* dates/times/recurrence (incl. time zone): September 25 - 26, 2024<br/>* HTML link : <a href="https://pydata.org/paris2024/">PyData Paris 2024</a>]]></description>
+				<pubDate>Wed, 25 Sep 2024 00:00:00 +0000</pubDate>
+				<link>https://pythondeadlin.es/conference/pydata-paris-2024/</link>
+				<guid isPermaLink="false"></guid>
+				<category>PYDATA</category>
 			</item>
 		
 			<item>
@@ -205,15 +214,6 @@
 				<description><![CDATA[* name of the event: PyCon US 2024<br/>* type of event: Conference <br/>* focus on Python: Yes<br/>* approximate number of attendees: Unknown<br/>* location (incl. country): Pittsburgh, PA, USA<br/>* dates/times/recurrence (incl. time zone): May 15 - 23, 2024<br/>* HTML link : <a href="https://us.pycon.org/2024/">PyCon US 2024</a>]]></description>
 				<pubDate>Wed, 15 May 2024 00:00:00 +0000</pubDate>
 				<link>https://pythondeadlin.es/conference/pycon-us-2024/</link>
-				<guid isPermaLink="false"></guid>
-				<category>PY</category>
-			</item>
-		
-			<item>
-				<title>Swiss Python Summit 2024 Conference Deadline</title>
-				<description><![CDATA[* name of the event: Swiss Python Summit 2024<br/>* type of event: Conference <br/>* focus on Python: Yes<br/>* approximate number of attendees: Unknown<br/>* location (incl. country): Rapperswil, Switzerland<br/>* dates/times/recurrence (incl. time zone): October 17 - 18, 2024<br/>* HTML link : <a href="https://python-summit.ch">Swiss Python Summit 2024</a>]]></description>
-				<pubDate>Thu, 17 Oct 2024 00:00:00 +0000</pubDate>
-				<link>https://pythondeadlin.es/conference/swiss-python-summit-2024/</link>
 				<guid isPermaLink="false"></guid>
 				<category>PY</category>
 			</item>

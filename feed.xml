@@ -9,7 +9,7 @@
 		<title>Python Conference Deadlines</title>
 		<description>Countdowns to your favourite Python conferences with calls for participation and resources to submit awesome talks!</description>
 		<link>https://pythondeadlin.es/feed.xml</link>
-		<lastBuildDate>Sat, 02 Mar 2024 01:27:41 +0000</lastBuildDate>
+		<lastBuildDate>Mon, 11 Mar 2024 12:43:09 +0000</lastBuildDate>
 		
 		
 		
@@ -32,6 +32,18 @@
 				<link>https://pythondeadlin.es/conference/pycon-estonia-2024/</link>
 				<guid isPermaLink="false"></guid>
 				<category>PY</category>
+			</item>
+		
+		
+		
+		
+			<item>
+				<title>PyData Paris 2024 Conference Deadline</title>
+				<description>Conference in Paris, France on September 25 - 26, 2024. CfP: 2024-04-08 23:59:00 AoE.&lt;br /&gt;Find them here: @PyDataParis </description>
+				<pubDate>Mon, 08 Apr 2024 23:59:00 +0000</pubDate>
+				<link>https://pythondeadlin.es/conference/pydata-paris-2024/</link>
+				<guid isPermaLink="false"></guid>
+				<category>PYDATA</category>
 			</item>
 		
 		
@@ -273,9 +285,6 @@
 				<guid isPermaLink="false"></guid>
 				<category>PY</category>
 			</item>
-		
-		
-		
 		
 		
 	</channel>
