@@ -62,7 +62,7 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/js-year-calendar.min.css?t=1710160989"
+      href="/static/css/js-year-calendar.min.css?t=1710264017"
       media="screen,projection"
     />
 
@@ -74,13 +74,13 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/deadlines.css?t=1710160989"
+      href="/static/css/deadlines.css?t=1710264017"
       media="screen,projection"
     />
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/calendar.css?t=1710160989"
+      href="/static/css/calendar.css?t=1710264017"
       media="screen,projection"
     />
 
@@ -707,6 +707,70 @@
 
         // add deadlines in red
         conf_list_all.push({
+          id: "djangocon-us-2024-deadline",
+          abbreviation: "djangocon-us-2024",
+          name: "DjangoCon US 2024 CfP ",
+          color: "red",
+          location: "Durham, USA",
+          date: "September 22 - 27, 2024",
+          subject: "WEB",
+          startDate: Date.parse("2024-04-24 12:00:00"),
+          endDate: Date.parse("2024-04-24 12:00:00"),
+        });
+
+        // add Conferences in chosen color
+
+        var color = "black";
+        // use first sub to choose color
+
+        color = "#0D0A0B";
+
+        conf_list_all.push({
+          id: "djangocon-us-2024-conference",
+          abbreviation: "djangocon-us-2024",
+          name: "DjangoCon US 2024",
+          color: color,
+          location: "Durham, USA",
+          date: "September 22 - 27, 2024",
+          subject: "WEB",
+          startDate: Date.parse("2024-09-22"),
+          endDate: Date.parse("2024-09-27"),
+        });
+
+        // add deadlines in red
+        conf_list_all.push({
+          id: "wagtail-space-us-2024-deadline",
+          abbreviation: "wagtail-space-us-2024",
+          name: "Wagtail Space US 2024 CfP ",
+          color: "red",
+          location: "Philadelphia, USA",
+          date: "June 20 - 22, 2024",
+          subject: "WEB",
+          startDate: Date.parse("2024-04-22 23:59:00"),
+          endDate: Date.parse("2024-04-22 23:59:00"),
+        });
+
+        // add Conferences in chosen color
+
+        var color = "black";
+        // use first sub to choose color
+
+        color = "#0D0A0B";
+
+        conf_list_all.push({
+          id: "wagtail-space-us-2024-conference",
+          abbreviation: "wagtail-space-us-2024",
+          name: "Wagtail Space US 2024",
+          color: color,
+          location: "Philadelphia, USA",
+          date: "June 20 - 22, 2024",
+          subject: "WEB",
+          startDate: Date.parse("2024-06-20"),
+          endDate: Date.parse("2024-06-22"),
+        });
+
+        // add deadlines in red
+        conf_list_all.push({
           id: "pycon-estonia-2024-deadline",
           abbreviation: "pycon-estonia-2024",
           name: "PyCon Estonia 2024 CfP ",
@@ -735,6 +799,48 @@
           subject: "PY",
           startDate: Date.parse("2024-09-05"),
           endDate: Date.parse("2024-09-06"),
+        });
+
+        // add deadlines in red
+        conf_list_all.push({
+          id: "pycon-taiwan-2024-deadline",
+          abbreviation: "pycon-taiwan-2024",
+          name: "PyCon Taiwan 2024 CfP ",
+          color: "red",
+          location: "TBD,TBD",
+          date: "September 21 - 22, 2024",
+          subject: "",
+          startDate: Date.parse("2024-04-08 23:59:00"),
+          endDate: Date.parse("2024-04-08 23:59:00"),
+        });
+
+        conf_list_all.push({
+          id: "pycon-taiwan-2024-deadline",
+          abbreviation: "pycon-taiwan-2024",
+          name: "PyCon Taiwan 2024 Tutorial Deadline",
+          color: "red",
+          location: "TBD,TBD",
+          date: "September 21 - 22, 2024",
+          subject: "",
+          startDate: Date.parse("2024-04-08 23:59:00"),
+          endDate: Date.parse("2024-04-08 23:59:00"),
+        });
+
+        // add Conferences in chosen color
+
+        var color = "black";
+        // use first sub to choose color
+
+        conf_list_all.push({
+          id: "pycon-taiwan-2024-conference",
+          abbreviation: "pycon-taiwan-2024",
+          name: "PyCon Taiwan 2024",
+          color: color,
+          location: "TBD,TBD",
+          date: "September 21 - 22, 2024",
+          subject: "",
+          startDate: Date.parse("2024-09-21"),
+          endDate: Date.parse("2024-09-22"),
         });
 
         // add deadlines in red
@@ -771,48 +877,6 @@
 
         // add deadlines in red
         conf_list_all.push({
-          id: "pycon-taiwan-2024-deadline",
-          abbreviation: "pycon-taiwan-2024",
-          name: "PyCon Taiwan 2024 CfP ",
-          color: "red",
-          location: "TBD",
-          date: "September 21 - 22, 2024",
-          subject: "",
-          startDate: Date.parse("2024-04-08 23:59:00"),
-          endDate: Date.parse("2024-04-08 23:59:00"),
-        });
-
-        conf_list_all.push({
-          id: "pycon-taiwan-2024-deadline",
-          abbreviation: "pycon-taiwan-2024",
-          name: "PyCon Taiwan 2024 Tutorial Deadline",
-          color: "red",
-          location: "TBD",
-          date: "September 21 - 22, 2024",
-          subject: "",
-          startDate: Date.parse("2024-04-08 23:59:00"),
-          endDate: Date.parse("2024-04-08 23:59:00"),
-        });
-
-        // add Conferences in chosen color
-
-        var color = "black";
-        // use first sub to choose color
-
-        conf_list_all.push({
-          id: "pycon-taiwan-2024-conference",
-          abbreviation: "pycon-taiwan-2024",
-          name: "PyCon Taiwan 2024",
-          color: color,
-          location: "TBD",
-          date: "September 21 - 22, 2024",
-          subject: "",
-          startDate: Date.parse("2024-09-21"),
-          endDate: Date.parse("2024-09-22"),
-        });
-
-        // add deadlines in red
-        conf_list_all.push({
           id: "earl-2024-deadline",
           abbreviation: "earl-2024",
           name: "EARL 2024 CfP ",
@@ -845,6 +909,36 @@
 
         // add deadlines in red
         conf_list_all.push({
+          id: "pycamp-españa-2024-deadline",
+          abbreviation: "pycamp-españa-2024",
+          name: "PyCamp España 2024 CfP ",
+          color: "red",
+          location: "Lleida, Spain",
+          date: "March 29 - April 01, 2024",
+          subject: "",
+          startDate: Date.parse("2024-03-27 23:59:00"),
+          endDate: Date.parse("2024-03-27 23:59:00"),
+        });
+
+        // add Conferences in chosen color
+
+        var color = "black";
+        // use first sub to choose color
+
+        conf_list_all.push({
+          id: "pycamp-españa-2024-conference",
+          abbreviation: "pycamp-españa-2024",
+          name: "PyCamp España 2024",
+          color: color,
+          location: "Lleida, Spain",
+          date: "March 29 - April 01, 2024",
+          subject: "",
+          startDate: Date.parse("2024-03-29"),
+          endDate: Date.parse("2024-04-01"),
+        });
+
+        // add deadlines in red
+        conf_list_all.push({
           id: "pycon-colombia-2024-deadline",
           abbreviation: "pycon-colombia-2024",
           name: "PyCon Colombia 2024 CfP ",
@@ -873,6 +967,38 @@
           subject: "PY",
           startDate: Date.parse("2024-06-07"),
           endDate: Date.parse("2024-06-09"),
+        });
+
+        // add deadlines in red
+        conf_list_all.push({
+          id: "wagtail-space-nl-2024-deadline",
+          abbreviation: "wagtail-space-nl-2024",
+          name: "Wagtail Space NL 2024 CfP ",
+          color: "red",
+          location: "Arnhem, The Netherlands",
+          date: "June 12 - 14, 2024",
+          subject: "WEB",
+          startDate: Date.parse("2024-03-08 23:59:00"),
+          endDate: Date.parse("2024-03-08 23:59:00"),
+        });
+
+        // add Conferences in chosen color
+
+        var color = "black";
+        // use first sub to choose color
+
+        color = "#0D0A0B";
+
+        conf_list_all.push({
+          id: "wagtail-space-nl-2024-conference",
+          abbreviation: "wagtail-space-nl-2024",
+          name: "Wagtail Space NL 2024",
+          color: color,
+          location: "Arnhem, The Netherlands",
+          date: "June 12 - 14, 2024",
+          subject: "WEB",
+          startDate: Date.parse("2024-06-12"),
+          endDate: Date.parse("2024-06-14"),
         });
 
         // add deadlines in red
@@ -973,43 +1099,11 @@
 
         // add deadlines in red
         conf_list_all.push({
-          id: "djangocon-us-2024-deadline",
-          abbreviation: "djangocon-us-2024",
-          name: "DjangoCon US 2024 CfP ",
+          id: "scipy-2024-deadline",
+          abbreviation: "scipy-2024",
+          name: "SciPy 2024 CfP ",
           color: "red",
-          location: "Durham, North Carolina, USA",
-          date: "September 22 - 27, 2024",
-          subject: "WEB",
-          startDate: Date.parse("2024-04-24 12:00:00"),
-          endDate: Date.parse("2024-04-24 12:00:00"),
-        });
-
-        // add Conferences in chosen color
-
-        var color = "black";
-        // use first sub to choose color
-
-        color = "#0D0A0B";
-
-        conf_list_all.push({
-          id: "djangocon-us-2024-conference",
-          abbreviation: "djangocon-us-2024",
-          name: "DjangoCon US 2024",
-          color: color,
-          location: "Durham, North Carolina, USA",
-          date: "September 22 - 27, 2024",
-          subject: "WEB",
-          startDate: Date.parse("2024-09-22"),
-          endDate: Date.parse("2024-09-27"),
-        });
-
-        // add deadlines in red
-        conf_list_all.push({
-          id: "scipy-us-2024-deadline",
-          abbreviation: "scipy-us-2024",
-          name: "SciPy US 2024 CfP ",
-          color: "red",
-          location: "Tacoma, Washington, USA",
+          location: "Tacoma, USA",
           date: "July 08 - 14, 2024",
           subject: "SCIPY",
           startDate: Date.parse("2024-02-27 23:59:00"),
@@ -1024,11 +1118,11 @@
         color = "#70163C";
 
         conf_list_all.push({
-          id: "scipy-us-2024-conference",
-          abbreviation: "scipy-us-2024",
-          name: "SciPy US 2024",
+          id: "scipy-2024-conference",
+          abbreviation: "scipy-2024",
+          name: "SciPy 2024",
           color: color,
-          location: "Tacoma, Washington, USA",
+          location: "Tacoma, USA",
           date: "July 08 - 14, 2024",
           subject: "SCIPY",
           startDate: Date.parse("2024-07-08"),
@@ -1233,7 +1327,7 @@
           abbreviation: "pycascades-2024",
           name: "PyCascades 2024 CfP (extended)",
           color: "red",
-          location: "Seattle, Washington, USA",
+          location: "Seattle, USA",
           date: "April 05 - 08, 2024",
           subject: "PY",
           startDate: Date.parse("2024-01-04 23:59:59"),
@@ -1252,7 +1346,7 @@
           abbreviation: "pycascades-2024",
           name: "PyCascades 2024",
           color: color,
-          location: "Seattle, Washington, USA",
+          location: "Seattle, USA",
           date: "April 05 - 08, 2024",
           subject: "PY",
           startDate: Date.parse("2024-04-05"),
@@ -1357,9 +1451,9 @@
 
         // add deadlines in red
         conf_list_all.push({
-          id: "pycon-de-pydata-berlin-2024-deadline",
-          abbreviation: "pycon-de-pydata-berlin-2024",
-          name: "PyCon DE & PyData Berlin 2024 CfP (extended)",
+          id: "pycon-germany-pydata-berlin-2024-deadline",
+          abbreviation: "pycon-germany-pydata-berlin-2024",
+          name: "PyCon Germany & PyData Berlin 2024 CfP (extended)",
           color: "red",
           location: "Berlin, Germany",
           date: "April 22 - 24, 2024",
@@ -1376,15 +1470,15 @@
         color = "#4B8BBE";
 
         conf_list_all.push({
-          id: "pycon-de-pydata-berlin-2024-conference",
-          abbreviation: "pycon-de-pydata-berlin-2024",
-          name: "PyCon DE & PyData Berlin 2024",
+          id: "pycon-germany-pydata-berlin-2024-conference",
+          abbreviation: "pycon-germany-pydata-berlin-2024",
+          name: "PyCon Germany & PyData Berlin 2024",
           color: color,
           location: "Berlin, Germany",
           date: "April 22 - 24, 2024",
           subject: "PY,PYDATA",
           startDate: Date.parse("2024-04-22"),
-          endDate: Date.parse("2024-04-25"),
+          endDate: Date.parse("2024-04-24"),
         });
 
         // add deadlines in red
@@ -1393,7 +1487,7 @@
           abbreviation: "pycon-us-2024",
           name: "PyCon US 2024 CfP (extended)",
           color: "red",
-          location: "Pittsburgh, PA, USA",
+          location: "Pittsburgh, USA",
           date: "May 15 - 23, 2024",
           subject: "PY",
           startDate: Date.parse("2023-12-18 23:59:00"),
@@ -1412,7 +1506,7 @@
           abbreviation: "pycon-us-2024",
           name: "PyCon US 2024",
           color: color,
-          location: "Pittsburgh, PA, USA",
+          location: "Pittsburgh, USA",
           date: "May 15 - 23, 2024",
           subject: "PY",
           startDate: Date.parse("2024-05-15"),
@@ -1453,15 +1547,15 @@
 
         // add deadlines in red
         conf_list_all.push({
-          id: "wagtail-space-nl-2024-deadline",
-          abbreviation: "wagtail-space-nl-2024",
-          name: "Wagtail Space NL 2024 CfP (extended)",
+          id: "flask-con-2024-deadline",
+          abbreviation: "flask-con-2024",
+          name: "Flask Con 2024 CfP (extended)",
           color: "red",
-          location: "Arnhem, The Netherlands",
-          date: "June 12 - 14, 2024",
-          subject: "WEB",
-          startDate: Date.parse("2024-03-08 23:59:00"),
-          endDate: Date.parse("2024-03-08 23:59:00"),
+          location: "Pittsburgh, USA",
+          date: "May 17th, 2024",
+          subject: "",
+          startDate: Date.parse("TBA"),
+          endDate: Date.parse("TBA"),
         });
 
         // add Conferences in chosen color
@@ -1469,31 +1563,29 @@
         var color = "black";
         // use first sub to choose color
 
-        color = "#0D0A0B";
-
         conf_list_all.push({
-          id: "wagtail-space-nl-2024-conference",
-          abbreviation: "wagtail-space-nl-2024",
-          name: "Wagtail Space NL 2024",
+          id: "flask-con-2024-conference",
+          abbreviation: "flask-con-2024",
+          name: "Flask Con 2024",
           color: color,
-          location: "Arnhem, The Netherlands",
-          date: "June 12 - 14, 2024",
-          subject: "WEB",
-          startDate: Date.parse("2024-06-12"),
-          endDate: Date.parse("2024-06-14"),
+          location: "Pittsburgh, USA",
+          date: "May 17th, 2024",
+          subject: "",
+          startDate: Date.parse("2024-05-17"),
+          endDate: Date.parse("2024-05-17"),
         });
 
         // add deadlines in red
         conf_list_all.push({
-          id: "wagtail-space-us-2024-deadline",
-          abbreviation: "wagtail-space-us-2024",
-          name: "Wagtail Space US 2024 CfP (extended)",
+          id: "pygrunn-2024-deadline",
+          abbreviation: "pygrunn-2024",
+          name: "PyGrunn 2024 CfP (extended)",
           color: "red",
-          location: "Philadelphia, PA, USA",
-          date: "June 20 - 22, 2024",
-          subject: "WEB",
-          startDate: Date.parse("2024-04-22 23:59:00"),
-          endDate: Date.parse("2024-04-22 23:59:00"),
+          location: "Groningen, Netherlands",
+          date: "May 17th, 2024",
+          subject: "",
+          startDate: Date.parse("TBA"),
+          endDate: Date.parse("TBA"),
         });
 
         // add Conferences in chosen color
@@ -1501,18 +1593,16 @@
         var color = "black";
         // use first sub to choose color
 
-        color = "#0D0A0B";
-
         conf_list_all.push({
-          id: "wagtail-space-us-2024-conference",
-          abbreviation: "wagtail-space-us-2024",
-          name: "Wagtail Space US 2024",
+          id: "pygrunn-2024-conference",
+          abbreviation: "pygrunn-2024",
+          name: "PyGrunn 2024",
           color: color,
-          location: "Philadelphia, PA, USA",
-          date: "June 20 - 22, 2024",
-          subject: "WEB",
-          startDate: Date.parse("2024-06-20"),
-          endDate: Date.parse("2024-06-22"),
+          location: "Groningen, Netherlands",
+          date: "May 17th, 2024",
+          subject: "",
+          startDate: Date.parse("2024-05-17"),
+          endDate: Date.parse("2024-05-17"),
         });
 
         return conf_list_all;

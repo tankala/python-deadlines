@@ -70,7 +70,7 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/js-year-calendar.min.css?t=1710160989"
+      href="/static/css/js-year-calendar.min.css?t=1710264017"
       media="screen,projection"
     />
 
@@ -82,13 +82,13 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/deadlines.css?t=1710160989"
+      href="/static/css/deadlines.css?t=1710264017"
       media="screen,projection"
     />
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/calendar.css?t=1710160989"
+      href="/static/css/calendar.css?t=1710264017"
       media="screen,projection"
     />
 
@@ -473,9 +473,8 @@
                 <div class="meta">
                   <span class="conf-date">September 22 - 27, 2024.</span>
                   <span class="conf-place">
-                    <a
-                      href="http://maps.google.com/?q=Durham, North Carolina, USA"
-                      >Durham, North Carolina, USA</a
+                    <a href="http://maps.google.com/?q=Durham, USA"
+                      >Durham, USA</a
                     >
                   </span>
                 </div>
@@ -524,7 +523,7 @@
                 <span class="conf-title-icon">
                   <a
                     title="Conference Website"
-                    href="https://2023.djangocon.us"
+                    href="https://2023.djangocon.us/"
                     target="_blank"
                     ><img
                       src="/static/img/203-earth.svg"
@@ -656,7 +655,7 @@
                 <span class="conf-title-icon">
                   <a
                     title="Conference Website"
-                    href="https://2022.djangocon.us"
+                    href="https://2022.djangocon.us/"
                     target="_blank"
                     ><img
                       src="/static/img/203-earth.svg"
@@ -701,6 +700,73 @@
                   class="badge badge-light conf-sub WEB-tag"
                 ></span>
               </div>
+              <div class="col-6">
+                <div class="calendar"></div>
+              </div>
+            </div>
+            <hr />
+          </div>
+
+          <div id="djangocon-us-2019" class="ConfItem">
+            <div class="row conf-row">
+              <div class="col-6">
+                <span class="conf-title">
+                  <a
+                    title="Deadline Details"
+                    href="/conference/djangocon-us-2019/"
+                    >DjangoCon US 2019</a
+                  >
+                </span>
+                <span class="conf-title-small">
+                  <a
+                    title="Deadline Details"
+                    href="/conference/djangocon-us-2019/"
+                    >DjangoCon US '19</a
+                  >
+                </span>
+                <span class="conf-title-icon">
+                  <a
+                    title="Conference Website"
+                    href="https://2019.djangocon.us/"
+                    target="_blank"
+                    ><img
+                      src="/static/img/203-earth.svg"
+                      class="badge-link"
+                      alt="Link to Conference Website"
+                      width="16"
+                      height="16"
+                  /></a>
+                  &ZeroWidthSpace;
+                </span>
+              </div>
+              <div class="col-6">
+                <span class="timer"></span>
+                <span class="timer-small"></span>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12 col-sm-6">
+                <div class="meta">
+                  <span class="conf-date">.</span>
+                  <span class="conf-place">
+                    <a
+                      href="http://maps.google.com/?q=San Diego, California, USA"
+                      >San Diego, California, USA</a
+                    >
+                  </span>
+                </div>
+              </div>
+              <div class="col-12 col-sm-6">
+                <div class="deadline">
+                  <div>
+                    Deadline:
+                    <span class="deadline-time">TBA</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-6"></div>
               <div class="col-6">
                 <div class="calendar"></div>
               </div>
@@ -1072,6 +1138,15 @@
                   $('#djangocon-us-2022 .timer-small').replaceWith($('#djangocon-us-2022 .deadline'));
                   $('#djangocon-us-2022 .calendar').remove();
                 }
+
+
+
+
+
+
+                $('#djangocon-us-2019 .timer').html("TBA");
+                $('#djangocon-us-2019 .deadline-time').html("TBA");
+                $('#djangocon-us-2019').attr("cfpDiff", Infinity);
 
 
 

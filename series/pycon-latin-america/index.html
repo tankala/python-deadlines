@@ -34,11 +34,7 @@
       content="https://pythondeadlin.es/series/pycon-latin-america/"
     />
     <meta property="og:site_name" content="Python Conference Deadlines" />
-    <meta property="og:type" content="article" />
-    <meta
-      property="article:published_time"
-      content="2024-08-24T00:00:00+00:00"
-    />
+    <meta property="og:type" content="website" />
     <meta name="twitter:card" content="summary" />
     <meta
       property="twitter:title"
@@ -49,20 +45,14 @@
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "BlogPosting",
+        "@type": "WebPage",
         "author": {
           "@type": "Person",
           "name": "Jesper Dramsch",
           "url": "https://dramsch.net"
         },
-        "dateModified": "2024-08-24T00:00:00+00:00",
-        "datePublished": "2024-08-24T00:00:00+00:00",
         "description": "Summary of the conference and its instances throughout the years.",
         "headline": "PyCon Latin America Conference Summary",
-        "mainEntityOfPage": {
-          "@type": "WebPage",
-          "@id": "https://pythondeadlin.es/series/pycon-latin-america/"
-        },
         "url": "https://pythondeadlin.es/series/pycon-latin-america/"
       }
     </script>
@@ -78,7 +68,7 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/js-year-calendar.min.css?t=1710160989"
+      href="/static/css/js-year-calendar.min.css?t=1710264017"
       media="screen,projection"
     />
 
@@ -90,13 +80,13 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/deadlines.css?t=1710160989"
+      href="/static/css/deadlines.css?t=1710264017"
       media="screen,projection"
     />
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/calendar.css?t=1710160989"
+      href="/static/css/calendar.css?t=1710264017"
       media="screen,projection"
     />
 
@@ -175,16 +165,6 @@
       type="text/javascript"
       src="/static/js/bootstrap-multiselect.min.js"
     ></script>
-
-    <style>
-      #twitter-widget {
-        width: 100%;
-      }
-
-      .twitter-timeline {
-        width: 100% !important;
-      }
-    </style>
   </head>
 
   <body>
@@ -295,11 +275,7 @@
         </div>
         <div class="row">
           <div class="col-sm-12" id="conf-subs">
-            <span id="conf-subs" title="Conference subjects">
-              <span class="PY-tag badge badge-light conf-sub conf-PY">
-                General Python
-              </span>
-            </span>
+            <span id="conf-subs" title="Conference subjects"> </span>
           </div>
         </div>
       </div>
@@ -340,7 +316,7 @@
             <div id="twitter-widget">
               <a
                 class="twitter-timeline"
-                href="https://twitter.com/PyLatam"
+                href="https://twitter.com/"
                 data-tweet-limit="2"
                 >Tweets by PyLatam</a
               >
@@ -464,6 +440,88 @@
                   class="badge badge-light conf-sub PY-tag"
                 ></span>
               </div>
+              <div class="col-6">
+                <div class="calendar"></div>
+              </div>
+            </div>
+            <hr />
+          </div>
+
+          <div id="pycon-latin-america-2019" class="ConfItem">
+            <div class="row conf-row">
+              <div class="col-6">
+                <span class="conf-title">
+                  <a
+                    title="Deadline Details"
+                    href="/conference/pycon-latin-america-2019/"
+                    >PyCon Latin America 2019</a
+                  >
+                </span>
+                <span class="conf-title-small">
+                  <a
+                    title="Deadline Details"
+                    href="/conference/pycon-latin-america-2019/"
+                    >PyCon Latin America '19</a
+                  >
+                </span>
+                <span class="conf-title-icon">
+                  <a
+                    title="Conference Website"
+                    href="https://pylatam.org"
+                    target="_blank"
+                    ><img
+                      src="/static/img/203-earth.svg"
+                      class="badge-link"
+                      alt="Link to Conference Website"
+                      width="16"
+                      height="16"
+                  /></a>
+                  &ZeroWidthSpace;
+                </span>
+
+                <span class="conf-title-icon">
+                  <a
+                    title="Call for Participation for PyCon Latin America"
+                    href="https://papercall.io/pyconlatam"
+                    target="_blank"
+                    ><img
+                      src="/static/img/035-file-text.svg"
+                      class="badge-link"
+                      alt="Link to Call for Participation for PyCon Latin America"
+                      width="16"
+                      height="16"
+                  /></a>
+                  &ZeroWidthSpace;
+                </span>
+              </div>
+              <div class="col-6">
+                <span class="timer"></span>
+                <span class="timer-small"></span>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12 col-sm-6">
+                <div class="meta">
+                  <span class="conf-date">.</span>
+                  <span class="conf-place">
+                    <a
+                      href="http://maps.google.com/?q=Puerto Vallarta, Jalisco, Mexico"
+                      >Puerto Vallarta, Jalisco, Mexico</a
+                    >
+                  </span>
+                </div>
+              </div>
+              <div class="col-12 col-sm-6">
+                <div class="deadline">
+                  <div>
+                    Deadline:
+                    <span class="deadline-time">Friday, 31 May 2019</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-6"></div>
               <div class="col-6">
                 <div class="calendar"></div>
               </div>
@@ -696,6 +754,73 @@
                   $('#pycon-latin-america-2023 .timer').replaceWith($('#pycon-latin-america-2023 .deadline'));
                   $('#pycon-latin-america-2023 .timer-small').replaceWith($('#pycon-latin-america-2023 .deadline'));
                   $('#pycon-latin-america-2023 .calendar').remove();
+                }
+
+
+
+
+
+
+
+                // Use specified timezone for deadlines if available else use AoE timezone
+
+                  var cfpDate = DateTime.fromSQL("2019-05-31 23:59:00", { zone: "UTC-12" });
+                  var confDate = DateTime.fromSQL("2019-08-29", { zone: "UTC-12" });
+
+
+                // check if timezone is valid otherwise replace by system timezone
+                if (cfpDate.invalid || confDate.invalid) {
+                  var cfpDate = DateTime.fromSQL("2019-05-31 23:59:00");
+                  var confDate = DateTime.fromSQL("2019-08-29");
+                  console.log("Invalid timezone in pycon-latin-america-2019. Using system timezone instead.");
+                }
+
+                // render countdown timer
+                $('#pycon-latin-america-2019 .timer').countdown(cfpDate.toJSDate(), function (event) {
+                  $(this).html(event.strftime('%D days %Hh %Mm %Ss'));
+                });
+
+                // render countdown timer small
+                $('#pycon-latin-america-2019 .timer-small').countdown(cfpDate.toJSDate(), function (event) {
+                  $(this).html(event.strftime('%Dd %H:%M:%S'));
+                });
+
+                // deadline in local timezone
+                $('#pycon-latin-america-2019 .deadline-time').html(cfpDate.setZone('system').toLocaleString(DateTime.DATE_HUGE));
+
+                // add calendar button
+                try {
+                  var myCalendar = createCalendarFromObject({
+                    id: 'pycon-latin-america-2019',
+                    title: 'PyCon Latin America 2019 deadline',
+                    date: cfpDate.toJSDate(),
+                    duration: 60,
+                  });
+                  document.querySelector('#pycon-latin-america-2019 .calendar').appendChild(myCalendar);
+                } catch (err) {
+                  document.querySelector('#pycon-latin-america-2019 .calendar').appendChild("<p>Calendar not available.</p>");
+                  console.log("Error in cfp date.");
+                }
+
+                // check if date has passed, add 'past' class to it
+                cfpDiff = cfpDate.diffNow("seconds");
+                confDiff = confDate.diffNow("seconds");
+
+                $('#pycon-latin-america-2019').attr("cfpDiff", cfpDiff.toMillis());
+                $('#pycon-latin-america-2019').attr("confDiff", confDiff.toMillis());
+
+                if (cfpDiff < 0) {
+                  $('#pycon-latin-america-2019').addClass('pastcfp');
+                  $('#pycon-latin-america-2019 .timer').replaceWith($('#pycon-latin-america-2019 .deadline'));
+                  $('#pycon-latin-america-2019 .timer-small').replaceWith($('#pycon-latin-america-2019 .deadline'));
+                  $('#pycon-latin-america-2019 .calendar').remove();
+                }
+
+                if (confDiff < 0) {
+                  $('#pycon-latin-america-2019').addClass('pastconf');
+                  $('#pycon-latin-america-2019 .timer').replaceWith($('#pycon-latin-america-2019 .deadline'));
+                  $('#pycon-latin-america-2019 .timer-small').replaceWith($('#pycon-latin-america-2019 .deadline'));
+                  $('#pycon-latin-america-2019 .calendar').remove();
                 }
 
 

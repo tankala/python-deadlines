@@ -74,7 +74,7 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/js-year-calendar.min.css?t=1710160989"
+      href="/static/css/js-year-calendar.min.css?t=1710264017"
       media="screen,projection"
     />
 
@@ -86,13 +86,13 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/deadlines.css?t=1710160989"
+      href="/static/css/deadlines.css?t=1710264017"
       media="screen,projection"
     />
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/calendar.css?t=1710160989"
+      href="/static/css/calendar.css?t=1710264017"
       media="screen,projection"
     />
 
@@ -483,8 +483,8 @@
               <a
                 id="conf-place"
                 target="_blank"
-                href="https://maps.google.com/?q=Cardiff, United Kingdom"
-                >Cardiff, United Kingdom</a
+                href="https://maps.google.com/?q=Cardiff, UK"
+                >Cardiff, UK</a
               >
             </div>
             <div>
@@ -505,6 +505,22 @@
 
             <div>
               <img
+                src="/static/img/035-file-text.svg"
+                class="badge-link"
+                alt="Document Icon for CfP link"
+                width="16"
+                height="16"
+              />
+              <a
+                id="conf-cfp_link"
+                target="_blank"
+                href="https://2022.pyconuk.org/call-for-proposals/"
+                >Call for Participation</a
+              >
+            </div>
+
+            <div>
+              <img
                 src="/static/img/002-home2.svg"
                 class="badge-link"
                 alt="Conference Series"
@@ -513,6 +529,38 @@
               />
               <a id="conf-series" href="/series/pycon-uk"
                 >All PyCon UK conferences</a
+              >
+            </div>
+
+            <div>
+              <img
+                src="/static/img/066-lifebuoy.svg"
+                class="badge-link"
+                alt="Life Buoy for Financial Aid"
+                width="16"
+                height="16"
+              />
+              <a
+                id="conf-finaid"
+                target="_blank"
+                href="https://2022.pyconuk.org/financial-assistance/"
+                >Financial Aid</a
+              >
+            </div>
+
+            <div>
+              <img
+                src="/static/img/060-coin-dollar.svg"
+                class="badge-link"
+                alt="Coin Dollar Icon for Sponsorship"
+                width="16"
+                height="16"
+              />
+              <a
+                id="conf-sponsor"
+                target="_blank"
+                href="https://2022.pyconuk.org/sponsors/"
+                >Sponsorship Opportunity</a
               >
             </div>
 
@@ -537,13 +585,13 @@
         </div>
         <div class="row">
           <div
-            id="fe640179-afbe-4f29-a8e5-af6371bcf4d1"
+            id="b4d3682c-834c-49c7-b48f-d80603e255da"
             style="width: 100%; height: 400px"
             class="jekyll-map"
           ></div>
           <script type="text/javascript">
             jekyllMaps.register(
-              "fe640179-afbe-4f29-a8e5-af6371bcf4d1",
+              "b4d3682c-834c-49c7-b48f-d80603e255da",
               [
                 {
                   latitude: 51.4816546,
@@ -686,13 +734,13 @@
 
         // Use specified timezone for deadlines if available else use AoE timezone
 
-        var confDeadline = DateTime.fromSQL("2022-07-02 16:59:59", {
+        var confDeadline = DateTime.fromSQL("2022-07-02 17:00:00", {
           zone: "Europe/London",
         });
 
         // check if timezone is valid otherwise replace by system timezone
         if (confDeadline.invalid) {
-          var confDeadline = DateTime.fromSQL("2022-07-02 16:59:59");
+          var confDeadline = DateTime.fromSQL("2022-07-02 17:00:00");
           console.log("Invalid timezone. Using system timezone instead.");
         }
 

@@ -75,7 +75,7 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/js-year-calendar.min.css?t=1710160989"
+      href="/static/css/js-year-calendar.min.css?t=1710264017"
       media="screen,projection"
     />
 
@@ -87,13 +87,13 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/deadlines.css?t=1710160989"
+      href="/static/css/deadlines.css?t=1710264017"
       media="screen,projection"
     />
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/calendar.css?t=1710160989"
+      href="/static/css/calendar.css?t=1710264017"
       media="screen,projection"
     />
 
@@ -311,8 +311,11 @@
                 width="16"
                 height="16"
               />
-              <a id="conf-website" target="_blank" href="https://2024.pycon.co/"
-                >https://2024.pycon.co/</a
+              <a
+                id="conf-website"
+                target="_blank"
+                href="https://2024.pycon.co/en"
+                >https://2024.pycon.co/en</a
               >
             </div>
 
@@ -371,7 +374,7 @@
                 <span class="conf-title-icon">
                   <a
                     title="Conference Website"
-                    href="https://2024.pycon.co/"
+                    href="https://2024.pycon.co/en"
                     target="_blank"
                     ><img
                       src="/static/img/203-earth.svg"
@@ -631,6 +634,90 @@
                   class="badge badge-light conf-sub PY-tag"
                 ></span>
               </div>
+              <div class="col-6">
+                <div class="calendar"></div>
+              </div>
+            </div>
+            <hr />
+          </div>
+
+          <div id="pycon-colombia-2019" class="ConfItem">
+            <div class="row conf-row">
+              <div class="col-6">
+                <span class="conf-title">
+                  <a
+                    title="Deadline Details"
+                    href="/conference/pycon-colombia-2019/"
+                    >PyCon Colombia 2019</a
+                  >
+                </span>
+                <span class="conf-title-small">
+                  <a
+                    title="Deadline Details"
+                    href="/conference/pycon-colombia-2019/"
+                    >PyCon Colombia '19</a
+                  >
+                </span>
+                <span class="conf-title-icon">
+                  <a
+                    title="Conference Website"
+                    href="https://pycon.co"
+                    target="_blank"
+                    ><img
+                      src="/static/img/203-earth.svg"
+                      class="badge-link"
+                      alt="Link to Conference Website"
+                      width="16"
+                      height="16"
+                  /></a>
+                  &ZeroWidthSpace;
+                </span>
+
+                <span class="conf-title-icon">
+                  <a
+                    title="Call for Participation for PyCon Colombia"
+                    href="https://papercall.io/pycon-colombia-2019-talks"
+                    target="_blank"
+                    ><img
+                      src="/static/img/035-file-text.svg"
+                      class="badge-link"
+                      alt="Link to Call for Participation for PyCon Colombia"
+                      width="16"
+                      height="16"
+                  /></a>
+                  &ZeroWidthSpace;
+                </span>
+              </div>
+              <div class="col-6">
+                <span class="timer"></span>
+                <span class="timer-small"></span>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12 col-sm-6">
+                <div class="meta">
+                  <span class="conf-date">.</span>
+                  <span class="conf-place">
+                    <a
+                      href="http://maps.google.com/?q=Medellin, Antioquia, Colombia"
+                      >Medellin, Antioquia, Colombia</a
+                    >
+                  </span>
+                </div>
+              </div>
+              <div class="col-12 col-sm-6">
+                <div class="deadline">
+                  <div>
+                    Deadline:
+                    <span class="deadline-time"
+                      >Saturday, 1 September 2018</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-6"></div>
               <div class="col-6">
                 <div class="calendar"></div>
               </div>
@@ -1001,6 +1088,73 @@
                   $('#pycon-colombia-2022 .timer').replaceWith($('#pycon-colombia-2022 .deadline'));
                   $('#pycon-colombia-2022 .timer-small').replaceWith($('#pycon-colombia-2022 .deadline'));
                   $('#pycon-colombia-2022 .calendar').remove();
+                }
+
+
+
+
+
+
+
+                // Use specified timezone for deadlines if available else use AoE timezone
+
+                  var cfpDate = DateTime.fromSQL("2018-09-01 23:59:00", { zone: "UTC-12" });
+                  var confDate = DateTime.fromSQL("2019-02-08", { zone: "UTC-12" });
+
+
+                // check if timezone is valid otherwise replace by system timezone
+                if (cfpDate.invalid || confDate.invalid) {
+                  var cfpDate = DateTime.fromSQL("2018-09-01 23:59:00");
+                  var confDate = DateTime.fromSQL("2019-02-08");
+                  console.log("Invalid timezone in pycon-colombia-2019. Using system timezone instead.");
+                }
+
+                // render countdown timer
+                $('#pycon-colombia-2019 .timer').countdown(cfpDate.toJSDate(), function (event) {
+                  $(this).html(event.strftime('%D days %Hh %Mm %Ss'));
+                });
+
+                // render countdown timer small
+                $('#pycon-colombia-2019 .timer-small').countdown(cfpDate.toJSDate(), function (event) {
+                  $(this).html(event.strftime('%Dd %H:%M:%S'));
+                });
+
+                // deadline in local timezone
+                $('#pycon-colombia-2019 .deadline-time').html(cfpDate.setZone('system').toLocaleString(DateTime.DATE_HUGE));
+
+                // add calendar button
+                try {
+                  var myCalendar = createCalendarFromObject({
+                    id: 'pycon-colombia-2019',
+                    title: 'PyCon Colombia 2019 deadline',
+                    date: cfpDate.toJSDate(),
+                    duration: 60,
+                  });
+                  document.querySelector('#pycon-colombia-2019 .calendar').appendChild(myCalendar);
+                } catch (err) {
+                  document.querySelector('#pycon-colombia-2019 .calendar').appendChild("<p>Calendar not available.</p>");
+                  console.log("Error in cfp date.");
+                }
+
+                // check if date has passed, add 'past' class to it
+                cfpDiff = cfpDate.diffNow("seconds");
+                confDiff = confDate.diffNow("seconds");
+
+                $('#pycon-colombia-2019').attr("cfpDiff", cfpDiff.toMillis());
+                $('#pycon-colombia-2019').attr("confDiff", confDiff.toMillis());
+
+                if (cfpDiff < 0) {
+                  $('#pycon-colombia-2019').addClass('pastcfp');
+                  $('#pycon-colombia-2019 .timer').replaceWith($('#pycon-colombia-2019 .deadline'));
+                  $('#pycon-colombia-2019 .timer-small').replaceWith($('#pycon-colombia-2019 .deadline'));
+                  $('#pycon-colombia-2019 .calendar').remove();
+                }
+
+                if (confDiff < 0) {
+                  $('#pycon-colombia-2019').addClass('pastconf');
+                  $('#pycon-colombia-2019 .timer').replaceWith($('#pycon-colombia-2019 .deadline'));
+                  $('#pycon-colombia-2019 .timer-small').replaceWith($('#pycon-colombia-2019 .deadline'));
+                  $('#pycon-colombia-2019 .calendar').remove();
                 }
 
 
