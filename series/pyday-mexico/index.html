@@ -60,7 +60,7 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/js-year-calendar.min.css?t=1710264017"
+      href="/static/css/js-year-calendar.min.css?t=1710264932"
       media="screen,projection"
     />
 
@@ -72,13 +72,13 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/deadlines.css?t=1710264017"
+      href="/static/css/deadlines.css?t=1710264932"
       media="screen,projection"
     />
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/calendar.css?t=1710264017"
+      href="/static/css/calendar.css?t=1710264932"
       media="screen,projection"
     />
 
@@ -374,6 +374,138 @@
             </div>
             <hr />
           </div>
+
+          <div id="pyday-mexico-2018" class="ConfItem">
+            <div class="row conf-row">
+              <div class="col-6">
+                <span class="conf-title">
+                  <a
+                    title="Deadline Details"
+                    href="/conference/pyday-mexico-2018/"
+                    >PyDay Mexico 2018</a
+                  >
+                </span>
+                <span class="conf-title-small">
+                  <a
+                    title="Deadline Details"
+                    href="/conference/pyday-mexico-2018/"
+                    >PyDay Mexico '18</a
+                  >
+                </span>
+                <span class="conf-title-icon">
+                  <a
+                    title="Conference Website"
+                    href="https://www.papercall.io/pydaymx2018"
+                    target="_blank"
+                    ><img
+                      src="/static/img/203-earth.svg"
+                      class="badge-link"
+                      alt="Link to Conference Website"
+                      width="16"
+                      height="16"
+                  /></a>
+                  &ZeroWidthSpace;
+                </span>
+              </div>
+              <div class="col-6">
+                <span class="timer"></span>
+                <span class="timer-small"></span>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12 col-sm-6">
+                <div class="meta">
+                  <span class="conf-date">.</span>
+                  <span class="conf-place">
+                    <a href="http://maps.google.com/?q=Guadalajara, Mexico"
+                      >Guadalajara, Mexico</a
+                    >
+                  </span>
+                </div>
+              </div>
+              <div class="col-12 col-sm-6">
+                <div class="deadline">
+                  <div>
+                    Deadline:
+                    <span class="deadline-time">TBA</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-6"></div>
+              <div class="col-6">
+                <div class="calendar"></div>
+              </div>
+            </div>
+            <hr />
+          </div>
+
+          <div id="pyday-mexico-2017" class="ConfItem">
+            <div class="row conf-row">
+              <div class="col-6">
+                <span class="conf-title">
+                  <a
+                    title="Deadline Details"
+                    href="/conference/pyday-mexico-2017/"
+                    >PyDay Mexico 2017</a
+                  >
+                </span>
+                <span class="conf-title-small">
+                  <a
+                    title="Deadline Details"
+                    href="/conference/pyday-mexico-2017/"
+                    >PyDay Mexico '17</a
+                  >
+                </span>
+                <span class="conf-title-icon">
+                  <a
+                    title="Conference Website"
+                    href="https://web.archive.org/web/20170605152219/http://pythonday.mx/"
+                    target="_blank"
+                    ><img
+                      src="/static/img/203-earth.svg"
+                      class="badge-link"
+                      alt="Link to Conference Website"
+                      width="16"
+                      height="16"
+                  /></a>
+                  &ZeroWidthSpace;
+                </span>
+              </div>
+              <div class="col-6">
+                <span class="timer"></span>
+                <span class="timer-small"></span>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12 col-sm-6">
+                <div class="meta">
+                  <span class="conf-date">.</span>
+                  <span class="conf-place">
+                    <a href="http://maps.google.com/?q=Mexico City, Mexico"
+                      >Mexico City, Mexico</a
+                    >
+                  </span>
+                </div>
+              </div>
+              <div class="col-12 col-sm-6">
+                <div class="deadline">
+                  <div>
+                    Deadline:
+                    <span class="deadline-time">TBA</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-6"></div>
+              <div class="col-6">
+                <div class="calendar"></div>
+              </div>
+            </div>
+            <hr />
+          </div>
         </div>
       </div>
       <footer>
@@ -599,6 +731,24 @@
                   $('#pyday-mexico-2019 .timer-small').replaceWith($('#pyday-mexico-2019 .deadline'));
                   $('#pyday-mexico-2019 .calendar').remove();
                 }
+
+
+
+
+
+
+                $('#pyday-mexico-2018 .timer').html("TBA");
+                $('#pyday-mexico-2018 .deadline-time').html("TBA");
+                $('#pyday-mexico-2018').attr("cfpDiff", Infinity);
+
+
+
+
+
+
+                $('#pyday-mexico-2017 .timer').html("TBA");
+                $('#pyday-mexico-2017 .deadline-time').html("TBA");
+                $('#pyday-mexico-2017').attr("cfpDiff", Infinity);
 
 
 
