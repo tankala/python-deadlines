@@ -60,7 +60,7 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/js-year-calendar.min.css?t=1710265240"
+      href="/static/css/js-year-calendar.min.css?t=1710355255"
       media="screen,projection"
     />
 
@@ -72,13 +72,13 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/deadlines.css?t=1710265240"
+      href="/static/css/deadlines.css?t=1710355255"
       media="screen,projection"
     />
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/calendar.css?t=1710265240"
+      href="/static/css/calendar.css?t=1710355255"
       media="screen,projection"
     />
 
@@ -347,7 +347,7 @@
                 <div class="deadline">
                   <div>
                     Deadline:
-                    <span class="deadline-time">TBA</span>
+                    <span class="deadline-time">Friday, 20 August 2021</span>
                   </div>
                 </div>
               </div>
@@ -413,7 +413,9 @@
                 <div class="deadline">
                   <div>
                     Deadline:
-                    <span class="deadline-time">TBA</span>
+                    <span class="deadline-time"
+                      >Saturday, 29 February 2020</span
+                    >
                   </div>
                 </div>
               </div>
@@ -657,18 +659,134 @@
 
 
 
-                $('#pycon-odessa-2021 .timer').html("TBA");
-                $('#pycon-odessa-2021 .deadline-time').html("TBA");
-                $('#pycon-odessa-2021').attr("cfpDiff", Infinity);
+
+                // Use specified timezone for deadlines if available else use AoE timezone
+
+                  var cfpDate = DateTime.fromSQL("2021-08-20 00:00:00", { zone: "UTC" });
+                  var confDate = DateTime.fromSQL("2021-09-11", { zone: "UTC" });
+
+
+                // check if timezone is valid otherwise replace by system timezone
+                if (cfpDate.invalid || confDate.invalid) {
+                  var cfpDate = DateTime.fromSQL("2021-08-20 00:00:00");
+                  var confDate = DateTime.fromSQL("2021-09-11");
+                  console.log("Invalid timezone in pycon-odessa-2021. Using system timezone instead.");
+                }
+
+                // render countdown timer
+                $('#pycon-odessa-2021 .timer').countdown(cfpDate.toJSDate(), function (event) {
+                  $(this).html(event.strftime('%D days %Hh %Mm %Ss'));
+                });
+
+                // render countdown timer small
+                $('#pycon-odessa-2021 .timer-small').countdown(cfpDate.toJSDate(), function (event) {
+                  $(this).html(event.strftime('%Dd %H:%M:%S'));
+                });
+
+                // deadline in local timezone
+                $('#pycon-odessa-2021 .deadline-time').html(cfpDate.setZone('system').toLocaleString(DateTime.DATE_HUGE));
+
+                // add calendar button
+                try {
+                  var myCalendar = createCalendarFromObject({
+                    id: 'pycon-odessa-2021',
+                    title: 'PyCon Odessa 2021 deadline',
+                    date: cfpDate.toJSDate(),
+                    duration: 60,
+                  });
+                  document.querySelector('#pycon-odessa-2021 .calendar').appendChild(myCalendar);
+                } catch (err) {
+                  document.querySelector('#pycon-odessa-2021 .calendar').appendChild("<p>Calendar not available.</p>");
+                  console.log("Error in cfp date.");
+                }
+
+                // check if date has passed, add 'past' class to it
+                cfpDiff = cfpDate.diffNow("seconds");
+                confDiff = confDate.diffNow("seconds");
+
+                $('#pycon-odessa-2021').attr("cfpDiff", cfpDiff.toMillis());
+                $('#pycon-odessa-2021').attr("confDiff", confDiff.toMillis());
+
+                if (cfpDiff < 0) {
+                  $('#pycon-odessa-2021').addClass('pastcfp');
+                  $('#pycon-odessa-2021 .timer').replaceWith($('#pycon-odessa-2021 .deadline'));
+                  $('#pycon-odessa-2021 .timer-small').replaceWith($('#pycon-odessa-2021 .deadline'));
+                  $('#pycon-odessa-2021 .calendar').remove();
+                }
+
+                if (confDiff < 0) {
+                  $('#pycon-odessa-2021').addClass('pastconf');
+                  $('#pycon-odessa-2021 .timer').replaceWith($('#pycon-odessa-2021 .deadline'));
+                  $('#pycon-odessa-2021 .timer-small').replaceWith($('#pycon-odessa-2021 .deadline'));
+                  $('#pycon-odessa-2021 .calendar').remove();
+                }
 
 
 
 
 
 
-                $('#pycon-odessa-2020 .timer').html("TBA");
-                $('#pycon-odessa-2020 .deadline-time').html("TBA");
-                $('#pycon-odessa-2020').attr("cfpDiff", Infinity);
+
+                // Use specified timezone for deadlines if available else use AoE timezone
+
+                  var cfpDate = DateTime.fromSQL("2020-02-29 00:00:00", { zone: "UTC" });
+                  var confDate = DateTime.fromSQL("2020-06-13", { zone: "UTC" });
+
+
+                // check if timezone is valid otherwise replace by system timezone
+                if (cfpDate.invalid || confDate.invalid) {
+                  var cfpDate = DateTime.fromSQL("2020-02-29 00:00:00");
+                  var confDate = DateTime.fromSQL("2020-06-13");
+                  console.log("Invalid timezone in pycon-odessa-2020. Using system timezone instead.");
+                }
+
+                // render countdown timer
+                $('#pycon-odessa-2020 .timer').countdown(cfpDate.toJSDate(), function (event) {
+                  $(this).html(event.strftime('%D days %Hh %Mm %Ss'));
+                });
+
+                // render countdown timer small
+                $('#pycon-odessa-2020 .timer-small').countdown(cfpDate.toJSDate(), function (event) {
+                  $(this).html(event.strftime('%Dd %H:%M:%S'));
+                });
+
+                // deadline in local timezone
+                $('#pycon-odessa-2020 .deadline-time').html(cfpDate.setZone('system').toLocaleString(DateTime.DATE_HUGE));
+
+                // add calendar button
+                try {
+                  var myCalendar = createCalendarFromObject({
+                    id: 'pycon-odessa-2020',
+                    title: 'PyCon Odessa 2020 deadline',
+                    date: cfpDate.toJSDate(),
+                    duration: 60,
+                  });
+                  document.querySelector('#pycon-odessa-2020 .calendar').appendChild(myCalendar);
+                } catch (err) {
+                  document.querySelector('#pycon-odessa-2020 .calendar').appendChild("<p>Calendar not available.</p>");
+                  console.log("Error in cfp date.");
+                }
+
+                // check if date has passed, add 'past' class to it
+                cfpDiff = cfpDate.diffNow("seconds");
+                confDiff = confDate.diffNow("seconds");
+
+                $('#pycon-odessa-2020').attr("cfpDiff", cfpDiff.toMillis());
+                $('#pycon-odessa-2020').attr("confDiff", confDiff.toMillis());
+
+                if (cfpDiff < 0) {
+                  $('#pycon-odessa-2020').addClass('pastcfp');
+                  $('#pycon-odessa-2020 .timer').replaceWith($('#pycon-odessa-2020 .deadline'));
+                  $('#pycon-odessa-2020 .timer-small').replaceWith($('#pycon-odessa-2020 .deadline'));
+                  $('#pycon-odessa-2020 .calendar').remove();
+                }
+
+                if (confDiff < 0) {
+                  $('#pycon-odessa-2020').addClass('pastconf');
+                  $('#pycon-odessa-2020 .timer').replaceWith($('#pycon-odessa-2020 .deadline'));
+                  $('#pycon-odessa-2020 .timer-small').replaceWith($('#pycon-odessa-2020 .deadline'));
+                  $('#pycon-odessa-2020 .calendar').remove();
+                }
 
 
 

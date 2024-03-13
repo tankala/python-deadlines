@@ -74,7 +74,7 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/js-year-calendar.min.css?t=1710265240"
+      href="/static/css/js-year-calendar.min.css?t=1710355255"
       media="screen,projection"
     />
 
@@ -86,13 +86,13 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/deadlines.css?t=1710265240"
+      href="/static/css/deadlines.css?t=1710355255"
       media="screen,projection"
     />
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/calendar.css?t=1710265240"
+      href="/static/css/calendar.css?t=1710355255"
       media="screen,projection"
     />
 
@@ -480,12 +480,7 @@
                 width="16"
                 height="16"
               />
-              <a
-                id="conf-place"
-                target="_blank"
-                href="https://maps.google.com/?q=Online / Cancelled"
-                >Online / Cancelled</a
-              >
+              <a id="conf-place" target="_blank" href="#">Online</a>
             </div>
             <div>
               <img
@@ -537,13 +532,13 @@
         </div>
         <div class="row">
           <div
-            id="e0eb06ea-f5ce-420f-af02-392c074ba513"
+            id="988500b8-add1-4a86-b039-f14f3e99efb8"
             style="width: 100%; height: 400px"
             class="jekyll-map"
           ></div>
           <script type="text/javascript">
             jekyllMaps.register(
-              "e0eb06ea-f5ce-420f-af02-392c074ba513",
+              "988500b8-add1-4a86-b039-f14f3e99efb8",
               [
                 {
                   latitude: 44.9379672,
@@ -686,13 +681,13 @@
 
         // Use specified timezone for deadlines if available else use AoE timezone
 
-        var confDeadline = DateTime.fromSQL("2022-02-04 23:59:59", {
+        var confDeadline = DateTime.fromSQL("Cancelled", {
           zone: "Asia/Tehran",
         });
 
         // check if timezone is valid otherwise replace by system timezone
         if (confDeadline.invalid) {
-          var confDeadline = DateTime.fromSQL("2022-02-04 23:59:59");
+          var confDeadline = DateTime.fromSQL("Cancelled");
           console.log("Invalid timezone. Using system timezone instead.");
         }
 

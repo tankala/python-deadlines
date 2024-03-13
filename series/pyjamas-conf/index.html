@@ -29,11 +29,7 @@
       content="https://pythondeadlin.es/series/pyjamas-conf/"
     />
     <meta property="og:site_name" content="Python Conference Deadlines" />
-    <meta property="og:type" content="article" />
-    <meta
-      property="article:published_time"
-      content="-0027-11-26T00:00:00+00:00"
-    />
+    <meta property="og:type" content="website" />
     <meta name="twitter:card" content="summary" />
     <meta property="twitter:title" content="Pyjamas Conf Conference Summary" />
     <meta name="twitter:site" content="@jesperdramsch" />
@@ -41,20 +37,14 @@
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "BlogPosting",
+        "@type": "WebPage",
         "author": {
           "@type": "Person",
           "name": "Jesper Dramsch",
           "url": "https://dramsch.net"
         },
-        "dateModified": "-0027-11-26T00:00:00+00:00",
-        "datePublished": "-0027-11-26T00:00:00+00:00",
         "description": "Summary of the conference and its instances throughout the years.",
         "headline": "Pyjamas Conf Conference Summary",
-        "mainEntityOfPage": {
-          "@type": "WebPage",
-          "@id": "https://pythondeadlin.es/series/pyjamas-conf/"
-        },
         "url": "https://pythondeadlin.es/series/pyjamas-conf/"
       }
     </script>
@@ -70,7 +60,7 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/js-year-calendar.min.css?t=1710265240"
+      href="/static/css/js-year-calendar.min.css?t=1710355255"
       media="screen,projection"
     />
 
@@ -82,13 +72,13 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/deadlines.css?t=1710265240"
+      href="/static/css/deadlines.css?t=1710355255"
       media="screen,projection"
     />
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/calendar.css?t=1710265240"
+      href="/static/css/calendar.css?t=1710355255"
       media="screen,projection"
     />
 
@@ -444,11 +434,7 @@
         </div>
         <div class="row">
           <div class="col-sm-12" id="conf-subs">
-            <span id="conf-subs" title="Conference subjects">
-              <span class="PY-tag badge badge-light conf-sub conf-PY">
-                General Python
-              </span>
-            </span>
+            <span id="conf-subs" title="Conference subjects"> </span>
           </div>
         </div>
       </div>
@@ -596,7 +582,7 @@
                 <div class="deadline">
                   <div>
                     Deadline:
-                    <span class="deadline-time">TBA</span>
+                    <span class="deadline-time">Sunday, 5 September 2021</span>
                   </div>
                 </div>
               </div>
@@ -677,12 +663,12 @@
 
         <div class="row">
           <div
-            id="0092cee7-d126-42f6-a89b-3e40c508f4cd"
+            id="facf2324-908f-4ae5-b879-b65fc60d8673"
             style="width: 100%; height: 400px"
             class="jekyll-map"
           ></div>
           <script type="text/javascript">
-            jekyllMaps.register("0092cee7-d126-42f6-a89b-3e40c508f4cd", [], {
+            jekyllMaps.register("facf2324-908f-4ae5-b879-b65fc60d8673", [], {
               baseUrl: "/",
               useCluster: true,
               showMarker: true,
@@ -925,9 +911,67 @@
 
 
 
-                $('#pyjamas-conf-2021 .timer').html("TBA");
-                $('#pyjamas-conf-2021 .deadline-time').html("TBA");
-                $('#pyjamas-conf-2021').attr("cfpDiff", Infinity);
+
+                // Use specified timezone for deadlines if available else use AoE timezone
+
+                  var cfpDate = DateTime.fromSQL("2021-09-19 23:59:00", { zone: "UTC-12" });
+                  var confDate = DateTime.fromSQL("2021-12-05", { zone: "UTC-12" });
+
+
+                // check if timezone is valid otherwise replace by system timezone
+                if (cfpDate.invalid || confDate.invalid) {
+                  var cfpDate = DateTime.fromSQL("2021-09-19 23:59:00");
+                  var confDate = DateTime.fromSQL("2021-12-05");
+                  console.log("Invalid timezone in pyjamas-conf-2021. Using system timezone instead.");
+                }
+
+                // render countdown timer
+                $('#pyjamas-conf-2021 .timer').countdown(cfpDate.toJSDate(), function (event) {
+                  $(this).html(event.strftime('%D days %Hh %Mm %Ss'));
+                });
+
+                // render countdown timer small
+                $('#pyjamas-conf-2021 .timer-small').countdown(cfpDate.toJSDate(), function (event) {
+                  $(this).html(event.strftime('%Dd %H:%M:%S'));
+                });
+
+                // deadline in local timezone
+                $('#pyjamas-conf-2021 .deadline-time').html(cfpDate.setZone('system').toLocaleString(DateTime.DATE_HUGE));
+
+                // add calendar button
+                try {
+                  var myCalendar = createCalendarFromObject({
+                    id: 'pyjamas-conf-2021',
+                    title: 'Pyjamas Conf 2021 deadline',
+                    date: cfpDate.toJSDate(),
+                    duration: 60,
+                  });
+                  document.querySelector('#pyjamas-conf-2021 .calendar').appendChild(myCalendar);
+                } catch (err) {
+                  document.querySelector('#pyjamas-conf-2021 .calendar').appendChild("<p>Calendar not available.</p>");
+                  console.log("Error in cfp date.");
+                }
+
+                // check if date has passed, add 'past' class to it
+                cfpDiff = cfpDate.diffNow("seconds");
+                confDiff = confDate.diffNow("seconds");
+
+                $('#pyjamas-conf-2021').attr("cfpDiff", cfpDiff.toMillis());
+                $('#pyjamas-conf-2021').attr("confDiff", confDiff.toMillis());
+
+                if (cfpDiff < 0) {
+                  $('#pyjamas-conf-2021').addClass('pastcfp');
+                  $('#pyjamas-conf-2021 .timer').replaceWith($('#pyjamas-conf-2021 .deadline'));
+                  $('#pyjamas-conf-2021 .timer-small').replaceWith($('#pyjamas-conf-2021 .deadline'));
+                  $('#pyjamas-conf-2021 .calendar').remove();
+                }
+
+                if (confDiff < 0) {
+                  $('#pyjamas-conf-2021').addClass('pastconf');
+                  $('#pyjamas-conf-2021 .timer').replaceWith($('#pyjamas-conf-2021 .deadline'));
+                  $('#pyjamas-conf-2021 .timer-small').replaceWith($('#pyjamas-conf-2021 .deadline'));
+                  $('#pyjamas-conf-2021 .calendar').remove();
+                }
 
 
 

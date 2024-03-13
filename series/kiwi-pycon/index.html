@@ -67,7 +67,7 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/js-year-calendar.min.css?t=1710265240"
+      href="/static/css/js-year-calendar.min.css?t=1710355255"
       media="screen,projection"
     />
 
@@ -79,13 +79,13 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/deadlines.css?t=1710265240"
+      href="/static/css/deadlines.css?t=1710355255"
       media="screen,projection"
     />
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/calendar.css?t=1710265240"
+      href="/static/css/calendar.css?t=1710355255"
       media="screen,projection"
     />
 
@@ -724,7 +724,7 @@
                 <span class="conf-title-icon">
                   <a
                     title="Conference Website"
-                    href="https://python.nz/"
+                    href="https://web.archive.org/web/20190616093942/https://python.nz/"
                     target="_blank"
                     ><img
                       src="/static/img/203-earth.svg"
@@ -746,9 +746,8 @@
                 <div class="meta">
                   <span class="conf-date">.</span>
                   <span class="conf-place">
-                    <a
-                      href="http://maps.google.com/?q=Wellington, Wellington, New Zealand"
-                      >Wellington, Wellington, New Zealand</a
+                    <a href="http://maps.google.com/?q=Wellington, New Zealand"
+                      >Wellington, New Zealand</a
                     >
                   </span>
                 </div>
@@ -757,7 +756,7 @@
                 <div class="deadline">
                   <div>
                     Deadline:
-                    <span class="deadline-time">TBA</span>
+                    <span class="deadline-time">Sunday, 23 June 2019</span>
                   </div>
                 </div>
               </div>
@@ -1405,9 +1404,67 @@
 
 
 
-                $('#kiwi-pycon-2019 .timer').html("TBA");
-                $('#kiwi-pycon-2019 .deadline-time').html("TBA");
-                $('#kiwi-pycon-2019').attr("cfpDiff", Infinity);
+
+                // Use specified timezone for deadlines if available else use AoE timezone
+
+                  var cfpDate = DateTime.fromSQL("2019-06-23 23:59:00", { zone: "UTC-12" });
+                  var confDate = DateTime.fromSQL("2019-08-23", { zone: "UTC-12" });
+
+
+                // check if timezone is valid otherwise replace by system timezone
+                if (cfpDate.invalid || confDate.invalid) {
+                  var cfpDate = DateTime.fromSQL("2019-06-23 23:59:00");
+                  var confDate = DateTime.fromSQL("2019-08-23");
+                  console.log("Invalid timezone in kiwi-pycon-2019. Using system timezone instead.");
+                }
+
+                // render countdown timer
+                $('#kiwi-pycon-2019 .timer').countdown(cfpDate.toJSDate(), function (event) {
+                  $(this).html(event.strftime('%D days %Hh %Mm %Ss'));
+                });
+
+                // render countdown timer small
+                $('#kiwi-pycon-2019 .timer-small').countdown(cfpDate.toJSDate(), function (event) {
+                  $(this).html(event.strftime('%Dd %H:%M:%S'));
+                });
+
+                // deadline in local timezone
+                $('#kiwi-pycon-2019 .deadline-time').html(cfpDate.setZone('system').toLocaleString(DateTime.DATE_HUGE));
+
+                // add calendar button
+                try {
+                  var myCalendar = createCalendarFromObject({
+                    id: 'kiwi-pycon-2019',
+                    title: 'Kiwi PyCon 2019 deadline',
+                    date: cfpDate.toJSDate(),
+                    duration: 60,
+                  });
+                  document.querySelector('#kiwi-pycon-2019 .calendar').appendChild(myCalendar);
+                } catch (err) {
+                  document.querySelector('#kiwi-pycon-2019 .calendar').appendChild("<p>Calendar not available.</p>");
+                  console.log("Error in cfp date.");
+                }
+
+                // check if date has passed, add 'past' class to it
+                cfpDiff = cfpDate.diffNow("seconds");
+                confDiff = confDate.diffNow("seconds");
+
+                $('#kiwi-pycon-2019').attr("cfpDiff", cfpDiff.toMillis());
+                $('#kiwi-pycon-2019').attr("confDiff", confDiff.toMillis());
+
+                if (cfpDiff < 0) {
+                  $('#kiwi-pycon-2019').addClass('pastcfp');
+                  $('#kiwi-pycon-2019 .timer').replaceWith($('#kiwi-pycon-2019 .deadline'));
+                  $('#kiwi-pycon-2019 .timer-small').replaceWith($('#kiwi-pycon-2019 .deadline'));
+                  $('#kiwi-pycon-2019 .calendar').remove();
+                }
+
+                if (confDiff < 0) {
+                  $('#kiwi-pycon-2019').addClass('pastconf');
+                  $('#kiwi-pycon-2019 .timer').replaceWith($('#kiwi-pycon-2019 .deadline'));
+                  $('#kiwi-pycon-2019 .timer-small').replaceWith($('#kiwi-pycon-2019 .deadline'));
+                  $('#kiwi-pycon-2019 .calendar').remove();
+                }
 
 
 

@@ -60,7 +60,7 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/js-year-calendar.min.css?t=1710265240"
+      href="/static/css/js-year-calendar.min.css?t=1710355255"
       media="screen,projection"
     />
 
@@ -72,13 +72,13 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/deadlines.css?t=1710265240"
+      href="/static/css/deadlines.css?t=1710355255"
       media="screen,projection"
     />
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/calendar.css?t=1710265240"
+      href="/static/css/calendar.css?t=1710355255"
       media="screen,projection"
     />
 
@@ -552,7 +552,7 @@
                 <span class="conf-title-icon">
                   <a
                     title="Conference Website"
-                    href="https://www.pycon.se/"
+                    href="https://www.pycon.se/2020/"
                     target="_blank"
                     ><img
                       src="/static/img/203-earth.svg"
@@ -582,7 +582,7 @@
                 <div class="deadline">
                   <div>
                     Deadline:
-                    <span class="deadline-time">TBA</span>
+                    <span class="deadline-time">Thursday, 1 October 2020</span>
                   </div>
                 </div>
               </div>
@@ -1193,9 +1193,67 @@
 
 
 
-                $('#pycon-sweden-2020 .timer').html("TBA");
-                $('#pycon-sweden-2020 .deadline-time').html("TBA");
-                $('#pycon-sweden-2020').attr("cfpDiff", Infinity);
+
+                // Use specified timezone for deadlines if available else use AoE timezone
+
+                  var cfpDate = DateTime.fromSQL("2020-10-01 00:00:00", { zone: "Europe/Stockholm" });
+                  var confDate = DateTime.fromSQL("2020-11-12", { zone: "Europe/Stockholm" });
+
+
+                // check if timezone is valid otherwise replace by system timezone
+                if (cfpDate.invalid || confDate.invalid) {
+                  var cfpDate = DateTime.fromSQL("2020-10-01 00:00:00");
+                  var confDate = DateTime.fromSQL("2020-11-12");
+                  console.log("Invalid timezone in pycon-sweden-2020. Using system timezone instead.");
+                }
+
+                // render countdown timer
+                $('#pycon-sweden-2020 .timer').countdown(cfpDate.toJSDate(), function (event) {
+                  $(this).html(event.strftime('%D days %Hh %Mm %Ss'));
+                });
+
+                // render countdown timer small
+                $('#pycon-sweden-2020 .timer-small').countdown(cfpDate.toJSDate(), function (event) {
+                  $(this).html(event.strftime('%Dd %H:%M:%S'));
+                });
+
+                // deadline in local timezone
+                $('#pycon-sweden-2020 .deadline-time').html(cfpDate.setZone('system').toLocaleString(DateTime.DATE_HUGE));
+
+                // add calendar button
+                try {
+                  var myCalendar = createCalendarFromObject({
+                    id: 'pycon-sweden-2020',
+                    title: 'PyCon Sweden 2020 deadline',
+                    date: cfpDate.toJSDate(),
+                    duration: 60,
+                  });
+                  document.querySelector('#pycon-sweden-2020 .calendar').appendChild(myCalendar);
+                } catch (err) {
+                  document.querySelector('#pycon-sweden-2020 .calendar').appendChild("<p>Calendar not available.</p>");
+                  console.log("Error in cfp date.");
+                }
+
+                // check if date has passed, add 'past' class to it
+                cfpDiff = cfpDate.diffNow("seconds");
+                confDiff = confDate.diffNow("seconds");
+
+                $('#pycon-sweden-2020').attr("cfpDiff", cfpDiff.toMillis());
+                $('#pycon-sweden-2020').attr("confDiff", confDiff.toMillis());
+
+                if (cfpDiff < 0) {
+                  $('#pycon-sweden-2020').addClass('pastcfp');
+                  $('#pycon-sweden-2020 .timer').replaceWith($('#pycon-sweden-2020 .deadline'));
+                  $('#pycon-sweden-2020 .timer-small').replaceWith($('#pycon-sweden-2020 .deadline'));
+                  $('#pycon-sweden-2020 .calendar').remove();
+                }
+
+                if (confDiff < 0) {
+                  $('#pycon-sweden-2020').addClass('pastconf');
+                  $('#pycon-sweden-2020 .timer').replaceWith($('#pycon-sweden-2020 .deadline'));
+                  $('#pycon-sweden-2020 .timer-small').replaceWith($('#pycon-sweden-2020 .deadline'));
+                  $('#pycon-sweden-2020 .calendar').remove();
+                }
 
 
 

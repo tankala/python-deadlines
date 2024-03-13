@@ -67,7 +67,7 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/js-year-calendar.min.css?t=1710265240"
+      href="/static/css/js-year-calendar.min.css?t=1710355255"
       media="screen,projection"
     />
 
@@ -79,13 +79,13 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/deadlines.css?t=1710265240"
+      href="/static/css/deadlines.css?t=1710355255"
       media="screen,projection"
     />
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/calendar.css?t=1710265240"
+      href="/static/css/calendar.css?t=1710355255"
       media="screen,projection"
     />
 
@@ -347,9 +347,7 @@
                 <div class="meta">
                   <span class="conf-date">February 16 - 19, 2022.</span>
                   <span class="conf-place">
-                    <a href="http://maps.google.com/?q=Online / Cancelled"
-                      >Online / Cancelled</a
-                    >
+                    <a href="#">Online</a>
                   </span>
                 </div>
               </div>
@@ -357,7 +355,7 @@
                 <div class="deadline">
                   <div>
                     Deadline:
-                    <span class="deadline-time">Friday, 4 February 2022</span>
+                    <span class="deadline-time">Cancelled</span>
                   </div>
                 </div>
               </div>
@@ -674,67 +672,9 @@
                 $('#pycon-iran-2022 .PY-tag').html(sub2name["PY"].toLocaleLowerCase());
 
 
-
-                // Use specified timezone for deadlines if available else use AoE timezone
-
-                  var cfpDate = DateTime.fromSQL("2022-02-04 23:59:59", { zone: "Asia/Tehran" });
-                  var confDate = DateTime.fromSQL("2022-02-16", { zone: "Asia/Tehran" });
-
-
-                // check if timezone is valid otherwise replace by system timezone
-                if (cfpDate.invalid || confDate.invalid) {
-                  var cfpDate = DateTime.fromSQL("2022-02-04 23:59:59");
-                  var confDate = DateTime.fromSQL("2022-02-16");
-                  console.log("Invalid timezone in pycon-iran-2022. Using system timezone instead.");
-                }
-
-                // render countdown timer
-                $('#pycon-iran-2022 .timer').countdown(cfpDate.toJSDate(), function (event) {
-                  $(this).html(event.strftime('%D days %Hh %Mm %Ss'));
-                });
-
-                // render countdown timer small
-                $('#pycon-iran-2022 .timer-small').countdown(cfpDate.toJSDate(), function (event) {
-                  $(this).html(event.strftime('%Dd %H:%M:%S'));
-                });
-
-                // deadline in local timezone
-                $('#pycon-iran-2022 .deadline-time').html(cfpDate.setZone('system').toLocaleString(DateTime.DATE_HUGE));
-
-                // add calendar button
-                try {
-                  var myCalendar = createCalendarFromObject({
-                    id: 'pycon-iran-2022',
-                    title: 'PyCon Iran 2022 deadline',
-                    date: cfpDate.toJSDate(),
-                    duration: 60,
-                  });
-                  document.querySelector('#pycon-iran-2022 .calendar').appendChild(myCalendar);
-                } catch (err) {
-                  document.querySelector('#pycon-iran-2022 .calendar').appendChild("<p>Calendar not available.</p>");
-                  console.log("Error in cfp date.");
-                }
-
-                // check if date has passed, add 'past' class to it
-                cfpDiff = cfpDate.diffNow("seconds");
-                confDiff = confDate.diffNow("seconds");
-
-                $('#pycon-iran-2022').attr("cfpDiff", cfpDiff.toMillis());
-                $('#pycon-iran-2022').attr("confDiff", confDiff.toMillis());
-
-                if (cfpDiff < 0) {
-                  $('#pycon-iran-2022').addClass('pastcfp');
-                  $('#pycon-iran-2022 .timer').replaceWith($('#pycon-iran-2022 .deadline'));
-                  $('#pycon-iran-2022 .timer-small').replaceWith($('#pycon-iran-2022 .deadline'));
-                  $('#pycon-iran-2022 .calendar').remove();
-                }
-
-                if (confDiff < 0) {
-                  $('#pycon-iran-2022').addClass('pastconf');
-                  $('#pycon-iran-2022 .timer').replaceWith($('#pycon-iran-2022 .deadline'));
-                  $('#pycon-iran-2022 .timer-small').replaceWith($('#pycon-iran-2022 .deadline'));
-                  $('#pycon-iran-2022 .calendar').remove();
-                }
+                $('#pycon-iran-2022 .timer').html("Cancelled");
+                $('#pycon-iran-2022 .deadline-time').html("Cancelled");
+                $('#pycon-iran-2022').attr("cfpDiff", Infinity);
 
 
 

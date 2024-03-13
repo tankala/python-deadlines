@@ -26,11 +26,7 @@
       content="https://pythondeadlin.es/series/pycon-india/"
     />
     <meta property="og:site_name" content="Python Conference Deadlines" />
-    <meta property="og:type" content="article" />
-    <meta
-      property="article:published_time"
-      content="2024-09-29T00:00:00+00:00"
-    />
+    <meta property="og:type" content="website" />
     <meta name="twitter:card" content="summary" />
     <meta property="twitter:title" content="PyCon India Conference Summary" />
     <meta name="twitter:site" content="@jesperdramsch" />
@@ -38,20 +34,14 @@
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "BlogPosting",
+        "@type": "WebPage",
         "author": {
           "@type": "Person",
           "name": "Jesper Dramsch",
           "url": "https://dramsch.net"
         },
-        "dateModified": "2024-09-29T00:00:00+00:00",
-        "datePublished": "2024-09-29T00:00:00+00:00",
         "description": "Summary of the conference and its instances throughout the years.",
         "headline": "PyCon India Conference Summary",
-        "mainEntityOfPage": {
-          "@type": "WebPage",
-          "@id": "https://pythondeadlin.es/series/pycon-india/"
-        },
         "url": "https://pythondeadlin.es/series/pycon-india/"
       }
     </script>
@@ -67,7 +57,7 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/js-year-calendar.min.css?t=1710265240"
+      href="/static/css/js-year-calendar.min.css?t=1710355255"
       media="screen,projection"
     />
 
@@ -79,13 +69,13 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/deadlines.css?t=1710265240"
+      href="/static/css/deadlines.css?t=1710355255"
       media="screen,projection"
     />
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/calendar.css?t=1710265240"
+      href="/static/css/calendar.css?t=1710355255"
       media="screen,projection"
     />
 
@@ -164,16 +154,6 @@
       type="text/javascript"
       src="/static/js/bootstrap-multiselect.min.js"
     ></script>
-
-    <style>
-      #twitter-widget {
-        width: 100%;
-      }
-
-      .twitter-timeline {
-        width: 100% !important;
-      }
-    </style>
   </head>
 
   <body>
@@ -284,11 +264,7 @@
         </div>
         <div class="row">
           <div class="col-sm-12" id="conf-subs">
-            <span id="conf-subs" title="Conference subjects">
-              <span class="PY-tag badge badge-light conf-sub conf-PY">
-                General Python
-              </span>
-            </span>
+            <span id="conf-subs" title="Conference subjects"> </span>
           </div>
         </div>
       </div>
@@ -332,7 +308,7 @@
             <div id="twitter-widget">
               <a
                 class="twitter-timeline"
-                href="https://twitter.com/PyConIndia"
+                href="https://twitter.com/"
                 data-tweet-limit="2"
                 >Tweets by PyConIndia</a
               >
@@ -505,7 +481,7 @@
                 <div class="meta">
                   <span class="conf-date">.</span>
                   <span class="conf-place">
-                    <a href="http://maps.google.com/?q=online">online</a>
+                    <a href="#">Online</a>
                   </span>
                 </div>
               </div>
@@ -513,7 +489,7 @@
                 <div class="deadline">
                   <div>
                     Deadline:
-                    <span class="deadline-time">TBA</span>
+                    <span class="deadline-time">Friday, 7 May 2021</span>
                   </div>
                 </div>
               </div>
@@ -1351,9 +1327,67 @@
 
 
 
-                $('#pycon-india-2021 .timer').html("TBA");
-                $('#pycon-india-2021 .deadline-time').html("TBA");
-                $('#pycon-india-2021').attr("cfpDiff", Infinity);
+
+                // Use specified timezone for deadlines if available else use AoE timezone
+
+                  var cfpDate = DateTime.fromSQL("2021-05-07 23:59:00", { zone: "Asia/Kolkata" });
+                  var confDate = DateTime.fromSQL("2021-09-17", { zone: "Asia/Kolkata" });
+
+
+                // check if timezone is valid otherwise replace by system timezone
+                if (cfpDate.invalid || confDate.invalid) {
+                  var cfpDate = DateTime.fromSQL("2021-05-07 23:59:00");
+                  var confDate = DateTime.fromSQL("2021-09-17");
+                  console.log("Invalid timezone in pycon-india-2021. Using system timezone instead.");
+                }
+
+                // render countdown timer
+                $('#pycon-india-2021 .timer').countdown(cfpDate.toJSDate(), function (event) {
+                  $(this).html(event.strftime('%D days %Hh %Mm %Ss'));
+                });
+
+                // render countdown timer small
+                $('#pycon-india-2021 .timer-small').countdown(cfpDate.toJSDate(), function (event) {
+                  $(this).html(event.strftime('%Dd %H:%M:%S'));
+                });
+
+                // deadline in local timezone
+                $('#pycon-india-2021 .deadline-time').html(cfpDate.setZone('system').toLocaleString(DateTime.DATE_HUGE));
+
+                // add calendar button
+                try {
+                  var myCalendar = createCalendarFromObject({
+                    id: 'pycon-india-2021',
+                    title: 'PyCon India 2021 deadline',
+                    date: cfpDate.toJSDate(),
+                    duration: 60,
+                  });
+                  document.querySelector('#pycon-india-2021 .calendar').appendChild(myCalendar);
+                } catch (err) {
+                  document.querySelector('#pycon-india-2021 .calendar').appendChild("<p>Calendar not available.</p>");
+                  console.log("Error in cfp date.");
+                }
+
+                // check if date has passed, add 'past' class to it
+                cfpDiff = cfpDate.diffNow("seconds");
+                confDiff = confDate.diffNow("seconds");
+
+                $('#pycon-india-2021').attr("cfpDiff", cfpDiff.toMillis());
+                $('#pycon-india-2021').attr("confDiff", confDiff.toMillis());
+
+                if (cfpDiff < 0) {
+                  $('#pycon-india-2021').addClass('pastcfp');
+                  $('#pycon-india-2021 .timer').replaceWith($('#pycon-india-2021 .deadline'));
+                  $('#pycon-india-2021 .timer-small').replaceWith($('#pycon-india-2021 .deadline'));
+                  $('#pycon-india-2021 .calendar').remove();
+                }
+
+                if (confDiff < 0) {
+                  $('#pycon-india-2021').addClass('pastconf');
+                  $('#pycon-india-2021 .timer').replaceWith($('#pycon-india-2021 .deadline'));
+                  $('#pycon-india-2021 .timer-small').replaceWith($('#pycon-india-2021 .deadline'));
+                  $('#pycon-india-2021 .calendar').remove();
+                }
 
 
 

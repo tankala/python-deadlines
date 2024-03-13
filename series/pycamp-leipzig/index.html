@@ -65,7 +65,7 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/js-year-calendar.min.css?t=1710265240"
+      href="/static/css/js-year-calendar.min.css?t=1710355255"
       media="screen,projection"
     />
 
@@ -77,13 +77,13 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/deadlines.css?t=1710265240"
+      href="/static/css/deadlines.css?t=1710355255"
       media="screen,projection"
     />
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/calendar.css?t=1710265240"
+      href="/static/css/calendar.css?t=1710355255"
       media="screen,projection"
     />
 
@@ -518,7 +518,7 @@
                 <div class="deadline">
                   <div>
                     Deadline:
-                    <span class="deadline-time">TBA</span>
+                    <span class="deadline-time">Friday, 28 January 2022</span>
                   </div>
                 </div>
               </div>
@@ -616,13 +616,13 @@
 
         <div class="row">
           <div
-            id="1ef367ad-ea7a-4141-9d89-84c2d67ab90f"
+            id="150547a2-cb0f-4ef8-8124-c7c6b74ce32f"
             style="width: 100%; height: 400px"
             class="jekyll-map"
           ></div>
           <script type="text/javascript">
             jekyllMaps.register(
-              "1ef367ad-ea7a-4141-9d89-84c2d67ab90f",
+              "150547a2-cb0f-4ef8-8124-c7c6b74ce32f",
               [
                 {
                   latitude: 51.3406321,
@@ -810,9 +810,67 @@
 
 
 
-                $('#pycamp-leipzig-2022 .timer').html("TBA");
-                $('#pycamp-leipzig-2022 .deadline-time').html("TBA");
-                $('#pycamp-leipzig-2022').attr("cfpDiff", Infinity);
+
+                // Use specified timezone for deadlines if available else use AoE timezone
+
+                  var cfpDate = DateTime.fromSQL("2022-01-28 23:59:00", { zone: "UTC-12" });
+                  var confDate = DateTime.fromSQL("2022-01-29", { zone: "UTC-12" });
+
+
+                // check if timezone is valid otherwise replace by system timezone
+                if (cfpDate.invalid || confDate.invalid) {
+                  var cfpDate = DateTime.fromSQL("2022-01-28 23:59:00");
+                  var confDate = DateTime.fromSQL("2022-01-29");
+                  console.log("Invalid timezone in pycamp-leipzig-2022. Using system timezone instead.");
+                }
+
+                // render countdown timer
+                $('#pycamp-leipzig-2022 .timer').countdown(cfpDate.toJSDate(), function (event) {
+                  $(this).html(event.strftime('%D days %Hh %Mm %Ss'));
+                });
+
+                // render countdown timer small
+                $('#pycamp-leipzig-2022 .timer-small').countdown(cfpDate.toJSDate(), function (event) {
+                  $(this).html(event.strftime('%Dd %H:%M:%S'));
+                });
+
+                // deadline in local timezone
+                $('#pycamp-leipzig-2022 .deadline-time').html(cfpDate.setZone('system').toLocaleString(DateTime.DATE_HUGE));
+
+                // add calendar button
+                try {
+                  var myCalendar = createCalendarFromObject({
+                    id: 'pycamp-leipzig-2022',
+                    title: 'PyCamp Leipzig 2022 deadline',
+                    date: cfpDate.toJSDate(),
+                    duration: 60,
+                  });
+                  document.querySelector('#pycamp-leipzig-2022 .calendar').appendChild(myCalendar);
+                } catch (err) {
+                  document.querySelector('#pycamp-leipzig-2022 .calendar').appendChild("<p>Calendar not available.</p>");
+                  console.log("Error in cfp date.");
+                }
+
+                // check if date has passed, add 'past' class to it
+                cfpDiff = cfpDate.diffNow("seconds");
+                confDiff = confDate.diffNow("seconds");
+
+                $('#pycamp-leipzig-2022').attr("cfpDiff", cfpDiff.toMillis());
+                $('#pycamp-leipzig-2022').attr("confDiff", confDiff.toMillis());
+
+                if (cfpDiff < 0) {
+                  $('#pycamp-leipzig-2022').addClass('pastcfp');
+                  $('#pycamp-leipzig-2022 .timer').replaceWith($('#pycamp-leipzig-2022 .deadline'));
+                  $('#pycamp-leipzig-2022 .timer-small').replaceWith($('#pycamp-leipzig-2022 .deadline'));
+                  $('#pycamp-leipzig-2022 .calendar').remove();
+                }
+
+                if (confDiff < 0) {
+                  $('#pycamp-leipzig-2022').addClass('pastconf');
+                  $('#pycamp-leipzig-2022 .timer').replaceWith($('#pycamp-leipzig-2022 .deadline'));
+                  $('#pycamp-leipzig-2022 .timer-small').replaceWith($('#pycamp-leipzig-2022 .deadline'));
+                  $('#pycamp-leipzig-2022 .calendar').remove();
+                }
 
 
 

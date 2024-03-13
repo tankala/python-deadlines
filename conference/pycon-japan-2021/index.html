@@ -64,7 +64,7 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/js-year-calendar.min.css?t=1710265240"
+      href="/static/css/js-year-calendar.min.css?t=1710355255"
       media="screen,projection"
     />
 
@@ -76,13 +76,13 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/deadlines.css?t=1710265240"
+      href="/static/css/deadlines.css?t=1710355255"
       media="screen,projection"
     />
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/calendar.css?t=1710265240"
+      href="/static/css/calendar.css?t=1710355255"
       media="screen,projection"
     />
 
@@ -444,7 +444,7 @@
       </div>
       <div id="page-content">
         <div id="conf-deadline-timer" class="row">
-          <div id="cfp-timer" class="col-12 conf-timer">TBA</div>
+          <div id="cfp-timer" class="col-12 conf-timer"></div>
         </div>
         <div id="conf-key-facts" class="row">
           <div class="col-12 col-md-6">
@@ -469,8 +469,8 @@
               <a
                 id="conf-place"
                 target="_blank"
-                href="https://maps.google.com/?q=Tokyo, Kantō, Japan"
-                >Tokyo, Kantō, Japan</a
+                href="https://maps.google.com/?q=Tokyo, Japan"
+                >Tokyo, Japan</a
               >
             </div>
             <div>
@@ -520,13 +520,13 @@
         </div>
         <div class="row">
           <div
-            id="c8ee4103-14c9-4c6a-80d2-a1843c24afad"
+            id="e462b612-2a9f-4937-b2ff-3135f3e11d95"
             style="width: 100%; height: 400px"
             class="jekyll-map"
           ></div>
           <script type="text/javascript">
             jekyllMaps.register(
-              "c8ee4103-14c9-4c6a-80d2-a1843c24afad",
+              "e462b612-2a9f-4937-b2ff-3135f3e11d95",
               [
                 {
                   latitude: 35.683805050000004,
@@ -667,9 +667,48 @@
 
         // other
 
-        $("#cfp-timer").html("TBA");
-        $(".deadline-time").html("TBA");
-        $(".deadline-local-time").html("TBA");
+        // Use specified timezone for deadlines if available else use AoE timezone
+
+        var confDeadline = DateTime.fromSQL("2021-07-10 23:59:00", {
+          zone: "UTC-12",
+        });
+
+        // check if timezone is valid otherwise replace by system timezone
+        if (confDeadline.invalid) {
+          var confDeadline = DateTime.fromSQL("2021-07-10 23:59:00");
+          console.log("Invalid timezone. Using system timezone instead.");
+        }
+
+        // add calendar
+        var conferenceDeadlineCalendar = createCalendarFromObject({
+          id: "pycon-japan-2021",
+          title: "PyCon Japan 2021 Conference Deadlines",
+          date: confDeadline.toJSDate(),
+          duration: 60,
+        });
+        document
+          .querySelector("#conference-deadline")
+          .appendChild(conferenceDeadlineCalendar);
+
+        // render countdown timer
+        $("#cfp-timer").countdown(confDeadline.toJSDate(), function (event) {
+          $(this).html(event.strftime("%D days %Hh %Mm %Ss"));
+        });
+
+        // render deadline conference time
+
+        $(".deadline-time").html(
+          confDeadline
+            .setZone("UTC-12")
+            .toLocaleString(DateTime.DATETIME_HUGE_WITH_SECONDS)
+        );
+
+        // render deadline in local timezone
+        $(".deadline-local-time").html(
+          confDeadline
+            .setZone("system")
+            .toLocaleString(DateTime.DATETIME_HUGE_WITH_SECONDS)
+        );
       });
     </script>
     <script async defer>

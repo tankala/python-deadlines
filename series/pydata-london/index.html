@@ -72,7 +72,7 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/js-year-calendar.min.css?t=1710265240"
+      href="/static/css/js-year-calendar.min.css?t=1710355255"
       media="screen,projection"
     />
 
@@ -84,13 +84,13 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/deadlines.css?t=1710265240"
+      href="/static/css/deadlines.css?t=1710355255"
       media="screen,projection"
     />
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/calendar.css?t=1710265240"
+      href="/static/css/calendar.css?t=1710355255"
       media="screen,projection"
     />
 
@@ -804,7 +804,7 @@
                 <div class="deadline">
                   <div>
                     Deadline:
-                    <span class="deadline-time">TBA</span>
+                    <span class="deadline-time">Monday, 25 April 2022</span>
                   </div>
                 </div>
               </div>
@@ -865,12 +865,14 @@
                     >
                   </span>
                 </div>
+
+                <div class="note"><b>Note: </b>Cancelled due to Covid</div>
               </div>
               <div class="col-12 col-sm-6">
                 <div class="deadline">
                   <div>
                     Deadline:
-                    <span class="deadline-time">TBA</span>
+                    <span class="deadline-time">Cancelled</span>
                   </div>
                 </div>
               </div>
@@ -936,7 +938,7 @@
                 <div class="deadline">
                   <div>
                     Deadline:
-                    <span class="deadline-time">TBA</span>
+                    <span class="deadline-time">Friday, 19 April 2019</span>
                   </div>
                 </div>
               </div>
@@ -1217,13 +1219,13 @@
 
         <div class="row">
           <div
-            id="e9fbc2e5-e02f-418c-884d-807934812424"
+            id="3636ac2c-f1b3-4bbd-96a6-855eed657364"
             style="width: 100%; height: 400px"
             class="jekyll-map"
           ></div>
           <script type="text/javascript">
             jekyllMaps.register(
-              "e9fbc2e5-e02f-418c-884d-807934812424",
+              "3636ac2c-f1b3-4bbd-96a6-855eed657364",
               [
                 {
                   latitude: 51.51072,
@@ -1549,17 +1551,75 @@
 
 
 
-                $('#pydata-london-2022 .timer').html("TBA");
-                $('#pydata-london-2022 .deadline-time').html("TBA");
-                $('#pydata-london-2022').attr("cfpDiff", Infinity);
+
+                // Use specified timezone for deadlines if available else use AoE timezone
+
+                  var cfpDate = DateTime.fromSQL("2022-04-25 23:59:00", { zone: "UTC-12" });
+                  var confDate = DateTime.fromSQL("2022-06-17", { zone: "UTC-12" });
+
+
+                // check if timezone is valid otherwise replace by system timezone
+                if (cfpDate.invalid || confDate.invalid) {
+                  var cfpDate = DateTime.fromSQL("2022-04-25 23:59:00");
+                  var confDate = DateTime.fromSQL("2022-06-17");
+                  console.log("Invalid timezone in pydata-london-2022. Using system timezone instead.");
+                }
+
+                // render countdown timer
+                $('#pydata-london-2022 .timer').countdown(cfpDate.toJSDate(), function (event) {
+                  $(this).html(event.strftime('%D days %Hh %Mm %Ss'));
+                });
+
+                // render countdown timer small
+                $('#pydata-london-2022 .timer-small').countdown(cfpDate.toJSDate(), function (event) {
+                  $(this).html(event.strftime('%Dd %H:%M:%S'));
+                });
+
+                // deadline in local timezone
+                $('#pydata-london-2022 .deadline-time').html(cfpDate.setZone('system').toLocaleString(DateTime.DATE_HUGE));
+
+                // add calendar button
+                try {
+                  var myCalendar = createCalendarFromObject({
+                    id: 'pydata-london-2022',
+                    title: 'PyData London 2022 deadline',
+                    date: cfpDate.toJSDate(),
+                    duration: 60,
+                  });
+                  document.querySelector('#pydata-london-2022 .calendar').appendChild(myCalendar);
+                } catch (err) {
+                  document.querySelector('#pydata-london-2022 .calendar').appendChild("<p>Calendar not available.</p>");
+                  console.log("Error in cfp date.");
+                }
+
+                // check if date has passed, add 'past' class to it
+                cfpDiff = cfpDate.diffNow("seconds");
+                confDiff = confDate.diffNow("seconds");
+
+                $('#pydata-london-2022').attr("cfpDiff", cfpDiff.toMillis());
+                $('#pydata-london-2022').attr("confDiff", confDiff.toMillis());
+
+                if (cfpDiff < 0) {
+                  $('#pydata-london-2022').addClass('pastcfp');
+                  $('#pydata-london-2022 .timer').replaceWith($('#pydata-london-2022 .deadline'));
+                  $('#pydata-london-2022 .timer-small').replaceWith($('#pydata-london-2022 .deadline'));
+                  $('#pydata-london-2022 .calendar').remove();
+                }
+
+                if (confDiff < 0) {
+                  $('#pydata-london-2022').addClass('pastconf');
+                  $('#pydata-london-2022 .timer').replaceWith($('#pydata-london-2022 .deadline'));
+                  $('#pydata-london-2022 .timer-small').replaceWith($('#pydata-london-2022 .deadline'));
+                  $('#pydata-london-2022 .calendar').remove();
+                }
 
 
 
 
 
 
-                $('#pydata-london-2020 .timer').html("TBA");
-                $('#pydata-london-2020 .deadline-time').html("TBA");
+                $('#pydata-london-2020 .timer').html("Cancelled");
+                $('#pydata-london-2020 .deadline-time').html("Cancelled");
                 $('#pydata-london-2020').attr("cfpDiff", Infinity);
 
 
@@ -1567,9 +1627,67 @@
 
 
 
-                $('#pydata-london-2019 .timer').html("TBA");
-                $('#pydata-london-2019 .deadline-time').html("TBA");
-                $('#pydata-london-2019').attr("cfpDiff", Infinity);
+
+                // Use specified timezone for deadlines if available else use AoE timezone
+
+                  var cfpDate = DateTime.fromSQL("2019-04-19 23:59:00", { zone: "UTC-12" });
+                  var confDate = DateTime.fromSQL("2019-07-12", { zone: "UTC-12" });
+
+
+                // check if timezone is valid otherwise replace by system timezone
+                if (cfpDate.invalid || confDate.invalid) {
+                  var cfpDate = DateTime.fromSQL("2019-04-19 23:59:00");
+                  var confDate = DateTime.fromSQL("2019-07-12");
+                  console.log("Invalid timezone in pydata-london-2019. Using system timezone instead.");
+                }
+
+                // render countdown timer
+                $('#pydata-london-2019 .timer').countdown(cfpDate.toJSDate(), function (event) {
+                  $(this).html(event.strftime('%D days %Hh %Mm %Ss'));
+                });
+
+                // render countdown timer small
+                $('#pydata-london-2019 .timer-small').countdown(cfpDate.toJSDate(), function (event) {
+                  $(this).html(event.strftime('%Dd %H:%M:%S'));
+                });
+
+                // deadline in local timezone
+                $('#pydata-london-2019 .deadline-time').html(cfpDate.setZone('system').toLocaleString(DateTime.DATE_HUGE));
+
+                // add calendar button
+                try {
+                  var myCalendar = createCalendarFromObject({
+                    id: 'pydata-london-2019',
+                    title: 'PyData London 2019 deadline',
+                    date: cfpDate.toJSDate(),
+                    duration: 60,
+                  });
+                  document.querySelector('#pydata-london-2019 .calendar').appendChild(myCalendar);
+                } catch (err) {
+                  document.querySelector('#pydata-london-2019 .calendar').appendChild("<p>Calendar not available.</p>");
+                  console.log("Error in cfp date.");
+                }
+
+                // check if date has passed, add 'past' class to it
+                cfpDiff = cfpDate.diffNow("seconds");
+                confDiff = confDate.diffNow("seconds");
+
+                $('#pydata-london-2019').attr("cfpDiff", cfpDiff.toMillis());
+                $('#pydata-london-2019').attr("confDiff", confDiff.toMillis());
+
+                if (cfpDiff < 0) {
+                  $('#pydata-london-2019').addClass('pastcfp');
+                  $('#pydata-london-2019 .timer').replaceWith($('#pydata-london-2019 .deadline'));
+                  $('#pydata-london-2019 .timer-small').replaceWith($('#pydata-london-2019 .deadline'));
+                  $('#pydata-london-2019 .calendar').remove();
+                }
+
+                if (confDiff < 0) {
+                  $('#pydata-london-2019').addClass('pastconf');
+                  $('#pydata-london-2019 .timer').replaceWith($('#pydata-london-2019 .deadline'));
+                  $('#pydata-london-2019 .timer-small').replaceWith($('#pydata-london-2019 .deadline'));
+                  $('#pydata-london-2019 .calendar').remove();
+                }
 
 
 

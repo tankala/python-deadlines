@@ -65,7 +65,7 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/js-year-calendar.min.css?t=1710265240"
+      href="/static/css/js-year-calendar.min.css?t=1710355255"
       media="screen,projection"
     />
 
@@ -77,13 +77,13 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/deadlines.css?t=1710265240"
+      href="/static/css/deadlines.css?t=1710355255"
       media="screen,projection"
     />
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/calendar.css?t=1710265240"
+      href="/static/css/calendar.css?t=1710355255"
       media="screen,projection"
     />
 
@@ -287,8 +287,11 @@
                 width="16"
                 height="16"
               />
-              <a id="conf-website" target="_blank" href="https://pycon.or.tz/"
-                >https://pycon.or.tz/</a
+              <a
+                id="conf-website"
+                target="_blank"
+                href="https://pycon.or.tz/2021/"
+                >https://pycon.or.tz/2021/</a
               >
             </div>
           </div>
@@ -316,7 +319,7 @@
                 <span class="conf-title-icon">
                   <a
                     title="Conference Website"
-                    href="https://pycon.or.tz/"
+                    href="https://pycon.or.tz/2021/"
                     target="_blank"
                     ><img
                       src="/static/img/203-earth.svg"
@@ -338,8 +341,8 @@
                 <div class="meta">
                   <span class="conf-date">.</span>
                   <span class="conf-place">
-                    <a href="http://maps.google.com/?q=None, None"
-                      >None, None</a
+                    <a href="http://maps.google.com/?q=Dare E Salaam, Tanzania"
+                      >Dare E Salaam, Tanzania</a
                     >
                   </span>
                 </div>
@@ -348,7 +351,7 @@
                 <div class="deadline">
                   <div>
                     Deadline:
-                    <span class="deadline-time">TBA</span>
+                    <span class="deadline-time">Monday, 15 November 2021</span>
                   </div>
                 </div>
               </div>
@@ -657,9 +660,67 @@
 
 
 
-                $('#pycon-tanzania-2021 .timer').html("TBA");
-                $('#pycon-tanzania-2021 .deadline-time').html("TBA");
-                $('#pycon-tanzania-2021').attr("cfpDiff", Infinity);
+
+                // Use specified timezone for deadlines if available else use AoE timezone
+
+                  var cfpDate = DateTime.fromSQL("2021-11-15 23:59:00", { zone: "UTC-12" });
+                  var confDate = DateTime.fromSQL("2021-12-01", { zone: "UTC-12" });
+
+
+                // check if timezone is valid otherwise replace by system timezone
+                if (cfpDate.invalid || confDate.invalid) {
+                  var cfpDate = DateTime.fromSQL("2021-11-15 23:59:00");
+                  var confDate = DateTime.fromSQL("2021-12-01");
+                  console.log("Invalid timezone in pycon-tanzania-2021. Using system timezone instead.");
+                }
+
+                // render countdown timer
+                $('#pycon-tanzania-2021 .timer').countdown(cfpDate.toJSDate(), function (event) {
+                  $(this).html(event.strftime('%D days %Hh %Mm %Ss'));
+                });
+
+                // render countdown timer small
+                $('#pycon-tanzania-2021 .timer-small').countdown(cfpDate.toJSDate(), function (event) {
+                  $(this).html(event.strftime('%Dd %H:%M:%S'));
+                });
+
+                // deadline in local timezone
+                $('#pycon-tanzania-2021 .deadline-time').html(cfpDate.setZone('system').toLocaleString(DateTime.DATE_HUGE));
+
+                // add calendar button
+                try {
+                  var myCalendar = createCalendarFromObject({
+                    id: 'pycon-tanzania-2021',
+                    title: 'PyCon Tanzania 2021 deadline',
+                    date: cfpDate.toJSDate(),
+                    duration: 60,
+                  });
+                  document.querySelector('#pycon-tanzania-2021 .calendar').appendChild(myCalendar);
+                } catch (err) {
+                  document.querySelector('#pycon-tanzania-2021 .calendar').appendChild("<p>Calendar not available.</p>");
+                  console.log("Error in cfp date.");
+                }
+
+                // check if date has passed, add 'past' class to it
+                cfpDiff = cfpDate.diffNow("seconds");
+                confDiff = confDate.diffNow("seconds");
+
+                $('#pycon-tanzania-2021').attr("cfpDiff", cfpDiff.toMillis());
+                $('#pycon-tanzania-2021').attr("confDiff", confDiff.toMillis());
+
+                if (cfpDiff < 0) {
+                  $('#pycon-tanzania-2021').addClass('pastcfp');
+                  $('#pycon-tanzania-2021 .timer').replaceWith($('#pycon-tanzania-2021 .deadline'));
+                  $('#pycon-tanzania-2021 .timer-small').replaceWith($('#pycon-tanzania-2021 .deadline'));
+                  $('#pycon-tanzania-2021 .calendar').remove();
+                }
+
+                if (confDiff < 0) {
+                  $('#pycon-tanzania-2021').addClass('pastconf');
+                  $('#pycon-tanzania-2021 .timer').replaceWith($('#pycon-tanzania-2021 .deadline'));
+                  $('#pycon-tanzania-2021 .timer-small').replaceWith($('#pycon-tanzania-2021 .deadline'));
+                  $('#pycon-tanzania-2021 .calendar').remove();
+                }
 
 
 

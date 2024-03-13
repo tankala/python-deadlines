@@ -54,7 +54,7 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/js-year-calendar.min.css?t=1710265240"
+      href="/static/css/js-year-calendar.min.css?t=1710355255"
       media="screen,projection"
     />
 
@@ -66,13 +66,13 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/deadlines.css?t=1710265240"
+      href="/static/css/deadlines.css?t=1710355255"
       media="screen,projection"
     />
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/calendar.css?t=1710265240"
+      href="/static/css/calendar.css?t=1710355255"
       media="screen,projection"
     />
 
@@ -261,11 +261,7 @@
         </div>
         <div class="row">
           <div class="col-sm-12" id="conf-subs">
-            <span id="conf-subs" title="Conference subjects">
-              <span class="PY-tag badge badge-light conf-sub conf-PY">
-                General Python
-              </span>
-            </span>
+            <span id="conf-subs" title="Conference subjects"> </span>
           </div>
         </div>
       </div>
@@ -439,7 +435,7 @@
                 <div class="deadline">
                   <div>
                     Deadline:
-                    <span class="deadline-time">TBA</span>
+                    <span class="deadline-time">Friday, 24 December 2021</span>
                   </div>
                 </div>
               </div>
@@ -1181,9 +1177,67 @@
 
 
 
-                $('#fosdem-2022 .timer').html("TBA");
-                $('#fosdem-2022 .deadline-time').html("TBA");
-                $('#fosdem-2022').attr("cfpDiff", Infinity);
+
+                // Use specified timezone for deadlines if available else use AoE timezone
+
+                  var cfpDate = DateTime.fromSQL("2021-12-24 23:59:00", { zone: "UTC-12" });
+                  var confDate = DateTime.fromSQL("2022-02-05", { zone: "UTC-12" });
+
+
+                // check if timezone is valid otherwise replace by system timezone
+                if (cfpDate.invalid || confDate.invalid) {
+                  var cfpDate = DateTime.fromSQL("2021-12-24 23:59:00");
+                  var confDate = DateTime.fromSQL("2022-02-05");
+                  console.log("Invalid timezone in fosdem-2022. Using system timezone instead.");
+                }
+
+                // render countdown timer
+                $('#fosdem-2022 .timer').countdown(cfpDate.toJSDate(), function (event) {
+                  $(this).html(event.strftime('%D days %Hh %Mm %Ss'));
+                });
+
+                // render countdown timer small
+                $('#fosdem-2022 .timer-small').countdown(cfpDate.toJSDate(), function (event) {
+                  $(this).html(event.strftime('%Dd %H:%M:%S'));
+                });
+
+                // deadline in local timezone
+                $('#fosdem-2022 .deadline-time').html(cfpDate.setZone('system').toLocaleString(DateTime.DATE_HUGE));
+
+                // add calendar button
+                try {
+                  var myCalendar = createCalendarFromObject({
+                    id: 'fosdem-2022',
+                    title: 'FOSDEM 2022 deadline',
+                    date: cfpDate.toJSDate(),
+                    duration: 60,
+                  });
+                  document.querySelector('#fosdem-2022 .calendar').appendChild(myCalendar);
+                } catch (err) {
+                  document.querySelector('#fosdem-2022 .calendar').appendChild("<p>Calendar not available.</p>");
+                  console.log("Error in cfp date.");
+                }
+
+                // check if date has passed, add 'past' class to it
+                cfpDiff = cfpDate.diffNow("seconds");
+                confDiff = confDate.diffNow("seconds");
+
+                $('#fosdem-2022').attr("cfpDiff", cfpDiff.toMillis());
+                $('#fosdem-2022').attr("confDiff", confDiff.toMillis());
+
+                if (cfpDiff < 0) {
+                  $('#fosdem-2022').addClass('pastcfp');
+                  $('#fosdem-2022 .timer').replaceWith($('#fosdem-2022 .deadline'));
+                  $('#fosdem-2022 .timer-small').replaceWith($('#fosdem-2022 .deadline'));
+                  $('#fosdem-2022 .calendar').remove();
+                }
+
+                if (confDiff < 0) {
+                  $('#fosdem-2022').addClass('pastconf');
+                  $('#fosdem-2022 .timer').replaceWith($('#fosdem-2022 .deadline'));
+                  $('#fosdem-2022 .timer-small').replaceWith($('#fosdem-2022 .deadline'));
+                  $('#fosdem-2022 .calendar').remove();
+                }
 
 
 

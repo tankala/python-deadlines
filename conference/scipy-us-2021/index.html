@@ -64,7 +64,7 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/js-year-calendar.min.css?t=1710265240"
+      href="/static/css/js-year-calendar.min.css?t=1710355255"
       media="screen,projection"
     />
 
@@ -76,13 +76,13 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/deadlines.css?t=1710265240"
+      href="/static/css/deadlines.css?t=1710355255"
       media="screen,projection"
     />
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/calendar.css?t=1710265240"
+      href="/static/css/calendar.css?t=1710355255"
       media="screen,projection"
     />
 
@@ -444,7 +444,7 @@
       </div>
       <div id="page-content">
         <div id="conf-deadline-timer" class="row">
-          <div id="cfp-timer" class="col-12 conf-timer">TBA</div>
+          <div id="cfp-timer" class="col-12 conf-timer"></div>
         </div>
         <div id="conf-key-facts" class="row">
           <div class="col-12 col-md-6">
@@ -523,13 +523,13 @@
         </div>
         <div class="row">
           <div
-            id="a96b2690-a0f2-4fcd-ab07-b97f6fe346ae"
+            id="ab5f85dc-9aef-432e-a636-2356acb41105"
             style="width: 100%; height: 400px"
             class="jekyll-map"
           ></div>
           <script type="text/javascript">
             jekyllMaps.register(
-              "a96b2690-a0f2-4fcd-ab07-b97f6fe346ae",
+              "ab5f85dc-9aef-432e-a636-2356acb41105",
               [
                 {
                   latitude: 30.2711286,
@@ -670,9 +670,48 @@
 
         // other
 
-        $("#cfp-timer").html("TBA");
-        $(".deadline-time").html("TBA");
-        $(".deadline-local-time").html("TBA");
+        // Use specified timezone for deadlines if available else use AoE timezone
+
+        var confDeadline = DateTime.fromSQL("2021-02-22 23:59:00", {
+          zone: "America/Chicago",
+        });
+
+        // check if timezone is valid otherwise replace by system timezone
+        if (confDeadline.invalid) {
+          var confDeadline = DateTime.fromSQL("2021-02-22 23:59:00");
+          console.log("Invalid timezone. Using system timezone instead.");
+        }
+
+        // add calendar
+        var conferenceDeadlineCalendar = createCalendarFromObject({
+          id: "scipy-us-2021",
+          title: "SciPy US 2021 Conference Deadlines",
+          date: confDeadline.toJSDate(),
+          duration: 60,
+        });
+        document
+          .querySelector("#conference-deadline")
+          .appendChild(conferenceDeadlineCalendar);
+
+        // render countdown timer
+        $("#cfp-timer").countdown(confDeadline.toJSDate(), function (event) {
+          $(this).html(event.strftime("%D days %Hh %Mm %Ss"));
+        });
+
+        // render deadline conference time
+
+        $(".deadline-time").html(
+          confDeadline
+            .setZone("America/Chicago")
+            .toLocaleString(DateTime.DATETIME_HUGE_WITH_SECONDS)
+        );
+
+        // render deadline in local timezone
+        $(".deadline-local-time").html(
+          confDeadline
+            .setZone("system")
+            .toLocaleString(DateTime.DATETIME_HUGE_WITH_SECONDS)
+        );
       });
     </script>
     <script async defer>

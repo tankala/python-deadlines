@@ -26,11 +26,7 @@
       content="https://pythondeadlin.es/series/pycon-apac/"
     />
     <meta property="og:site_name" content="Python Conference Deadlines" />
-    <meta property="og:type" content="article" />
-    <meta
-      property="article:published_time"
-      content="2024-09-03T00:00:00+00:00"
-    />
+    <meta property="og:type" content="website" />
     <meta name="twitter:card" content="summary" />
     <meta property="twitter:title" content="PyCon APAC Conference Summary" />
     <meta name="twitter:site" content="@jesperdramsch" />
@@ -38,20 +34,14 @@
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "BlogPosting",
+        "@type": "WebPage",
         "author": {
           "@type": "Person",
           "name": "Jesper Dramsch",
           "url": "https://dramsch.net"
         },
-        "dateModified": "2024-09-03T00:00:00+00:00",
-        "datePublished": "2024-09-03T00:00:00+00:00",
         "description": "Summary of the conference and its instances throughout the years.",
         "headline": "PyCon APAC Conference Summary",
-        "mainEntityOfPage": {
-          "@type": "WebPage",
-          "@id": "https://pythondeadlin.es/series/pycon-apac/"
-        },
         "url": "https://pythondeadlin.es/series/pycon-apac/"
       }
     </script>
@@ -67,7 +57,7 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/js-year-calendar.min.css?t=1710265240"
+      href="/static/css/js-year-calendar.min.css?t=1710355255"
       media="screen,projection"
     />
 
@@ -79,13 +69,13 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/deadlines.css?t=1710265240"
+      href="/static/css/deadlines.css?t=1710355255"
       media="screen,projection"
     />
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/calendar.css?t=1710265240"
+      href="/static/css/calendar.css?t=1710355255"
       media="screen,projection"
     />
 
@@ -274,11 +264,7 @@
         </div>
         <div class="row">
           <div class="col-sm-12" id="conf-subs">
-            <span id="conf-subs" title="Conference subjects">
-              <span class="PY-tag badge badge-light conf-sub conf-PY">
-                General Python
-              </span>
-            </span>
+            <span id="conf-subs" title="Conference subjects"> </span>
           </div>
         </div>
       </div>
@@ -499,12 +485,27 @@
                 <span class="conf-title-icon">
                   <a
                     title="Conference Website"
-                    href="https://th.pycon.org/"
+                    href="https://2021.th.pycon.org/"
                     target="_blank"
                     ><img
                       src="/static/img/203-earth.svg"
                       class="badge-link"
                       alt="Link to Conference Website"
+                      width="16"
+                      height="16"
+                  /></a>
+                  &ZeroWidthSpace;
+                </span>
+
+                <span class="conf-title-icon">
+                  <a
+                    title="Call for Participation for PyCon APAC"
+                    href="https://www.papercall.io/pyconapac"
+                    target="_blank"
+                    ><img
+                      src="/static/img/035-file-text.svg"
+                      class="badge-link"
+                      alt="Link to Call for Participation for PyCon APAC"
                       width="16"
                       height="16"
                   /></a>
@@ -521,9 +522,8 @@
                 <div class="meta">
                   <span class="conf-date">.</span>
                   <span class="conf-place">
-                    <a
-                      href="http://maps.google.com/?q=Bangkok, Thailand and online"
-                      >Bangkok, Thailand and online</a
+                    <a href="http://maps.google.com/?q=Bangkok, Thailand"
+                      >Bangkok, Thailand</a
                     >
                   </span>
                 </div>
@@ -532,7 +532,7 @@
                 <div class="deadline">
                   <div>
                     Deadline:
-                    <span class="deadline-time">TBA</span>
+                    <span class="deadline-time">Saturday, 21 August 2021</span>
                   </div>
                 </div>
               </div>
@@ -1323,9 +1323,67 @@
 
 
 
-                $('#pycon-apac-2021 .timer').html("TBA");
-                $('#pycon-apac-2021 .deadline-time').html("TBA");
-                $('#pycon-apac-2021').attr("cfpDiff", Infinity);
+
+                // Use specified timezone for deadlines if available else use AoE timezone
+
+                  var cfpDate = DateTime.fromSQL("2021-08-21 23:30:00", { zone: "UTC" });
+                  var confDate = DateTime.fromSQL("2021-11-20", { zone: "UTC" });
+
+
+                // check if timezone is valid otherwise replace by system timezone
+                if (cfpDate.invalid || confDate.invalid) {
+                  var cfpDate = DateTime.fromSQL("2021-08-21 23:30:00");
+                  var confDate = DateTime.fromSQL("2021-11-20");
+                  console.log("Invalid timezone in pycon-apac-2021. Using system timezone instead.");
+                }
+
+                // render countdown timer
+                $('#pycon-apac-2021 .timer').countdown(cfpDate.toJSDate(), function (event) {
+                  $(this).html(event.strftime('%D days %Hh %Mm %Ss'));
+                });
+
+                // render countdown timer small
+                $('#pycon-apac-2021 .timer-small').countdown(cfpDate.toJSDate(), function (event) {
+                  $(this).html(event.strftime('%Dd %H:%M:%S'));
+                });
+
+                // deadline in local timezone
+                $('#pycon-apac-2021 .deadline-time').html(cfpDate.setZone('system').toLocaleString(DateTime.DATE_HUGE));
+
+                // add calendar button
+                try {
+                  var myCalendar = createCalendarFromObject({
+                    id: 'pycon-apac-2021',
+                    title: 'PyCon APAC 2021 deadline',
+                    date: cfpDate.toJSDate(),
+                    duration: 60,
+                  });
+                  document.querySelector('#pycon-apac-2021 .calendar').appendChild(myCalendar);
+                } catch (err) {
+                  document.querySelector('#pycon-apac-2021 .calendar').appendChild("<p>Calendar not available.</p>");
+                  console.log("Error in cfp date.");
+                }
+
+                // check if date has passed, add 'past' class to it
+                cfpDiff = cfpDate.diffNow("seconds");
+                confDiff = confDate.diffNow("seconds");
+
+                $('#pycon-apac-2021').attr("cfpDiff", cfpDiff.toMillis());
+                $('#pycon-apac-2021').attr("confDiff", confDiff.toMillis());
+
+                if (cfpDiff < 0) {
+                  $('#pycon-apac-2021').addClass('pastcfp');
+                  $('#pycon-apac-2021 .timer').replaceWith($('#pycon-apac-2021 .deadline'));
+                  $('#pycon-apac-2021 .timer-small').replaceWith($('#pycon-apac-2021 .deadline'));
+                  $('#pycon-apac-2021 .calendar').remove();
+                }
+
+                if (confDiff < 0) {
+                  $('#pycon-apac-2021').addClass('pastconf');
+                  $('#pycon-apac-2021 .timer').replaceWith($('#pycon-apac-2021 .deadline'));
+                  $('#pycon-apac-2021 .timer-small').replaceWith($('#pycon-apac-2021 .deadline'));
+                  $('#pycon-apac-2021 .calendar').remove();
+                }
 
 
 

@@ -67,7 +67,7 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/js-year-calendar.min.css?t=1710265240"
+      href="/static/css/js-year-calendar.min.css?t=1710355255"
       media="screen,projection"
     />
 
@@ -79,13 +79,13 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/deadlines.css?t=1710265240"
+      href="/static/css/deadlines.css?t=1710355255"
       media="screen,projection"
     />
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/calendar.css?t=1710265240"
+      href="/static/css/calendar.css?t=1710355255"
       media="screen,projection"
     />
 
@@ -699,7 +699,7 @@
                 <span class="conf-title-icon">
                   <a
                     title="Conference Website"
-                    href="http://pytexas.org"
+                    href="https://web.archive.org/web/20220131171842/https://www.pytexas.org/"
                     target="_blank"
                     ><img
                       src="/static/img/203-earth.svg"
@@ -731,7 +731,7 @@
                 <div class="deadline">
                   <div>
                     Deadline:
-                    <span class="deadline-time">TBA</span>
+                    <span class="deadline-time">Thursday, 13 January 2022</span>
                   </div>
                 </div>
               </div>
@@ -996,13 +996,13 @@
 
         <div class="row">
           <div
-            id="1b6a867e-b76e-407c-8a79-61d36551b85e"
+            id="df241664-7a66-4d9e-91a6-575303ffc28e"
             style="width: 100%; height: 400px"
             class="jekyll-map"
           ></div>
           <script type="text/javascript">
             jekyllMaps.register(
-              "1b6a867e-b76e-407c-8a79-61d36551b85e",
+              "df241664-7a66-4d9e-91a6-575303ffc28e",
               [
                 {
                   latitude: 30.2711286,
@@ -1328,9 +1328,67 @@
 
 
 
-                $('#pytexas-2022 .timer').html("TBA");
-                $('#pytexas-2022 .deadline-time').html("TBA");
-                $('#pytexas-2022').attr("cfpDiff", Infinity);
+
+                // Use specified timezone for deadlines if available else use AoE timezone
+
+                  var cfpDate = DateTime.fromSQL("2022-01-13 23:59:00", { zone: "UTC-12" });
+                  var confDate = DateTime.fromSQL("2022-03-26", { zone: "UTC-12" });
+
+
+                // check if timezone is valid otherwise replace by system timezone
+                if (cfpDate.invalid || confDate.invalid) {
+                  var cfpDate = DateTime.fromSQL("2022-01-13 23:59:00");
+                  var confDate = DateTime.fromSQL("2022-03-26");
+                  console.log("Invalid timezone in pytexas-2022. Using system timezone instead.");
+                }
+
+                // render countdown timer
+                $('#pytexas-2022 .timer').countdown(cfpDate.toJSDate(), function (event) {
+                  $(this).html(event.strftime('%D days %Hh %Mm %Ss'));
+                });
+
+                // render countdown timer small
+                $('#pytexas-2022 .timer-small').countdown(cfpDate.toJSDate(), function (event) {
+                  $(this).html(event.strftime('%Dd %H:%M:%S'));
+                });
+
+                // deadline in local timezone
+                $('#pytexas-2022 .deadline-time').html(cfpDate.setZone('system').toLocaleString(DateTime.DATE_HUGE));
+
+                // add calendar button
+                try {
+                  var myCalendar = createCalendarFromObject({
+                    id: 'pytexas-2022',
+                    title: 'PyTexas 2022 deadline',
+                    date: cfpDate.toJSDate(),
+                    duration: 60,
+                  });
+                  document.querySelector('#pytexas-2022 .calendar').appendChild(myCalendar);
+                } catch (err) {
+                  document.querySelector('#pytexas-2022 .calendar').appendChild("<p>Calendar not available.</p>");
+                  console.log("Error in cfp date.");
+                }
+
+                // check if date has passed, add 'past' class to it
+                cfpDiff = cfpDate.diffNow("seconds");
+                confDiff = confDate.diffNow("seconds");
+
+                $('#pytexas-2022').attr("cfpDiff", cfpDiff.toMillis());
+                $('#pytexas-2022').attr("confDiff", confDiff.toMillis());
+
+                if (cfpDiff < 0) {
+                  $('#pytexas-2022').addClass('pastcfp');
+                  $('#pytexas-2022 .timer').replaceWith($('#pytexas-2022 .deadline'));
+                  $('#pytexas-2022 .timer-small').replaceWith($('#pytexas-2022 .deadline'));
+                  $('#pytexas-2022 .calendar').remove();
+                }
+
+                if (confDiff < 0) {
+                  $('#pytexas-2022').addClass('pastconf');
+                  $('#pytexas-2022 .timer').replaceWith($('#pytexas-2022 .deadline'));
+                  $('#pytexas-2022 .timer-small').replaceWith($('#pytexas-2022 .deadline'));
+                  $('#pytexas-2022 .calendar').remove();
+                }
 
 
 

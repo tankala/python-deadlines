@@ -67,7 +67,7 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/js-year-calendar.min.css?t=1710265240"
+      href="/static/css/js-year-calendar.min.css?t=1710355255"
       media="screen,projection"
     />
 
@@ -79,13 +79,13 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/deadlines.css?t=1710265240"
+      href="/static/css/deadlines.css?t=1710355255"
       media="screen,projection"
     />
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/calendar.css?t=1710265240"
+      href="/static/css/calendar.css?t=1710355255"
       media="screen,projection"
     />
 
@@ -936,7 +936,7 @@
                 <div class="deadline">
                   <div>
                     Deadline:
-                    <span class="deadline-time">TBA</span>
+                    <span class="deadline-time">Sunday, 12 May 2019</span>
                   </div>
                 </div>
               </div>
@@ -1034,7 +1034,7 @@
                 <span class="conf-title-icon">
                   <a
                     title="Conference Website"
-                    href="https://www.europython.eu"
+                    href="https://ep2019.europython.eu/"
                     target="_blank"
                     ><img
                       src="/static/img/203-earth.svg"
@@ -1479,13 +1479,13 @@
 
         <div class="row">
           <div
-            id="33afb8e4-983b-428d-9ec7-61bfe76267e7"
+            id="754f052e-d3bb-462f-839d-cb097e2927b4"
             style="width: 100%; height: 400px"
             class="jekyll-map"
           ></div>
           <script type="text/javascript">
             jekyllMaps.register(
-              "33afb8e4-983b-428d-9ec7-61bfe76267e7",
+              "754f052e-d3bb-462f-839d-cb097e2927b4",
               [
                 {
                   latitude: 50.0874654,
@@ -1880,9 +1880,67 @@
 
 
 
-                $('#europython-2021 .timer').html("TBA");
-                $('#europython-2021 .deadline-time').html("TBA");
-                $('#europython-2021').attr("cfpDiff", Infinity);
+
+                // Use specified timezone for deadlines if available else use AoE timezone
+
+                  var cfpDate = DateTime.fromSQL("2019-05-12 23:59:59", { zone: "Europe/Zurich" });
+                  var confDate = DateTime.fromSQL("2021-07-26", { zone: "Europe/Zurich" });
+
+
+                // check if timezone is valid otherwise replace by system timezone
+                if (cfpDate.invalid || confDate.invalid) {
+                  var cfpDate = DateTime.fromSQL("2019-05-12 23:59:59");
+                  var confDate = DateTime.fromSQL("2021-07-26");
+                  console.log("Invalid timezone in europython-2021. Using system timezone instead.");
+                }
+
+                // render countdown timer
+                $('#europython-2021 .timer').countdown(cfpDate.toJSDate(), function (event) {
+                  $(this).html(event.strftime('%D days %Hh %Mm %Ss'));
+                });
+
+                // render countdown timer small
+                $('#europython-2021 .timer-small').countdown(cfpDate.toJSDate(), function (event) {
+                  $(this).html(event.strftime('%Dd %H:%M:%S'));
+                });
+
+                // deadline in local timezone
+                $('#europython-2021 .deadline-time').html(cfpDate.setZone('system').toLocaleString(DateTime.DATE_HUGE));
+
+                // add calendar button
+                try {
+                  var myCalendar = createCalendarFromObject({
+                    id: 'europython-2021',
+                    title: 'EuroPython 2021 deadline',
+                    date: cfpDate.toJSDate(),
+                    duration: 60,
+                  });
+                  document.querySelector('#europython-2021 .calendar').appendChild(myCalendar);
+                } catch (err) {
+                  document.querySelector('#europython-2021 .calendar').appendChild("<p>Calendar not available.</p>");
+                  console.log("Error in cfp date.");
+                }
+
+                // check if date has passed, add 'past' class to it
+                cfpDiff = cfpDate.diffNow("seconds");
+                confDiff = confDate.diffNow("seconds");
+
+                $('#europython-2021').attr("cfpDiff", cfpDiff.toMillis());
+                $('#europython-2021').attr("confDiff", confDiff.toMillis());
+
+                if (cfpDiff < 0) {
+                  $('#europython-2021').addClass('pastcfp');
+                  $('#europython-2021 .timer').replaceWith($('#europython-2021 .deadline'));
+                  $('#europython-2021 .timer-small').replaceWith($('#europython-2021 .deadline'));
+                  $('#europython-2021 .calendar').remove();
+                }
+
+                if (confDiff < 0) {
+                  $('#europython-2021').addClass('pastconf');
+                  $('#europython-2021 .timer').replaceWith($('#europython-2021 .deadline'));
+                  $('#europython-2021 .timer-small').replaceWith($('#europython-2021 .deadline'));
+                  $('#europython-2021 .calendar').remove();
+                }
 
 
 
