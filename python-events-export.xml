@@ -9,7 +9,7 @@
 		<title>Newsfeed for Python Events Calendar from Python Conference Deadlines</title>
 		<description>Countdowns to your favourite Python conferences with calls for participation and resources to submit awesome talks!</description>
 		<link>https://pythondeadlin.es/feed.xml</link>
-		<lastBuildDate>Wed, 13 Mar 2024 18:40:55 +0000</lastBuildDate>
+		<lastBuildDate>Wed, 13 Mar 2024 19:53:47 +0000</lastBuildDate>
 		
 			<item>
 				<title>Kiwi PyCon 2024 Conference Deadline</title>
@@ -40,7 +40,7 @@
 		
 			<item>
 				<title>PyCon Estonia 2024 Conference Deadline</title>
-				<description><![CDATA[* name of the event: PyCon Estonia 2024<br/>* type of event: Conference <br/>* focus on Python: Yes<br/>* approximate number of attendees: Unknown<br/>* location (incl. country): Tallinn, Estonia<br/>* dates/times/recurrence (incl. time zone): September 05 - 06, 2024<br/>* HTML link : <a href="https://pycon.ee/">PyCon Estonia 2024</a>]]></description>
+				<description><![CDATA[* name of the event: PyCon Estonia 2024<br/>* type of event: Conference <br/>* focus on Python: Yes<br/>* approximate number of attendees: Unknown<br/>* location (incl. country): Tallinn, Estonia<br/>* dates/times/recurrence (incl. time zone): September 5 - 6, 2024<br/>* HTML link : <a href="https://pycon.ee/">PyCon Estonia 2024</a>]]></description>
 				<pubDate>Thu, 05 Sep 2024 00:00:00 +0000</pubDate>
 				<link>https://pythondeadlin.es/conference/pycon-estonia-2024/</link>
 				<guid isPermaLink="false"></guid>
@@ -67,7 +67,7 @@
 		
 			<item>
 				<title>EARL 2024 Conference Deadline</title>
-				<description><![CDATA[* name of the event: EARL 2024<br/>* type of event: Conference <br/>* focus on Python: Yes<br/>* approximate number of attendees: Unknown<br/>* location (incl. country): Brighton, UK<br/>* dates/times/recurrence (incl. time zone): September 04 - 05, 2024<br/>* HTML link : <a href="https://datacove.co.uk/earl-2024-tech-conference/">EARL 2024</a>]]></description>
+				<description><![CDATA[* name of the event: EARL 2024<br/>* type of event: Conference <br/>* focus on Python: Yes<br/>* approximate number of attendees: Unknown<br/>* location (incl. country): Brighton, UK<br/>* dates/times/recurrence (incl. time zone): September 4 - 5, 2024<br/>* HTML link : <a href="https://datacove.co.uk/earl-2024-tech-conference/">EARL 2024</a>]]></description>
 				<pubDate>Wed, 04 Sep 2024 00:00:00 +0000</pubDate>
 				<link>https://pythondeadlin.es/conference/earl-2024/</link>
 				<guid isPermaLink="false"></guid>
@@ -76,7 +76,7 @@
 		
 			<item>
 				<title>PyCamp España 2024 Conference Deadline</title>
-				<description><![CDATA[* name of the event: PyCamp España 2024<br/>* type of event: Conference <br/>* focus on Python: Yes<br/>* approximate number of attendees: Unknown<br/>* location (incl. country): Lleida, Spain<br/>* dates/times/recurrence (incl. time zone): March 29 - April 01, 2024<br/>* HTML link : <a href="https://pycamp.es/">PyCamp España 2024</a>]]></description>
+				<description><![CDATA[* name of the event: PyCamp España 2024<br/>* type of event: Conference <br/>* focus on Python: Yes<br/>* approximate number of attendees: Unknown<br/>* location (incl. country): Lleida, Spain<br/>* dates/times/recurrence (incl. time zone): March 29 - April 1, 2024<br/>* HTML link : <a href="https://pycamp.es/">PyCamp España 2024</a>]]></description>
 				<pubDate>Fri, 29 Mar 2024 00:00:00 +0000</pubDate>
 				<link>https://pythondeadlin.es/conference/pycamp-españa-2024/</link>
 				<guid isPermaLink="false"></guid>
@@ -85,7 +85,7 @@
 		
 			<item>
 				<title>PyCon Colombia 2024 Conference Deadline</title>
-				<description><![CDATA[* name of the event: PyCon Colombia 2024<br/>* type of event: Conference <br/>* focus on Python: Yes<br/>* approximate number of attendees: Unknown<br/>* location (incl. country): Medellin, Colombia<br/>* dates/times/recurrence (incl. time zone): June 07 - 09, 2024<br/>* HTML link : <a href="https://2024.pycon.co/en">PyCon Colombia 2024</a>]]></description>
+				<description><![CDATA[* name of the event: PyCon Colombia 2024<br/>* type of event: Conference <br/>* focus on Python: Yes<br/>* approximate number of attendees: Unknown<br/>* location (incl. country): Medellin, Colombia<br/>* dates/times/recurrence (incl. time zone): June 7 - 9, 2024<br/>* HTML link : <a href="https://2024.pycon.co/en">PyCon Colombia 2024</a>]]></description>
 				<pubDate>Fri, 07 Jun 2024 00:00:00 +0000</pubDate>
 				<link>https://pythondeadlin.es/conference/pycon-colombia-2024/</link>
 				<guid isPermaLink="false"></guid>
@@ -103,7 +103,7 @@
 		
 			<item>
 				<title>EuroPython 2024 Conference Deadline</title>
-				<description><![CDATA[* name of the event: EuroPython 2024<br/>* type of event: Conference <br/>* focus on Python: Yes<br/>* approximate number of attendees: Unknown<br/>* location (incl. country): Prague, Czechia<br/>* dates/times/recurrence (incl. time zone): July 08 - 14, 2024<br/>* HTML link : <a href="https://ep2024.europython.eu/">EuroPython 2024</a>]]></description>
+				<description><![CDATA[* name of the event: EuroPython 2024<br/>* type of event: Conference <br/>* focus on Python: Yes<br/>* approximate number of attendees: Unknown<br/>* location (incl. country): Prague, Czechia<br/>* dates/times/recurrence (incl. time zone): July 8 - 14, 2024<br/>* HTML link : <a href="https://ep2024.europython.eu/">EuroPython 2024</a>]]></description>
 				<pubDate>Mon, 08 Jul 2024 00:00:00 +0000</pubDate>
 				<link>https://pythondeadlin.es/conference/europython-2024/</link>
 				<guid isPermaLink="false"></guid>
@@ -130,7 +130,7 @@
 		
 			<item>
 				<title>SciPy 2024 Conference Deadline</title>
-				<description><![CDATA[* name of the event: SciPy 2024<br/>* type of event: Conference <br/>* focus on Python: Yes<br/>* approximate number of attendees: Unknown<br/>* location (incl. country): Tacoma, USA<br/>* dates/times/recurrence (incl. time zone): July 08 - 14, 2024<br/>* HTML link : <a href="https://scipy2024.scipy.org">SciPy 2024</a>]]></description>
+				<description><![CDATA[* name of the event: SciPy 2024<br/>* type of event: Conference <br/>* focus on Python: Yes<br/>* approximate number of attendees: Unknown<br/>* location (incl. country): Tacoma, USA<br/>* dates/times/recurrence (incl. time zone): July 8 - 14, 2024<br/>* HTML link : <a href="https://scipy2024.scipy.org">SciPy 2024</a>]]></description>
 				<pubDate>Mon, 08 Jul 2024 00:00:00 +0000</pubDate>
 				<link>https://pythondeadlin.es/conference/scipy-2024/</link>
 				<guid isPermaLink="false"></guid>
@@ -148,7 +148,7 @@
 		
 			<item>
 				<title>PyCon Namibia 2024 Conference Deadline</title>
-				<description><![CDATA[* name of the event: PyCon Namibia 2024<br/>* type of event: Conference <br/>* focus on Python: Yes<br/>* approximate number of attendees: Unknown<br/>* location (incl. country): Windhoek, Namibia<br/>* dates/times/recurrence (incl. time zone): March 04 - 08, 2024<br/>* HTML link : <a href="https://na.pycon.org/">PyCon Namibia 2024</a>]]></description>
+				<description><![CDATA[* name of the event: PyCon Namibia 2024<br/>* type of event: Conference <br/>* focus on Python: Yes<br/>* approximate number of attendees: Unknown<br/>* location (incl. country): Windhoek, Namibia<br/>* dates/times/recurrence (incl. time zone): March 4 - 8, 2024<br/>* HTML link : <a href="https://na.pycon.org/">PyCon Namibia 2024</a>]]></description>
 				<pubDate>Mon, 04 Mar 2024 00:00:00 +0000</pubDate>
 				<link>https://pythondeadlin.es/conference/pycon-namibia-2024/</link>
 				<guid isPermaLink="false"></guid>
@@ -157,7 +157,7 @@
 		
 			<item>
 				<title>PyCon Pakistan 2024 Conference Deadline</title>
-				<description><![CDATA[* name of the event: PyCon Pakistan 2024<br/>* type of event: Conference <br/>* focus on Python: Yes<br/>* approximate number of attendees: Unknown<br/>* location (incl. country): Lahore, Pakistan<br/>* dates/times/recurrence (incl. time zone): March 09, 2024<br/>* HTML link : <a href="https://pycon.pk/">PyCon Pakistan 2024</a>]]></description>
+				<description><![CDATA[* name of the event: PyCon Pakistan 2024<br/>* type of event: Conference <br/>* focus on Python: Yes<br/>* approximate number of attendees: Unknown<br/>* location (incl. country): Lahore, Pakistan<br/>* dates/times/recurrence (incl. time zone): March 9 - 10, 2024<br/>* HTML link : <a href="https://pycon.pk/">PyCon Pakistan 2024</a>]]></description>
 				<pubDate>Sat, 09 Mar 2024 00:00:00 +0000</pubDate>
 				<link>https://pythondeadlin.es/conference/pycon-pakistan-2024/</link>
 				<guid isPermaLink="false"></guid>
@@ -167,7 +167,7 @@
 			<item>
 				<title>PyTexas 2024 Conference Deadline</title>
 				<description><![CDATA[* name of the event: PyTexas 2024<br/>* type of event: Conference <br/>* focus on Python: Yes<br/>* approximate number of attendees: Unknown<br/>* location (incl. country): Austin, Texas, USA<br/>* dates/times/recurrence (incl. time zone): April 19 - 21, 2024<br/>* HTML link : <a href="https://pytexas.org/2024">PyTexas 2024</a>]]></description>
-				<pubDate>Sat, 20 Apr 2024 00:00:00 +0000</pubDate>
+				<pubDate>Fri, 19 Apr 2024 00:00:00 +0000</pubDate>
 				<link>https://pythondeadlin.es/conference/pytexas-2024/</link>
 				<guid isPermaLink="false"></guid>
 				<category>PY</category>
@@ -193,7 +193,7 @@
 		
 			<item>
 				<title>PyCascades 2024 Conference Deadline</title>
-				<description><![CDATA[* name of the event: PyCascades 2024<br/>* type of event: Conference <br/>* focus on Python: Yes<br/>* approximate number of attendees: Unknown<br/>* location (incl. country): Seattle, USA<br/>* dates/times/recurrence (incl. time zone): April 05 - 08, 2024<br/>* HTML link : <a href="https://2024.pycascades.com/">PyCascades 2024</a>]]></description>
+				<description><![CDATA[* name of the event: PyCascades 2024<br/>* type of event: Conference <br/>* focus on Python: Yes<br/>* approximate number of attendees: Unknown<br/>* location (incl. country): Seattle, USA<br/>* dates/times/recurrence (incl. time zone): April 5 - 8, 2024<br/>* HTML link : <a href="https://2024.pycascades.com/">PyCascades 2024</a>]]></description>
 				<pubDate>Fri, 05 Apr 2024 00:00:00 +0000</pubDate>
 				<link>https://pythondeadlin.es/conference/pycascades-2024/</link>
 				<guid isPermaLink="false"></guid>

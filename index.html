@@ -63,7 +63,7 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/js-year-calendar.min.css?t=1710355255"
+      href="/static/css/js-year-calendar.min.css?t=1710359627"
       media="screen,projection"
     />
 
@@ -75,13 +75,13 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/deadlines.css?t=1710355255"
+      href="/static/css/deadlines.css?t=1710359627"
       media="screen,projection"
     />
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/calendar.css?t=1710355255"
+      href="/static/css/calendar.css?t=1710359627"
       media="screen,projection"
     />
 
@@ -689,7 +689,7 @@
             <div class="row">
               <div class="col-12 col-sm-6">
                 <div class="meta">
-                  <span class="conf-date">September 05 - 06, 2024.</span>
+                  <span class="conf-date">September 5 - 6, 2024.</span>
                   <span class="conf-place">
                     <a href="http://maps.google.com/?q=Tallinn, Estonia"
                       >Tallinn, Estonia</a
@@ -923,7 +923,7 @@
             <div class="row">
               <div class="col-12 col-sm-6">
                 <div class="meta">
-                  <span class="conf-date">September 04 - 05, 2024.</span>
+                  <span class="conf-date">September 4 - 5, 2024.</span>
                   <span class="conf-place">
                     <a href="http://maps.google.com/?q=Brighton, UK"
                       >Brighton, UK</a
@@ -995,7 +995,7 @@
             <div class="row">
               <div class="col-12 col-sm-6">
                 <div class="meta">
-                  <span class="conf-date">March 29 - April 01, 2024.</span>
+                  <span class="conf-date">March 29 - April 1, 2024.</span>
                   <span class="conf-place">
                     <a href="http://maps.google.com/?q=Lleida, Spain"
                       >Lleida, Spain</a
@@ -1076,7 +1076,7 @@
             <div class="row">
               <div class="col-12 col-sm-6">
                 <div class="meta">
-                  <span class="conf-date">June 07 - 09, 2024.</span>
+                  <span class="conf-date">June 7 - 9, 2024.</span>
                   <span class="conf-place">
                     <a href="http://maps.google.com/?q=Medellin, Colombia"
                       >Medellin, Colombia</a
@@ -1280,7 +1280,7 @@
             <div class="row">
               <div class="col-12 col-sm-6">
                 <div class="meta">
-                  <span class="conf-date">July 08 - 14, 2024.</span>
+                  <span class="conf-date">July 8 - 14, 2024.</span>
                   <span class="conf-place">
                     <a href="http://maps.google.com/?q=Prague, Czechia"
                       >Prague, Czechia</a
@@ -1584,7 +1584,7 @@
             <div class="row">
               <div class="col-12 col-sm-6">
                 <div class="meta">
-                  <span class="conf-date">July 08 - 14, 2024.</span>
+                  <span class="conf-date">July 8 - 14, 2024.</span>
                   <span class="conf-place">
                     <a href="http://maps.google.com/?q=Tacoma, USA"
                       >Tacoma, USA</a
@@ -1754,7 +1754,7 @@
             <div class="row">
               <div class="col-12 col-sm-6">
                 <div class="meta">
-                  <span class="conf-date">March 04 - 08, 2024.</span>
+                  <span class="conf-date">March 4 - 8, 2024.</span>
                   <span class="conf-place">
                     <a href="http://maps.google.com/?q=Windhoek, Namibia"
                       >Windhoek, Namibia</a
@@ -1841,7 +1841,7 @@
             <div class="row">
               <div class="col-12 col-sm-6">
                 <div class="meta">
-                  <span class="conf-date">March 09, 2024.</span>
+                  <span class="conf-date">March 9 - 10, 2024.</span>
                   <span class="conf-place">
                     <a href="http://maps.google.com/?q=Lahore, Pakistan"
                       >Lahore, Pakistan</a
@@ -2232,7 +2232,7 @@
             <div class="row">
               <div class="col-12 col-sm-6">
                 <div class="meta">
-                  <span class="conf-date">April 05 - 08, 2024.</span>
+                  <span class="conf-date">April 5 - 8, 2024.</span>
                   <span class="conf-place">
                     <a href="http://maps.google.com/?q=Seattle, USA"
                       >Seattle, USA</a
@@ -4697,14 +4697,14 @@
         var cfpDate = DateTime.fromSQL("2024-01-14 23:59:00", {
           zone: "America/Chicago",
         });
-        var confDate = DateTime.fromSQL("2024-04-20", {
+        var confDate = DateTime.fromSQL("2024-04-19", {
           zone: "America/Chicago",
         });
 
         // check if timezone is valid otherwise replace by system timezone
         if (cfpDate.invalid || confDate.invalid) {
           var cfpDate = DateTime.fromSQL("2024-01-14 23:59:00");
-          var confDate = DateTime.fromSQL("2024-04-20");
+          var confDate = DateTime.fromSQL("2024-04-19");
           console.log(
             "Invalid timezone in pytexas-2024. Using system timezone instead."
           );
