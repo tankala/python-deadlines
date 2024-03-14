@@ -34,7 +34,7 @@
     <meta property="og:type" content="article" />
     <meta
       property="article:published_time"
-      content="2024-11-18T00:00:00+00:00"
+      content="2024-12-04T00:00:00+00:00"
     />
     <meta name="twitter:card" content="summary" />
     <meta
@@ -52,8 +52,8 @@
           "name": "Jesper Dramsch",
           "url": "https://dramsch.net"
         },
-        "dateModified": "2024-11-18T00:00:00+00:00",
-        "datePublished": "2024-11-18T00:00:00+00:00",
+        "dateModified": "2024-12-04T00:00:00+00:00",
+        "datePublished": "2024-12-04T00:00:00+00:00",
         "description": "Summary of the conference and its instances throughout the years.",
         "headline": "PyCon Indonesia Conference Summary",
         "mainEntityOfPage": {
@@ -75,7 +75,7 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/js-year-calendar.min.css?t=1710454765"
+      href="/static/css/js-year-calendar.min.css?t=1710456942"
       media="screen,projection"
     />
 
@@ -87,13 +87,13 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/deadlines.css?t=1710454765"
+      href="/static/css/deadlines.css?t=1710456942"
       media="screen,projection"
     />
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/calendar.css?t=1710454765"
+      href="/static/css/calendar.css?t=1710456942"
       media="screen,projection"
     />
 
@@ -172,16 +172,6 @@
       type="text/javascript"
       src="/static/js/bootstrap-multiselect.min.js"
     ></script>
-
-    <style>
-      #twitter-widget {
-        width: 100%;
-      }
-
-      .twitter-timeline {
-        width: 100% !important;
-      }
-    </style>
   </head>
 
   <body>
@@ -292,11 +282,7 @@
         </div>
         <div class="row">
           <div class="col-sm-12" id="conf-subs">
-            <span id="conf-subs" title="Conference subjects">
-              <span class="PY-tag badge badge-light conf-sub conf-PY">
-                General Python
-              </span>
-            </span>
+            <span id="conf-subs" title="Conference subjects"> </span>
           </div>
         </div>
       </div>
@@ -337,7 +323,7 @@
             <div id="twitter-widget">
               <a
                 class="twitter-timeline"
-                href="https://twitter.com/id_pycon"
+                href="https://twitter.com/"
                 data-tweet-limit="2"
                 >Tweets by id_pycon</a
               >
@@ -523,7 +509,7 @@
             <div class="row">
               <div class="col-12 col-sm-6">
                 <div class="meta">
-                  <span class="conf-date">December 4 - 6, 2021.</span>
+                  <span class="conf-date">December 4 - 5, 2021.</span>
                   <span class="conf-place">
                     <a href="#">Online</a>
                   </span>
@@ -533,7 +519,7 @@
                 <div class="deadline">
                   <div>
                     Deadline:
-                    <span class="deadline-time">TBA</span>
+                    <span class="deadline-time">Sunday, 31 October 2021</span>
                   </div>
                 </div>
               </div>
@@ -975,9 +961,67 @@
 
 
 
-                $('#pycon-indonesia-2021 .timer').html("TBA");
-                $('#pycon-indonesia-2021 .deadline-time').html("TBA");
-                $('#pycon-indonesia-2021').attr("cfpDiff", Infinity);
+
+                // Use specified timezone for deadlines if available else use AoE timezone
+
+                  var cfpDate = DateTime.fromSQL("2021-10-31 23:59:00", { zone: "UTC-12" });
+                  var confDate = DateTime.fromSQL("2021-12-04", { zone: "UTC-12" });
+
+
+                // check if timezone is valid otherwise replace by system timezone
+                if (cfpDate.invalid || confDate.invalid) {
+                  var cfpDate = DateTime.fromSQL("2021-10-31 23:59:00");
+                  var confDate = DateTime.fromSQL("2021-12-04");
+                  console.log("Invalid timezone in pycon-indonesia-2021. Using system timezone instead.");
+                }
+
+                // render countdown timer
+                $('#pycon-indonesia-2021 .timer').countdown(cfpDate.toJSDate(), function (event) {
+                  $(this).html(event.strftime('%D days %Hh %Mm %Ss'));
+                });
+
+                // render countdown timer small
+                $('#pycon-indonesia-2021 .timer-small').countdown(cfpDate.toJSDate(), function (event) {
+                  $(this).html(event.strftime('%Dd %H:%M:%S'));
+                });
+
+                // deadline in local timezone
+                $('#pycon-indonesia-2021 .deadline-time').html(cfpDate.setZone('system').toLocaleString(DateTime.DATE_HUGE));
+
+                // add calendar button
+                try {
+                  var myCalendar = createCalendarFromObject({
+                    id: 'pycon-indonesia-2021',
+                    title: 'PyCon Indonesia 2021 deadline',
+                    date: cfpDate.toJSDate(),
+                    duration: 60,
+                  });
+                  document.querySelector('#pycon-indonesia-2021 .calendar').appendChild(myCalendar);
+                } catch (err) {
+                  document.querySelector('#pycon-indonesia-2021 .calendar').appendChild("<p>Calendar not available.</p>");
+                  console.log("Error in cfp date.");
+                }
+
+                // check if date has passed, add 'past' class to it
+                cfpDiff = cfpDate.diffNow("seconds");
+                confDiff = confDate.diffNow("seconds");
+
+                $('#pycon-indonesia-2021').attr("cfpDiff", cfpDiff.toMillis());
+                $('#pycon-indonesia-2021').attr("confDiff", confDiff.toMillis());
+
+                if (cfpDiff < 0) {
+                  $('#pycon-indonesia-2021').addClass('pastcfp');
+                  $('#pycon-indonesia-2021 .timer').replaceWith($('#pycon-indonesia-2021 .deadline'));
+                  $('#pycon-indonesia-2021 .timer-small').replaceWith($('#pycon-indonesia-2021 .deadline'));
+                  $('#pycon-indonesia-2021 .calendar').remove();
+                }
+
+                if (confDiff < 0) {
+                  $('#pycon-indonesia-2021').addClass('pastconf');
+                  $('#pycon-indonesia-2021 .timer').replaceWith($('#pycon-indonesia-2021 .deadline'));
+                  $('#pycon-indonesia-2021 .timer-small').replaceWith($('#pycon-indonesia-2021 .deadline'));
+                  $('#pycon-indonesia-2021 .calendar').remove();
+                }
 
 
 
