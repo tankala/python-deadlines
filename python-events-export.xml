@@ -9,7 +9,16 @@
 		<title>Newsfeed for Python Events Calendar from Python Conference Deadlines</title>
 		<description>Countdowns to your favourite Python conferences with calls for participation and resources to submit awesome talks!</description>
 		<link>https://pythondeadlin.es/feed.xml</link>
-		<lastBuildDate>Thu, 14 Mar 2024 00:34:07 +0000</lastBuildDate>
+		<lastBuildDate>Thu, 14 Mar 2024 00:45:22 +0000</lastBuildDate>
+		
+			<item>
+				<title>PyCon India 2023 Conference Deadline</title>
+				<description><![CDATA[* name of the event: PyCon India 2023<br/>* type of event: Conference <br/>* focus on Python: Yes<br/>* approximate number of attendees: Unknown<br/>* location (incl. country): Bengaluru, India<br/>* dates/times/recurrence (incl. time zone): September 20 - 23, 2024<br/>* HTML link : <a href="https://in.pycon.org/2024/">PyCon India 2023</a>]]></description>
+				<pubDate>Fri, 20 Sep 2024 00:00:00 +0000</pubDate>
+				<link>https://pythondeadlin.es/conference/pycon-india-2023/</link>
+				<guid isPermaLink="false"></guid>
+				<category>PY</category>
+			</item>
 		
 			<item>
 				<title>Kiwi PyCon 2024 Conference Deadline</title>
@@ -205,15 +214,6 @@
 				<description><![CDATA[* name of the event: PyCascades 2024<br/>* type of event: Conference <br/>* focus on Python: Yes<br/>* approximate number of attendees: Unknown<br/>* location (incl. country): Seattle, USA<br/>* dates/times/recurrence (incl. time zone): April 5 - 8, 2024<br/>* HTML link : <a href="https://2024.pycascades.com/">PyCascades 2024</a>]]></description>
 				<pubDate>Fri, 05 Apr 2024 00:00:00 +0000</pubDate>
 				<link>https://pythondeadlin.es/conference/pycascades-2024/</link>
-				<guid isPermaLink="false"></guid>
-				<category>PY</category>
-			</item>
-		
-			<item>
-				<title>PyCon Philippines 2024 Conference Deadline</title>
-				<description><![CDATA[* name of the event: PyCon Philippines 2024<br/>* type of event: Conference <br/>* focus on Python: Yes<br/>* approximate number of attendees: Unknown<br/>* location (incl. country): Manila, Philippines<br/>* dates/times/recurrence (incl. time zone): February 25 - 26, 2024<br/>* HTML link : <a href="https://pycon-2024.python.ph/">PyCon Philippines 2024</a>]]></description>
-				<pubDate>Sun, 25 Feb 2024 00:00:00 +0000</pubDate>
-				<link>https://pythondeadlin.es/conference/pycon-philippines-2024/</link>
 				<guid isPermaLink="false"></guid>
 				<category>PY</category>
 			</item>

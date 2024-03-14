@@ -62,7 +62,7 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/js-year-calendar.min.css?t=1710376447"
+      href="/static/css/js-year-calendar.min.css?t=1710377122"
       media="screen,projection"
     />
 
@@ -74,13 +74,13 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/deadlines.css?t=1710376447"
+      href="/static/css/deadlines.css?t=1710377122"
       media="screen,projection"
     />
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/calendar.css?t=1710376447"
+      href="/static/css/calendar.css?t=1710377122"
       media="screen,projection"
     />
 
@@ -672,6 +672,38 @@
       function load_conference_list() {
         // Gather data
         var conf_list_all = [];
+
+        // add deadlines in red
+        conf_list_all.push({
+          id: "pycon-india-2023-deadline",
+          abbreviation: "pycon-india-2023",
+          name: "PyCon India 2023 CfP ",
+          color: "red",
+          location: "Bengaluru, India",
+          date: "September 20 - 23, 2024",
+          subject: "PY",
+          startDate: Date.parse("2024-05-31 23:59:00"),
+          endDate: Date.parse("2024-05-31 23:59:00"),
+        });
+
+        // add Conferences in chosen color
+
+        var color = "black";
+        // use first sub to choose color
+
+        color = "#4B8BBE";
+
+        conf_list_all.push({
+          id: "pycon-india-2023-conference",
+          abbreviation: "pycon-india-2023",
+          name: "PyCon India 2023",
+          color: color,
+          location: "Bengaluru, India",
+          date: "September 20 - 23, 2024",
+          subject: "PY",
+          startDate: Date.parse("2024-09-20"),
+          endDate: Date.parse("2024-09-23"),
+        });
 
         // add deadlines in red
         conf_list_all.push({

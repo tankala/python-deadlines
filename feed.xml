@@ -9,7 +9,19 @@
 		<title>Python Conference Deadlines</title>
 		<description>Countdowns to your favourite Python conferences with calls for participation and resources to submit awesome talks!</description>
 		<link>https://pythondeadlin.es/feed.xml</link>
-		<lastBuildDate>Thu, 14 Mar 2024 00:34:07 +0000</lastBuildDate>
+		<lastBuildDate>Thu, 14 Mar 2024 00:45:22 +0000</lastBuildDate>
+		
+		
+		
+			<item>
+				<title>PyCon India 2023 Conference Deadline</title>
+				<description>Conference in Bengaluru, India on September 20 - 23, 2024. CfP: 2024-05-31 23:59:00 AoE.&lt;br /&gt;Find them here: @PyConIndia </description>
+				<pubDate>Fri, 31 May 2024 23:59:00 +0000</pubDate>
+				<link>https://pythondeadlin.es/conference/pycon-india-2023/</link>
+				<guid isPermaLink="false"></guid>
+				<category>PY</category>
+			</item>
+		
 		
 		
 		
@@ -270,18 +282,6 @@
 				<description>Conference in Seattle, USA on April 5 - 8, 2024. CfP: 2024-01-04 23:59:59 AoE.&lt;br /&gt;Find them here: @pyCascades </description>
 				<pubDate>Thu, 04 Jan 2024 23:59:59 +0000</pubDate>
 				<link>https://pythondeadlin.es/conference/pycascades-2024/</link>
-				<guid isPermaLink="false"></guid>
-				<category>PY</category>
-			</item>
-		
-		
-		
-		
-			<item>
-				<title>PyCon Philippines 2024 Conference Deadline</title>
-				<description>Conference in Manila, Philippines on February 25 - 26, 2024. CfP: 2023-12-31 23:59:00 AoE.&lt;br /&gt;Find them here: @PyConPH </description>
-				<pubDate>Sun, 31 Dec 2023 23:59:00 +0000</pubDate>
-				<link>https://pythondeadlin.es/conference/pycon-philippines-2024/</link>
 				<guid isPermaLink="false"></guid>
 				<category>PY</category>
 			</item>

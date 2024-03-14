@@ -29,7 +29,7 @@
     <meta property="og:type" content="article" />
     <meta
       property="article:published_time"
-      content="2024-09-17T00:00:00+00:00"
+      content="2024-09-20T00:00:00+00:00"
     />
     <meta name="twitter:card" content="summary" />
     <meta property="twitter:title" content="PyCon India Conference Summary" />
@@ -44,8 +44,8 @@
           "name": "Jesper Dramsch",
           "url": "https://dramsch.net"
         },
-        "dateModified": "2024-09-17T00:00:00+00:00",
-        "datePublished": "2024-09-17T00:00:00+00:00",
+        "dateModified": "2024-09-20T00:00:00+00:00",
+        "datePublished": "2024-09-20T00:00:00+00:00",
         "description": "Summary of the conference and its instances throughout the years.",
         "headline": "PyCon India Conference Summary",
         "mainEntityOfPage": {
@@ -67,7 +67,7 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/js-year-calendar.min.css?t=1710376447"
+      href="/static/css/js-year-calendar.min.css?t=1710377122"
       media="screen,projection"
     />
 
@@ -79,13 +79,13 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/deadlines.css?t=1710376447"
+      href="/static/css/deadlines.css?t=1710377122"
       media="screen,projection"
     />
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/calendar.css?t=1710376447"
+      href="/static/css/calendar.css?t=1710377122"
       media="screen,projection"
     />
 
@@ -164,6 +164,16 @@
       type="text/javascript"
       src="/static/js/bootstrap-multiselect.min.js"
     ></script>
+
+    <style>
+      #twitter-widget {
+        width: 100%;
+      }
+
+      .twitter-timeline {
+        width: 100% !important;
+      }
+    </style>
   </head>
 
   <body>
@@ -274,7 +284,11 @@
         </div>
         <div class="row">
           <div class="col-sm-12" id="conf-subs">
-            <span id="conf-subs" title="Conference subjects"> </span>
+            <span id="conf-subs" title="Conference subjects">
+              <span class="PY-tag badge badge-light conf-sub conf-PY">
+                General Python
+              </span>
+            </span>
           </div>
         </div>
       </div>
@@ -318,7 +332,7 @@
             <div id="twitter-widget">
               <a
                 class="twitter-timeline"
-                href="https://twitter.com/"
+                href="https://twitter.com/PyConIndia"
                 data-tweet-limit="2"
                 >Tweets by PyConIndia</a
               >
@@ -430,6 +444,93 @@
                   <div>
                     Deadline:
                     <span class="deadline-time">Saturday, 5 August 2023</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-6">
+                <span
+                  title="Click to only show PY conferences"
+                  data-sub="PY"
+                  class="badge badge-light conf-sub PY-tag"
+                ></span>
+              </div>
+              <div class="col-6">
+                <div class="calendar"></div>
+              </div>
+            </div>
+            <hr />
+          </div>
+
+          <div id="pycon-india-2023" class="ConfItem PY-conf">
+            <div class="row conf-row">
+              <div class="col-6">
+                <span class="conf-title">
+                  <a
+                    title="Deadline Details"
+                    href="/conference/pycon-india-2023/"
+                    >PyCon India 2023</a
+                  >
+                </span>
+                <span class="conf-title-small">
+                  <a
+                    title="Deadline Details"
+                    href="/conference/pycon-india-2023/"
+                    >PyCon India '23</a
+                  >
+                </span>
+                <span class="conf-title-icon">
+                  <a
+                    title="Conference Website"
+                    href="https://in.pycon.org/2024/"
+                    target="_blank"
+                    ><img
+                      src="/static/img/203-earth.svg"
+                      class="badge-link"
+                      alt="Link to Conference Website"
+                      width="16"
+                      height="16"
+                  /></a>
+                  &ZeroWidthSpace;
+                </span>
+
+                <span class="conf-title-icon">
+                  <a
+                    title="Twitter for PyCon India"
+                    href="https://twitter.com/PyConIndia"
+                    target="_blank"
+                    ><img
+                      src="/static/img/407-twitter.svg"
+                      class="badge-link"
+                      alt="Link to Conference Twitter"
+                      width="16"
+                      height="16"
+                  /></a>
+                  &ZeroWidthSpace;
+                </span>
+              </div>
+              <div class="col-6">
+                <span class="timer"></span>
+                <span class="timer-small"></span>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12 col-sm-6">
+                <div class="meta">
+                  <span class="conf-date">September 20 - 23, 2024.</span>
+                  <span class="conf-place">
+                    <a href="http://maps.google.com/?q=Bengaluru, India"
+                      >Bengaluru, India</a
+                    >
+                  </span>
+                </div>
+              </div>
+              <div class="col-12 col-sm-6">
+                <div class="deadline">
+                  <div>
+                    Deadline:
+                    <span class="deadline-time">Friday, 31 May 2024</span>
                   </div>
                 </div>
               </div>
@@ -1281,6 +1382,75 @@
                 if (cfpDate.invalid || confDate.invalid) {
                   var cfpDate = DateTime.fromSQL("2023-08-05 23:59:00");
                   var confDate = DateTime.fromSQL("2023-09-29");
+                  console.log("Invalid timezone in pycon-india-2023. Using system timezone instead.");
+                }
+
+                // render countdown timer
+                $('#pycon-india-2023 .timer').countdown(cfpDate.toJSDate(), function (event) {
+                  $(this).html(event.strftime('%D days %Hh %Mm %Ss'));
+                });
+
+                // render countdown timer small
+                $('#pycon-india-2023 .timer-small').countdown(cfpDate.toJSDate(), function (event) {
+                  $(this).html(event.strftime('%Dd %H:%M:%S'));
+                });
+
+                // deadline in local timezone
+                $('#pycon-india-2023 .deadline-time').html(cfpDate.setZone('system').toLocaleString(DateTime.DATE_HUGE));
+
+                // add calendar button
+                try {
+                  var myCalendar = createCalendarFromObject({
+                    id: 'pycon-india-2023',
+                    title: 'PyCon India 2023 deadline',
+                    date: cfpDate.toJSDate(),
+                    duration: 60,
+                  });
+                  document.querySelector('#pycon-india-2023 .calendar').appendChild(myCalendar);
+                } catch (err) {
+                  document.querySelector('#pycon-india-2023 .calendar').appendChild("<p>Calendar not available.</p>");
+                  console.log("Error in cfp date.");
+                }
+
+                // check if date has passed, add 'past' class to it
+                cfpDiff = cfpDate.diffNow("seconds");
+                confDiff = confDate.diffNow("seconds");
+
+                $('#pycon-india-2023').attr("cfpDiff", cfpDiff.toMillis());
+                $('#pycon-india-2023').attr("confDiff", confDiff.toMillis());
+
+                if (cfpDiff < 0) {
+                  $('#pycon-india-2023').addClass('pastcfp');
+                  $('#pycon-india-2023 .timer').replaceWith($('#pycon-india-2023 .deadline'));
+                  $('#pycon-india-2023 .timer-small').replaceWith($('#pycon-india-2023 .deadline'));
+                  $('#pycon-india-2023 .calendar').remove();
+                }
+
+                if (confDiff < 0) {
+                  $('#pycon-india-2023').addClass('pastconf');
+                  $('#pycon-india-2023 .timer').replaceWith($('#pycon-india-2023 .deadline'));
+                  $('#pycon-india-2023 .timer-small').replaceWith($('#pycon-india-2023 .deadline'));
+                  $('#pycon-india-2023 .calendar').remove();
+                }
+
+
+
+
+
+                $('#pycon-india-2023 .PY-tag').html(sub2name["PY"].toLocaleLowerCase());
+
+
+
+                // Use specified timezone for deadlines if available else use AoE timezone
+
+                  var cfpDate = DateTime.fromSQL("2024-05-31 23:59:00", { zone: "Asia/Kolkata" });
+                  var confDate = DateTime.fromSQL("2024-09-20", { zone: "Asia/Kolkata" });
+
+
+                // check if timezone is valid otherwise replace by system timezone
+                if (cfpDate.invalid || confDate.invalid) {
+                  var cfpDate = DateTime.fromSQL("2024-05-31 23:59:00");
+                  var confDate = DateTime.fromSQL("2024-09-20");
                   console.log("Invalid timezone in pycon-india-2023. Using system timezone instead.");
                 }
 
