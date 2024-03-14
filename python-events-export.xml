@@ -9,7 +9,7 @@
 		<title>Newsfeed for Python Events Calendar from Python Conference Deadlines</title>
 		<description>Countdowns to your favourite Python conferences with calls for participation and resources to submit awesome talks!</description>
 		<link>https://pythondeadlin.es/feed.xml</link>
-		<lastBuildDate>Wed, 13 Mar 2024 23:04:36 +0000</lastBuildDate>
+		<lastBuildDate>Thu, 14 Mar 2024 00:34:07 +0000</lastBuildDate>
 		
 			<item>
 				<title>Kiwi PyCon 2024 Conference Deadline</title>
@@ -111,6 +111,15 @@
 			</item>
 		
 			<item>
+				<title>Python Nordeste 2024 Conference Deadline</title>
+				<description><![CDATA[* name of the event: Python Nordeste 2024<br/>* type of event: Conference <br/>* focus on Python: Yes<br/>* approximate number of attendees: Unknown<br/>* location (incl. country): Natal, Brazil<br/>* dates/times/recurrence (incl. time zone): August 9 - 11, 2024<br/>* HTML link : <a href="https://2024.pythonnordeste.org/">Python Nordeste 2024</a>]]></description>
+				<pubDate>Fri, 09 Aug 2024 00:00:00 +0000</pubDate>
+				<link>https://pythondeadlin.es/conference/python-nordeste-2024/</link>
+				<guid isPermaLink="false"></guid>
+				<category></category>
+			</item>
+		
+			<item>
 				<title>PyData London 2024 Conference Deadline</title>
 				<description><![CDATA[* name of the event: PyData London 2024<br/>* type of event: Conference <br/>* focus on Python: Yes<br/>* approximate number of attendees: Unknown<br/>* location (incl. country): London, UK<br/>* dates/times/recurrence (incl. time zone): June 14 - 16, 2024<br/>* HTML link : <a href="https://pydata.org/london2024/">PyData London 2024</a>]]></description>
 				<pubDate>Fri, 14 Jun 2024 00:00:00 +0000</pubDate>
@@ -205,15 +214,6 @@
 				<description><![CDATA[* name of the event: PyCon Philippines 2024<br/>* type of event: Conference <br/>* focus on Python: Yes<br/>* approximate number of attendees: Unknown<br/>* location (incl. country): Manila, Philippines<br/>* dates/times/recurrence (incl. time zone): February 25 - 26, 2024<br/>* HTML link : <a href="https://pycon-2024.python.ph/">PyCon Philippines 2024</a>]]></description>
 				<pubDate>Sun, 25 Feb 2024 00:00:00 +0000</pubDate>
 				<link>https://pythondeadlin.es/conference/pycon-philippines-2024/</link>
-				<guid isPermaLink="false"></guid>
-				<category>PY</category>
-			</item>
-		
-			<item>
-				<title>PyCon Slovakia 2024 Conference Deadline</title>
-				<description><![CDATA[* name of the event: PyCon Slovakia 2024<br/>* type of event: Conference <br/>* focus on Python: Yes<br/>* approximate number of attendees: Unknown<br/>* location (incl. country): Bratislava, Slovakia<br/>* dates/times/recurrence (incl. time zone): March 15 - 17, 2024<br/>* HTML link : <a href="https://2024.pycon.sk/">PyCon Slovakia 2024</a>]]></description>
-				<pubDate>Fri, 15 Mar 2024 00:00:00 +0000</pubDate>
-				<link>https://pythondeadlin.es/conference/pycon-slovakia-2024/</link>
 				<guid isPermaLink="false"></guid>
 				<category>PY</category>
 			</item>

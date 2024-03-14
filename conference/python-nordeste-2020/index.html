@@ -77,7 +77,7 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/js-year-calendar.min.css?t=1710371076"
+      href="/static/css/js-year-calendar.min.css?t=1710376447"
       media="screen,projection"
     />
 
@@ -89,13 +89,13 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/deadlines.css?t=1710371076"
+      href="/static/css/deadlines.css?t=1710376447"
       media="screen,projection"
     />
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/calendar.css?t=1710371076"
+      href="/static/css/calendar.css?t=1710376447"
       media="screen,projection"
     />
 
@@ -459,7 +459,7 @@
       </div>
       <div id="page-content">
         <div id="conf-deadline-timer" class="row">
-          <div id="cfp-timer" class="col-12 conf-timer">TBA</div>
+          <div id="cfp-timer" class="col-12 conf-timer"></div>
         </div>
         <div id="conf-key-facts" class="row">
           <div class="col-12 col-md-6">
@@ -538,13 +538,13 @@
         </div>
         <div class="row">
           <div
-            id="dac30087-c88f-4759-8700-eaf754dc450c"
+            id="07b7a394-f257-49bb-80c6-17b1c251051e"
             style="width: 100%; height: 400px"
             class="jekyll-map"
           ></div>
           <script type="text/javascript">
             jekyllMaps.register(
-              "dac30087-c88f-4759-8700-eaf754dc450c",
+              "07b7a394-f257-49bb-80c6-17b1c251051e",
               [
                 {
                   latitude: -3.7304512,
@@ -685,9 +685,46 @@
 
         // other
 
-        $("#cfp-timer").html("TBA");
-        $(".deadline-time").html("TBA");
-        $(".deadline-local-time").html("TBA");
+        // Use specified timezone for deadlines if available else use AoE timezone
+
+        var confDeadline = DateTime.fromSQL("Cancelled", { zone: "UTC-12" });
+
+        // check if timezone is valid otherwise replace by system timezone
+        if (confDeadline.invalid) {
+          var confDeadline = DateTime.fromSQL("Cancelled");
+          console.log("Invalid timezone. Using system timezone instead.");
+        }
+
+        // add calendar
+        var conferenceDeadlineCalendar = createCalendarFromObject({
+          id: "python-nordeste-2020",
+          title: "Python Nordeste 2020 Conference Deadlines",
+          date: confDeadline.toJSDate(),
+          duration: 60,
+        });
+        document
+          .querySelector("#conference-deadline")
+          .appendChild(conferenceDeadlineCalendar);
+
+        // render countdown timer
+        $("#cfp-timer").countdown(confDeadline.toJSDate(), function (event) {
+          $(this).html(event.strftime("%D days %Hh %Mm %Ss"));
+        });
+
+        // render deadline conference time
+
+        $(".deadline-time").html(
+          confDeadline
+            .setZone("UTC-12")
+            .toLocaleString(DateTime.DATETIME_HUGE_WITH_SECONDS)
+        );
+
+        // render deadline in local timezone
+        $(".deadline-local-time").html(
+          confDeadline
+            .setZone("system")
+            .toLocaleString(DateTime.DATETIME_HUGE_WITH_SECONDS)
+        );
       });
     </script>
     <script async defer>
