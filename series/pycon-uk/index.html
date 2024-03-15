@@ -29,7 +29,7 @@
     <meta property="og:type" content="article" />
     <meta
       property="article:published_time"
-      content="2024-09-16T00:00:00+00:00"
+      content="2024-09-13T00:00:00+00:00"
     />
     <meta name="twitter:card" content="summary" />
     <meta property="twitter:title" content="PyCon UK Conference Summary" />
@@ -44,8 +44,8 @@
           "name": "Jesper Dramsch",
           "url": "https://dramsch.net"
         },
-        "dateModified": "2024-09-16T00:00:00+00:00",
-        "datePublished": "2024-09-16T00:00:00+00:00",
+        "dateModified": "2024-09-13T00:00:00+00:00",
+        "datePublished": "2024-09-13T00:00:00+00:00",
         "description": "Summary of the conference and its instances throughout the years.",
         "headline": "PyCon UK Conference Summary",
         "mainEntityOfPage": {
@@ -67,7 +67,7 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/js-year-calendar.min.css?t=1710456942"
+      href="/static/css/js-year-calendar.min.css?t=1710514397"
       media="screen,projection"
     />
 
@@ -79,13 +79,13 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/deadlines.css?t=1710456942"
+      href="/static/css/deadlines.css?t=1710514397"
       media="screen,projection"
     />
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/calendar.css?t=1710456942"
+      href="/static/css/calendar.css?t=1710514397"
       media="screen,projection"
     />
 
@@ -441,11 +441,7 @@
         </div>
         <div class="row">
           <div class="col-sm-12" id="conf-subs">
-            <span id="conf-subs" title="Conference subjects">
-              <span class="PY-tag badge badge-light conf-sub conf-PY">
-                General Python
-              </span>
-            </span>
+            <span id="conf-subs" title="Conference subjects"> </span>
           </div>
         </div>
       </div>
@@ -777,6 +773,21 @@
                   /></a>
                   &ZeroWidthSpace;
                 </span>
+
+                <span class="conf-title-icon">
+                  <a
+                    title="Call for Participation for PyCon UK"
+                    href="https://web.archive.org/web/20190517080333/https://2019.pyconuk.org/call-proposals/"
+                    target="_blank"
+                    ><img
+                      src="/static/img/035-file-text.svg"
+                      class="badge-link"
+                      alt="Link to Call for Participation for PyCon UK"
+                      width="16"
+                      height="16"
+                  /></a>
+                  &ZeroWidthSpace;
+                </span>
               </div>
               <div class="col-6">
                 <span class="timer"></span>
@@ -798,7 +809,7 @@
                 <div class="deadline">
                   <div>
                     Deadline:
-                    <span class="deadline-time">TBA</span>
+                    <span class="deadline-time">Friday, 7 June 2019</span>
                   </div>
                 </div>
               </div>
@@ -1249,13 +1260,13 @@
 
         <div class="row">
           <div
-            id="7c9e46ca-14bc-476a-b5e8-534546de6fb7"
+            id="6544e912-4591-4307-9842-b023cfaae428"
             style="width: 100%; height: 400px"
             class="jekyll-map"
           ></div>
           <script type="text/javascript">
             jekyllMaps.register(
-              "7c9e46ca-14bc-476a-b5e8-534546de6fb7",
+              "6544e912-4591-4307-9842-b023cfaae428",
               [
                 {
                   latitude: 51.4816546,
@@ -1581,9 +1592,67 @@
 
 
 
-                $('#pycon-uk-2019 .timer').html("TBA");
-                $('#pycon-uk-2019 .deadline-time').html("TBA");
-                $('#pycon-uk-2019').attr("cfpDiff", Infinity);
+
+                // Use specified timezone for deadlines if available else use AoE timezone
+
+                  var cfpDate = DateTime.fromSQL("2019-06-07 17:00:00", { zone: "Europe/London" });
+                  var confDate = DateTime.fromSQL("2019-09-13", { zone: "Europe/London" });
+
+
+                // check if timezone is valid otherwise replace by system timezone
+                if (cfpDate.invalid || confDate.invalid) {
+                  var cfpDate = DateTime.fromSQL("2019-06-07 17:00:00");
+                  var confDate = DateTime.fromSQL("2019-09-13");
+                  console.log("Invalid timezone in pycon-uk-2019. Using system timezone instead.");
+                }
+
+                // render countdown timer
+                $('#pycon-uk-2019 .timer').countdown(cfpDate.toJSDate(), function (event) {
+                  $(this).html(event.strftime('%D days %Hh %Mm %Ss'));
+                });
+
+                // render countdown timer small
+                $('#pycon-uk-2019 .timer-small').countdown(cfpDate.toJSDate(), function (event) {
+                  $(this).html(event.strftime('%Dd %H:%M:%S'));
+                });
+
+                // deadline in local timezone
+                $('#pycon-uk-2019 .deadline-time').html(cfpDate.setZone('system').toLocaleString(DateTime.DATE_HUGE));
+
+                // add calendar button
+                try {
+                  var myCalendar = createCalendarFromObject({
+                    id: 'pycon-uk-2019',
+                    title: 'PyCon UK 2019 deadline',
+                    date: cfpDate.toJSDate(),
+                    duration: 60,
+                  });
+                  document.querySelector('#pycon-uk-2019 .calendar').appendChild(myCalendar);
+                } catch (err) {
+                  document.querySelector('#pycon-uk-2019 .calendar').appendChild("<p>Calendar not available.</p>");
+                  console.log("Error in cfp date.");
+                }
+
+                // check if date has passed, add 'past' class to it
+                cfpDiff = cfpDate.diffNow("seconds");
+                confDiff = confDate.diffNow("seconds");
+
+                $('#pycon-uk-2019').attr("cfpDiff", cfpDiff.toMillis());
+                $('#pycon-uk-2019').attr("confDiff", confDiff.toMillis());
+
+                if (cfpDiff < 0) {
+                  $('#pycon-uk-2019').addClass('pastcfp');
+                  $('#pycon-uk-2019 .timer').replaceWith($('#pycon-uk-2019 .deadline'));
+                  $('#pycon-uk-2019 .timer-small').replaceWith($('#pycon-uk-2019 .deadline'));
+                  $('#pycon-uk-2019 .calendar').remove();
+                }
+
+                if (confDiff < 0) {
+                  $('#pycon-uk-2019').addClass('pastconf');
+                  $('#pycon-uk-2019 .timer').replaceWith($('#pycon-uk-2019 .deadline'));
+                  $('#pycon-uk-2019 .timer-small').replaceWith($('#pycon-uk-2019 .deadline'));
+                  $('#pycon-uk-2019 .calendar').remove();
+                }
 
 
 

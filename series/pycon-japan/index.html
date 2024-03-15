@@ -67,7 +67,7 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/js-year-calendar.min.css?t=1710456942"
+      href="/static/css/js-year-calendar.min.css?t=1710514397"
       media="screen,projection"
     />
 
@@ -79,13 +79,13 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/deadlines.css?t=1710456942"
+      href="/static/css/deadlines.css?t=1710514397"
       media="screen,projection"
     />
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/calendar.css?t=1710456942"
+      href="/static/css/calendar.css?t=1710514397"
       media="screen,projection"
     />
 
@@ -643,7 +643,7 @@
             <div class="row">
               <div class="col-12 col-sm-6">
                 <div class="meta">
-                  <span class="conf-date">August 28 - 30, 2020.</span>
+                  <span class="conf-date">August 28 - 29, 2020.</span>
                   <span class="conf-place">
                     <a href="#">Online</a>
                   </span>
@@ -653,7 +653,7 @@
                 <div class="deadline">
                   <div>
                     Deadline:
-                    <span class="deadline-time">TBA</span>
+                    <span class="deadline-time">Sunday, 31 May 2020</span>
                   </div>
                 </div>
               </div>
@@ -1162,13 +1162,13 @@
 
         <div class="row">
           <div
-            id="7dbd4245-802b-4bf5-af7d-199952ee06f4"
+            id="224ea9ae-f63d-4393-938f-da22ff52f3fc"
             style="width: 100%; height: 400px"
             class="jekyll-map"
           ></div>
           <script type="text/javascript">
             jekyllMaps.register(
-              "7dbd4245-802b-4bf5-af7d-199952ee06f4",
+              "224ea9ae-f63d-4393-938f-da22ff52f3fc",
               [
                 {
                   latitude: 35.683805050000004,
@@ -1492,9 +1492,67 @@
 
 
 
-                $('#pycon-japan-2020 .timer').html("TBA");
-                $('#pycon-japan-2020 .deadline-time').html("TBA");
-                $('#pycon-japan-2020').attr("cfpDiff", Infinity);
+
+                // Use specified timezone for deadlines if available else use AoE timezone
+
+                  var cfpDate = DateTime.fromSQL("2020-05-31 23:59:00", { zone: "UTC-12" });
+                  var confDate = DateTime.fromSQL("2020-08-28", { zone: "UTC-12" });
+
+
+                // check if timezone is valid otherwise replace by system timezone
+                if (cfpDate.invalid || confDate.invalid) {
+                  var cfpDate = DateTime.fromSQL("2020-05-31 23:59:00");
+                  var confDate = DateTime.fromSQL("2020-08-28");
+                  console.log("Invalid timezone in pycon-japan-2020. Using system timezone instead.");
+                }
+
+                // render countdown timer
+                $('#pycon-japan-2020 .timer').countdown(cfpDate.toJSDate(), function (event) {
+                  $(this).html(event.strftime('%D days %Hh %Mm %Ss'));
+                });
+
+                // render countdown timer small
+                $('#pycon-japan-2020 .timer-small').countdown(cfpDate.toJSDate(), function (event) {
+                  $(this).html(event.strftime('%Dd %H:%M:%S'));
+                });
+
+                // deadline in local timezone
+                $('#pycon-japan-2020 .deadline-time').html(cfpDate.setZone('system').toLocaleString(DateTime.DATE_HUGE));
+
+                // add calendar button
+                try {
+                  var myCalendar = createCalendarFromObject({
+                    id: 'pycon-japan-2020',
+                    title: 'PyCon Japan 2020 deadline',
+                    date: cfpDate.toJSDate(),
+                    duration: 60,
+                  });
+                  document.querySelector('#pycon-japan-2020 .calendar').appendChild(myCalendar);
+                } catch (err) {
+                  document.querySelector('#pycon-japan-2020 .calendar').appendChild("<p>Calendar not available.</p>");
+                  console.log("Error in cfp date.");
+                }
+
+                // check if date has passed, add 'past' class to it
+                cfpDiff = cfpDate.diffNow("seconds");
+                confDiff = confDate.diffNow("seconds");
+
+                $('#pycon-japan-2020').attr("cfpDiff", cfpDiff.toMillis());
+                $('#pycon-japan-2020').attr("confDiff", confDiff.toMillis());
+
+                if (cfpDiff < 0) {
+                  $('#pycon-japan-2020').addClass('pastcfp');
+                  $('#pycon-japan-2020 .timer').replaceWith($('#pycon-japan-2020 .deadline'));
+                  $('#pycon-japan-2020 .timer-small').replaceWith($('#pycon-japan-2020 .deadline'));
+                  $('#pycon-japan-2020 .calendar').remove();
+                }
+
+                if (confDiff < 0) {
+                  $('#pycon-japan-2020').addClass('pastconf');
+                  $('#pycon-japan-2020 .timer').replaceWith($('#pycon-japan-2020 .deadline'));
+                  $('#pycon-japan-2020 .timer-small').replaceWith($('#pycon-japan-2020 .deadline'));
+                  $('#pycon-japan-2020 .calendar').remove();
+                }
 
 
 

@@ -62,7 +62,7 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/js-year-calendar.min.css?t=1710456942"
+      href="/static/css/js-year-calendar.min.css?t=1710514397"
       media="screen,projection"
     />
 
@@ -74,13 +74,13 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/deadlines.css?t=1710456942"
+      href="/static/css/deadlines.css?t=1710514397"
       media="screen,projection"
     />
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/calendar.css?t=1710456942"
+      href="/static/css/calendar.css?t=1710514397"
       media="screen,projection"
     />
 
@@ -967,6 +967,36 @@
           subject: "",
           startDate: Date.parse("2024-03-29"),
           endDate: Date.parse("2024-04-01"),
+        });
+
+        // add deadlines in red
+        conf_list_all.push({
+          id: "python-fwdays-2024-deadline",
+          abbreviation: "python-fwdays-2024",
+          name: "Python fwdays 2024 CfP ",
+          color: "red",
+          location: "Kyiv, Ukraine",
+          date: "April 20th, 2024",
+          subject: "",
+          startDate: Date.parse("2024-03-20 23:59:00"),
+          endDate: Date.parse("2024-03-20 23:59:00"),
+        });
+
+        // add Conferences in chosen color
+
+        var color = "black";
+        // use first sub to choose color
+
+        conf_list_all.push({
+          id: "python-fwdays-2024-conference",
+          abbreviation: "python-fwdays-2024",
+          name: "Python fwdays 2024",
+          color: color,
+          location: "Kyiv, Ukraine",
+          date: "April 20th, 2024",
+          subject: "",
+          startDate: Date.parse("2024-04-20"),
+          endDate: Date.parse("2024-04-20"),
         });
 
         // add deadlines in red

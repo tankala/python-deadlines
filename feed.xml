@@ -9,7 +9,7 @@
 		<title>Python Conference Deadlines</title>
 		<description>Countdowns to your favourite Python conferences with calls for participation and resources to submit awesome talks!</description>
 		<link>https://pythondeadlin.es/feed.xml</link>
-		<lastBuildDate>Thu, 14 Mar 2024 22:55:42 +0000</lastBuildDate>
+		<lastBuildDate>Fri, 15 Mar 2024 14:53:17 +0000</lastBuildDate>
 		
 		
 		
@@ -114,6 +114,18 @@
 				<description>Conference in Lleida, Spain on March 29 - April 1, 2024. CfP: 2024-03-27 23:59:00 AoE. </description>
 				<pubDate>Wed, 27 Mar 2024 23:59:00 +0000</pubDate>
 				<link>https://pythondeadlin.es/conference/pycamp-españa-2024/</link>
+				<guid isPermaLink="false"></guid>
+				<category></category>
+			</item>
+		
+		
+		
+		
+			<item>
+				<title>Python fwdays 2024 Conference Deadline</title>
+				<description>Conference in Kyiv, Ukraine on April 20th, 2024. CfP: 2024-03-20 23:59:00 AoE. </description>
+				<pubDate>Wed, 20 Mar 2024 23:59:00 +0000</pubDate>
+				<link>https://pythondeadlin.es/conference/python-fwdays-2024/</link>
 				<guid isPermaLink="false"></guid>
 				<category></category>
 			</item>
@@ -270,18 +282,6 @@
 				<description>Conference in Florence, Italy on May 22 - 25, 2024. CfP: 2024-01-15 23:59:00 AoE.&lt;br /&gt;Find them here: @PyConIT </description>
 				<pubDate>Mon, 15 Jan 2024 23:59:00 +0000</pubDate>
 				<link>https://pythondeadlin.es/conference/pycon-italia-2024/</link>
-				<guid isPermaLink="false"></guid>
-				<category>PY</category>
-			</item>
-		
-		
-		
-		
-			<item>
-				<title>PyCascades 2024 Conference Deadline</title>
-				<description>Conference in Seattle, USA on April 5 - 8, 2024. CfP: 2024-01-04 23:59:59 AoE.&lt;br /&gt;Find them here: @pyCascades </description>
-				<pubDate>Thu, 04 Jan 2024 23:59:59 +0000</pubDate>
-				<link>https://pythondeadlin.es/conference/pycascades-2024/</link>
 				<guid isPermaLink="false"></guid>
 				<category>PY</category>
 			</item>
