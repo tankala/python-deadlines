@@ -9,7 +9,7 @@
     <title>
       Kiwi PyCon 2014 Conference Deadlines | Python Conference Deadlines
     </title>
-    <meta name="generator" content="Jekyll v3.9.3" />
+    <meta name="generator" content="Jekyll v4.3.3" />
     <meta property="og:title" content="Kiwi PyCon 2014 Conference Deadlines" />
     <meta name="author" content="Jesper Dramsch" />
     <meta property="og:locale" content="en_US" />
@@ -74,7 +74,7 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/js-year-calendar.min.css?t=1710514397"
+      href="/static/css/js-year-calendar.min.css?t=1710554084"
       media="screen,projection"
     />
 
@@ -86,13 +86,13 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/deadlines.css?t=1710514397"
+      href="/static/css/deadlines.css?t=1710554084"
       media="screen,projection"
     />
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/calendar.css?t=1710514397"
+      href="/static/css/calendar.css?t=1710554084"
       media="screen,projection"
     />
 
@@ -145,6 +145,30 @@
       .WEB-select.active {
         color: white;
         background: #0d0a0b;
+      }
+
+      .BIZ-tag {
+        color: #a8b9cc;
+      }
+      .BIZ-select {
+        color: #a8b9cc;
+        background: white;
+      }
+      .BIZ-select.active {
+        color: white;
+        background: #a8b9cc;
+      }
+
+      .GEO-tag {
+        color: #310c0c;
+      }
+      .GEO-select {
+        color: #310c0c;
+        background: white;
+      }
+      .GEO-select.active {
+        color: white;
+        background: #310c0c;
       }
     </style>
 
@@ -448,7 +472,11 @@
         </div>
         <div class="row">
           <div class="col-sm-12" id="conf-subs">
-            <span id="conf-subs" title="Conference subjects"> </span>
+            <span id="conf-subs" title="Conference subjects">
+              <span class="PY-tag badge badge-light conf-sub conf-PY">
+                General Python
+              </span>
+            </span>
           </div>
         </div>
       </div>
@@ -533,13 +561,13 @@
         </div>
         <div class="row">
           <div
-            id="d8638b5d-7c5d-4755-bc2a-373744c18cb5"
+            id="53a4332f-2833-4640-b89d-81b08660d632"
             style="width: 100%; height: 400px"
             class="jekyll-map"
           ></div>
           <script type="text/javascript">
             jekyllMaps.register(
-              "d8638b5d-7c5d-4755-bc2a-373744c18cb5",
+              "53a4332f-2833-4640-b89d-81b08660d632",
               [
                 {
                   latitude: -41.2887953,
@@ -618,6 +646,8 @@
           { name: "Scientific Python", sub: "SCIPY", color: "#70163C" },
           { name: "Python for Data", sub: "PYDATA", color: "#849324" },
           { name: "Python for Web", sub: "WEB", color: "#0D0A0B" },
+          { name: "Python for Business", sub: "BIZ", color: "#A8B9CC" },
+          { name: "Python for Earth", sub: "GEO", color: "#310c0c" },
         ];
         var sub2name = {};
         var name2sub = {};

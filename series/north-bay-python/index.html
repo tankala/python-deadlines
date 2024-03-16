@@ -10,7 +10,7 @@
     <title>
       North Bay Python Conference Summary | Python Conference Deadlines
     </title>
-    <meta name="generator" content="Jekyll v3.9.3" />
+    <meta name="generator" content="Jekyll v4.3.3" />
     <meta property="og:title" content="North Bay Python Conference Summary" />
     <meta name="author" content="Jesper Dramsch" />
     <meta property="og:locale" content="en_US" />
@@ -75,7 +75,7 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/js-year-calendar.min.css?t=1710514397"
+      href="/static/css/js-year-calendar.min.css?t=1710554084"
       media="screen,projection"
     />
 
@@ -87,13 +87,13 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/deadlines.css?t=1710514397"
+      href="/static/css/deadlines.css?t=1710554084"
       media="screen,projection"
     />
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/calendar.css?t=1710514397"
+      href="/static/css/calendar.css?t=1710554084"
       media="screen,projection"
     />
 
@@ -146,6 +146,30 @@
       .WEB-select.active {
         color: white;
         background: #0d0a0b;
+      }
+
+      .BIZ-tag {
+        color: #a8b9cc;
+      }
+      .BIZ-select {
+        color: #a8b9cc;
+        background: white;
+      }
+      .BIZ-select.active {
+        color: white;
+        background: #a8b9cc;
+      }
+
+      .GEO-tag {
+        color: #310c0c;
+      }
+      .GEO-select {
+        color: #310c0c;
+        background: white;
+      }
+      .GEO-select.active {
+        color: white;
+        background: #310c0c;
       }
     </style>
 
@@ -449,7 +473,11 @@
         </div>
         <div class="row">
           <div class="col-sm-12" id="conf-subs">
-            <span id="conf-subs" title="Conference subjects"> </span>
+            <span id="conf-subs" title="Conference subjects">
+              <span class="PY-tag badge badge-light conf-sub conf-PY">
+                General Python
+              </span>
+            </span>
           </div>
         </div>
       </div>
@@ -631,7 +659,7 @@
             <hr />
           </div>
 
-          <div id="north-bay-python-2019" class="ConfItem">
+          <div id="north-bay-python-2019" class="ConfItem PY-conf">
             <div class="row conf-row">
               <div class="col-6">
                 <span class="conf-title">
@@ -690,7 +718,13 @@
               </div>
             </div>
             <div class="row">
-              <div class="col-6"></div>
+              <div class="col-6">
+                <span
+                  title="Click to only show PY conferences"
+                  data-sub="PY"
+                  class="badge badge-light conf-sub PY-tag"
+                ></span>
+              </div>
               <div class="col-6">
                 <div class="calendar"></div>
               </div>
@@ -698,7 +732,7 @@
             <hr />
           </div>
 
-          <div id="north-bay-python-2018" class="ConfItem">
+          <div id="north-bay-python-2018" class="ConfItem PY-conf">
             <div class="row conf-row">
               <div class="col-6">
                 <span class="conf-title">
@@ -756,7 +790,13 @@
               </div>
             </div>
             <div class="row">
-              <div class="col-6"></div>
+              <div class="col-6">
+                <span
+                  title="Click to only show PY conferences"
+                  data-sub="PY"
+                  class="badge badge-light conf-sub PY-tag"
+                ></span>
+              </div>
               <div class="col-6">
                 <div class="calendar"></div>
               </div>
@@ -764,7 +804,7 @@
             <hr />
           </div>
 
-          <div id="north-bay-python-2017" class="ConfItem">
+          <div id="north-bay-python-2017" class="ConfItem PY-conf">
             <div class="row conf-row">
               <div class="col-6">
                 <span class="conf-title">
@@ -822,7 +862,13 @@
               </div>
             </div>
             <div class="row">
-              <div class="col-6"></div>
+              <div class="col-6">
+                <span
+                  title="Click to only show PY conferences"
+                  data-sub="PY"
+                  class="badge badge-light conf-sub PY-tag"
+                ></span>
+              </div>
               <div class="col-6">
                 <div class="calendar"></div>
               </div>
@@ -833,14 +879,24 @@
 
         <div class="row">
           <div
-            id="6ebd0250-f70b-45b3-a711-3e61798f67d2"
+            id="2430f44d-8ec3-492b-ae79-91d64a007a49"
             style="width: 100%; height: 400px"
             class="jekyll-map"
           ></div>
           <script type="text/javascript">
             jekyllMaps.register(
-              "6ebd0250-f70b-45b3-a711-3e61798f67d2",
+              "2430f44d-8ec3-492b-ae79-91d64a007a49",
               [
+                {
+                  latitude: 38.295411,
+                  longitude: -122.61369350203252,
+                  title: "North Bay Python Conference Summary",
+                  icon: null,
+                  url: "/series/north-bay-python/",
+                  url_text: null,
+                  image: "",
+                  popup_html: "",
+                },
                 {
                   latitude: 38.295411,
                   longitude: -122.61369350203252,
@@ -918,7 +974,7 @@
       var subs = [];
       var _all_subs = [];
       // Get all subs
-      var conf_type_data = [{"name":"General Python","sub":"PY","color":"#4B8BBE"},{"name":"Scientific Python","sub":"SCIPY","color":"#70163C"},{"name":"Python for Data","sub":"PYDATA","color":"#849324"},{"name":"Python for Web","sub":"WEB","color":"#0D0A0B"}];
+      var conf_type_data = [{"name":"General Python","sub":"PY","color":"#4B8BBE"},{"name":"Scientific Python","sub":"SCIPY","color":"#70163C"},{"name":"Python for Data","sub":"PYDATA","color":"#849324"},{"name":"Python for Web","sub":"WEB","color":"#0D0A0B"},{"name":"Python for Business","sub":"BIZ","color":"#A8B9CC"},{"name":"Python for Earth","sub":"GEO","color":"#310c0c"}];
       var sub2name = {}; var name2sub = {};
       for (var i = 0; i < conf_type_data.length; i++) {
           _all_subs[i] = conf_type_data[i]['sub'];
@@ -1095,6 +1151,8 @@
 
 
 
+                $('#north-bay-python-2019 .PY-tag').html(sub2name["PY"].toLocaleLowerCase());
+
 
 
                 // Use specified timezone for deadlines if available else use AoE timezone
@@ -1162,6 +1220,8 @@
 
 
 
+                $('#north-bay-python-2018 .PY-tag').html(sub2name["PY"].toLocaleLowerCase());
+
 
                 $('#north-bay-python-2018 .timer').html("TBA");
                 $('#north-bay-python-2018 .deadline-time').html("TBA");
@@ -1170,6 +1230,8 @@
 
 
 
+
+                $('#north-bay-python-2017 .PY-tag').html(sub2name["PY"].toLocaleLowerCase());
 
 
                 $('#north-bay-python-2017 .timer').html("TBA");

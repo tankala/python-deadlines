@@ -8,7 +8,7 @@
     <title>PyCon Africa Conference Summary</title>
     <!-- Begin Jekyll SEO tag v2.8.0 -->
     <title>PyCon Africa Conference Summary | Python Conference Deadlines</title>
-    <meta name="generator" content="Jekyll v3.9.3" />
+    <meta name="generator" content="Jekyll v4.3.3" />
     <meta property="og:title" content="PyCon Africa Conference Summary" />
     <meta name="author" content="Jesper Dramsch" />
     <meta property="og:locale" content="en_US" />
@@ -70,7 +70,7 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/js-year-calendar.min.css?t=1710514397"
+      href="/static/css/js-year-calendar.min.css?t=1710554084"
       media="screen,projection"
     />
 
@@ -82,13 +82,13 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/deadlines.css?t=1710514397"
+      href="/static/css/deadlines.css?t=1710554084"
       media="screen,projection"
     />
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/calendar.css?t=1710514397"
+      href="/static/css/calendar.css?t=1710554084"
       media="screen,projection"
     />
 
@@ -141,6 +141,30 @@
       .WEB-select.active {
         color: white;
         background: #0d0a0b;
+      }
+
+      .BIZ-tag {
+        color: #a8b9cc;
+      }
+      .BIZ-select {
+        color: #a8b9cc;
+        background: white;
+      }
+      .BIZ-select.active {
+        color: white;
+        background: #a8b9cc;
+      }
+
+      .GEO-tag {
+        color: #310c0c;
+      }
+      .GEO-select {
+        color: #310c0c;
+        background: white;
+      }
+      .GEO-select.active {
+        color: white;
+        background: #310c0c;
       }
     </style>
 
@@ -277,7 +301,11 @@
         </div>
         <div class="row">
           <div class="col-sm-12" id="conf-subs">
-            <span id="conf-subs" title="Conference subjects"> </span>
+            <span id="conf-subs" title="Conference subjects">
+              <span class="PY-tag badge badge-light conf-sub conf-PY">
+                General Python
+              </span>
+            </span>
           </div>
         </div>
       </div>
@@ -304,7 +332,7 @@
         </div>
         <hr />
         <div id="all_confs">
-          <div id="pycon-africa-2019" class="ConfItem">
+          <div id="pycon-africa-2019" class="ConfItem PY-conf">
             <div class="row conf-row">
               <div class="col-6">
                 <span class="conf-title">
@@ -393,7 +421,13 @@
               </div>
             </div>
             <div class="row">
-              <div class="col-6"></div>
+              <div class="col-6">
+                <span
+                  title="Click to only show PY conferences"
+                  data-sub="PY"
+                  class="badge badge-light conf-sub PY-tag"
+                ></span>
+              </div>
               <div class="col-6">
                 <div class="calendar"></div>
               </div>
@@ -455,7 +489,7 @@
       var subs = [];
       var _all_subs = [];
       // Get all subs
-      var conf_type_data = [{"name":"General Python","sub":"PY","color":"#4B8BBE"},{"name":"Scientific Python","sub":"SCIPY","color":"#70163C"},{"name":"Python for Data","sub":"PYDATA","color":"#849324"},{"name":"Python for Web","sub":"WEB","color":"#0D0A0B"}];
+      var conf_type_data = [{"name":"General Python","sub":"PY","color":"#4B8BBE"},{"name":"Scientific Python","sub":"SCIPY","color":"#70163C"},{"name":"Python for Data","sub":"PYDATA","color":"#849324"},{"name":"Python for Web","sub":"WEB","color":"#0D0A0B"},{"name":"Python for Business","sub":"BIZ","color":"#A8B9CC"},{"name":"Python for Earth","sub":"GEO","color":"#310c0c"}];
       var sub2name = {}; var name2sub = {};
       for (var i = 0; i < conf_type_data.length; i++) {
           _all_subs[i] = conf_type_data[i]['sub'];
@@ -562,6 +596,8 @@
 
 
 
+
+                $('#pycon-africa-2019 .PY-tag').html(sub2name["PY"].toLocaleLowerCase());
 
 
 

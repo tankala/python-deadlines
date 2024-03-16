@@ -9,7 +9,7 @@
 		<title>Newsfeed for Python Events Calendar from Python Conference Deadlines</title>
 		<description>Countdowns to your favourite Python conferences with calls for participation and resources to submit awesome talks!</description>
 		<link>https://pythondeadlin.es/feed.xml</link>
-		<lastBuildDate>Fri, 15 Mar 2024 14:53:17 +0000</lastBuildDate>
+		<lastBuildDate>Sat, 16 Mar 2024 01:54:44 +0000</lastBuildDate>
 		
 			<item>
 				<title>PyCon India 2023 Conference Deadline</title>
@@ -58,11 +58,11 @@
 		
 			<item>
 				<title>PyCon Taiwan 2024 Conference Deadline</title>
-				<description><![CDATA[* name of the event: PyCon Taiwan 2024<br/>* type of event: Conference <br/>* focus on Python: Yes<br/>* approximate number of attendees: Unknown<br/>* location (incl. country): TBD,TBD<br/>* dates/times/recurrence (incl. time zone): September 21 - 22, 2024<br/>* HTML link : <a href="https://tw.pycon.org/2024/en-us">PyCon Taiwan 2024</a>]]></description>
+				<description><![CDATA[* name of the event: PyCon Taiwan 2024<br/>* type of event: Conference <br/>* focus on Python: Yes<br/>* approximate number of attendees: Unknown<br/>* location (incl. country): Taipei, Taiwan<br/>* dates/times/recurrence (incl. time zone): September 21 - 22, 2024<br/>* HTML link : <a href="https://tw.pycon.org/2024/en-us">PyCon Taiwan 2024</a>]]></description>
 				<pubDate>Sat, 21 Sep 2024 00:00:00 +0000</pubDate>
 				<link>https://pythondeadlin.es/conference/pycon-taiwan-2024/</link>
 				<guid isPermaLink="false"></guid>
-				<category></category>
+				<category>PY</category>
 			</item>
 		
 			<item>
@@ -80,7 +80,7 @@
 				<pubDate>Wed, 04 Sep 2024 00:00:00 +0000</pubDate>
 				<link>https://pythondeadlin.es/conference/earl-2024/</link>
 				<guid isPermaLink="false"></guid>
-				<category>PY</category>
+				<category>BIZ</category>
 			</item>
 		
 			<item>
@@ -89,7 +89,7 @@
 				<pubDate>Fri, 29 Mar 2024 00:00:00 +0000</pubDate>
 				<link>https://pythondeadlin.es/conference/pycamp-españa-2024/</link>
 				<guid isPermaLink="false"></guid>
-				<category></category>
+				<category>PY</category>
 			</item>
 		
 			<item>
@@ -98,7 +98,7 @@
 				<pubDate>Sat, 20 Apr 2024 00:00:00 +0000</pubDate>
 				<link>https://pythondeadlin.es/conference/python-fwdays-2024/</link>
 				<guid isPermaLink="false"></guid>
-				<category></category>
+				<category>PY</category>
 			</item>
 		
 			<item>
@@ -134,7 +134,7 @@
 				<pubDate>Fri, 09 Aug 2024 00:00:00 +0000</pubDate>
 				<link>https://pythondeadlin.es/conference/python-nordeste-2024/</link>
 				<guid isPermaLink="false"></guid>
-				<category></category>
+				<category>PY</category>
 			</item>
 		
 			<item>
@@ -170,7 +170,7 @@
 				<pubDate>Mon, 27 May 2024 00:00:00 +0000</pubDate>
 				<link>https://pythondeadlin.es/conference/geopython-2024/</link>
 				<guid isPermaLink="false"></guid>
-				<category>PY</category>
+				<category>GEO</category>
 			</item>
 		
 			<item>

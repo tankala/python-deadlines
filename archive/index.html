@@ -7,7 +7,7 @@
     <title>Past Python Conferences</title>
     <!-- Begin Jekyll SEO tag v2.8.0 -->
     <title>Past Python Conferences | Python Conference Deadlines</title>
-    <meta name="generator" content="Jekyll v3.9.3" />
+    <meta name="generator" content="Jekyll v4.3.3" />
     <meta property="og:title" content="Past Python Conferences" />
     <meta name="author" content="Jesper Dramsch" />
     <meta property="og:locale" content="en_US" />
@@ -53,7 +53,7 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/js-year-calendar.min.css?t=1710514397"
+      href="/static/css/js-year-calendar.min.css?t=1710554084"
       media="screen,projection"
     />
 
@@ -65,13 +65,13 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/deadlines.css?t=1710514397"
+      href="/static/css/deadlines.css?t=1710554084"
       media="screen,projection"
     />
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/calendar.css?t=1710514397"
+      href="/static/css/calendar.css?t=1710554084"
       media="screen,projection"
     />
 
@@ -124,6 +124,30 @@
       .WEB-select.active {
         color: white;
         background: #0d0a0b;
+      }
+
+      .BIZ-tag {
+        color: #a8b9cc;
+      }
+      .BIZ-select {
+        color: #a8b9cc;
+        background: white;
+      }
+      .BIZ-select.active {
+        color: white;
+        background: #a8b9cc;
+      }
+
+      .GEO-tag {
+        color: #310c0c;
+      }
+      .GEO-select {
+        color: #310c0c;
+        background: white;
+      }
+      .GEO-select.active {
+        color: white;
+        background: #310c0c;
       }
     </style>
 
@@ -283,6 +307,14 @@
 
                       <option value="WEB" id="WEB-checkbox">
                         Python for Web (WEB)
+                      </option>
+
+                      <option value="BIZ" id="BIZ-checkbox">
+                        Python for Business (BIZ)
+                      </option>
+
+                      <option value="GEO" id="GEO-checkbox">
+                        Python for Earth (GEO)
                       </option>
                     </select>
                   </div>
@@ -1173,7 +1205,7 @@
             <hr />
           </div>
 
-          <div id="django-day-copenhagen-2023" class="ConfItem">
+          <div id="django-day-copenhagen-2023" class="ConfItem WEB-conf">
             <div class="row conf-row">
               <div class="col-6">
                 <span class="conf-title">
@@ -1231,7 +1263,13 @@
               </div>
             </div>
             <div class="row">
-              <div class="col-6"></div>
+              <div class="col-6">
+                <span
+                  title="Click to only show WEB conferences"
+                  data-sub="WEB"
+                  class="badge badge-light conf-sub WEB-tag"
+                ></span>
+              </div>
               <div class="col-6">
                 <div class="calendar"></div>
               </div>
@@ -2400,7 +2438,7 @@
             <hr />
           </div>
 
-          <div id="python-nordeste-2023" class="ConfItem">
+          <div id="python-nordeste-2023" class="ConfItem PY-conf">
             <div class="row conf-row">
               <div class="col-6">
                 <span class="conf-title">
@@ -2488,7 +2526,13 @@
               </div>
             </div>
             <div class="row">
-              <div class="col-6"></div>
+              <div class="col-6">
+                <span
+                  title="Click to only show PY conferences"
+                  data-sub="PY"
+                  class="badge badge-light conf-sub PY-tag"
+                ></span>
+              </div>
               <div class="col-6">
                 <div class="calendar"></div>
               </div>
@@ -6274,7 +6318,7 @@
             <hr />
           </div>
 
-          <div id="jupytercon-2023" class="ConfItem PY-conf">
+          <div id="jupytercon-2023" class="ConfItem PYDATA-conf">
             <div class="row conf-row">
               <div class="col-6">
                 <span class="conf-title">
@@ -6349,9 +6393,9 @@
             <div class="row">
               <div class="col-6">
                 <span
-                  title="Click to only show PY conferences"
-                  data-sub="PY"
-                  class="badge badge-light conf-sub PY-tag"
+                  title="Click to only show PYDATA conferences"
+                  data-sub="PYDATA"
+                  class="badge badge-light conf-sub PYDATA-tag"
                 ></span>
               </div>
               <div class="col-6">
@@ -6361,7 +6405,7 @@
             <hr />
           </div>
 
-          <div id="geopython-2023" class="ConfItem PY-conf">
+          <div id="geopython-2023" class="ConfItem GEO-conf">
             <div class="row conf-row">
               <div class="col-6">
                 <span class="conf-title">
@@ -6447,9 +6491,9 @@
             <div class="row">
               <div class="col-6">
                 <span
-                  title="Click to only show PY conferences"
-                  data-sub="PY"
-                  class="badge badge-light conf-sub PY-tag"
+                  title="Click to only show GEO conferences"
+                  data-sub="GEO"
+                  class="badge badge-light conf-sub GEO-tag"
                 ></span>
               </div>
               <div class="col-6">
@@ -6644,7 +6688,7 @@
             <hr />
           </div>
 
-          <div id="xtreme-python-2022" class="ConfItem">
+          <div id="xtreme-python-2022" class="ConfItem PY-conf">
             <div class="row conf-row">
               <div class="col-6">
                 <span class="conf-title">
@@ -6705,7 +6749,13 @@
               </div>
             </div>
             <div class="row">
-              <div class="col-6"></div>
+              <div class="col-6">
+                <span
+                  title="Click to only show PY conferences"
+                  data-sub="PY"
+                  class="badge badge-light conf-sub PY-tag"
+                ></span>
+              </div>
               <div class="col-6">
                 <div class="calendar"></div>
               </div>
@@ -7175,7 +7225,7 @@
             <hr />
           </div>
 
-          <div id="scipy-latin-america-2022" class="ConfItem">
+          <div id="scipy-latin-america-2022" class="ConfItem SCIPY-conf">
             <div class="row conf-row">
               <div class="col-6">
                 <span class="conf-title">
@@ -7233,7 +7283,13 @@
               </div>
             </div>
             <div class="row">
-              <div class="col-6"></div>
+              <div class="col-6">
+                <span
+                  title="Click to only show SCIPY conferences"
+                  data-sub="SCIPY"
+                  class="badge badge-light conf-sub SCIPY-tag"
+                ></span>
+              </div>
               <div class="col-6">
                 <div class="calendar"></div>
               </div>
@@ -7472,7 +7528,7 @@
             <hr />
           </div>
 
-          <div id="pyhep-2022" class="ConfItem">
+          <div id="pyhep-2022" class="ConfItem SCIPY-conf">
             <div class="row conf-row">
               <div class="col-6">
                 <span class="conf-title">
@@ -7524,7 +7580,13 @@
               </div>
             </div>
             <div class="row">
-              <div class="col-6"></div>
+              <div class="col-6">
+                <span
+                  title="Click to only show SCIPY conferences"
+                  data-sub="SCIPY"
+                  class="badge badge-light conf-sub SCIPY-tag"
+                ></span>
+              </div>
               <div class="col-6">
                 <div class="calendar"></div>
               </div>
@@ -7763,7 +7825,7 @@
             <hr />
           </div>
 
-          <div id="python-at-scale-2022" class="ConfItem PYDATA-conf">
+          <div id="python-at-scale-2022" class="ConfItem PY-conf">
             <div class="row conf-row">
               <div class="col-6">
                 <span class="conf-title">
@@ -7823,9 +7885,9 @@
             <div class="row">
               <div class="col-6">
                 <span
-                  title="Click to only show PYDATA conferences"
-                  data-sub="PYDATA"
-                  class="badge badge-light conf-sub PYDATA-tag"
+                  title="Click to only show PY conferences"
+                  data-sub="PY"
+                  class="badge badge-light conf-sub PY-tag"
                 ></span>
               </div>
               <div class="col-6">
@@ -8675,7 +8737,7 @@
             <hr />
           </div>
 
-          <div id="python-nordeste-2022" class="ConfItem">
+          <div id="python-nordeste-2022" class="ConfItem PY-conf">
             <div class="row conf-row">
               <div class="col-6">
                 <span class="conf-title">
@@ -8748,7 +8810,13 @@
               </div>
             </div>
             <div class="row">
-              <div class="col-6"></div>
+              <div class="col-6">
+                <span
+                  title="Click to only show PY conferences"
+                  data-sub="PY"
+                  class="badge badge-light conf-sub PY-tag"
+                ></span>
+              </div>
               <div class="col-6">
                 <div class="calendar"></div>
               </div>
@@ -8977,7 +9045,7 @@
             <hr />
           </div>
 
-          <div id="pycon-russia-2022" class="ConfItem">
+          <div id="pycon-russia-2022" class="ConfItem PY-conf">
             <div class="row conf-row">
               <div class="col-6">
                 <span class="conf-title">
@@ -9050,7 +9118,13 @@
               </div>
             </div>
             <div class="row">
-              <div class="col-6"></div>
+              <div class="col-6">
+                <span
+                  title="Click to only show PY conferences"
+                  data-sub="PY"
+                  class="badge badge-light conf-sub PY-tag"
+                ></span>
+              </div>
               <div class="col-6">
                 <div class="calendar"></div>
               </div>
@@ -9268,7 +9342,7 @@
             <hr />
           </div>
 
-          <div id="pydata-london-2022" class="ConfItem">
+          <div id="pydata-london-2022" class="ConfItem PYDATA-conf">
             <div class="row conf-row">
               <div class="col-6">
                 <span class="conf-title">
@@ -9326,7 +9400,13 @@
               </div>
             </div>
             <div class="row">
-              <div class="col-6"></div>
+              <div class="col-6">
+                <span
+                  title="Click to only show PYDATA conferences"
+                  data-sub="PYDATA"
+                  class="badge badge-light conf-sub PYDATA-tag"
+                ></span>
+              </div>
               <div class="col-6">
                 <div class="calendar"></div>
               </div>
@@ -9622,7 +9702,7 @@
             <hr />
           </div>
 
-          <div id="pycamp-españa-2022" class="ConfItem">
+          <div id="pycamp-españa-2022" class="ConfItem PY-conf">
             <div class="row conf-row">
               <div class="col-6">
                 <span class="conf-title">
@@ -9680,7 +9760,13 @@
               </div>
             </div>
             <div class="row">
-              <div class="col-6"></div>
+              <div class="col-6">
+                <span
+                  title="Click to only show PY conferences"
+                  data-sub="PY"
+                  class="badge badge-light conf-sub PY-tag"
+                ></span>
+              </div>
               <div class="col-6">
                 <div class="calendar"></div>
               </div>
@@ -9688,7 +9774,7 @@
             <hr />
           </div>
 
-          <div id="django-day-copenhagen-2022" class="ConfItem">
+          <div id="django-day-copenhagen-2022" class="ConfItem WEB-conf">
             <div class="row conf-row">
               <div class="col-6">
                 <span class="conf-title">
@@ -9746,7 +9832,13 @@
               </div>
             </div>
             <div class="row">
-              <div class="col-6"></div>
+              <div class="col-6">
+                <span
+                  title="Click to only show WEB conferences"
+                  data-sub="WEB"
+                  class="badge badge-light conf-sub WEB-tag"
+                ></span>
+              </div>
               <div class="col-6">
                 <div class="calendar"></div>
               </div>
@@ -9754,7 +9846,7 @@
             <hr />
           </div>
 
-          <div id="geopython-2022" class="ConfItem PY-conf">
+          <div id="geopython-2022" class="ConfItem GEO-conf">
             <div class="row conf-row">
               <div class="col-6">
                 <span class="conf-title">
@@ -9825,9 +9917,9 @@
             <div class="row">
               <div class="col-6">
                 <span
-                  title="Click to only show PY conferences"
-                  data-sub="PY"
-                  class="badge badge-light conf-sub PY-tag"
+                  title="Click to only show GEO conferences"
+                  data-sub="GEO"
+                  class="badge badge-light conf-sub GEO-tag"
                 ></span>
               </div>
               <div class="col-6">
@@ -9905,7 +9997,7 @@
             <hr />
           </div>
 
-          <div id="pycamp-leipzig-2022" class="ConfItem">
+          <div id="pycamp-leipzig-2022" class="ConfItem PY-conf">
             <div class="row conf-row">
               <div class="col-6">
                 <span class="conf-title">
@@ -9963,7 +10055,13 @@
               </div>
             </div>
             <div class="row">
-              <div class="col-6"></div>
+              <div class="col-6">
+                <span
+                  title="Click to only show PY conferences"
+                  data-sub="PY"
+                  class="badge badge-light conf-sub PY-tag"
+                ></span>
+              </div>
               <div class="col-6">
                 <div class="calendar"></div>
               </div>
@@ -10271,7 +10369,7 @@
             <hr />
           </div>
 
-          <div id="pycon-sri-lanka-2022" class="ConfItem">
+          <div id="pycon-sri-lanka-2022" class="ConfItem PY-conf">
             <div class="row conf-row">
               <div class="col-6">
                 <span class="conf-title">
@@ -10327,7 +10425,13 @@
               </div>
             </div>
             <div class="row">
-              <div class="col-6"></div>
+              <div class="col-6">
+                <span
+                  title="Click to only show PY conferences"
+                  data-sub="PY"
+                  class="badge badge-light conf-sub PY-tag"
+                ></span>
+              </div>
               <div class="col-6">
                 <div class="calendar"></div>
               </div>
@@ -10537,7 +10641,7 @@
             <hr />
           </div>
 
-          <div id="pycon-kyushu-kumamoto-2022" class="ConfItem">
+          <div id="pycon-kyushu-kumamoto-2022" class="ConfItem PY-conf">
             <div class="row conf-row">
               <div class="col-6">
                 <span class="conf-title">
@@ -10595,7 +10699,13 @@
               </div>
             </div>
             <div class="row">
-              <div class="col-6"></div>
+              <div class="col-6">
+                <span
+                  title="Click to only show PY conferences"
+                  data-sub="PY"
+                  class="badge badge-light conf-sub PY-tag"
+                ></span>
+              </div>
               <div class="col-6">
                 <div class="calendar"></div>
               </div>
@@ -10603,7 +10713,7 @@
             <hr />
           </div>
 
-          <div id="pycon-tanzania-2021" class="ConfItem">
+          <div id="pycon-tanzania-2021" class="ConfItem PY-conf">
             <div class="row conf-row">
               <div class="col-6">
                 <span class="conf-title">
@@ -10661,7 +10771,13 @@
               </div>
             </div>
             <div class="row">
-              <div class="col-6"></div>
+              <div class="col-6">
+                <span
+                  title="Click to only show PY conferences"
+                  data-sub="PY"
+                  class="badge badge-light conf-sub PY-tag"
+                ></span>
+              </div>
               <div class="col-6">
                 <div class="calendar"></div>
               </div>
@@ -10733,7 +10849,7 @@
             <hr />
           </div>
 
-          <div id="flask-con-2021" class="ConfItem">
+          <div id="flask-con-2021" class="ConfItem WEB-conf">
             <div class="row conf-row">
               <div class="col-6">
                 <span class="conf-title">
@@ -10785,7 +10901,13 @@
               </div>
             </div>
             <div class="row">
-              <div class="col-6"></div>
+              <div class="col-6">
+                <span
+                  title="Click to only show WEB conferences"
+                  data-sub="WEB"
+                  class="badge badge-light conf-sub WEB-tag"
+                ></span>
+              </div>
               <div class="col-6">
                 <div class="calendar"></div>
               </div>
@@ -10793,7 +10915,7 @@
             <hr />
           </div>
 
-          <div id="xtreme-python-2021" class="ConfItem">
+          <div id="xtreme-python-2021" class="ConfItem PY-conf">
             <div class="row conf-row">
               <div class="col-6">
                 <span class="conf-title">
@@ -10854,7 +10976,13 @@
               </div>
             </div>
             <div class="row">
-              <div class="col-6"></div>
+              <div class="col-6">
+                <span
+                  title="Click to only show PY conferences"
+                  data-sub="PY"
+                  class="badge badge-light conf-sub PY-tag"
+                ></span>
+              </div>
               <div class="col-6">
                 <div class="calendar"></div>
               </div>
@@ -10932,7 +11060,7 @@
             <hr />
           </div>
 
-          <div id="pycon-indonesia-2021" class="ConfItem">
+          <div id="pycon-indonesia-2021" class="ConfItem PY-conf">
             <div class="row conf-row">
               <div class="col-6">
                 <span class="conf-title">
@@ -10988,7 +11116,13 @@
               </div>
             </div>
             <div class="row">
-              <div class="col-6"></div>
+              <div class="col-6">
+                <span
+                  title="Click to only show PY conferences"
+                  data-sub="PY"
+                  class="badge badge-light conf-sub PY-tag"
+                ></span>
+              </div>
               <div class="col-6">
                 <div class="calendar"></div>
               </div>
@@ -10996,21 +11130,21 @@
             <hr />
           </div>
 
-          <div id="pycascades-remote-2022" class="ConfItem PY-conf">
+          <div id="pycascades-2022" class="ConfItem PY-conf">
             <div class="row conf-row">
               <div class="col-6">
                 <span class="conf-title">
                   <a
                     title="Deadline Details"
-                    href="/conference/pycascades-remote-2022/"
-                    >PyCascades Remote 2022</a
+                    href="/conference/pycascades-2022/"
+                    >PyCascades 2022</a
                   >
                 </span>
                 <span class="conf-title-small">
                   <a
                     title="Deadline Details"
-                    href="/conference/pycascades-remote-2022/"
-                    >PyCascades Remote '22</a
+                    href="/conference/pycascades-2022/"
+                    >PyCascades '22</a
                   >
                 </span>
                 <span class="conf-title-icon">
@@ -11041,6 +11175,8 @@
                     <a href="#">Online</a>
                   </span>
                 </div>
+
+                <div class="note"><b>Note: </b>Remote</div>
               </div>
               <div class="col-12 col-sm-6">
                 <div class="deadline">
@@ -11066,7 +11202,7 @@
             <hr />
           </div>
 
-          <div id="pyjamas-conf-2021" class="ConfItem">
+          <div id="pyjamas-conf-2021" class="ConfItem PY-conf">
             <div class="row conf-row">
               <div class="col-6">
                 <span class="conf-title">
@@ -11122,7 +11258,13 @@
               </div>
             </div>
             <div class="row">
-              <div class="col-6"></div>
+              <div class="col-6">
+                <span
+                  title="Click to only show PY conferences"
+                  data-sub="PY"
+                  class="badge badge-light conf-sub PY-tag"
+                ></span>
+              </div>
               <div class="col-6">
                 <div class="calendar"></div>
               </div>
@@ -11130,7 +11272,7 @@
             <hr />
           </div>
 
-          <div id="pycon-apac-2021" class="ConfItem">
+          <div id="pycon-apac-2021" class="ConfItem PY-conf">
             <div class="row conf-row">
               <div class="col-6">
                 <span class="conf-title">
@@ -11203,7 +11345,13 @@
               </div>
             </div>
             <div class="row">
-              <div class="col-6"></div>
+              <div class="col-6">
+                <span
+                  title="Click to only show PY conferences"
+                  data-sub="PY"
+                  class="badge badge-light conf-sub PY-tag"
+                ></span>
+              </div>
               <div class="col-6">
                 <div class="calendar"></div>
               </div>
@@ -11211,7 +11359,7 @@
             <hr />
           </div>
 
-          <div id="pycon-odessa-2021" class="ConfItem">
+          <div id="pycon-odessa-2021" class="ConfItem PY-conf">
             <div class="row conf-row">
               <div class="col-6">
                 <span class="conf-title">
@@ -11269,7 +11417,13 @@
               </div>
             </div>
             <div class="row">
-              <div class="col-6"></div>
+              <div class="col-6">
+                <span
+                  title="Click to only show PY conferences"
+                  data-sub="PY"
+                  class="badge badge-light conf-sub PY-tag"
+                ></span>
+              </div>
               <div class="col-6">
                 <div class="calendar"></div>
               </div>
@@ -11277,7 +11431,7 @@
             <hr />
           </div>
 
-          <div id="pycon-south-africa-2021" class="ConfItem">
+          <div id="pycon-south-africa-2021" class="ConfItem PY-conf">
             <div class="row conf-row">
               <div class="col-6">
                 <span class="conf-title">
@@ -11333,7 +11487,13 @@
               </div>
             </div>
             <div class="row">
-              <div class="col-6"></div>
+              <div class="col-6">
+                <span
+                  title="Click to only show PY conferences"
+                  data-sub="PY"
+                  class="badge badge-light conf-sub PY-tag"
+                ></span>
+              </div>
               <div class="col-6">
                 <div class="calendar"></div>
               </div>
@@ -11341,7 +11501,7 @@
             <hr />
           </div>
 
-          <div id="pydata-global-2021" class="ConfItem">
+          <div id="pydata-global-2021" class="ConfItem PYDATA-conf">
             <div class="row conf-row">
               <div class="col-6">
                 <span class="conf-title">
@@ -11412,7 +11572,13 @@
               </div>
             </div>
             <div class="row">
-              <div class="col-6"></div>
+              <div class="col-6">
+                <span
+                  title="Click to only show PYDATA conferences"
+                  data-sub="PYDATA"
+                  class="badge badge-light conf-sub PYDATA-tag"
+                ></span>
+              </div>
               <div class="col-6">
                 <div class="calendar"></div>
               </div>
@@ -11420,7 +11586,7 @@
             <hr />
           </div>
 
-          <div id="pycon-japan-2021" class="ConfItem">
+          <div id="pycon-japan-2021" class="ConfItem PY-conf">
             <div class="row conf-row">
               <div class="col-6">
                 <span class="conf-title">
@@ -11478,7 +11644,13 @@
               </div>
             </div>
             <div class="row">
-              <div class="col-6"></div>
+              <div class="col-6">
+                <span
+                  title="Click to only show PY conferences"
+                  data-sub="PY"
+                  class="badge badge-light conf-sub PY-tag"
+                ></span>
+              </div>
               <div class="col-6">
                 <div class="calendar"></div>
               </div>
@@ -11486,7 +11658,7 @@
             <hr />
           </div>
 
-          <div id="pycon-india-2021" class="ConfItem">
+          <div id="pycon-india-2021" class="ConfItem PY-conf">
             <div class="row conf-row">
               <div class="col-6">
                 <span class="conf-title">
@@ -11542,7 +11714,13 @@
               </div>
             </div>
             <div class="row">
-              <div class="col-6"></div>
+              <div class="col-6">
+                <span
+                  title="Click to only show PY conferences"
+                  data-sub="PY"
+                  class="badge badge-light conf-sub PY-tag"
+                ></span>
+              </div>
               <div class="col-6">
                 <div class="calendar"></div>
               </div>
@@ -11627,7 +11805,7 @@
             <hr />
           </div>
 
-          <div id="djangocon-europe-2021" class="ConfItem">
+          <div id="djangocon-europe-2021" class="ConfItem WEB-conf">
             <div class="row conf-row">
               <div class="col-6">
                 <span class="conf-title">
@@ -11700,7 +11878,13 @@
               </div>
             </div>
             <div class="row">
-              <div class="col-6"></div>
+              <div class="col-6">
+                <span
+                  title="Click to only show WEB conferences"
+                  data-sub="WEB"
+                  class="badge badge-light conf-sub WEB-tag"
+                ></span>
+              </div>
               <div class="col-6">
                 <div class="calendar"></div>
               </div>
@@ -11708,7 +11892,7 @@
             <hr />
           </div>
 
-          <div id="python-nordeste-2021" class="ConfItem">
+          <div id="python-nordeste-2021" class="ConfItem PY-conf">
             <div class="row conf-row">
               <div class="col-6">
                 <span class="conf-title">
@@ -11794,7 +11978,13 @@
               </div>
             </div>
             <div class="row">
-              <div class="col-6"></div>
+              <div class="col-6">
+                <span
+                  title="Click to only show PY conferences"
+                  data-sub="PY"
+                  class="badge badge-light conf-sub PY-tag"
+                ></span>
+              </div>
               <div class="col-6">
                 <div class="calendar"></div>
               </div>
@@ -11802,7 +11992,7 @@
             <hr />
           </div>
 
-          <div id="scipy-us-2021" class="ConfItem">
+          <div id="scipy-us-2021" class="ConfItem SCIPY-conf">
             <div class="row conf-row">
               <div class="col-6">
                 <span class="conf-title">
@@ -11856,7 +12046,13 @@
               </div>
             </div>
             <div class="row">
-              <div class="col-6"></div>
+              <div class="col-6">
+                <span
+                  title="Click to only show SCIPY conferences"
+                  data-sub="SCIPY"
+                  class="badge badge-light conf-sub SCIPY-tag"
+                ></span>
+              </div>
               <div class="col-6">
                 <div class="calendar"></div>
               </div>
@@ -11864,7 +12060,7 @@
             <hr />
           </div>
 
-          <div id="pycon-us-2021" class="ConfItem">
+          <div id="pycon-us-2021" class="ConfItem PY-conf">
             <div class="row conf-row">
               <div class="col-6">
                 <span class="conf-title">
@@ -11931,7 +12127,13 @@
               </div>
             </div>
             <div class="row">
-              <div class="col-6"></div>
+              <div class="col-6">
+                <span
+                  title="Click to only show PY conferences"
+                  data-sub="PY"
+                  class="badge badge-light conf-sub PY-tag"
+                ></span>
+              </div>
               <div class="col-6">
                 <div class="calendar"></div>
               </div>
@@ -11939,7 +12141,7 @@
             <hr />
           </div>
 
-          <div id="python-web-conference-2021" class="ConfItem">
+          <div id="python-web-conference-2021" class="ConfItem WEB-conf">
             <div class="row conf-row">
               <div class="col-6">
                 <span class="conf-title">
@@ -11995,7 +12197,13 @@
               </div>
             </div>
             <div class="row">
-              <div class="col-6"></div>
+              <div class="col-6">
+                <span
+                  title="Click to only show WEB conferences"
+                  data-sub="WEB"
+                  class="badge badge-light conf-sub WEB-tag"
+                ></span>
+              </div>
               <div class="col-6">
                 <div class="calendar"></div>
               </div>
@@ -12003,7 +12211,7 @@
             <hr />
           </div>
 
-          <div id="geopython-2021" class="ConfItem">
+          <div id="geopython-2021" class="ConfItem GEO-conf">
             <div class="row conf-row">
               <div class="col-6">
                 <span class="conf-title">
@@ -12073,7 +12281,13 @@
               </div>
             </div>
             <div class="row">
-              <div class="col-6"></div>
+              <div class="col-6">
+                <span
+                  title="Click to only show GEO conferences"
+                  data-sub="GEO"
+                  class="badge badge-light conf-sub GEO-tag"
+                ></span>
+              </div>
               <div class="col-6">
                 <div class="calendar"></div>
               </div>
@@ -12081,7 +12295,7 @@
             <hr />
           </div>
 
-          <div id="pycon-sweden-2020" class="ConfItem">
+          <div id="pycon-sweden-2020" class="ConfItem PY-conf">
             <div class="row conf-row">
               <div class="col-6">
                 <span class="conf-title">
@@ -12137,7 +12351,13 @@
               </div>
             </div>
             <div class="row">
-              <div class="col-6"></div>
+              <div class="col-6">
+                <span
+                  title="Click to only show PY conferences"
+                  data-sub="PY"
+                  class="badge badge-light conf-sub PY-tag"
+                ></span>
+              </div>
               <div class="col-6">
                 <div class="calendar"></div>
               </div>
@@ -12205,7 +12425,7 @@
             <hr />
           </div>
 
-          <div id="pyhep-2020" class="ConfItem">
+          <div id="pyhep-2020" class="ConfItem SCIPY-conf">
             <div class="row conf-row">
               <div class="col-6">
                 <span class="conf-title">
@@ -12259,7 +12479,13 @@
               </div>
             </div>
             <div class="row">
-              <div class="col-6"></div>
+              <div class="col-6">
+                <span
+                  title="Click to only show SCIPY conferences"
+                  data-sub="SCIPY"
+                  class="badge badge-light conf-sub SCIPY-tag"
+                ></span>
+              </div>
               <div class="col-6">
                 <div class="calendar"></div>
               </div>
@@ -12267,7 +12493,7 @@
             <hr />
           </div>
 
-          <div id="flask-con-2020" class="ConfItem">
+          <div id="flask-con-2020" class="ConfItem WEB-conf">
             <div class="row conf-row">
               <div class="col-6">
                 <span class="conf-title">
@@ -12319,7 +12545,13 @@
               </div>
             </div>
             <div class="row">
-              <div class="col-6"></div>
+              <div class="col-6">
+                <span
+                  title="Click to only show WEB conferences"
+                  data-sub="WEB"
+                  class="badge badge-light conf-sub WEB-tag"
+                ></span>
+              </div>
               <div class="col-6">
                 <div class="calendar"></div>
               </div>
@@ -12327,7 +12559,7 @@
             <hr />
           </div>
 
-          <div id="pycon-japan-2020" class="ConfItem">
+          <div id="pycon-japan-2020" class="ConfItem PY-conf">
             <div class="row conf-row">
               <div class="col-6">
                 <span class="conf-title">
@@ -12383,7 +12615,13 @@
               </div>
             </div>
             <div class="row">
-              <div class="col-6"></div>
+              <div class="col-6">
+                <span
+                  title="Click to only show PY conferences"
+                  data-sub="PY"
+                  class="badge badge-light conf-sub PY-tag"
+                ></span>
+              </div>
               <div class="col-6">
                 <div class="calendar"></div>
               </div>
@@ -12391,7 +12629,7 @@
             <hr />
           </div>
 
-          <div id="europython-2020" class="ConfItem">
+          <div id="europython-2020" class="ConfItem PY-conf">
             <div class="row conf-row">
               <div class="col-6">
                 <span class="conf-title">
@@ -12447,7 +12685,13 @@
               </div>
             </div>
             <div class="row">
-              <div class="col-6"></div>
+              <div class="col-6">
+                <span
+                  title="Click to only show PY conferences"
+                  data-sub="PY"
+                  class="badge badge-light conf-sub PY-tag"
+                ></span>
+              </div>
               <div class="col-6">
                 <div class="calendar"></div>
               </div>
@@ -12455,7 +12699,7 @@
             <hr />
           </div>
 
-          <div id="python-web-conference-2020" class="ConfItem">
+          <div id="python-web-conference-2020" class="ConfItem WEB-conf">
             <div class="row conf-row">
               <div class="col-6">
                 <span class="conf-title">
@@ -12511,7 +12755,13 @@
               </div>
             </div>
             <div class="row">
-              <div class="col-6"></div>
+              <div class="col-6">
+                <span
+                  title="Click to only show WEB conferences"
+                  data-sub="WEB"
+                  class="badge badge-light conf-sub WEB-tag"
+                ></span>
+              </div>
               <div class="col-6">
                 <div class="calendar"></div>
               </div>
@@ -12519,7 +12769,7 @@
             <hr />
           </div>
 
-          <div id="pycon-odessa-2020" class="ConfItem">
+          <div id="pycon-odessa-2020" class="ConfItem PY-conf">
             <div class="row conf-row">
               <div class="col-6">
                 <span class="conf-title">
@@ -12579,7 +12829,13 @@
               </div>
             </div>
             <div class="row">
-              <div class="col-6"></div>
+              <div class="col-6">
+                <span
+                  title="Click to only show PY conferences"
+                  data-sub="PY"
+                  class="badge badge-light conf-sub PY-tag"
+                ></span>
+              </div>
               <div class="col-6">
                 <div class="calendar"></div>
               </div>
@@ -12587,7 +12843,7 @@
             <hr />
           </div>
 
-          <div id="scipy-us-2020" class="ConfItem">
+          <div id="scipy-us-2020" class="ConfItem SCIPY-conf">
             <div class="row conf-row">
               <div class="col-6">
                 <span class="conf-title">
@@ -12639,7 +12895,13 @@
               </div>
             </div>
             <div class="row">
-              <div class="col-6"></div>
+              <div class="col-6">
+                <span
+                  title="Click to only show SCIPY conferences"
+                  data-sub="SCIPY"
+                  class="badge badge-light conf-sub SCIPY-tag"
+                ></span>
+              </div>
               <div class="col-6">
                 <div class="calendar"></div>
               </div>
@@ -12647,7 +12909,7 @@
             <hr />
           </div>
 
-          <div id="python-fwdays-2019" class="ConfItem">
+          <div id="python-fwdays-2019" class="ConfItem PY-conf">
             <div class="row conf-row">
               <div class="col-6">
                 <span class="conf-title">
@@ -12722,7 +12984,13 @@
               </div>
             </div>
             <div class="row">
-              <div class="col-6"></div>
+              <div class="col-6">
+                <span
+                  title="Click to only show PY conferences"
+                  data-sub="PY"
+                  class="badge badge-light conf-sub PY-tag"
+                ></span>
+              </div>
               <div class="col-6">
                 <div class="calendar"></div>
               </div>
@@ -12730,7 +12998,7 @@
             <hr />
           </div>
 
-          <div id="afropython-conf-2019" class="ConfItem">
+          <div id="afropython-conf-2019" class="ConfItem PY-conf">
             <div class="row conf-row">
               <div class="col-6">
                 <span class="conf-title">
@@ -12803,7 +13071,13 @@
               </div>
             </div>
             <div class="row">
-              <div class="col-6"></div>
+              <div class="col-6">
+                <span
+                  title="Click to only show PY conferences"
+                  data-sub="PY"
+                  class="badge badge-light conf-sub PY-tag"
+                ></span>
+              </div>
               <div class="col-6">
                 <div class="calendar"></div>
               </div>
@@ -12811,7 +13085,7 @@
             <hr />
           </div>
 
-          <div id="pyday-mexico-2019" class="ConfItem">
+          <div id="pyday-mexico-2019" class="ConfItem PY-conf">
             <div class="row conf-row">
               <div class="col-6">
                 <span class="conf-title">
@@ -12884,7 +13158,13 @@
               </div>
             </div>
             <div class="row">
-              <div class="col-6"></div>
+              <div class="col-6">
+                <span
+                  title="Click to only show PY conferences"
+                  data-sub="PY"
+                  class="badge badge-light conf-sub PY-tag"
+                ></span>
+              </div>
               <div class="col-6">
                 <div class="calendar"></div>
               </div>
@@ -12892,7 +13172,7 @@
             <hr />
           </div>
 
-          <div id="pycon-sweden-2019" class="ConfItem">
+          <div id="pycon-sweden-2019" class="ConfItem PY-conf">
             <div class="row conf-row">
               <div class="col-6">
                 <span class="conf-title">
@@ -12966,7 +13246,13 @@
               </div>
             </div>
             <div class="row">
-              <div class="col-6"></div>
+              <div class="col-6">
+                <span
+                  title="Click to only show PY conferences"
+                  data-sub="PY"
+                  class="badge badge-light conf-sub PY-tag"
+                ></span>
+              </div>
               <div class="col-6">
                 <div class="calendar"></div>
               </div>
@@ -12974,7 +13260,7 @@
             <hr />
           </div>
 
-          <div id="pycon-canada-2019" class="ConfItem">
+          <div id="pycon-canada-2019" class="ConfItem PY-conf">
             <div class="row conf-row">
               <div class="col-6">
                 <span class="conf-title">
@@ -13047,7 +13333,13 @@
               </div>
             </div>
             <div class="row">
-              <div class="col-6"></div>
+              <div class="col-6">
+                <span
+                  title="Click to only show PY conferences"
+                  data-sub="PY"
+                  class="badge badge-light conf-sub PY-tag"
+                ></span>
+              </div>
               <div class="col-6">
                 <div class="calendar"></div>
               </div>
@@ -13055,7 +13347,7 @@
             <hr />
           </div>
 
-          <div id="north-bay-python-2019" class="ConfItem">
+          <div id="north-bay-python-2019" class="ConfItem PY-conf">
             <div class="row conf-row">
               <div class="col-6">
                 <span class="conf-title">
@@ -13114,7 +13406,13 @@
               </div>
             </div>
             <div class="row">
-              <div class="col-6"></div>
+              <div class="col-6">
+                <span
+                  title="Click to only show PY conferences"
+                  data-sub="PY"
+                  class="badge badge-light conf-sub PY-tag"
+                ></span>
+              </div>
               <div class="col-6">
                 <div class="calendar"></div>
               </div>
@@ -13122,7 +13420,7 @@
             <hr />
           </div>
 
-          <div id="python-web-conference-2019" class="ConfItem">
+          <div id="python-web-conference-2019" class="ConfItem WEB-conf">
             <div class="row conf-row">
               <div class="col-6">
                 <span class="conf-title">
@@ -13193,7 +13491,13 @@
               </div>
             </div>
             <div class="row">
-              <div class="col-6"></div>
+              <div class="col-6">
+                <span
+                  title="Click to only show WEB conferences"
+                  data-sub="WEB"
+                  class="badge badge-light conf-sub WEB-tag"
+                ></span>
+              </div>
               <div class="col-6">
                 <div class="calendar"></div>
               </div>
@@ -13201,7 +13505,7 @@
             <hr />
           </div>
 
-          <div id="pycon-balkan-2019" class="ConfItem">
+          <div id="pycon-balkan-2019" class="ConfItem PY-conf">
             <div class="row conf-row">
               <div class="col-6">
                 <span class="conf-title">
@@ -13274,7 +13578,13 @@
               </div>
             </div>
             <div class="row">
-              <div class="col-6"></div>
+              <div class="col-6">
+                <span
+                  title="Click to only show PY conferences"
+                  data-sub="PY"
+                  class="badge badge-light conf-sub PY-tag"
+                ></span>
+              </div>
               <div class="col-6">
                 <div class="calendar"></div>
               </div>
@@ -13282,7 +13592,7 @@
             <hr />
           </div>
 
-          <div id="kiwi-pycon-2019" class="ConfItem">
+          <div id="kiwi-pycon-2019" class="ConfItem PY-conf">
             <div class="row conf-row">
               <div class="col-6">
                 <span class="conf-title">
@@ -13340,7 +13650,13 @@
               </div>
             </div>
             <div class="row">
-              <div class="col-6"></div>
+              <div class="col-6">
+                <span
+                  title="Click to only show PY conferences"
+                  data-sub="PY"
+                  class="badge badge-light conf-sub PY-tag"
+                ></span>
+              </div>
               <div class="col-6">
                 <div class="calendar"></div>
               </div>
@@ -13348,7 +13664,10 @@
             <hr />
           </div>
 
-          <div id="pycon-germany-pydata-berlin-2019" class="ConfItem">
+          <div
+            id="pycon-germany-pydata-berlin-2019"
+            class="ConfItem PY-conf PYDATA-conf"
+          >
             <div class="row conf-row">
               <div class="col-6">
                 <span class="conf-title">
@@ -13421,7 +13740,19 @@
               </div>
             </div>
             <div class="row">
-              <div class="col-6"></div>
+              <div class="col-6">
+                <span
+                  title="Click to only show PY conferences"
+                  data-sub="PY"
+                  class="badge badge-light conf-sub PY-tag"
+                ></span>
+
+                <span
+                  title="Click to only show PYDATA conferences"
+                  data-sub="PYDATA"
+                  class="badge badge-light conf-sub PYDATA-tag"
+                ></span>
+              </div>
               <div class="col-6">
                 <div class="calendar"></div>
               </div>
@@ -13429,7 +13760,7 @@
             <hr />
           </div>
 
-          <div id="pycon-uk-2019" class="ConfItem">
+          <div id="pycon-uk-2019" class="ConfItem PY-conf">
             <div class="row conf-row">
               <div class="col-6">
                 <span class="conf-title">
@@ -13498,7 +13829,13 @@
               </div>
             </div>
             <div class="row">
-              <div class="col-6"></div>
+              <div class="col-6">
+                <span
+                  title="Click to only show PY conferences"
+                  data-sub="PY"
+                  class="badge badge-light conf-sub PY-tag"
+                ></span>
+              </div>
               <div class="col-6">
                 <div class="calendar"></div>
               </div>
@@ -13506,7 +13843,7 @@
             <hr />
           </div>
 
-          <div id="pycon-japan-2019" class="ConfItem">
+          <div id="pycon-japan-2019" class="ConfItem PY-conf">
             <div class="row conf-row">
               <div class="col-6">
                 <span class="conf-title">
@@ -13579,7 +13916,13 @@
               </div>
             </div>
             <div class="row">
-              <div class="col-6"></div>
+              <div class="col-6">
+                <span
+                  title="Click to only show PY conferences"
+                  data-sub="PY"
+                  class="badge badge-light conf-sub PY-tag"
+                ></span>
+              </div>
               <div class="col-6">
                 <div class="calendar"></div>
               </div>
@@ -13587,7 +13930,7 @@
             <hr />
           </div>
 
-          <div id="pycon-africa-2019" class="ConfItem">
+          <div id="pycon-africa-2019" class="ConfItem PY-conf">
             <div class="row conf-row">
               <div class="col-6">
                 <span class="conf-title">
@@ -13661,7 +14004,13 @@
               </div>
             </div>
             <div class="row">
-              <div class="col-6"></div>
+              <div class="col-6">
+                <span
+                  title="Click to only show PY conferences"
+                  data-sub="PY"
+                  class="badge badge-light conf-sub PY-tag"
+                ></span>
+              </div>
               <div class="col-6">
                 <div class="calendar"></div>
               </div>
@@ -13669,7 +14018,7 @@
             <hr />
           </div>
 
-          <div id="pycon-latin-america-2019" class="ConfItem">
+          <div id="pycon-latin-america-2019" class="ConfItem PY-conf">
             <div class="row conf-row">
               <div class="col-6">
                 <span class="conf-title">
@@ -13743,6 +14092,93 @@
               </div>
             </div>
             <div class="row">
+              <div class="col-6">
+                <span
+                  title="Click to only show PY conferences"
+                  data-sub="PY"
+                  class="badge badge-light conf-sub PY-tag"
+                ></span>
+              </div>
+              <div class="col-6">
+                <div class="calendar"></div>
+              </div>
+            </div>
+            <hr />
+          </div>
+
+          <div id="pycolorado-2019" class="ConfItem">
+            <div class="row conf-row">
+              <div class="col-6">
+                <span class="conf-title">
+                  <a
+                    title="Deadline Details"
+                    href="/conference/pycolorado-2019/"
+                    >PyColorado 2019</a
+                  >
+                </span>
+                <span class="conf-title-small">
+                  <a
+                    title="Deadline Details"
+                    href="/conference/pycolorado-2019/"
+                    >PyColorado '19</a
+                  >
+                </span>
+                <span class="conf-title-icon">
+                  <a
+                    title="Conference Website"
+                    href="https://pycolorado.org/"
+                    target="_blank"
+                    ><img
+                      src="/static/img/203-earth.svg"
+                      class="badge-link"
+                      alt="Link to Conference Website"
+                      width="16"
+                      height="16"
+                  /></a>
+                  &ZeroWidthSpace;
+                </span>
+
+                <span class="conf-title-icon">
+                  <a
+                    title="Call for Participation"
+                    href="https://www.papercall.io/pycolorado"
+                    target="_blank"
+                    ><img
+                      src="/static/img/035-file-text.svg"
+                      class="badge-link"
+                      alt="Link to Call for Participation"
+                      width="16"
+                      height="16"
+                  /></a>
+                  &ZeroWidthSpace;
+                </span>
+              </div>
+              <div class="col-6">
+                <span class="timer"></span>
+                <span class="timer-small"></span>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12 col-sm-6">
+                <div class="meta">
+                  <span class="conf-date">September 7 - 8, 2019.</span>
+                  <span class="conf-place">
+                    <a href="http://maps.google.com/?q=Denver, Colorado, USA"
+                      >Denver, Colorado, USA</a
+                    >
+                  </span>
+                </div>
+              </div>
+              <div class="col-12 col-sm-6">
+                <div class="deadline">
+                  <div>
+                    Deadline:
+                    <span class="deadline-time">Friday, 17 May 2019</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
               <div class="col-6"></div>
               <div class="col-6">
                 <div class="calendar"></div>
@@ -13751,17 +14187,21 @@
             <hr />
           </div>
 
-          <div id="pygotham-2019" class="ConfItem">
+          <div id="pygotham-tv-2019" class="ConfItem">
             <div class="row conf-row">
               <div class="col-6">
                 <span class="conf-title">
-                  <a title="Deadline Details" href="/conference/pygotham-2019/"
-                    >PyGotham 2019</a
+                  <a
+                    title="Deadline Details"
+                    href="/conference/pygotham-tv-2019/"
+                    >PyGotham TV 2019</a
                   >
                 </span>
                 <span class="conf-title-small">
-                  <a title="Deadline Details" href="/conference/pygotham-2019/"
-                    >PyGotham '19</a
+                  <a
+                    title="Deadline Details"
+                    href="/conference/pygotham-tv-2019/"
+                    >PyGotham TV '19</a
                   >
                 </span>
                 <span class="conf-title-icon">
@@ -13983,7 +14423,7 @@
             <hr />
           </div>
 
-          <div id="europython-2021" class="ConfItem">
+          <div id="europython-2021" class="ConfItem PY-conf">
             <div class="row conf-row">
               <div class="col-6">
                 <span class="conf-title">
@@ -14039,7 +14479,13 @@
               </div>
             </div>
             <div class="row">
-              <div class="col-6"></div>
+              <div class="col-6">
+                <span
+                  title="Click to only show PY conferences"
+                  data-sub="PY"
+                  class="badge badge-light conf-sub PY-tag"
+                ></span>
+              </div>
               <div class="col-6">
                 <div class="calendar"></div>
               </div>
@@ -14047,7 +14493,7 @@
             <hr />
           </div>
 
-          <div id="pycon-spain-2019" class="ConfItem">
+          <div id="pycon-spain-2019" class="ConfItem PY-conf">
             <div class="row conf-row">
               <div class="col-6">
                 <span class="conf-title">
@@ -14120,7 +14566,13 @@
               </div>
             </div>
             <div class="row">
-              <div class="col-6"></div>
+              <div class="col-6">
+                <span
+                  title="Click to only show PY conferences"
+                  data-sub="PY"
+                  class="badge badge-light conf-sub PY-tag"
+                ></span>
+              </div>
               <div class="col-6">
                 <div class="calendar"></div>
               </div>
@@ -14128,7 +14580,7 @@
             <hr />
           </div>
 
-          <div id="python-nordeste-2019" class="ConfItem">
+          <div id="python-nordeste-2019" class="ConfItem PY-conf">
             <div class="row conf-row">
               <div class="col-6">
                 <span class="conf-title">
@@ -14201,7 +14653,13 @@
               </div>
             </div>
             <div class="row">
-              <div class="col-6"></div>
+              <div class="col-6">
+                <span
+                  title="Click to only show PY conferences"
+                  data-sub="PY"
+                  class="badge badge-light conf-sub PY-tag"
+                ></span>
+              </div>
               <div class="col-6">
                 <div class="calendar"></div>
               </div>
@@ -14209,7 +14667,7 @@
             <hr />
           </div>
 
-          <div id="pycon-australia-2019" class="ConfItem">
+          <div id="pycon-australia-2019" class="ConfItem PY-conf">
             <div class="row conf-row">
               <div class="col-6">
                 <span class="conf-title">
@@ -14268,7 +14726,13 @@
               </div>
             </div>
             <div class="row">
-              <div class="col-6"></div>
+              <div class="col-6">
+                <span
+                  title="Click to only show PY conferences"
+                  data-sub="PY"
+                  class="badge badge-light conf-sub PY-tag"
+                ></span>
+              </div>
               <div class="col-6">
                 <div class="calendar"></div>
               </div>
@@ -14359,7 +14823,7 @@
             <hr />
           </div>
 
-          <div id="pydata-london-2019" class="ConfItem">
+          <div id="pydata-london-2019" class="ConfItem PYDATA-conf">
             <div class="row conf-row">
               <div class="col-6">
                 <span class="conf-title">
@@ -14417,7 +14881,13 @@
               </div>
             </div>
             <div class="row">
-              <div class="col-6"></div>
+              <div class="col-6">
+                <span
+                  title="Click to only show PYDATA conferences"
+                  data-sub="PYDATA"
+                  class="badge badge-light conf-sub PYDATA-tag"
+                ></span>
+              </div>
               <div class="col-6">
                 <div class="calendar"></div>
               </div>
@@ -14425,7 +14895,7 @@
             <hr />
           </div>
 
-          <div id="scipy-us-2019" class="ConfItem">
+          <div id="scipy-us-2019" class="ConfItem SCIPY-conf">
             <div class="row conf-row">
               <div class="col-6">
                 <span class="conf-title">
@@ -14479,7 +14949,13 @@
               </div>
             </div>
             <div class="row">
-              <div class="col-6"></div>
+              <div class="col-6">
+                <span
+                  title="Click to only show SCIPY conferences"
+                  data-sub="SCIPY"
+                  class="badge badge-light conf-sub SCIPY-tag"
+                ></span>
+              </div>
               <div class="col-6">
                 <div class="calendar"></div>
               </div>
@@ -14487,7 +14963,7 @@
             <hr />
           </div>
 
-          <div id="pycon-italia-2019" class="ConfItem">
+          <div id="pycon-italia-2019" class="ConfItem PY-conf">
             <div class="row conf-row">
               <div class="col-6">
                 <span class="conf-title">
@@ -14560,7 +15036,13 @@
               </div>
             </div>
             <div class="row">
-              <div class="col-6"></div>
+              <div class="col-6">
+                <span
+                  title="Click to only show PY conferences"
+                  data-sub="PY"
+                  class="badge badge-light conf-sub PY-tag"
+                ></span>
+              </div>
               <div class="col-6">
                 <div class="calendar"></div>
               </div>
@@ -14568,7 +15050,7 @@
             <hr />
           </div>
 
-          <div id="pycon-us-2019" class="ConfItem">
+          <div id="pycon-us-2019" class="ConfItem PY-conf">
             <div class="row conf-row">
               <div class="col-6">
                 <span class="conf-title">
@@ -14637,7 +15119,13 @@
               </div>
             </div>
             <div class="row">
-              <div class="col-6"></div>
+              <div class="col-6">
+                <span
+                  title="Click to only show PY conferences"
+                  data-sub="PY"
+                  class="badge badge-light conf-sub PY-tag"
+                ></span>
+              </div>
               <div class="col-6">
                 <div class="calendar"></div>
               </div>
@@ -14645,7 +15133,7 @@
             <hr />
           </div>
 
-          <div id="pycon-belarus-2019" class="ConfItem">
+          <div id="pycon-belarus-2019" class="ConfItem PY-conf">
             <div class="row conf-row">
               <div class="col-6">
                 <span class="conf-title">
@@ -14718,7 +15206,13 @@
               </div>
             </div>
             <div class="row">
-              <div class="col-6"></div>
+              <div class="col-6">
+                <span
+                  title="Click to only show PY conferences"
+                  data-sub="PY"
+                  class="badge badge-light conf-sub PY-tag"
+                ></span>
+              </div>
               <div class="col-6">
                 <div class="calendar"></div>
               </div>
@@ -14973,7 +15467,7 @@
             <hr />
           </div>
 
-          <div id="pycon-colombia-2019" class="ConfItem">
+          <div id="pycon-colombia-2019" class="ConfItem PY-conf">
             <div class="row conf-row">
               <div class="col-6">
                 <span class="conf-title">
@@ -15049,7 +15543,13 @@
               </div>
             </div>
             <div class="row">
-              <div class="col-6"></div>
+              <div class="col-6">
+                <span
+                  title="Click to only show PY conferences"
+                  data-sub="PY"
+                  class="badge badge-light conf-sub PY-tag"
+                ></span>
+              </div>
               <div class="col-6">
                 <div class="calendar"></div>
               </div>
@@ -15057,7 +15557,95 @@
             <hr />
           </div>
 
-          <div id="python-nordeste-2018" class="ConfItem">
+          <div id="flask-conf-brasil-2019" class="ConfItem WEB-conf">
+            <div class="row conf-row">
+              <div class="col-6">
+                <span class="conf-title">
+                  <a
+                    title="Deadline Details"
+                    href="/conference/flask-conf-brasil-2019/"
+                    >Flask Conf Brasil 2019</a
+                  >
+                </span>
+                <span class="conf-title-small">
+                  <a
+                    title="Deadline Details"
+                    href="/conference/flask-conf-brasil-2019/"
+                    >Flask Conf Brasil '19</a
+                  >
+                </span>
+                <span class="conf-title-icon">
+                  <a
+                    title="Conference Website"
+                    href="https://2019.flask.python.org.br/"
+                    target="_blank"
+                    ><img
+                      src="/static/img/203-earth.svg"
+                      class="badge-link"
+                      alt="Link to Conference Website"
+                      width="16"
+                      height="16"
+                  /></a>
+                  &ZeroWidthSpace;
+                </span>
+
+                <span class="conf-title-icon">
+                  <a
+                    title="Call for Participation"
+                    href="https://speakerfight.com/events/flaskconf-2018/"
+                    target="_blank"
+                    ><img
+                      src="/static/img/035-file-text.svg"
+                      class="badge-link"
+                      alt="Link to Call for Participation"
+                      width="16"
+                      height="16"
+                  /></a>
+                  &ZeroWidthSpace;
+                </span>
+              </div>
+              <div class="col-6">
+                <span class="timer"></span>
+                <span class="timer-small"></span>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12 col-sm-6">
+                <div class="meta">
+                  <span class="conf-date">September 6 - 8, 2019.</span>
+                  <span class="conf-place">
+                    <a
+                      href="http://maps.google.com/?q=Florianópolis, Santa Catarina, Brazil"
+                      >Florianópolis, Santa Catarina, Brazil</a
+                    >
+                  </span>
+                </div>
+              </div>
+              <div class="col-12 col-sm-6">
+                <div class="deadline">
+                  <div>
+                    Deadline:
+                    <span class="deadline-time">Wednesday, 1 August 2018</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-6">
+                <span
+                  title="Click to only show WEB conferences"
+                  data-sub="WEB"
+                  class="badge badge-light conf-sub WEB-tag"
+                ></span>
+              </div>
+              <div class="col-6">
+                <div class="calendar"></div>
+              </div>
+            </div>
+            <hr />
+          </div>
+
+          <div id="python-nordeste-2018" class="ConfItem PY-conf">
             <div class="row conf-row">
               <div class="col-6">
                 <span class="conf-title">
@@ -15145,7 +15733,13 @@
               </div>
             </div>
             <div class="row">
-              <div class="col-6"></div>
+              <div class="col-6">
+                <span
+                  title="Click to only show PY conferences"
+                  data-sub="PY"
+                  class="badge badge-light conf-sub PY-tag"
+                ></span>
+              </div>
               <div class="col-6">
                 <div class="calendar"></div>
               </div>
@@ -15153,7 +15747,7 @@
             <hr />
           </div>
 
-          <div id="python-nordeste-2017" class="ConfItem">
+          <div id="python-nordeste-2017" class="ConfItem PY-conf">
             <div class="row conf-row">
               <div class="col-6">
                 <span class="conf-title">
@@ -15241,7 +15835,13 @@
               </div>
             </div>
             <div class="row">
-              <div class="col-6"></div>
+              <div class="col-6">
+                <span
+                  title="Click to only show PY conferences"
+                  data-sub="PY"
+                  class="badge badge-light conf-sub PY-tag"
+                ></span>
+              </div>
               <div class="col-6">
                 <div class="calendar"></div>
               </div>
@@ -15249,7 +15849,7 @@
             <hr />
           </div>
 
-          <div id="pydata-dc-2016" class="ConfItem">
+          <div id="pydata-dc-2016" class="ConfItem PYDATA-conf">
             <div class="row conf-row">
               <div class="col-6">
                 <span class="conf-title">
@@ -15303,7 +15903,13 @@
               </div>
             </div>
             <div class="row">
-              <div class="col-6"></div>
+              <div class="col-6">
+                <span
+                  title="Click to only show PYDATA conferences"
+                  data-sub="PYDATA"
+                  class="badge badge-light conf-sub PYDATA-tag"
+                ></span>
+              </div>
               <div class="col-6">
                 <div class="calendar"></div>
               </div>
@@ -15311,7 +15917,7 @@
             <hr />
           </div>
 
-          <div id="python-nordeste-2016" class="ConfItem">
+          <div id="python-nordeste-2016" class="ConfItem PY-conf">
             <div class="row conf-row">
               <div class="col-6">
                 <span class="conf-title">
@@ -15399,7 +16005,13 @@
               </div>
             </div>
             <div class="row">
-              <div class="col-6"></div>
+              <div class="col-6">
+                <span
+                  title="Click to only show PY conferences"
+                  data-sub="PY"
+                  class="badge badge-light conf-sub PY-tag"
+                ></span>
+              </div>
               <div class="col-6">
                 <div class="calendar"></div>
               </div>
@@ -15407,7 +16019,7 @@
             <hr />
           </div>
 
-          <div id="pydata-london-2015" class="ConfItem">
+          <div id="pydata-london-2015" class="ConfItem PYDATA-conf">
             <div class="row conf-row">
               <div class="col-6">
                 <span class="conf-title">
@@ -15465,7 +16077,13 @@
               </div>
             </div>
             <div class="row">
-              <div class="col-6"></div>
+              <div class="col-6">
+                <span
+                  title="Click to only show PYDATA conferences"
+                  data-sub="PYDATA"
+                  class="badge badge-light conf-sub PYDATA-tag"
+                ></span>
+              </div>
               <div class="col-6">
                 <div class="calendar"></div>
               </div>
@@ -15473,7 +16091,79 @@
             <hr />
           </div>
 
-          <div id="python-nordeste-2015" class="ConfItem">
+          <div id="scipy-latin-america-2015" class="ConfItem SCIPY-conf">
+            <div class="row conf-row">
+              <div class="col-6">
+                <span class="conf-title">
+                  <a
+                    title="Deadline Details"
+                    href="/conference/scipy-latin-america-2015/"
+                    >SciPy Latin America 2015</a
+                  >
+                </span>
+                <span class="conf-title-small">
+                  <a
+                    title="Deadline Details"
+                    href="/conference/scipy-latin-america-2015/"
+                    >SciPy Latin America '15</a
+                  >
+                </span>
+                <span class="conf-title-icon">
+                  <a
+                    title="Conference Website"
+                    href="https://web.archive.org/web/20150508131405/http://conf.scipyla.org/"
+                    target="_blank"
+                    ><img
+                      src="/static/img/203-earth.svg"
+                      class="badge-link"
+                      alt="Link to Conference Website"
+                      width="16"
+                      height="16"
+                  /></a>
+                  &ZeroWidthSpace;
+                </span>
+              </div>
+              <div class="col-6">
+                <span class="timer"></span>
+                <span class="timer-small"></span>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12 col-sm-6">
+                <div class="meta">
+                  <span class="conf-date">May 20 - 22, 2015.</span>
+                  <span class="conf-place">
+                    <a href="http://maps.google.com/?q=Posadas, Argentina"
+                      >Posadas, Argentina</a
+                    >
+                  </span>
+                </div>
+              </div>
+              <div class="col-12 col-sm-6">
+                <div class="deadline">
+                  <div>
+                    Deadline:
+                    <span class="deadline-time">Monday, 13 April 2015</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-6">
+                <span
+                  title="Click to only show SCIPY conferences"
+                  data-sub="SCIPY"
+                  class="badge badge-light conf-sub SCIPY-tag"
+                ></span>
+              </div>
+              <div class="col-6">
+                <div class="calendar"></div>
+              </div>
+            </div>
+            <hr />
+          </div>
+
+          <div id="python-nordeste-2015" class="ConfItem PY-conf">
             <div class="row conf-row">
               <div class="col-6">
                 <span class="conf-title">
@@ -15561,7 +16251,13 @@
               </div>
             </div>
             <div class="row">
-              <div class="col-6"></div>
+              <div class="col-6">
+                <span
+                  title="Click to only show PY conferences"
+                  data-sub="PY"
+                  class="badge badge-light conf-sub PY-tag"
+                ></span>
+              </div>
               <div class="col-6">
                 <div class="calendar"></div>
               </div>
@@ -15569,7 +16265,7 @@
             <hr />
           </div>
 
-          <div id="python-nordeste-2014" class="ConfItem">
+          <div id="python-nordeste-2014" class="ConfItem PY-conf">
             <div class="row conf-row">
               <div class="col-6">
                 <span class="conf-title">
@@ -15642,7 +16338,13 @@
               </div>
             </div>
             <div class="row">
-              <div class="col-6"></div>
+              <div class="col-6">
+                <span
+                  title="Click to only show PY conferences"
+                  data-sub="PY"
+                  class="badge badge-light conf-sub PY-tag"
+                ></span>
+              </div>
               <div class="col-6">
                 <div class="calendar"></div>
               </div>
@@ -15650,7 +16352,7 @@
             <hr />
           </div>
 
-          <div id="pydata-london-2014" class="ConfItem">
+          <div id="pydata-london-2014" class="ConfItem PYDATA-conf">
             <div class="row conf-row">
               <div class="col-6">
                 <span class="conf-title">
@@ -15708,7 +16410,13 @@
               </div>
             </div>
             <div class="row">
-              <div class="col-6"></div>
+              <div class="col-6">
+                <span
+                  title="Click to only show PYDATA conferences"
+                  data-sub="PYDATA"
+                  class="badge badge-light conf-sub PYDATA-tag"
+                ></span>
+              </div>
               <div class="col-6">
                 <div class="calendar"></div>
               </div>
@@ -15716,7 +16424,7 @@
             <hr />
           </div>
 
-          <div id="python-nordeste-2013" class="ConfItem">
+          <div id="python-nordeste-2013" class="ConfItem PY-conf">
             <div class="row conf-row">
               <div class="col-6">
                 <span class="conf-title">
@@ -15774,7 +16482,13 @@
               </div>
             </div>
             <div class="row">
-              <div class="col-6"></div>
+              <div class="col-6">
+                <span
+                  title="Click to only show PY conferences"
+                  data-sub="PY"
+                  class="badge badge-light conf-sub PY-tag"
+                ></span>
+              </div>
               <div class="col-6">
                 <div class="calendar"></div>
               </div>
@@ -15844,6 +16558,8 @@
           { name: "Scientific Python", sub: "SCIPY", color: "#70163C" },
           { name: "Python for Data", sub: "PYDATA", color: "#849324" },
           { name: "Python for Web", sub: "WEB", color: "#0D0A0B" },
+          { name: "Python for Business", sub: "BIZ", color: "#A8B9CC" },
+          { name: "Python for Earth", sub: "GEO", color: "#310c0c" },
         ];
         var sub2name = {};
         var name2sub = {};
@@ -16200,6 +16916,10 @@
           cfpDate.setZone("system").toLocaleString(DateTime.DATE_HUGE)
         );
 
+        $("#django-day-copenhagen-2023 .WEB-tag").html(
+          sub2name["WEB"].toLocaleLowerCase()
+        );
+
         // Use specified timezone for deadlines if available else use AoE timezone
 
         var cfpDate = DateTime.fromSQL("2023-08-31 23:59:59", {
@@ -16521,6 +17241,10 @@
         // deadline in local timezone
         $("#pycon-uk-2023 .deadline-time").html(
           cfpDate.setZone("system").toLocaleString(DateTime.DATE_HUGE)
+        );
+
+        $("#python-nordeste-2023 .PY-tag").html(
+          sub2name["PY"].toLocaleLowerCase()
         );
 
         // Use specified timezone for deadlines if available else use AoE timezone
@@ -17559,7 +18283,9 @@
           cfpDate.setZone("system").toLocaleString(DateTime.DATE_HUGE)
         );
 
-        $("#jupytercon-2023 .PY-tag").html(sub2name["PY"].toLocaleLowerCase());
+        $("#jupytercon-2023 .PYDATA-tag").html(
+          sub2name["PYDATA"].toLocaleLowerCase()
+        );
 
         // Use specified timezone for deadlines if available else use AoE timezone
 
@@ -17582,7 +18308,7 @@
           cfpDate.setZone("system").toLocaleString(DateTime.DATE_HUGE)
         );
 
-        $("#geopython-2023 .PY-tag").html(sub2name["PY"].toLocaleLowerCase());
+        $("#geopython-2023 .GEO-tag").html(sub2name["GEO"].toLocaleLowerCase());
 
         // Use specified timezone for deadlines if available else use AoE timezone
 
@@ -17649,6 +18375,10 @@
         // deadline in local timezone
         $("#pycon-us-2023 .deadline-time").html(
           cfpDate.setZone("system").toLocaleString(DateTime.DATE_HUGE)
+        );
+
+        $("#xtreme-python-2022 .PY-tag").html(
+          sub2name["PY"].toLocaleLowerCase()
         );
 
         // Use specified timezone for deadlines if available else use AoE timezone
@@ -17824,6 +18554,10 @@
           cfpDate.setZone("system").toLocaleString(DateTime.DATE_HUGE)
         );
 
+        $("#scipy-latin-america-2022 .SCIPY-tag").html(
+          sub2name["SCIPY"].toLocaleLowerCase()
+        );
+
         // Use specified timezone for deadlines if available else use AoE timezone
 
         var cfpDate = DateTime.fromSQL("2022-08-31 23:59:00", {
@@ -17924,6 +18658,8 @@
           cfpDate.setZone("system").toLocaleString(DateTime.DATE_HUGE)
         );
 
+        $("#pyhep-2022 .SCIPY-tag").html(sub2name["SCIPY"].toLocaleLowerCase());
+
         // Use specified timezone for deadlines if available else use AoE timezone
 
         var cfpDate = DateTime.fromSQL("2022-08-17 23:59:00", {
@@ -18022,8 +18758,8 @@
           cfpDate.setZone("system").toLocaleString(DateTime.DATE_HUGE)
         );
 
-        $("#python-at-scale-2022 .PYDATA-tag").html(
-          sub2name["PYDATA"].toLocaleLowerCase()
+        $("#python-at-scale-2022 .PY-tag").html(
+          sub2name["PY"].toLocaleLowerCase()
         );
 
         // Use specified timezone for deadlines if available else use AoE timezone
@@ -18332,6 +19068,10 @@
           cfpDate.setZone("system").toLocaleString(DateTime.DATE_HUGE)
         );
 
+        $("#python-nordeste-2022 .PY-tag").html(
+          sub2name["PY"].toLocaleLowerCase()
+        );
+
         // Use specified timezone for deadlines if available else use AoE timezone
 
         var cfpDate = DateTime.fromSQL("2022-06-04 23:59:00", {
@@ -18424,6 +19164,10 @@
         // deadline in local timezone
         $("#pyohio-2022 .deadline-time").html(
           cfpDate.setZone("system").toLocaleString(DateTime.DATE_HUGE)
+        );
+
+        $("#pycon-russia-2022 .PY-tag").html(
+          sub2name["PY"].toLocaleLowerCase()
         );
 
         // Use specified timezone for deadlines if available else use AoE timezone
@@ -18524,6 +19268,10 @@
         // deadline in local timezone
         $("#pycon-israel-2022 .deadline-time").html(
           cfpDate.setZone("system").toLocaleString(DateTime.DATE_HUGE)
+        );
+
+        $("#pydata-london-2022 .PYDATA-tag").html(
+          sub2name["PYDATA"].toLocaleLowerCase()
         );
 
         // Use specified timezone for deadlines if available else use AoE timezone
@@ -18645,6 +19393,10 @@
           cfpDate.setZone("system").toLocaleString(DateTime.DATE_HUGE)
         );
 
+        $("#pycamp-españa-2022 .PY-tag").html(
+          sub2name["PY"].toLocaleLowerCase()
+        );
+
         // Use specified timezone for deadlines if available else use AoE timezone
 
         var cfpDate = DateTime.fromSQL("2022-03-15 23:59:00", {
@@ -18664,6 +19416,10 @@
         // deadline in local timezone
         $("#pycamp-españa-2022 .deadline-time").html(
           cfpDate.setZone("system").toLocaleString(DateTime.DATE_HUGE)
+        );
+
+        $("#django-day-copenhagen-2022 .WEB-tag").html(
+          sub2name["WEB"].toLocaleLowerCase()
         );
 
         // Use specified timezone for deadlines if available else use AoE timezone
@@ -18689,7 +19445,7 @@
           cfpDate.setZone("system").toLocaleString(DateTime.DATE_HUGE)
         );
 
-        $("#geopython-2022 .PY-tag").html(sub2name["PY"].toLocaleLowerCase());
+        $("#geopython-2022 .GEO-tag").html(sub2name["GEO"].toLocaleLowerCase());
 
         // Use specified timezone for deadlines if available else use AoE timezone
 
@@ -18737,6 +19493,10 @@
         // deadline in local timezone
         $("#scipy-us-2022 .deadline-time").html(
           cfpDate.setZone("system").toLocaleString(DateTime.DATE_HUGE)
+        );
+
+        $("#pycamp-leipzig-2022 .PY-tag").html(
+          sub2name["PY"].toLocaleLowerCase()
         );
 
         // Use specified timezone for deadlines if available else use AoE timezone
@@ -18862,6 +19622,10 @@
           cfpDate.setZone("system").toLocaleString(DateTime.DATE_HUGE)
         );
 
+        $("#pycon-sri-lanka-2022 .PY-tag").html(
+          sub2name["PY"].toLocaleLowerCase()
+        );
+
         // Use specified timezone for deadlines if available else use AoE timezone
 
         var cfpDate = DateTime.fromSQL("2021-12-31 23:59:00", {
@@ -18952,6 +19716,10 @@
           cfpDate.setZone("system").toLocaleString(DateTime.DATE_HUGE)
         );
 
+        $("#pycon-kyushu-kumamoto-2022 .PY-tag").html(
+          sub2name["PY"].toLocaleLowerCase()
+        );
+
         // Use specified timezone for deadlines if available else use AoE timezone
 
         var cfpDate = DateTime.fromSQL("2021-11-21 14:59:00", { zone: "UTC" });
@@ -18969,6 +19737,10 @@
         // deadline in local timezone
         $("#pycon-kyushu-kumamoto-2022 .deadline-time").html(
           cfpDate.setZone("system").toLocaleString(DateTime.DATE_HUGE)
+        );
+
+        $("#pycon-tanzania-2021 .PY-tag").html(
+          sub2name["PY"].toLocaleLowerCase()
         );
 
         // Use specified timezone for deadlines if available else use AoE timezone
@@ -19013,6 +19785,8 @@
           cfpDate.setZone("system").toLocaleString(DateTime.DATE_HUGE)
         );
 
+        $("#flask-con-2021 .WEB-tag").html(sub2name["WEB"].toLocaleLowerCase());
+
         // Use specified timezone for deadlines if available else use AoE timezone
 
         var cfpDate = DateTime.fromSQL("2021-11-04 00:00:00", { zone: "GMT" });
@@ -19030,6 +19804,10 @@
         // deadline in local timezone
         $("#flask-con-2021 .deadline-time").html(
           cfpDate.setZone("system").toLocaleString(DateTime.DATE_HUGE)
+        );
+
+        $("#xtreme-python-2021 .PY-tag").html(
+          sub2name["PY"].toLocaleLowerCase()
         );
 
         // Use specified timezone for deadlines if available else use AoE timezone
@@ -19078,6 +19856,10 @@
           cfpDate.setZone("system").toLocaleString(DateTime.DATE_HUGE)
         );
 
+        $("#pycon-indonesia-2021 .PY-tag").html(
+          sub2name["PY"].toLocaleLowerCase()
+        );
+
         // Use specified timezone for deadlines if available else use AoE timezone
 
         var cfpDate = DateTime.fromSQL("2021-10-31 23:59:00", {
@@ -19099,9 +19881,7 @@
           cfpDate.setZone("system").toLocaleString(DateTime.DATE_HUGE)
         );
 
-        $("#pycascades-remote-2022 .PY-tag").html(
-          sub2name["PY"].toLocaleLowerCase()
-        );
+        $("#pycascades-2022 .PY-tag").html(sub2name["PY"].toLocaleLowerCase());
 
         // Use specified timezone for deadlines if available else use AoE timezone
 
@@ -19115,13 +19895,17 @@
           var cfpDate = DateTime.fromSQL("2021-10-24 23:59:59");
           var confDate = DateTime.fromSQL("2022-02-05");
           console.log(
-            "Invalid timezone in pycascades-remote-2022. Using system timezone instead."
+            "Invalid timezone in pycascades-2022. Using system timezone instead."
           );
         }
 
         // deadline in local timezone
-        $("#pycascades-remote-2022 .deadline-time").html(
+        $("#pycascades-2022 .deadline-time").html(
           cfpDate.setZone("system").toLocaleString(DateTime.DATE_HUGE)
+        );
+
+        $("#pyjamas-conf-2021 .PY-tag").html(
+          sub2name["PY"].toLocaleLowerCase()
         );
 
         // Use specified timezone for deadlines if available else use AoE timezone
@@ -19145,6 +19929,8 @@
           cfpDate.setZone("system").toLocaleString(DateTime.DATE_HUGE)
         );
 
+        $("#pycon-apac-2021 .PY-tag").html(sub2name["PY"].toLocaleLowerCase());
+
         // Use specified timezone for deadlines if available else use AoE timezone
 
         var cfpDate = DateTime.fromSQL("2021-08-21 23:30:00", { zone: "UTC" });
@@ -19164,6 +19950,10 @@
           cfpDate.setZone("system").toLocaleString(DateTime.DATE_HUGE)
         );
 
+        $("#pycon-odessa-2021 .PY-tag").html(
+          sub2name["PY"].toLocaleLowerCase()
+        );
+
         // Use specified timezone for deadlines if available else use AoE timezone
 
         var cfpDate = DateTime.fromSQL("2021-08-20 00:00:00", { zone: "UTC" });
@@ -19181,6 +19971,10 @@
         // deadline in local timezone
         $("#pycon-odessa-2021 .deadline-time").html(
           cfpDate.setZone("system").toLocaleString(DateTime.DATE_HUGE)
+        );
+
+        $("#pycon-south-africa-2021 .PY-tag").html(
+          sub2name["PY"].toLocaleLowerCase()
         );
 
         // Use specified timezone for deadlines if available else use AoE timezone
@@ -19204,6 +19998,10 @@
           cfpDate.setZone("system").toLocaleString(DateTime.DATE_HUGE)
         );
 
+        $("#pydata-global-2021 .PYDATA-tag").html(
+          sub2name["PYDATA"].toLocaleLowerCase()
+        );
+
         // Use specified timezone for deadlines if available else use AoE timezone
 
         var cfpDate = DateTime.fromSQL("2021-08-15 23:59:00", {
@@ -19225,6 +20023,8 @@
           cfpDate.setZone("system").toLocaleString(DateTime.DATE_HUGE)
         );
 
+        $("#pycon-japan-2021 .PY-tag").html(sub2name["PY"].toLocaleLowerCase());
+
         // Use specified timezone for deadlines if available else use AoE timezone
 
         var cfpDate = DateTime.fromSQL("2021-07-10 23:59:00", {
@@ -19245,6 +20045,8 @@
         $("#pycon-japan-2021 .deadline-time").html(
           cfpDate.setZone("system").toLocaleString(DateTime.DATE_HUGE)
         );
+
+        $("#pycon-india-2021 .PY-tag").html(sub2name["PY"].toLocaleLowerCase());
 
         // Use specified timezone for deadlines if available else use AoE timezone
 
@@ -19288,6 +20090,10 @@
           cfpDate.setZone("system").toLocaleString(DateTime.DATE_HUGE)
         );
 
+        $("#djangocon-europe-2021 .WEB-tag").html(
+          sub2name["WEB"].toLocaleLowerCase()
+        );
+
         // Use specified timezone for deadlines if available else use AoE timezone
 
         var cfpDate = DateTime.fromSQL("2021-04-01 23:59:00", {
@@ -19307,6 +20113,10 @@
         // deadline in local timezone
         $("#djangocon-europe-2021 .deadline-time").html(
           cfpDate.setZone("system").toLocaleString(DateTime.DATE_HUGE)
+        );
+
+        $("#python-nordeste-2021 .PY-tag").html(
+          sub2name["PY"].toLocaleLowerCase()
         );
 
         // Use specified timezone for deadlines if available else use AoE timezone
@@ -19332,6 +20142,10 @@
           cfpDate.setZone("system").toLocaleString(DateTime.DATE_HUGE)
         );
 
+        $("#scipy-us-2021 .SCIPY-tag").html(
+          sub2name["SCIPY"].toLocaleLowerCase()
+        );
+
         // Use specified timezone for deadlines if available else use AoE timezone
 
         var cfpDate = DateTime.fromSQL("2021-02-22 23:59:00", {
@@ -19355,6 +20169,8 @@
           cfpDate.setZone("system").toLocaleString(DateTime.DATE_HUGE)
         );
 
+        $("#pycon-us-2021 .PY-tag").html(sub2name["PY"].toLocaleLowerCase());
+
         // Use specified timezone for deadlines if available else use AoE timezone
 
         var cfpDate = DateTime.fromSQL("2021-02-12 23:59:00", {
@@ -19376,6 +20192,10 @@
           cfpDate.setZone("system").toLocaleString(DateTime.DATE_HUGE)
         );
 
+        $("#python-web-conference-2021 .WEB-tag").html(
+          sub2name["WEB"].toLocaleLowerCase()
+        );
+
         // Use specified timezone for deadlines if available else use AoE timezone
 
         var cfpDate = DateTime.fromSQL("2021-01-29 15:03:00", { zone: "UTC" });
@@ -19394,6 +20214,8 @@
         $("#python-web-conference-2021 .deadline-time").html(
           cfpDate.setZone("system").toLocaleString(DateTime.DATE_HUGE)
         );
+
+        $("#geopython-2021 .GEO-tag").html(sub2name["GEO"].toLocaleLowerCase());
 
         // Use specified timezone for deadlines if available else use AoE timezone
 
@@ -19414,6 +20236,10 @@
         // deadline in local timezone
         $("#geopython-2021 .deadline-time").html(
           cfpDate.setZone("system").toLocaleString(DateTime.DATE_HUGE)
+        );
+
+        $("#pycon-sweden-2020 .PY-tag").html(
+          sub2name["PY"].toLocaleLowerCase()
         );
 
         // Use specified timezone for deadlines if available else use AoE timezone
@@ -19460,6 +20286,8 @@
           cfpDate.setZone("system").toLocaleString(DateTime.DATE_HUGE)
         );
 
+        $("#pyhep-2020 .SCIPY-tag").html(sub2name["SCIPY"].toLocaleLowerCase());
+
         // Use specified timezone for deadlines if available else use AoE timezone
 
         var cfpDate = DateTime.fromSQL("2020-06-22 16:59:00", {
@@ -19480,6 +20308,8 @@
         $("#pyhep-2020 .deadline-time").html(
           cfpDate.setZone("system").toLocaleString(DateTime.DATE_HUGE)
         );
+
+        $("#flask-con-2020 .WEB-tag").html(sub2name["WEB"].toLocaleLowerCase());
 
         // Use specified timezone for deadlines if available else use AoE timezone
 
@@ -19502,6 +20332,8 @@
           cfpDate.setZone("system").toLocaleString(DateTime.DATE_HUGE)
         );
 
+        $("#pycon-japan-2020 .PY-tag").html(sub2name["PY"].toLocaleLowerCase());
+
         // Use specified timezone for deadlines if available else use AoE timezone
 
         var cfpDate = DateTime.fromSQL("2020-05-31 23:59:00", {
@@ -19522,6 +20354,8 @@
         $("#pycon-japan-2020 .deadline-time").html(
           cfpDate.setZone("system").toLocaleString(DateTime.DATE_HUGE)
         );
+
+        $("#europython-2020 .PY-tag").html(sub2name["PY"].toLocaleLowerCase());
 
         // Use specified timezone for deadlines if available else use AoE timezone
 
@@ -19544,6 +20378,10 @@
           cfpDate.setZone("system").toLocaleString(DateTime.DATE_HUGE)
         );
 
+        $("#python-web-conference-2020 .WEB-tag").html(
+          sub2name["WEB"].toLocaleLowerCase()
+        );
+
         // Use specified timezone for deadlines if available else use AoE timezone
 
         var cfpDate = DateTime.fromSQL("2020-04-18 04:00:00", { zone: "UTC" });
@@ -19563,6 +20401,10 @@
           cfpDate.setZone("system").toLocaleString(DateTime.DATE_HUGE)
         );
 
+        $("#pycon-odessa-2020 .PY-tag").html(
+          sub2name["PY"].toLocaleLowerCase()
+        );
+
         // Use specified timezone for deadlines if available else use AoE timezone
 
         var cfpDate = DateTime.fromSQL("2020-02-29 00:00:00", { zone: "UTC" });
@@ -19580,6 +20422,10 @@
         // deadline in local timezone
         $("#pycon-odessa-2020 .deadline-time").html(
           cfpDate.setZone("system").toLocaleString(DateTime.DATE_HUGE)
+        );
+
+        $("#scipy-us-2020 .SCIPY-tag").html(
+          sub2name["SCIPY"].toLocaleLowerCase()
         );
 
         // Use specified timezone for deadlines if available else use AoE timezone
@@ -19605,6 +20451,10 @@
           cfpDate.setZone("system").toLocaleString(DateTime.DATE_HUGE)
         );
 
+        $("#python-fwdays-2019 .PY-tag").html(
+          sub2name["PY"].toLocaleLowerCase()
+        );
+
         // Use specified timezone for deadlines if available else use AoE timezone
 
         var cfpDate = DateTime.fromSQL("2019-11-28 23:59:00", {
@@ -19624,6 +20474,10 @@
         // deadline in local timezone
         $("#python-fwdays-2019 .deadline-time").html(
           cfpDate.setZone("system").toLocaleString(DateTime.DATE_HUGE)
+        );
+
+        $("#afropython-conf-2019 .PY-tag").html(
+          sub2name["PY"].toLocaleLowerCase()
         );
 
         // Use specified timezone for deadlines if available else use AoE timezone
@@ -19647,6 +20501,10 @@
           cfpDate.setZone("system").toLocaleString(DateTime.DATE_HUGE)
         );
 
+        $("#pyday-mexico-2019 .PY-tag").html(
+          sub2name["PY"].toLocaleLowerCase()
+        );
+
         // Use specified timezone for deadlines if available else use AoE timezone
 
         var cfpDate = DateTime.fromSQL("2019-09-27 23:59:00", {
@@ -19666,6 +20524,10 @@
         // deadline in local timezone
         $("#pyday-mexico-2019 .deadline-time").html(
           cfpDate.setZone("system").toLocaleString(DateTime.DATE_HUGE)
+        );
+
+        $("#pycon-sweden-2019 .PY-tag").html(
+          sub2name["PY"].toLocaleLowerCase()
         );
 
         // Use specified timezone for deadlines if available else use AoE timezone
@@ -19689,6 +20551,10 @@
           cfpDate.setZone("system").toLocaleString(DateTime.DATE_HUGE)
         );
 
+        $("#pycon-canada-2019 .PY-tag").html(
+          sub2name["PY"].toLocaleLowerCase()
+        );
+
         // Use specified timezone for deadlines if available else use AoE timezone
 
         var cfpDate = DateTime.fromSQL("2019-08-31 23:59:00", {
@@ -19708,6 +20574,10 @@
         // deadline in local timezone
         $("#pycon-canada-2019 .deadline-time").html(
           cfpDate.setZone("system").toLocaleString(DateTime.DATE_HUGE)
+        );
+
+        $("#north-bay-python-2019 .PY-tag").html(
+          sub2name["PY"].toLocaleLowerCase()
         );
 
         // Use specified timezone for deadlines if available else use AoE timezone
@@ -19731,6 +20601,10 @@
           cfpDate.setZone("system").toLocaleString(DateTime.DATE_HUGE)
         );
 
+        $("#python-web-conference-2019 .WEB-tag").html(
+          sub2name["WEB"].toLocaleLowerCase()
+        );
+
         // Use specified timezone for deadlines if available else use AoE timezone
 
         var cfpDate = DateTime.fromSQL("2019-07-19 05:07:00", { zone: "UTC" });
@@ -19748,6 +20622,10 @@
         // deadline in local timezone
         $("#python-web-conference-2019 .deadline-time").html(
           cfpDate.setZone("system").toLocaleString(DateTime.DATE_HUGE)
+        );
+
+        $("#pycon-balkan-2019 .PY-tag").html(
+          sub2name["PY"].toLocaleLowerCase()
         );
 
         // Use specified timezone for deadlines if available else use AoE timezone
@@ -19771,6 +20649,8 @@
           cfpDate.setZone("system").toLocaleString(DateTime.DATE_HUGE)
         );
 
+        $("#kiwi-pycon-2019 .PY-tag").html(sub2name["PY"].toLocaleLowerCase());
+
         // Use specified timezone for deadlines if available else use AoE timezone
 
         var cfpDate = DateTime.fromSQL("2019-06-23 23:59:00", {
@@ -19790,6 +20670,14 @@
         // deadline in local timezone
         $("#kiwi-pycon-2019 .deadline-time").html(
           cfpDate.setZone("system").toLocaleString(DateTime.DATE_HUGE)
+        );
+
+        $("#pycon-germany-pydata-berlin-2019 .PY-tag").html(
+          sub2name["PY"].toLocaleLowerCase()
+        );
+
+        $("#pycon-germany-pydata-berlin-2019 .PYDATA-tag").html(
+          sub2name["PYDATA"].toLocaleLowerCase()
         );
 
         // Use specified timezone for deadlines if available else use AoE timezone
@@ -19812,6 +20700,8 @@
         $("#pycon-germany-pydata-berlin-2019 .deadline-time").html(
           cfpDate.setZone("system").toLocaleString(DateTime.DATE_HUGE)
         );
+
+        $("#pycon-uk-2019 .PY-tag").html(sub2name["PY"].toLocaleLowerCase());
 
         // Use specified timezone for deadlines if available else use AoE timezone
 
@@ -19836,6 +20726,8 @@
           cfpDate.setZone("system").toLocaleString(DateTime.DATE_HUGE)
         );
 
+        $("#pycon-japan-2019 .PY-tag").html(sub2name["PY"].toLocaleLowerCase());
+
         // Use specified timezone for deadlines if available else use AoE timezone
 
         var cfpDate = DateTime.fromSQL("2019-06-02 23:59:00", {
@@ -19857,6 +20749,10 @@
           cfpDate.setZone("system").toLocaleString(DateTime.DATE_HUGE)
         );
 
+        $("#pycon-africa-2019 .PY-tag").html(
+          sub2name["PY"].toLocaleLowerCase()
+        );
+
         // Use specified timezone for deadlines if available else use AoE timezone
 
         var cfpDate = DateTime.fromSQL("2019-06-01 23:59:00", {
@@ -19876,6 +20772,10 @@
         // deadline in local timezone
         $("#pycon-africa-2019 .deadline-time").html(
           cfpDate.setZone("system").toLocaleString(DateTime.DATE_HUGE)
+        );
+
+        $("#pycon-latin-america-2019 .PY-tag").html(
+          sub2name["PY"].toLocaleLowerCase()
         );
 
         // Use specified timezone for deadlines if available else use AoE timezone
@@ -19901,6 +20801,25 @@
 
         // Use specified timezone for deadlines if available else use AoE timezone
 
+        var cfpDate = DateTime.fromSQL("2019-05-17 12:05:00", { zone: "UTC" });
+        var confDate = DateTime.fromSQL("2019-09-07", { zone: "UTC" });
+
+        // check if timezone is valid otherwise replace by system timezone
+        if (cfpDate.invalid || confDate.invalid) {
+          var cfpDate = DateTime.fromSQL("2019-05-17 12:05:00");
+          var confDate = DateTime.fromSQL("2019-09-07");
+          console.log(
+            "Invalid timezone in pycolorado-2019. Using system timezone instead."
+          );
+        }
+
+        // deadline in local timezone
+        $("#pycolorado-2019 .deadline-time").html(
+          cfpDate.setZone("system").toLocaleString(DateTime.DATE_HUGE)
+        );
+
+        // Use specified timezone for deadlines if available else use AoE timezone
+
         var cfpDate = DateTime.fromSQL("2019-05-12 23:59:00", {
           zone: "UTC-12",
         });
@@ -19911,12 +20830,12 @@
           var cfpDate = DateTime.fromSQL("2019-05-12 23:59:00");
           var confDate = DateTime.fromSQL("2019-10-04");
           console.log(
-            "Invalid timezone in pygotham-2019. Using system timezone instead."
+            "Invalid timezone in pygotham-tv-2019. Using system timezone instead."
           );
         }
 
         // deadline in local timezone
-        $("#pygotham-2019 .deadline-time").html(
+        $("#pygotham-tv-2019 .deadline-time").html(
           cfpDate.setZone("system").toLocaleString(DateTime.DATE_HUGE)
         );
 
@@ -19962,6 +20881,8 @@
           cfpDate.setZone("system").toLocaleString(DateTime.DATE_HUGE)
         );
 
+        $("#europython-2021 .PY-tag").html(sub2name["PY"].toLocaleLowerCase());
+
         // Use specified timezone for deadlines if available else use AoE timezone
 
         var cfpDate = DateTime.fromSQL("2019-05-12 23:59:59", {
@@ -19985,6 +20906,8 @@
           cfpDate.setZone("system").toLocaleString(DateTime.DATE_HUGE)
         );
 
+        $("#pycon-spain-2019 .PY-tag").html(sub2name["PY"].toLocaleLowerCase());
+
         // Use specified timezone for deadlines if available else use AoE timezone
 
         var cfpDate = DateTime.fromSQL("2019-05-10 23:59:00", {
@@ -20004,6 +20927,10 @@
         // deadline in local timezone
         $("#pycon-spain-2019 .deadline-time").html(
           cfpDate.setZone("system").toLocaleString(DateTime.DATE_HUGE)
+        );
+
+        $("#python-nordeste-2019 .PY-tag").html(
+          sub2name["PY"].toLocaleLowerCase()
         );
 
         // Use specified timezone for deadlines if available else use AoE timezone
@@ -20027,6 +20954,10 @@
         // deadline in local timezone
         $("#python-nordeste-2019 .deadline-time").html(
           cfpDate.setZone("system").toLocaleString(DateTime.DATE_HUGE)
+        );
+
+        $("#pycon-australia-2019 .PY-tag").html(
+          sub2name["PY"].toLocaleLowerCase()
         );
 
         // Use specified timezone for deadlines if available else use AoE timezone
@@ -20077,6 +21008,10 @@
           cfpDate.setZone("system").toLocaleString(DateTime.DATE_HUGE)
         );
 
+        $("#pydata-london-2019 .PYDATA-tag").html(
+          sub2name["PYDATA"].toLocaleLowerCase()
+        );
+
         // Use specified timezone for deadlines if available else use AoE timezone
 
         var cfpDate = DateTime.fromSQL("2019-04-19 23:59:00", {
@@ -20096,6 +21031,10 @@
         // deadline in local timezone
         $("#pydata-london-2019 .deadline-time").html(
           cfpDate.setZone("system").toLocaleString(DateTime.DATE_HUGE)
+        );
+
+        $("#scipy-us-2019 .SCIPY-tag").html(
+          sub2name["SCIPY"].toLocaleLowerCase()
         );
 
         // Use specified timezone for deadlines if available else use AoE timezone
@@ -20121,6 +21060,10 @@
           cfpDate.setZone("system").toLocaleString(DateTime.DATE_HUGE)
         );
 
+        $("#pycon-italia-2019 .PY-tag").html(
+          sub2name["PY"].toLocaleLowerCase()
+        );
+
         // Use specified timezone for deadlines if available else use AoE timezone
 
         var cfpDate = DateTime.fromSQL("2019-01-06 23:59:00", {
@@ -20142,6 +21085,8 @@
           cfpDate.setZone("system").toLocaleString(DateTime.DATE_HUGE)
         );
 
+        $("#pycon-us-2019 .PY-tag").html(sub2name["PY"].toLocaleLowerCase());
+
         // Use specified timezone for deadlines if available else use AoE timezone
 
         var cfpDate = DateTime.fromSQL("2019-01-03 23:59:00", {
@@ -20161,6 +21106,10 @@
         // deadline in local timezone
         $("#pycon-us-2019 .deadline-time").html(
           cfpDate.setZone("system").toLocaleString(DateTime.DATE_HUGE)
+        );
+
+        $("#pycon-belarus-2019 .PY-tag").html(
+          sub2name["PY"].toLocaleLowerCase()
         );
 
         // Use specified timezone for deadlines if available else use AoE timezone
@@ -20247,6 +21196,10 @@
           cfpDate.setZone("system").toLocaleString(DateTime.DATE_HUGE)
         );
 
+        $("#pycon-colombia-2019 .PY-tag").html(
+          sub2name["PY"].toLocaleLowerCase()
+        );
+
         // Use specified timezone for deadlines if available else use AoE timezone
 
         var cfpDate = DateTime.fromSQL("2018-09-01 23:59:00", {
@@ -20266,6 +21219,35 @@
         // deadline in local timezone
         $("#pycon-colombia-2019 .deadline-time").html(
           cfpDate.setZone("system").toLocaleString(DateTime.DATE_HUGE)
+        );
+
+        $("#flask-conf-brasil-2019 .WEB-tag").html(
+          sub2name["WEB"].toLocaleLowerCase()
+        );
+
+        // Use specified timezone for deadlines if available else use AoE timezone
+
+        var cfpDate = DateTime.fromSQL("2018-08-01 23:55:00", {
+          zone: "UTC-12",
+        });
+        var confDate = DateTime.fromSQL("2019-09-06", { zone: "UTC-12" });
+
+        // check if timezone is valid otherwise replace by system timezone
+        if (cfpDate.invalid || confDate.invalid) {
+          var cfpDate = DateTime.fromSQL("2018-08-01 23:55:00");
+          var confDate = DateTime.fromSQL("2019-09-06");
+          console.log(
+            "Invalid timezone in flask-conf-brasil-2019. Using system timezone instead."
+          );
+        }
+
+        // deadline in local timezone
+        $("#flask-conf-brasil-2019 .deadline-time").html(
+          cfpDate.setZone("system").toLocaleString(DateTime.DATE_HUGE)
+        );
+
+        $("#python-nordeste-2018 .PY-tag").html(
+          sub2name["PY"].toLocaleLowerCase()
         );
 
         // Use specified timezone for deadlines if available else use AoE timezone
@@ -20291,6 +21273,10 @@
           cfpDate.setZone("system").toLocaleString(DateTime.DATE_HUGE)
         );
 
+        $("#python-nordeste-2017 .PY-tag").html(
+          sub2name["PY"].toLocaleLowerCase()
+        );
+
         // Use specified timezone for deadlines if available else use AoE timezone
 
         var cfpDate = DateTime.fromSQL("2017-04-10 23:55:00", {
@@ -20312,6 +21298,10 @@
         // deadline in local timezone
         $("#python-nordeste-2017 .deadline-time").html(
           cfpDate.setZone("system").toLocaleString(DateTime.DATE_HUGE)
+        );
+
+        $("#pydata-dc-2016 .PYDATA-tag").html(
+          sub2name["PYDATA"].toLocaleLowerCase()
         );
 
         // Use specified timezone for deadlines if available else use AoE timezone
@@ -20337,6 +21327,10 @@
           cfpDate.setZone("system").toLocaleString(DateTime.DATE_HUGE)
         );
 
+        $("#python-nordeste-2016 .PY-tag").html(
+          sub2name["PY"].toLocaleLowerCase()
+        );
+
         // Use specified timezone for deadlines if available else use AoE timezone
 
         var cfpDate = DateTime.fromSQL("2016-05-07 23:55:00", {
@@ -20360,6 +21354,10 @@
           cfpDate.setZone("system").toLocaleString(DateTime.DATE_HUGE)
         );
 
+        $("#pydata-london-2015 .PYDATA-tag").html(
+          sub2name["PYDATA"].toLocaleLowerCase()
+        );
+
         // Use specified timezone for deadlines if available else use AoE timezone
 
         var cfpDate = DateTime.fromSQL("2015-05-18 23:59:00", {
@@ -20379,6 +21377,35 @@
         // deadline in local timezone
         $("#pydata-london-2015 .deadline-time").html(
           cfpDate.setZone("system").toLocaleString(DateTime.DATE_HUGE)
+        );
+
+        $("#scipy-latin-america-2015 .SCIPY-tag").html(
+          sub2name["SCIPY"].toLocaleLowerCase()
+        );
+
+        // Use specified timezone for deadlines if available else use AoE timezone
+
+        var cfpDate = DateTime.fromSQL("2015-04-13 23:59:00", {
+          zone: "UTC-12",
+        });
+        var confDate = DateTime.fromSQL("2015-05-20", { zone: "UTC-12" });
+
+        // check if timezone is valid otherwise replace by system timezone
+        if (cfpDate.invalid || confDate.invalid) {
+          var cfpDate = DateTime.fromSQL("2015-04-13 23:59:00");
+          var confDate = DateTime.fromSQL("2015-05-20");
+          console.log(
+            "Invalid timezone in scipy-latin-america-2015. Using system timezone instead."
+          );
+        }
+
+        // deadline in local timezone
+        $("#scipy-latin-america-2015 .deadline-time").html(
+          cfpDate.setZone("system").toLocaleString(DateTime.DATE_HUGE)
+        );
+
+        $("#python-nordeste-2015 .PY-tag").html(
+          sub2name["PY"].toLocaleLowerCase()
         );
 
         // Use specified timezone for deadlines if available else use AoE timezone
@@ -20404,6 +21431,10 @@
           cfpDate.setZone("system").toLocaleString(DateTime.DATE_HUGE)
         );
 
+        $("#python-nordeste-2014 .PY-tag").html(
+          sub2name["PY"].toLocaleLowerCase()
+        );
+
         // Use specified timezone for deadlines if available else use AoE timezone
 
         var cfpDate = DateTime.fromSQL("2014-03-31 23:55:00", {
@@ -20427,6 +21458,10 @@
           cfpDate.setZone("system").toLocaleString(DateTime.DATE_HUGE)
         );
 
+        $("#pydata-london-2014 .PYDATA-tag").html(
+          sub2name["PYDATA"].toLocaleLowerCase()
+        );
+
         // Use specified timezone for deadlines if available else use AoE timezone
 
         var cfpDate = DateTime.fromSQL("2014-01-30 23:59:00", {
@@ -20446,6 +21481,10 @@
         // deadline in local timezone
         $("#pydata-london-2014 .deadline-time").html(
           cfpDate.setZone("system").toLocaleString(DateTime.DATE_HUGE)
+        );
+
+        $("#python-nordeste-2013 .PY-tag").html(
+          sub2name["PY"].toLocaleLowerCase()
         );
 
         // Use specified timezone for deadlines if available else use AoE timezone

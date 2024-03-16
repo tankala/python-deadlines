@@ -8,7 +8,7 @@
     <title>PyCon Taiwan Conference Summary</title>
     <!-- Begin Jekyll SEO tag v2.8.0 -->
     <title>PyCon Taiwan Conference Summary | Python Conference Deadlines</title>
-    <meta name="generator" content="Jekyll v3.9.3" />
+    <meta name="generator" content="Jekyll v4.3.3" />
     <meta property="og:title" content="PyCon Taiwan Conference Summary" />
     <meta name="author" content="Jesper Dramsch" />
     <meta property="og:locale" content="en_US" />
@@ -70,7 +70,7 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/js-year-calendar.min.css?t=1710514397"
+      href="/static/css/js-year-calendar.min.css?t=1710554084"
       media="screen,projection"
     />
 
@@ -82,13 +82,13 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/deadlines.css?t=1710514397"
+      href="/static/css/deadlines.css?t=1710554084"
       media="screen,projection"
     />
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/calendar.css?t=1710514397"
+      href="/static/css/calendar.css?t=1710554084"
       media="screen,projection"
     />
 
@@ -142,6 +142,30 @@
         color: white;
         background: #0d0a0b;
       }
+
+      .BIZ-tag {
+        color: #a8b9cc;
+      }
+      .BIZ-select {
+        color: #a8b9cc;
+        background: white;
+      }
+      .BIZ-select.active {
+        color: white;
+        background: #a8b9cc;
+      }
+
+      .GEO-tag {
+        color: #310c0c;
+      }
+      .GEO-select {
+        color: #310c0c;
+        background: white;
+      }
+      .GEO-select.active {
+        color: white;
+        background: #310c0c;
+      }
     </style>
 
     <script
@@ -167,6 +191,173 @@
       type="text/javascript"
       src="/static/js/bootstrap-multiselect.min.js"
     ></script>
+
+    <script type="text/javascript">
+      /* global google */
+      /* global MarkerClusterer */
+      // eslint-disable-next-line no-unused-vars
+      var jekyllMaps = (function () {
+        "use strict";
+        var clusterSettings = {};
+        var clusterReady = false;
+        var mapReady = false;
+        var options = {};
+        var data = [];
+        var maps = [];
+
+        return {
+          initializeMap: initializeMap,
+          initializeCluster: initializeCluster,
+          register: register,
+        };
+
+        /**
+         * Setup Google Maps options and call renderer.
+         */
+        function initializeMap() {
+          options = {
+            mapTypeId: google.maps.MapTypeId.ROADMAP,
+            center: new google.maps.LatLng(0, 0),
+            styles: [],
+          };
+          mapReady = true;
+          render();
+        }
+
+        /**
+         * Register map data to be rendered once Google Maps API is loaded.
+         *
+         * @param string id
+         * @param Array locations
+         * @param Object settings
+         */
+        function register(id, locations, options) {
+          data.push({ id: id, locations: locations, options: options });
+          render();
+        }
+
+        /**
+         * Render maps data if Google Maps API is loaded.
+         */
+        function render() {
+          if (!mapReady) return;
+
+          while (data.length > 0) {
+            var item = data.pop();
+            var bounds = new google.maps.LatLngBounds();
+            var mapOptions = Object.assign({}, options, item.options);
+            var map = new google.maps.Map(
+              document.getElementById(item.id),
+              mapOptions
+            );
+            var infoWindow = new google.maps.InfoWindow();
+            var markers = item.locations.map(createMarker);
+
+            map.fitBounds(bounds);
+            google.maps.event.addListenerOnce(map, "idle", function () {
+              if (this.customZoom) this.setZoom(this.customZoom);
+            });
+            if (mapOptions.useCluster) {
+              maps.push({ map: map, markers: markers });
+              processCluster();
+            }
+          }
+
+          function createMarker(location) {
+            var position = new google.maps.LatLng(
+              location.latitude,
+              location.longitude
+            );
+            bounds.extend(position);
+            if (!mapOptions.showMarker) return false;
+
+            var marker = new google.maps.Marker({
+              position: position,
+              title: location.title,
+              image: location.image,
+              popup_html: location.popup_html,
+              icon: location.icon || mapOptions.markerIcon,
+              url: markerUrl(mapOptions.baseUrl, location.url),
+              url_text: location.url_text,
+              map: map,
+            });
+            if (mapOptions.showMarkerPopup)
+              marker.addListener("click", markerPopup);
+
+            return marker;
+          }
+
+          function markerUrl(baseUrl, url) {
+            if (/^(https?|\/\/)/.test(url)) return url;
+
+            return url.length > 0 ? baseUrl + url : "";
+          }
+
+          function markerPopup() {
+            var content =
+              '<div class="map-info-window"><h5>' + this.title + "</h5>";
+            if (this.popup_html.length > 0) {
+              content += this.popup_html;
+            } else {
+              var imageTag =
+                this.image.length > 0 &&
+                '<img src="' + this.image + '" alt="' + this.title + '"/>';
+              if (this.url.length > 0) {
+                var linkContent = imageTag || this.url_text || "View";
+                content += '<a href="' + this.url + '">' + linkContent + "</a>";
+              } else if (imageTag) {
+                content += imageTag;
+              }
+            }
+            content += "</div>";
+            infoWindow.setContent(content);
+            infoWindow.open(map, this);
+          }
+        }
+
+        function initializeCluster(settings) {
+          clusterReady = true;
+          clusterSettings = settings || {};
+          processCluster();
+        }
+
+        function processCluster() {
+          if (!clusterReady) return;
+
+          while (maps.length > 0) {
+            var obj = maps.pop();
+            // eslint-disable-next-line no-new
+            new MarkerClusterer(obj.map, obj.markers, {
+              gridSize: clusterSettings.grid_size || 25,
+              imagePath:
+                "https://cdn.rawgit.com/googlemaps/js-marker-clusterer/gh-pages/images/m",
+            });
+          }
+        }
+      })();
+      /* Object.assign polyfill */
+      if (typeof Object.assign !== "function") {
+        Object.assign = function (target) {
+          "use strict";
+          if (target == null) {
+            throw new TypeError("Cannot convert undefined or null to object");
+          }
+
+          target = Object(target);
+          for (var index = 1; index < arguments.length; index++) {
+            var source = arguments[index];
+            if (source != null) {
+              for (var key in source) {
+                if (Object.prototype.hasOwnProperty.call(source, key)) {
+                  target[key] = source[key];
+                }
+              }
+            }
+          }
+          return target;
+        };
+      }
+    </script>
   </head>
 
   <body>
@@ -277,7 +468,11 @@
         </div>
         <div class="row">
           <div class="col-sm-12" id="conf-subs">
-            <span id="conf-subs" title="Conference subjects"> </span>
+            <span id="conf-subs" title="Conference subjects">
+              <span class="PY-tag badge badge-light conf-sub conf-PY">
+                General Python
+              </span>
+            </span>
           </div>
         </div>
       </div>
@@ -304,7 +499,7 @@
         </div>
         <hr />
         <div id="all_confs">
-          <div id="pycon-taiwan-2024" class="ConfItem">
+          <div id="pycon-taiwan-2024" class="ConfItem PY-conf">
             <div class="row conf-row">
               <div class="col-6">
                 <span class="conf-title">
@@ -376,7 +571,9 @@
                 <div class="meta">
                   <span class="conf-date">September 21 - 22, 2024.</span>
                   <span class="conf-place">
-                    <a href="http://maps.google.com/?q=TBD,TBD">TBD,TBD</a>
+                    <a href="http://maps.google.com/?q=Taipei, Taiwan"
+                      >Taipei, Taiwan</a
+                    >
                   </span>
                 </div>
               </div>
@@ -390,7 +587,13 @@
               </div>
             </div>
             <div class="row">
-              <div class="col-6"></div>
+              <div class="col-6">
+                <span
+                  title="Click to only show PY conferences"
+                  data-sub="PY"
+                  class="badge badge-light conf-sub PY-tag"
+                ></span>
+              </div>
               <div class="col-6">
                 <div class="calendar"></div>
               </div>
@@ -515,7 +718,7 @@
             <hr />
           </div>
 
-          <div id="pycon-taiwan-2021" class="ConfItem">
+          <div id="pycon-taiwan-2021" class="ConfItem PY-conf">
             <div class="row conf-row">
               <div class="col-6">
                 <span class="conf-title">
@@ -571,7 +774,13 @@
               </div>
             </div>
             <div class="row">
-              <div class="col-6"></div>
+              <div class="col-6">
+                <span
+                  title="Click to only show PY conferences"
+                  data-sub="PY"
+                  class="badge badge-light conf-sub PY-tag"
+                ></span>
+              </div>
               <div class="col-6">
                 <div class="calendar"></div>
               </div>
@@ -579,7 +788,7 @@
             <hr />
           </div>
 
-          <div id="pycon-taiwan-2020" class="ConfItem">
+          <div id="pycon-taiwan-2020" class="ConfItem PY-conf">
             <div class="row conf-row">
               <div class="col-6">
                 <span class="conf-title">
@@ -638,7 +847,13 @@
               </div>
             </div>
             <div class="row">
-              <div class="col-6"></div>
+              <div class="col-6">
+                <span
+                  title="Click to only show PY conferences"
+                  data-sub="PY"
+                  class="badge badge-light conf-sub PY-tag"
+                ></span>
+              </div>
               <div class="col-6">
                 <div class="calendar"></div>
               </div>
@@ -646,7 +861,7 @@
             <hr />
           </div>
 
-          <div id="pycon-taiwan-2019" class="ConfItem">
+          <div id="pycon-taiwan-2019" class="ConfItem PY-conf">
             <div class="row conf-row">
               <div class="col-6">
                 <span class="conf-title">
@@ -734,7 +949,13 @@
               </div>
             </div>
             <div class="row">
-              <div class="col-6"></div>
+              <div class="col-6">
+                <span
+                  title="Click to only show PY conferences"
+                  data-sub="PY"
+                  class="badge badge-light conf-sub PY-tag"
+                ></span>
+              </div>
               <div class="col-6">
                 <div class="calendar"></div>
               </div>
@@ -742,7 +963,7 @@
             <hr />
           </div>
 
-          <div id="pycon-taiwan-2018" class="ConfItem">
+          <div id="pycon-taiwan-2018" class="ConfItem PY-conf">
             <div class="row conf-row">
               <div class="col-6">
                 <span class="conf-title">
@@ -800,7 +1021,13 @@
               </div>
             </div>
             <div class="row">
-              <div class="col-6"></div>
+              <div class="col-6">
+                <span
+                  title="Click to only show PY conferences"
+                  data-sub="PY"
+                  class="badge badge-light conf-sub PY-tag"
+                ></span>
+              </div>
               <div class="col-6">
                 <div class="calendar"></div>
               </div>
@@ -808,7 +1035,7 @@
             <hr />
           </div>
 
-          <div id="pycon-taiwan-2017" class="ConfItem">
+          <div id="pycon-taiwan-2017" class="ConfItem PY-conf">
             <div class="row conf-row">
               <div class="col-6">
                 <span class="conf-title">
@@ -866,7 +1093,13 @@
               </div>
             </div>
             <div class="row">
-              <div class="col-6"></div>
+              <div class="col-6">
+                <span
+                  title="Click to only show PY conferences"
+                  data-sub="PY"
+                  class="badge badge-light conf-sub PY-tag"
+                ></span>
+              </div>
               <div class="col-6">
                 <div class="calendar"></div>
               </div>
@@ -874,7 +1107,7 @@
             <hr />
           </div>
 
-          <div id="pycon-taiwan-2016" class="ConfItem">
+          <div id="pycon-taiwan-2016" class="ConfItem PY-conf">
             <div class="row conf-row">
               <div class="col-6">
                 <span class="conf-title">
@@ -932,7 +1165,13 @@
               </div>
             </div>
             <div class="row">
-              <div class="col-6"></div>
+              <div class="col-6">
+                <span
+                  title="Click to only show PY conferences"
+                  data-sub="PY"
+                  class="badge badge-light conf-sub PY-tag"
+                ></span>
+              </div>
               <div class="col-6">
                 <div class="calendar"></div>
               </div>
@@ -940,7 +1179,7 @@
             <hr />
           </div>
 
-          <div id="pycon-taiwan-2013" class="ConfItem">
+          <div id="pycon-taiwan-2013" class="ConfItem PY-conf">
             <div class="row conf-row">
               <div class="col-6">
                 <span class="conf-title">
@@ -998,13 +1237,93 @@
               </div>
             </div>
             <div class="row">
-              <div class="col-6"></div>
+              <div class="col-6">
+                <span
+                  title="Click to only show PY conferences"
+                  data-sub="PY"
+                  class="badge badge-light conf-sub PY-tag"
+                ></span>
+              </div>
               <div class="col-6">
                 <div class="calendar"></div>
               </div>
             </div>
             <hr />
           </div>
+        </div>
+
+        <div class="row">
+          <div
+            id="17e92106-5106-496f-9245-5caa6a36d190"
+            style="width: 100%; height: 400px"
+            class="jekyll-map"
+          ></div>
+          <script type="text/javascript">
+            jekyllMaps.register(
+              "17e92106-5106-496f-9245-5caa6a36d190",
+              [
+                {
+                  latitude: 25.0375198,
+                  longitude: 121.5636796,
+                  title: "PyCon Taiwan Conference Summary",
+                  icon: null,
+                  url: "/series/pycon-taiwan/",
+                  url_text: null,
+                  image: "",
+                  popup_html: "",
+                },
+                {
+                  latitude: 25.0375198,
+                  longitude: 121.5636796,
+                  title: "PyCon Taiwan Conference Summary",
+                  icon: null,
+                  url: "/series/pycon-taiwan/",
+                  url_text: null,
+                  image: "",
+                  popup_html: "",
+                },
+                {
+                  latitude: 25.0375198,
+                  longitude: 121.5636796,
+                  title: "PyCon Taiwan Conference Summary",
+                  icon: null,
+                  url: "/series/pycon-taiwan/",
+                  url_text: null,
+                  image: "",
+                  popup_html: "",
+                },
+                {
+                  latitude: 25.0375198,
+                  longitude: 121.5636796,
+                  title: "PyCon Taiwan Conference Summary",
+                  icon: null,
+                  url: "/series/pycon-taiwan/",
+                  url_text: null,
+                  image: "",
+                  popup_html: "",
+                },
+                {
+                  latitude: 50.4431636,
+                  longitude: 9.9853751,
+                  title: "PyCon Taiwan Conference Summary",
+                  icon: null,
+                  url: "/series/pycon-taiwan/",
+                  url_text: null,
+                  image: "",
+                  popup_html: "",
+                },
+              ],
+              {
+                baseUrl: "/",
+                useCluster: true,
+                showMarker: true,
+                showMarkerPopup: true,
+                markerIcon: null,
+                styles: "[]",
+                customZoom: 6,
+              }
+            );
+          </script>
         </div>
       </div>
       <footer>
@@ -1060,7 +1379,7 @@
       var subs = [];
       var _all_subs = [];
       // Get all subs
-      var conf_type_data = [{"name":"General Python","sub":"PY","color":"#4B8BBE"},{"name":"Scientific Python","sub":"SCIPY","color":"#70163C"},{"name":"Python for Data","sub":"PYDATA","color":"#849324"},{"name":"Python for Web","sub":"WEB","color":"#0D0A0B"}];
+      var conf_type_data = [{"name":"General Python","sub":"PY","color":"#4B8BBE"},{"name":"Scientific Python","sub":"SCIPY","color":"#70163C"},{"name":"Python for Data","sub":"PYDATA","color":"#849324"},{"name":"Python for Web","sub":"WEB","color":"#0D0A0B"},{"name":"Python for Business","sub":"BIZ","color":"#A8B9CC"},{"name":"Python for Earth","sub":"GEO","color":"#310c0c"}];
       var sub2name = {}; var name2sub = {};
       for (var i = 0; i < conf_type_data.length; i++) {
           _all_subs[i] = conf_type_data[i]['sub'];
@@ -1167,6 +1486,8 @@
 
 
 
+
+                $('#pycon-taiwan-2024 .PY-tag').html(sub2name["PY"].toLocaleLowerCase());
 
 
 
@@ -1304,6 +1625,8 @@
 
 
 
+                $('#pycon-taiwan-2021 .PY-tag').html(sub2name["PY"].toLocaleLowerCase());
+
 
                 $('#pycon-taiwan-2021 .timer').html("TBA");
                 $('#pycon-taiwan-2021 .deadline-time').html("TBA");
@@ -1312,6 +1635,8 @@
 
 
 
+
+                $('#pycon-taiwan-2020 .PY-tag').html(sub2name["PY"].toLocaleLowerCase());
 
 
                 $('#pycon-taiwan-2020 .timer').html("TBA");
@@ -1322,6 +1647,8 @@
 
 
 
+                $('#pycon-taiwan-2019 .PY-tag').html(sub2name["PY"].toLocaleLowerCase());
+
 
                 $('#pycon-taiwan-2019 .timer').html("TBA");
                 $('#pycon-taiwan-2019 .deadline-time').html("TBA");
@@ -1330,6 +1657,8 @@
 
 
 
+
+                $('#pycon-taiwan-2018 .PY-tag').html(sub2name["PY"].toLocaleLowerCase());
 
 
                 $('#pycon-taiwan-2018 .timer').html("TBA");
@@ -1340,6 +1669,8 @@
 
 
 
+                $('#pycon-taiwan-2017 .PY-tag').html(sub2name["PY"].toLocaleLowerCase());
+
 
                 $('#pycon-taiwan-2017 .timer').html("TBA");
                 $('#pycon-taiwan-2017 .deadline-time').html("TBA");
@@ -1349,6 +1680,8 @@
 
 
 
+                $('#pycon-taiwan-2016 .PY-tag').html(sub2name["PY"].toLocaleLowerCase());
+
 
                 $('#pycon-taiwan-2016 .timer').html("TBA");
                 $('#pycon-taiwan-2016 .deadline-time').html("TBA");
@@ -1357,6 +1690,8 @@
 
 
 
+
+                $('#pycon-taiwan-2013 .PY-tag').html(sub2name["PY"].toLocaleLowerCase());
 
 
                 $('#pycon-taiwan-2013 .timer').html("TBA");
@@ -1370,5 +1705,66 @@
               return $(a).attr('cfpDiff') - $(b).attr('cfpDiff');
             }).appendTo($("#coming_confs"));
     </script>
+    <script async defer>
+      // Load maps only when DOM is loaded
+      document.addEventListener("DOMContentLoaded", function () {
+        if (window.google && window.google.maps && jekyllMaps) {
+          // Maps script already loaded -> Execute callback method
+          jekyllMaps.initializeMap();
+        } else if (
+          !("IntersectionObserver" in window) ||
+          !("IntersectionObserverEntry" in window) ||
+          !("intersectionRatio" in window.IntersectionObserverEntry.prototype)
+        ) {
+          // Intersection Observer -> Backup solution : load maps now
+          lazyLoadGoogleMap();
+        } else {
+          // Google Maps not loaded & Intersection Observer working -> Enable it
+          enableMapsObserver();
+        }
+      });
+
+      function enableMapsObserver() {
+        // Enable Observer on all Maps
+        var maps = document.getElementsByClassName("jekyll-map");
+
+        const observer = new IntersectionObserver(function (entries, observer) {
+          // Test if one of the maps is in the viewport
+          var isIntersecting =
+            typeof entries[0].isIntersecting === "boolean"
+              ? entries[0].isIntersecting
+              : entries[0].intersectionRatio > 0;
+          if (isIntersecting) {
+            lazyLoadGoogleMap();
+            observer.disconnect();
+          }
+        });
+
+        for (var i = 0; i < maps.length; i++) {
+          observer.observe(maps[i]);
+        }
+      }
+
+      function lazyLoadGoogleMap() {
+        // If google maps api script not already loaded
+        if (!window.google || !window.google.maps) {
+          var fjs = document.getElementsByTagName("script")[0];
+          var js = document.createElement("script");
+          js.id = "gmap-api";
+          js.setAttribute("async", "");
+          js.setAttribute("defer", "");
+          js.src =
+            "//maps.google.com/maps/api/js?key=AIzaSyCEJ_S3OFxqrOfgx5WdSEMl8hxzgTFEw20&callback=jekyllMaps.initializeMap";
+          fjs.parentNode.insertBefore(js, fjs);
+        }
+      }
+    </script>
+
+    <script
+      async
+      defer
+      src="https://cdn.rawgit.com/googlemaps/js-marker-clusterer/gh-pages/src/markerclusterer.js"
+      onload="jekyllMaps.initializeCluster({})"
+    ></script>
   </body>
 </html>
