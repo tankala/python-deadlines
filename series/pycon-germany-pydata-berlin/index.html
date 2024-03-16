@@ -79,7 +79,7 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/js-year-calendar.min.css?t=1710554084"
+      href="/static/css/js-year-calendar.min.css?t=1710597640"
       media="screen,projection"
     />
 
@@ -91,13 +91,13 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/deadlines.css?t=1710554084"
+      href="/static/css/deadlines.css?t=1710597640"
       media="screen,projection"
     />
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/calendar.css?t=1710554084"
+      href="/static/css/calendar.css?t=1710597640"
       media="screen,projection"
     />
 
@@ -1318,8 +1318,8 @@
                 <div class="meta">
                   <span class="conf-date">June 30 - July 3, 2017.</span>
                   <span class="conf-place">
-                    <a href="http://maps.google.com/?q=Treskowallee 8, Germany"
-                      >Treskowallee 8, Germany</a
+                    <a href="http://maps.google.com/?q=Berlin, Germany"
+                      >Berlin, Germany</a
                     >
                   </span>
                 </div>
@@ -1462,8 +1462,8 @@
                 <div class="meta">
                   <span class="conf-date">May 20 - 22, 2016.</span>
                   <span class="conf-place">
-                    <a href="http://maps.google.com/?q=Kosmos, Germany"
-                      >Kosmos, Germany</a
+                    <a href="http://maps.google.com/?q=Berlin, Germany"
+                      >Berlin, Germany</a
                     >
                   </span>
                 </div>
@@ -1607,8 +1607,8 @@
                 <div class="meta">
                   <span class="conf-date">May 29 - 31, 2015.</span>
                   <span class="conf-place">
-                    <a href="http://maps.google.com/?q=Betahaus Berlin, Germany"
-                      >Betahaus Berlin, Germany</a
+                    <a href="http://maps.google.com/?q=Berlin, Germany"
+                      >Berlin, Germany</a
                     >
                   </span>
                 </div>
@@ -1821,7 +1821,7 @@
             <div class="row">
               <div class="col-12 col-sm-6">
                 <div class="meta">
-                  <span class="conf-date">October 29 - November 4, 2012.</span>
+                  <span class="conf-date">October 29 - November 3, 2012.</span>
                   <span class="conf-place">
                     <a href="http://maps.google.com/?q=Leipzig, Germany"
                       >Leipzig, Germany</a
@@ -1833,7 +1833,79 @@
                 <div class="deadline">
                   <div>
                     Deadline:
-                    <span class="deadline-time">TBA</span>
+                    <span class="deadline-time">Friday, 15 June 2012</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-6">
+                <span
+                  title="Click to only show PY conferences"
+                  data-sub="PY"
+                  class="badge badge-light conf-sub PY-tag"
+                ></span>
+              </div>
+              <div class="col-6">
+                <div class="calendar"></div>
+              </div>
+            </div>
+            <hr />
+          </div>
+
+          <div id="pycon-germany-2011" class="ConfItem PY-conf">
+            <div class="row conf-row">
+              <div class="col-6">
+                <span class="conf-title">
+                  <a
+                    title="Deadline Details"
+                    href="/conference/pycon-germany-2011/"
+                    >PyCon Germany 2011</a
+                  >
+                </span>
+                <span class="conf-title-small">
+                  <a
+                    title="Deadline Details"
+                    href="/conference/pycon-germany-2011/"
+                    >PyCon Germany '11</a
+                  >
+                </span>
+                <span class="conf-title-icon">
+                  <a
+                    title="Conference Website"
+                    href="https://web.archive.org/web/20120728002815/http://2011.de.pycon.org/2011/home/"
+                    target="_blank"
+                    ><img
+                      src="/static/img/203-earth.svg"
+                      class="badge-link"
+                      alt="Link to Conference Website"
+                      width="16"
+                      height="16"
+                  /></a>
+                  &ZeroWidthSpace;
+                </span>
+              </div>
+              <div class="col-6">
+                <span class="timer"></span>
+                <span class="timer-small"></span>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12 col-sm-6">
+                <div class="meta">
+                  <span class="conf-date">October 4 - 9, 2011.</span>
+                  <span class="conf-place">
+                    <a href="http://maps.google.com/?q=Leipzig, Germany"
+                      >Leipzig, Germany</a
+                    >
+                  </span>
+                </div>
+              </div>
+              <div class="col-12 col-sm-6">
+                <div class="deadline">
+                  <div>
+                    Deadline:
+                    <span class="deadline-time">Friday, 15 July 2011</span>
                   </div>
                 </div>
               </div>
@@ -1856,13 +1928,13 @@
 
         <div class="row">
           <div
-            id="e0989fe8-ba90-494a-86d1-aac58d32860c"
+            id="74f057ad-f3fd-465f-a658-703de76e3fbb"
             style="width: 100%; height: 400px"
             class="jekyll-map"
           ></div>
           <script type="text/javascript">
             jekyllMaps.register(
-              "e0989fe8-ba90-494a-86d1-aac58d32860c",
+              "74f057ad-f3fd-465f-a658-703de76e3fbb",
               [
                 {
                   latitude: 52.5170365,
@@ -2554,9 +2626,136 @@
                 $('#pycon-germany-2012 .PY-tag').html(sub2name["PY"].toLocaleLowerCase());
 
 
-                $('#pycon-germany-2012 .timer').html("TBA");
-                $('#pycon-germany-2012 .deadline-time').html("TBA");
-                $('#pycon-germany-2012').attr("cfpDiff", Infinity);
+
+                // Use specified timezone for deadlines if available else use AoE timezone
+
+                  var cfpDate = DateTime.fromSQL("2012-06-15 23:59:00", { zone: "UTC-12" });
+                  var confDate = DateTime.fromSQL("2012-10-29", { zone: "UTC-12" });
+
+
+                // check if timezone is valid otherwise replace by system timezone
+                if (cfpDate.invalid || confDate.invalid) {
+                  var cfpDate = DateTime.fromSQL("2012-06-15 23:59:00");
+                  var confDate = DateTime.fromSQL("2012-10-29");
+                  console.log("Invalid timezone in pycon-germany-2012. Using system timezone instead.");
+                }
+
+                // render countdown timer
+                $('#pycon-germany-2012 .timer').countdown(cfpDate.toJSDate(), function (event) {
+                  $(this).html(event.strftime('%D days %Hh %Mm %Ss'));
+                });
+
+                // render countdown timer small
+                $('#pycon-germany-2012 .timer-small').countdown(cfpDate.toJSDate(), function (event) {
+                  $(this).html(event.strftime('%Dd %H:%M:%S'));
+                });
+
+                // deadline in local timezone
+                $('#pycon-germany-2012 .deadline-time').html(cfpDate.setZone('system').toLocaleString(DateTime.DATE_HUGE));
+
+                // add calendar button
+                try {
+                  var myCalendar = createCalendarFromObject({
+                    id: 'pycon-germany-2012',
+                    title: 'PyCon Germany 2012 deadline',
+                    date: cfpDate.toJSDate(),
+                    duration: 60,
+                  });
+                  document.querySelector('#pycon-germany-2012 .calendar').appendChild(myCalendar);
+                } catch (err) {
+                  document.querySelector('#pycon-germany-2012 .calendar').appendChild("<p>Calendar not available.</p>");
+                  console.log("Error in cfp date.");
+                }
+
+                // check if date has passed, add 'past' class to it
+                cfpDiff = cfpDate.diffNow("seconds");
+                confDiff = confDate.diffNow("seconds");
+
+                $('#pycon-germany-2012').attr("cfpDiff", cfpDiff.toMillis());
+                $('#pycon-germany-2012').attr("confDiff", confDiff.toMillis());
+
+                if (cfpDiff < 0) {
+                  $('#pycon-germany-2012').addClass('pastcfp');
+                  $('#pycon-germany-2012 .timer').replaceWith($('#pycon-germany-2012 .deadline'));
+                  $('#pycon-germany-2012 .timer-small').replaceWith($('#pycon-germany-2012 .deadline'));
+                  $('#pycon-germany-2012 .calendar').remove();
+                }
+
+                if (confDiff < 0) {
+                  $('#pycon-germany-2012').addClass('pastconf');
+                  $('#pycon-germany-2012 .timer').replaceWith($('#pycon-germany-2012 .deadline'));
+                  $('#pycon-germany-2012 .timer-small').replaceWith($('#pycon-germany-2012 .deadline'));
+                  $('#pycon-germany-2012 .calendar').remove();
+                }
+
+
+
+
+
+                $('#pycon-germany-2011 .PY-tag').html(sub2name["PY"].toLocaleLowerCase());
+
+
+
+                // Use specified timezone for deadlines if available else use AoE timezone
+
+                  var cfpDate = DateTime.fromSQL("2011-07-15 23:59:00", { zone: "UTC-12" });
+                  var confDate = DateTime.fromSQL("2011-10-04", { zone: "UTC-12" });
+
+
+                // check if timezone is valid otherwise replace by system timezone
+                if (cfpDate.invalid || confDate.invalid) {
+                  var cfpDate = DateTime.fromSQL("2011-07-15 23:59:00");
+                  var confDate = DateTime.fromSQL("2011-10-04");
+                  console.log("Invalid timezone in pycon-germany-2011. Using system timezone instead.");
+                }
+
+                // render countdown timer
+                $('#pycon-germany-2011 .timer').countdown(cfpDate.toJSDate(), function (event) {
+                  $(this).html(event.strftime('%D days %Hh %Mm %Ss'));
+                });
+
+                // render countdown timer small
+                $('#pycon-germany-2011 .timer-small').countdown(cfpDate.toJSDate(), function (event) {
+                  $(this).html(event.strftime('%Dd %H:%M:%S'));
+                });
+
+                // deadline in local timezone
+                $('#pycon-germany-2011 .deadline-time').html(cfpDate.setZone('system').toLocaleString(DateTime.DATE_HUGE));
+
+                // add calendar button
+                try {
+                  var myCalendar = createCalendarFromObject({
+                    id: 'pycon-germany-2011',
+                    title: 'PyCon Germany 2011 deadline',
+                    date: cfpDate.toJSDate(),
+                    duration: 60,
+                  });
+                  document.querySelector('#pycon-germany-2011 .calendar').appendChild(myCalendar);
+                } catch (err) {
+                  document.querySelector('#pycon-germany-2011 .calendar').appendChild("<p>Calendar not available.</p>");
+                  console.log("Error in cfp date.");
+                }
+
+                // check if date has passed, add 'past' class to it
+                cfpDiff = cfpDate.diffNow("seconds");
+                confDiff = confDate.diffNow("seconds");
+
+                $('#pycon-germany-2011').attr("cfpDiff", cfpDiff.toMillis());
+                $('#pycon-germany-2011').attr("confDiff", confDiff.toMillis());
+
+                if (cfpDiff < 0) {
+                  $('#pycon-germany-2011').addClass('pastcfp');
+                  $('#pycon-germany-2011 .timer').replaceWith($('#pycon-germany-2011 .deadline'));
+                  $('#pycon-germany-2011 .timer-small').replaceWith($('#pycon-germany-2011 .deadline'));
+                  $('#pycon-germany-2011 .calendar').remove();
+                }
+
+                if (confDiff < 0) {
+                  $('#pycon-germany-2011').addClass('pastconf');
+                  $('#pycon-germany-2011 .timer').replaceWith($('#pycon-germany-2011 .deadline'));
+                  $('#pycon-germany-2011 .timer-small').replaceWith($('#pycon-germany-2011 .deadline'));
+                  $('#pycon-germany-2011 .calendar').remove();
+                }
 
 
 

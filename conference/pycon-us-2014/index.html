@@ -74,7 +74,7 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/js-year-calendar.min.css?t=1710554084"
+      href="/static/css/js-year-calendar.min.css?t=1710597640"
       media="screen,projection"
     />
 
@@ -86,13 +86,13 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/deadlines.css?t=1710554084"
+      href="/static/css/deadlines.css?t=1710597640"
       media="screen,projection"
     />
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/calendar.css?t=1710554084"
+      href="/static/css/calendar.css?t=1710597640"
       media="screen,projection"
     />
 
@@ -482,7 +482,7 @@
       </div>
       <div id="page-content">
         <div id="conf-deadline-timer" class="row">
-          <div id="cfp-timer" class="col-12 conf-timer">TBA</div>
+          <div id="cfp-timer" class="col-12 conf-timer"></div>
         </div>
         <div id="conf-key-facts" class="row">
           <div class="col-12 col-md-6">
@@ -494,7 +494,7 @@
                 width="16"
                 height="16"
               />
-              <span id="conf-date">April 9 - 18, 2014</span>
+              <span id="conf-date">April 9 - 17, 2014</span>
             </div>
             <div>
               <img
@@ -522,8 +522,8 @@
               <a
                 id="conf-website"
                 target="_blank"
-                href="https://us.pycon.org/2024/"
-                >https://us.pycon.org/2024/</a
+                href="https://us.pycon.org/2014/"
+                >https://us.pycon.org/2014/</a
               >
             </div>
 
@@ -561,13 +561,13 @@
         </div>
         <div class="row">
           <div
-            id="8d03ad6b-a261-494f-8169-9cf1a8598cae"
+            id="7d7e2071-a3d1-48ca-902c-ad39ec0d0782"
             style="width: 100%; height: 400px"
             class="jekyll-map"
           ></div>
           <script type="text/javascript">
             jekyllMaps.register(
-              "8d03ad6b-a261-494f-8169-9cf1a8598cae",
+              "7d7e2071-a3d1-48ca-902c-ad39ec0d0782",
               [
                 {
                   latitude: 45.5031824,
@@ -710,9 +710,48 @@
 
         // other
 
-        $("#cfp-timer").html("TBA");
-        $(".deadline-time").html("TBA");
-        $(".deadline-local-time").html("TBA");
+        // Use specified timezone for deadlines if available else use AoE timezone
+
+        var confDeadline = DateTime.fromSQL("2013-09-15 23:59:00", {
+          zone: "UTC-12",
+        });
+
+        // check if timezone is valid otherwise replace by system timezone
+        if (confDeadline.invalid) {
+          var confDeadline = DateTime.fromSQL("2013-09-15 23:59:00");
+          console.log("Invalid timezone. Using system timezone instead.");
+        }
+
+        // add calendar
+        var conferenceDeadlineCalendar = createCalendarFromObject({
+          id: "pycon-us-2014",
+          title: "PyCon US 2014 Conference Deadlines",
+          date: confDeadline.toJSDate(),
+          duration: 60,
+        });
+        document
+          .querySelector("#conference-deadline")
+          .appendChild(conferenceDeadlineCalendar);
+
+        // render countdown timer
+        $("#cfp-timer").countdown(confDeadline.toJSDate(), function (event) {
+          $(this).html(event.strftime("%D days %Hh %Mm %Ss"));
+        });
+
+        // render deadline conference time
+
+        $(".deadline-time").html(
+          confDeadline
+            .setZone("UTC-12")
+            .toLocaleString(DateTime.DATETIME_HUGE_WITH_SECONDS)
+        );
+
+        // render deadline in local timezone
+        $(".deadline-local-time").html(
+          confDeadline
+            .setZone("system")
+            .toLocaleString(DateTime.DATETIME_HUGE_WITH_SECONDS)
+        );
       });
     </script>
     <script async defer>

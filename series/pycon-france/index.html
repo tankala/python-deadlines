@@ -32,7 +32,7 @@
     <meta property="og:type" content="article" />
     <meta
       property="article:published_time"
-      content="2024-02-16T00:00:00+00:00"
+      content="2024-05-17T00:00:00+00:00"
     />
     <meta name="twitter:card" content="summary" />
     <meta property="twitter:title" content="PyCon France Conference Summary" />
@@ -47,8 +47,8 @@
           "name": "Jesper Dramsch",
           "url": "https://dramsch.net"
         },
-        "dateModified": "2024-02-16T00:00:00+00:00",
-        "datePublished": "2024-02-16T00:00:00+00:00",
+        "dateModified": "2024-05-17T00:00:00+00:00",
+        "datePublished": "2024-05-17T00:00:00+00:00",
         "description": "Summary of the conference and its instances throughout the years.",
         "headline": "PyCon France Conference Summary",
         "mainEntityOfPage": {
@@ -70,7 +70,7 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/js-year-calendar.min.css?t=1710554084"
+      href="/static/css/js-year-calendar.min.css?t=1710597640"
       media="screen,projection"
     />
 
@@ -82,13 +82,13 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/deadlines.css?t=1710554084"
+      href="/static/css/deadlines.css?t=1710597640"
       media="screen,projection"
     />
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/calendar.css?t=1710554084"
+      href="/static/css/calendar.css?t=1710597640"
       media="screen,projection"
     />
 
@@ -191,45 +191,6 @@
       type="text/javascript"
       src="/static/js/bootstrap-multiselect.min.js"
     ></script>
-
-    <link rel="stylesheet" type="text/css" href="/static/css/mastodon.css" />
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        fetch("https://mamot.fr/@AFPy.rss")
-          .then(function (response) {
-            return response.text();
-          })
-          .then(function (xmlText) {
-            var parser = new DOMParser();
-            var xml = parser.parseFromString(xmlText, "text/xml");
-            var items = xml.querySelectorAll("item");
-            var feedContainer = document.getElementById("mastodon-feed");
-            var postLimit = 2; // Number of posts to display
-
-            for (var i = 0; i < postLimit && i < items.length; i++) {
-              var item = items[i];
-              var post = item.querySelector("description").textContent;
-              var link = item.querySelector("link").textContent;
-              var pubDate = item.querySelector("pubDate").textContent;
-
-              var feedItem = document.createElement("div");
-              feedItem.setAttribute("class", "timeline-item");
-              feedItem.innerHTML =
-                '<div class="timeline-content">' +
-                post +
-                '</div><a href="' +
-                link +
-                '">' +
-                pubDate +
-                " by PyCon France</a>";
-              feedContainer.appendChild(feedItem);
-            }
-          })
-          .catch(function (error) {
-            console.log("Error fetching Mastodon RSS feed:", error);
-          });
-      });
-    </script>
   </head>
 
   <body>
@@ -400,9 +361,7 @@
             <!-- Mastodon timeline -->
             <div class="meta">Mastodon Posts by PyCon France:</div>
             <div id="mastodon-feed"></div>
-            <a href="https://mamot.fr/@AFPy"
-              >See all Mastodon posts for PyCon France</a
-            >
+            <a href="">See all Mastodon posts for PyCon France</a>
           </div>
         </div>
         <hr />
@@ -853,7 +812,7 @@
             <div class="row">
               <div class="col-12 col-sm-6">
                 <div class="meta">
-                  <span class="conf-date">September 13 - 17, 2012.</span>
+                  <span class="conf-date">September 13 - 16, 2012.</span>
                   <span class="conf-place">
                     <a href="http://maps.google.com/?q=Paris, France"
                       >Paris, France</a
@@ -865,7 +824,295 @@
                 <div class="deadline">
                   <div>
                     Deadline:
-                    <span class="deadline-time">TBA</span>
+                    <span class="deadline-time">Sunday, 15 July 2012</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-6">
+                <span
+                  title="Click to only show PY conferences"
+                  data-sub="PY"
+                  class="badge badge-light conf-sub PY-tag"
+                ></span>
+              </div>
+              <div class="col-6">
+                <div class="calendar"></div>
+              </div>
+            </div>
+            <hr />
+          </div>
+
+          <div id="pycon-france-2011" class="ConfItem PY-conf">
+            <div class="row conf-row">
+              <div class="col-6">
+                <span class="conf-title">
+                  <a
+                    title="Deadline Details"
+                    href="/conference/pycon-france-2011/"
+                    >PyCon France 2011</a
+                  >
+                </span>
+                <span class="conf-title-small">
+                  <a
+                    title="Deadline Details"
+                    href="/conference/pycon-france-2011/"
+                    >PyCon France '11</a
+                  >
+                </span>
+                <span class="conf-title-icon">
+                  <a
+                    title="Conference Website"
+                    href="https://www.pycon.fr/2011/category/conference.html"
+                    target="_blank"
+                    ><img
+                      src="/static/img/203-earth.svg"
+                      class="badge-link"
+                      alt="Link to Conference Website"
+                      width="16"
+                      height="16"
+                  /></a>
+                  &ZeroWidthSpace;
+                </span>
+              </div>
+              <div class="col-6">
+                <span class="timer"></span>
+                <span class="timer-small"></span>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12 col-sm-6">
+                <div class="meta">
+                  <span class="conf-date">September 17 - 18, 2011.</span>
+                  <span class="conf-place">
+                    <a href="http://maps.google.com/?q=Paris, France"
+                      >Paris, France</a
+                    >
+                  </span>
+                </div>
+              </div>
+              <div class="col-12 col-sm-6">
+                <div class="deadline">
+                  <div>
+                    Deadline:
+                    <span class="deadline-time">Monday, 1 August 2011</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-6">
+                <span
+                  title="Click to only show PY conferences"
+                  data-sub="PY"
+                  class="badge badge-light conf-sub PY-tag"
+                ></span>
+              </div>
+              <div class="col-6">
+                <div class="calendar"></div>
+              </div>
+            </div>
+            <hr />
+          </div>
+
+          <div id="pycon-france-2010" class="ConfItem PY-conf">
+            <div class="row conf-row">
+              <div class="col-6">
+                <span class="conf-title">
+                  <a
+                    title="Deadline Details"
+                    href="/conference/pycon-france-2010/"
+                    >PyCon France 2010</a
+                  >
+                </span>
+                <span class="conf-title-small">
+                  <a
+                    title="Deadline Details"
+                    href="/conference/pycon-france-2010/"
+                    >PyCon France '10</a
+                  >
+                </span>
+                <span class="conf-title-icon">
+                  <a
+                    title="Conference Website"
+                    href="https://www.pycon.fr/2010/category/conference.html"
+                    target="_blank"
+                    ><img
+                      src="/static/img/203-earth.svg"
+                      class="badge-link"
+                      alt="Link to Conference Website"
+                      width="16"
+                      height="16"
+                  /></a>
+                  &ZeroWidthSpace;
+                </span>
+              </div>
+              <div class="col-6">
+                <span class="timer"></span>
+                <span class="timer-small"></span>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12 col-sm-6">
+                <div class="meta">
+                  <span class="conf-date">August 28 - 29, 2010.</span>
+                  <span class="conf-place">
+                    <a href="http://maps.google.com/?q=Paris, France"
+                      >Paris, France</a
+                    >
+                  </span>
+                </div>
+              </div>
+              <div class="col-12 col-sm-6">
+                <div class="deadline">
+                  <div>
+                    Deadline:
+                    <span class="deadline-time">Thursday, 15 July 2010</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-6">
+                <span
+                  title="Click to only show PY conferences"
+                  data-sub="PY"
+                  class="badge badge-light conf-sub PY-tag"
+                ></span>
+              </div>
+              <div class="col-6">
+                <div class="calendar"></div>
+              </div>
+            </div>
+            <hr />
+          </div>
+
+          <div id="pycon-france-2009" class="ConfItem PY-conf">
+            <div class="row conf-row">
+              <div class="col-6">
+                <span class="conf-title">
+                  <a
+                    title="Deadline Details"
+                    href="/conference/pycon-france-2009/"
+                    >PyCon France 2009</a
+                  >
+                </span>
+                <span class="conf-title-small">
+                  <a
+                    title="Deadline Details"
+                    href="/conference/pycon-france-2009/"
+                    >PyCon France '09</a
+                  >
+                </span>
+                <span class="conf-title-icon">
+                  <a
+                    title="Conference Website"
+                    href="https://web.archive.org/web/20090307100440/http://www.pycon.fr/sessions"
+                    target="_blank"
+                    ><img
+                      src="/static/img/203-earth.svg"
+                      class="badge-link"
+                      alt="Link to Conference Website"
+                      width="16"
+                      height="16"
+                  /></a>
+                  &ZeroWidthSpace;
+                </span>
+              </div>
+              <div class="col-6">
+                <span class="timer"></span>
+                <span class="timer-small"></span>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12 col-sm-6">
+                <div class="meta">
+                  <span class="conf-date">May 30 - 31, 2009.</span>
+                  <span class="conf-place">
+                    <a href="http://maps.google.com/?q=Paris, France"
+                      >Paris, France</a
+                    >
+                  </span>
+                </div>
+              </div>
+              <div class="col-12 col-sm-6">
+                <div class="deadline">
+                  <div>
+                    Deadline:
+                    <span class="deadline-time">Friday, 24 April 2009</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-6">
+                <span
+                  title="Click to only show PY conferences"
+                  data-sub="PY"
+                  class="badge badge-light conf-sub PY-tag"
+                ></span>
+              </div>
+              <div class="col-6">
+                <div class="calendar"></div>
+              </div>
+            </div>
+            <hr />
+          </div>
+
+          <div id="pycon-france-2008" class="ConfItem PY-conf">
+            <div class="row conf-row">
+              <div class="col-6">
+                <span class="conf-title">
+                  <a
+                    title="Deadline Details"
+                    href="/conference/pycon-france-2008/"
+                    >PyCon France 2008</a
+                  >
+                </span>
+                <span class="conf-title-small">
+                  <a
+                    title="Deadline Details"
+                    href="/conference/pycon-france-2008/"
+                    >PyCon France '08</a
+                  >
+                </span>
+                <span class="conf-title-icon">
+                  <a
+                    title="Conference Website"
+                    href="https://web.archive.org/web/20080513070424/http://fr.pycon.org/"
+                    target="_blank"
+                    ><img
+                      src="/static/img/203-earth.svg"
+                      class="badge-link"
+                      alt="Link to Conference Website"
+                      width="16"
+                      height="16"
+                  /></a>
+                  &ZeroWidthSpace;
+                </span>
+              </div>
+              <div class="col-6">
+                <span class="timer"></span>
+                <span class="timer-small"></span>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12 col-sm-6">
+                <div class="meta">
+                  <span class="conf-date">May 17 - 18, 2008.</span>
+                  <span class="conf-place">
+                    <a href="http://maps.google.com/?q=Paris, France"
+                      >Paris, France</a
+                    >
+                  </span>
+                </div>
+              </div>
+              <div class="col-12 col-sm-6">
+                <div class="deadline">
+                  <div>
+                    Deadline:
+                    <span class="deadline-time">Sunday, 30 March 2008</span>
                   </div>
                 </div>
               </div>
@@ -1163,9 +1410,343 @@
                 $('#pycon-france-2012 .PY-tag').html(sub2name["PY"].toLocaleLowerCase());
 
 
-                $('#pycon-france-2012 .timer').html("TBA");
-                $('#pycon-france-2012 .deadline-time').html("TBA");
-                $('#pycon-france-2012').attr("cfpDiff", Infinity);
+
+                // Use specified timezone for deadlines if available else use AoE timezone
+
+                  var cfpDate = DateTime.fromSQL("2012-07-15 23:59:00", { zone: "UTC-12" });
+                  var confDate = DateTime.fromSQL("2012-09-13", { zone: "UTC-12" });
+
+
+                // check if timezone is valid otherwise replace by system timezone
+                if (cfpDate.invalid || confDate.invalid) {
+                  var cfpDate = DateTime.fromSQL("2012-07-15 23:59:00");
+                  var confDate = DateTime.fromSQL("2012-09-13");
+                  console.log("Invalid timezone in pycon-france-2012. Using system timezone instead.");
+                }
+
+                // render countdown timer
+                $('#pycon-france-2012 .timer').countdown(cfpDate.toJSDate(), function (event) {
+                  $(this).html(event.strftime('%D days %Hh %Mm %Ss'));
+                });
+
+                // render countdown timer small
+                $('#pycon-france-2012 .timer-small').countdown(cfpDate.toJSDate(), function (event) {
+                  $(this).html(event.strftime('%Dd %H:%M:%S'));
+                });
+
+                // deadline in local timezone
+                $('#pycon-france-2012 .deadline-time').html(cfpDate.setZone('system').toLocaleString(DateTime.DATE_HUGE));
+
+                // add calendar button
+                try {
+                  var myCalendar = createCalendarFromObject({
+                    id: 'pycon-france-2012',
+                    title: 'PyCon France 2012 deadline',
+                    date: cfpDate.toJSDate(),
+                    duration: 60,
+                  });
+                  document.querySelector('#pycon-france-2012 .calendar').appendChild(myCalendar);
+                } catch (err) {
+                  document.querySelector('#pycon-france-2012 .calendar').appendChild("<p>Calendar not available.</p>");
+                  console.log("Error in cfp date.");
+                }
+
+                // check if date has passed, add 'past' class to it
+                cfpDiff = cfpDate.diffNow("seconds");
+                confDiff = confDate.diffNow("seconds");
+
+                $('#pycon-france-2012').attr("cfpDiff", cfpDiff.toMillis());
+                $('#pycon-france-2012').attr("confDiff", confDiff.toMillis());
+
+                if (cfpDiff < 0) {
+                  $('#pycon-france-2012').addClass('pastcfp');
+                  $('#pycon-france-2012 .timer').replaceWith($('#pycon-france-2012 .deadline'));
+                  $('#pycon-france-2012 .timer-small').replaceWith($('#pycon-france-2012 .deadline'));
+                  $('#pycon-france-2012 .calendar').remove();
+                }
+
+                if (confDiff < 0) {
+                  $('#pycon-france-2012').addClass('pastconf');
+                  $('#pycon-france-2012 .timer').replaceWith($('#pycon-france-2012 .deadline'));
+                  $('#pycon-france-2012 .timer-small').replaceWith($('#pycon-france-2012 .deadline'));
+                  $('#pycon-france-2012 .calendar').remove();
+                }
+
+
+
+
+
+                $('#pycon-france-2011 .PY-tag').html(sub2name["PY"].toLocaleLowerCase());
+
+
+
+                // Use specified timezone for deadlines if available else use AoE timezone
+
+                  var cfpDate = DateTime.fromSQL("2011-08-01 23:59:00", { zone: "UTC-12" });
+                  var confDate = DateTime.fromSQL("2011-09-17", { zone: "UTC-12" });
+
+
+                // check if timezone is valid otherwise replace by system timezone
+                if (cfpDate.invalid || confDate.invalid) {
+                  var cfpDate = DateTime.fromSQL("2011-08-01 23:59:00");
+                  var confDate = DateTime.fromSQL("2011-09-17");
+                  console.log("Invalid timezone in pycon-france-2011. Using system timezone instead.");
+                }
+
+                // render countdown timer
+                $('#pycon-france-2011 .timer').countdown(cfpDate.toJSDate(), function (event) {
+                  $(this).html(event.strftime('%D days %Hh %Mm %Ss'));
+                });
+
+                // render countdown timer small
+                $('#pycon-france-2011 .timer-small').countdown(cfpDate.toJSDate(), function (event) {
+                  $(this).html(event.strftime('%Dd %H:%M:%S'));
+                });
+
+                // deadline in local timezone
+                $('#pycon-france-2011 .deadline-time').html(cfpDate.setZone('system').toLocaleString(DateTime.DATE_HUGE));
+
+                // add calendar button
+                try {
+                  var myCalendar = createCalendarFromObject({
+                    id: 'pycon-france-2011',
+                    title: 'PyCon France 2011 deadline',
+                    date: cfpDate.toJSDate(),
+                    duration: 60,
+                  });
+                  document.querySelector('#pycon-france-2011 .calendar').appendChild(myCalendar);
+                } catch (err) {
+                  document.querySelector('#pycon-france-2011 .calendar').appendChild("<p>Calendar not available.</p>");
+                  console.log("Error in cfp date.");
+                }
+
+                // check if date has passed, add 'past' class to it
+                cfpDiff = cfpDate.diffNow("seconds");
+                confDiff = confDate.diffNow("seconds");
+
+                $('#pycon-france-2011').attr("cfpDiff", cfpDiff.toMillis());
+                $('#pycon-france-2011').attr("confDiff", confDiff.toMillis());
+
+                if (cfpDiff < 0) {
+                  $('#pycon-france-2011').addClass('pastcfp');
+                  $('#pycon-france-2011 .timer').replaceWith($('#pycon-france-2011 .deadline'));
+                  $('#pycon-france-2011 .timer-small').replaceWith($('#pycon-france-2011 .deadline'));
+                  $('#pycon-france-2011 .calendar').remove();
+                }
+
+                if (confDiff < 0) {
+                  $('#pycon-france-2011').addClass('pastconf');
+                  $('#pycon-france-2011 .timer').replaceWith($('#pycon-france-2011 .deadline'));
+                  $('#pycon-france-2011 .timer-small').replaceWith($('#pycon-france-2011 .deadline'));
+                  $('#pycon-france-2011 .calendar').remove();
+                }
+
+
+
+
+
+                $('#pycon-france-2010 .PY-tag').html(sub2name["PY"].toLocaleLowerCase());
+
+
+
+                // Use specified timezone for deadlines if available else use AoE timezone
+
+                  var cfpDate = DateTime.fromSQL("2010-07-15 23:59:00", { zone: "UTC-12" });
+                  var confDate = DateTime.fromSQL("2010-08-28", { zone: "UTC-12" });
+
+
+                // check if timezone is valid otherwise replace by system timezone
+                if (cfpDate.invalid || confDate.invalid) {
+                  var cfpDate = DateTime.fromSQL("2010-07-15 23:59:00");
+                  var confDate = DateTime.fromSQL("2010-08-28");
+                  console.log("Invalid timezone in pycon-france-2010. Using system timezone instead.");
+                }
+
+                // render countdown timer
+                $('#pycon-france-2010 .timer').countdown(cfpDate.toJSDate(), function (event) {
+                  $(this).html(event.strftime('%D days %Hh %Mm %Ss'));
+                });
+
+                // render countdown timer small
+                $('#pycon-france-2010 .timer-small').countdown(cfpDate.toJSDate(), function (event) {
+                  $(this).html(event.strftime('%Dd %H:%M:%S'));
+                });
+
+                // deadline in local timezone
+                $('#pycon-france-2010 .deadline-time').html(cfpDate.setZone('system').toLocaleString(DateTime.DATE_HUGE));
+
+                // add calendar button
+                try {
+                  var myCalendar = createCalendarFromObject({
+                    id: 'pycon-france-2010',
+                    title: 'PyCon France 2010 deadline',
+                    date: cfpDate.toJSDate(),
+                    duration: 60,
+                  });
+                  document.querySelector('#pycon-france-2010 .calendar').appendChild(myCalendar);
+                } catch (err) {
+                  document.querySelector('#pycon-france-2010 .calendar').appendChild("<p>Calendar not available.</p>");
+                  console.log("Error in cfp date.");
+                }
+
+                // check if date has passed, add 'past' class to it
+                cfpDiff = cfpDate.diffNow("seconds");
+                confDiff = confDate.diffNow("seconds");
+
+                $('#pycon-france-2010').attr("cfpDiff", cfpDiff.toMillis());
+                $('#pycon-france-2010').attr("confDiff", confDiff.toMillis());
+
+                if (cfpDiff < 0) {
+                  $('#pycon-france-2010').addClass('pastcfp');
+                  $('#pycon-france-2010 .timer').replaceWith($('#pycon-france-2010 .deadline'));
+                  $('#pycon-france-2010 .timer-small').replaceWith($('#pycon-france-2010 .deadline'));
+                  $('#pycon-france-2010 .calendar').remove();
+                }
+
+                if (confDiff < 0) {
+                  $('#pycon-france-2010').addClass('pastconf');
+                  $('#pycon-france-2010 .timer').replaceWith($('#pycon-france-2010 .deadline'));
+                  $('#pycon-france-2010 .timer-small').replaceWith($('#pycon-france-2010 .deadline'));
+                  $('#pycon-france-2010 .calendar').remove();
+                }
+
+
+
+
+
+                $('#pycon-france-2009 .PY-tag').html(sub2name["PY"].toLocaleLowerCase());
+
+
+
+                // Use specified timezone for deadlines if available else use AoE timezone
+
+                  var cfpDate = DateTime.fromSQL("2009-04-24 23:59:00", { zone: "UTC-12" });
+                  var confDate = DateTime.fromSQL("2009-05-30", { zone: "UTC-12" });
+
+
+                // check if timezone is valid otherwise replace by system timezone
+                if (cfpDate.invalid || confDate.invalid) {
+                  var cfpDate = DateTime.fromSQL("2009-04-24 23:59:00");
+                  var confDate = DateTime.fromSQL("2009-05-30");
+                  console.log("Invalid timezone in pycon-france-2009. Using system timezone instead.");
+                }
+
+                // render countdown timer
+                $('#pycon-france-2009 .timer').countdown(cfpDate.toJSDate(), function (event) {
+                  $(this).html(event.strftime('%D days %Hh %Mm %Ss'));
+                });
+
+                // render countdown timer small
+                $('#pycon-france-2009 .timer-small').countdown(cfpDate.toJSDate(), function (event) {
+                  $(this).html(event.strftime('%Dd %H:%M:%S'));
+                });
+
+                // deadline in local timezone
+                $('#pycon-france-2009 .deadline-time').html(cfpDate.setZone('system').toLocaleString(DateTime.DATE_HUGE));
+
+                // add calendar button
+                try {
+                  var myCalendar = createCalendarFromObject({
+                    id: 'pycon-france-2009',
+                    title: 'PyCon France 2009 deadline',
+                    date: cfpDate.toJSDate(),
+                    duration: 60,
+                  });
+                  document.querySelector('#pycon-france-2009 .calendar').appendChild(myCalendar);
+                } catch (err) {
+                  document.querySelector('#pycon-france-2009 .calendar').appendChild("<p>Calendar not available.</p>");
+                  console.log("Error in cfp date.");
+                }
+
+                // check if date has passed, add 'past' class to it
+                cfpDiff = cfpDate.diffNow("seconds");
+                confDiff = confDate.diffNow("seconds");
+
+                $('#pycon-france-2009').attr("cfpDiff", cfpDiff.toMillis());
+                $('#pycon-france-2009').attr("confDiff", confDiff.toMillis());
+
+                if (cfpDiff < 0) {
+                  $('#pycon-france-2009').addClass('pastcfp');
+                  $('#pycon-france-2009 .timer').replaceWith($('#pycon-france-2009 .deadline'));
+                  $('#pycon-france-2009 .timer-small').replaceWith($('#pycon-france-2009 .deadline'));
+                  $('#pycon-france-2009 .calendar').remove();
+                }
+
+                if (confDiff < 0) {
+                  $('#pycon-france-2009').addClass('pastconf');
+                  $('#pycon-france-2009 .timer').replaceWith($('#pycon-france-2009 .deadline'));
+                  $('#pycon-france-2009 .timer-small').replaceWith($('#pycon-france-2009 .deadline'));
+                  $('#pycon-france-2009 .calendar').remove();
+                }
+
+
+
+
+
+                $('#pycon-france-2008 .PY-tag').html(sub2name["PY"].toLocaleLowerCase());
+
+
+
+                // Use specified timezone for deadlines if available else use AoE timezone
+
+                  var cfpDate = DateTime.fromSQL("2008-03-30 23:59:00", { zone: "UTC-12" });
+                  var confDate = DateTime.fromSQL("2008-05-17", { zone: "UTC-12" });
+
+
+                // check if timezone is valid otherwise replace by system timezone
+                if (cfpDate.invalid || confDate.invalid) {
+                  var cfpDate = DateTime.fromSQL("2008-03-30 23:59:00");
+                  var confDate = DateTime.fromSQL("2008-05-17");
+                  console.log("Invalid timezone in pycon-france-2008. Using system timezone instead.");
+                }
+
+                // render countdown timer
+                $('#pycon-france-2008 .timer').countdown(cfpDate.toJSDate(), function (event) {
+                  $(this).html(event.strftime('%D days %Hh %Mm %Ss'));
+                });
+
+                // render countdown timer small
+                $('#pycon-france-2008 .timer-small').countdown(cfpDate.toJSDate(), function (event) {
+                  $(this).html(event.strftime('%Dd %H:%M:%S'));
+                });
+
+                // deadline in local timezone
+                $('#pycon-france-2008 .deadline-time').html(cfpDate.setZone('system').toLocaleString(DateTime.DATE_HUGE));
+
+                // add calendar button
+                try {
+                  var myCalendar = createCalendarFromObject({
+                    id: 'pycon-france-2008',
+                    title: 'PyCon France 2008 deadline',
+                    date: cfpDate.toJSDate(),
+                    duration: 60,
+                  });
+                  document.querySelector('#pycon-france-2008 .calendar').appendChild(myCalendar);
+                } catch (err) {
+                  document.querySelector('#pycon-france-2008 .calendar').appendChild("<p>Calendar not available.</p>");
+                  console.log("Error in cfp date.");
+                }
+
+                // check if date has passed, add 'past' class to it
+                cfpDiff = cfpDate.diffNow("seconds");
+                confDiff = confDate.diffNow("seconds");
+
+                $('#pycon-france-2008').attr("cfpDiff", cfpDiff.toMillis());
+                $('#pycon-france-2008').attr("confDiff", confDiff.toMillis());
+
+                if (cfpDiff < 0) {
+                  $('#pycon-france-2008').addClass('pastcfp');
+                  $('#pycon-france-2008 .timer').replaceWith($('#pycon-france-2008 .deadline'));
+                  $('#pycon-france-2008 .timer-small').replaceWith($('#pycon-france-2008 .deadline'));
+                  $('#pycon-france-2008 .calendar').remove();
+                }
+
+                if (confDiff < 0) {
+                  $('#pycon-france-2008').addClass('pastconf');
+                  $('#pycon-france-2008 .timer').replaceWith($('#pycon-france-2008 .deadline'));
+                  $('#pycon-france-2008 .timer-small').replaceWith($('#pycon-france-2008 .deadline'));
+                  $('#pycon-france-2008 .calendar').remove();
+                }
 
 
 
