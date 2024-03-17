@@ -33,7 +33,7 @@
     <meta property="og:type" content="article" />
     <meta
       property="article:published_time"
-      content="2024-09-17T00:00:00+00:00"
+      content="2024-09-15T00:00:00+00:00"
     />
     <meta name="twitter:card" content="summary" />
     <meta
@@ -51,8 +51,8 @@
           "name": "Jesper Dramsch",
           "url": "https://dramsch.net"
         },
-        "dateModified": "2024-09-17T00:00:00+00:00",
-        "datePublished": "2024-09-17T00:00:00+00:00",
+        "dateModified": "2024-09-15T00:00:00+00:00",
+        "datePublished": "2024-09-15T00:00:00+00:00",
         "description": "Countdown for the Call for Participation of this conference including conference dates and details.",
         "headline": "PyCon Japan 2018 Conference Deadlines",
         "mainEntityOfPage": {
@@ -74,7 +74,7 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/js-year-calendar.min.css?t=1710664356"
+      href="/static/css/js-year-calendar.min.css?t=1710665651"
       media="screen,projection"
     />
 
@@ -86,13 +86,13 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/deadlines.css?t=1710664356"
+      href="/static/css/deadlines.css?t=1710665651"
       media="screen,projection"
     />
     <link
       rel="stylesheet"
       type="text/css"
-      href="/static/css/calendar.css?t=1710664356"
+      href="/static/css/calendar.css?t=1710665651"
       media="screen,projection"
     />
 
@@ -469,7 +469,7 @@
       </div>
       <div id="page-content">
         <div id="conf-deadline-timer" class="row">
-          <div id="cfp-timer" class="col-12 conf-timer">TBA</div>
+          <div id="cfp-timer" class="col-12 conf-timer"></div>
         </div>
         <div id="conf-key-facts" class="row">
           <div class="col-12 col-md-6">
@@ -481,7 +481,7 @@
                 width="16"
                 height="16"
               />
-              <span id="conf-date">September 17 - 19, 2018</span>
+              <span id="conf-date">September 15 - 18, 2018</span>
             </div>
             <div>
               <img
@@ -591,13 +591,13 @@
         </div>
         <div class="row">
           <div
-            id="4195ca3f-27fa-460c-8044-219f211e60fd"
+            id="33f7d89d-66e7-4497-9f73-22cab96a5714"
             style="width: 100%; height: 400px"
             class="jekyll-map"
           ></div>
           <script type="text/javascript">
             jekyllMaps.register(
-              "4195ca3f-27fa-460c-8044-219f211e60fd",
+              "33f7d89d-66e7-4497-9f73-22cab96a5714",
               [
                 {
                   latitude: 35.6812665,
@@ -740,9 +740,48 @@
 
         // other
 
-        $("#cfp-timer").html("TBA");
-        $(".deadline-time").html("TBA");
-        $(".deadline-local-time").html("TBA");
+        // Use specified timezone for deadlines if available else use AoE timezone
+
+        var confDeadline = DateTime.fromSQL("2018-06-15 23:59:00", {
+          zone: "UTC-12",
+        });
+
+        // check if timezone is valid otherwise replace by system timezone
+        if (confDeadline.invalid) {
+          var confDeadline = DateTime.fromSQL("2018-06-15 23:59:00");
+          console.log("Invalid timezone. Using system timezone instead.");
+        }
+
+        // add calendar
+        var conferenceDeadlineCalendar = createCalendarFromObject({
+          id: "pycon-japan-2018",
+          title: "PyCon Japan 2018 Conference Deadlines",
+          date: confDeadline.toJSDate(),
+          duration: 60,
+        });
+        document
+          .querySelector("#conference-deadline")
+          .appendChild(conferenceDeadlineCalendar);
+
+        // render countdown timer
+        $("#cfp-timer").countdown(confDeadline.toJSDate(), function (event) {
+          $(this).html(event.strftime("%D days %Hh %Mm %Ss"));
+        });
+
+        // render deadline conference time
+
+        $(".deadline-time").html(
+          confDeadline
+            .setZone("UTC-12")
+            .toLocaleString(DateTime.DATETIME_HUGE_WITH_SECONDS)
+        );
+
+        // render deadline in local timezone
+        $(".deadline-local-time").html(
+          confDeadline
+            .setZone("system")
+            .toLocaleString(DateTime.DATETIME_HUGE_WITH_SECONDS)
+        );
       });
     </script>
     <script async defer>
